@@ -3,8 +3,8 @@ import {
   BuildingOfficeIcon,
   PhoneArrowDownLeftIcon,
   UserGroupIcon,
-  BookmarkSquareIcon,
 } from "@heroicons/react/24/outline";
+import { StarIcon } from "@heroicons/react/24/solid";
 import { useRef, useState } from "react";
 import useOutsideClick from "./../hooks/useOutsideClick";
 import { NavLink } from "react-router-dom";
@@ -19,7 +19,7 @@ function Header() {
   };
 
   return (
-    <header className="relative p-4">
+    <header className="relative mb-8 p-4">
       <nav
         className={`relative flex flex-wrap gap-x-6 rounded-xl bg-slate-200 px-3 py-4 ${
           isOpenMenu ? "rounded-b-none md:rounded-xl" : ""
@@ -29,7 +29,7 @@ function Header() {
           <AppLogo />
           {/* Bookmark Component */}
           <div className="ml-1">
-            <BookmarkSquareIcon className="h-8 w-8 text-slate-800" />
+            <StarIcon className="h-8 w-8 text-yellow-400" />
           </div>
         </div>
         <div className="flex flex-auto items-center justify-end">
@@ -58,7 +58,7 @@ function HamburgerMenuButton({ onShowMenu, isOpenMenu }) {
       <div
         className={`bar ${
           isOpenMenu
-            ? "translate-y-2.25 rotate-129 mx-0 my-2 translate-x-0 bg-red-600"
+            ? "mx-0 my-2 translate-x-0 translate-y-2.25 rotate-129 bg-gradient-to-r from-red-500 to-orange-500"
             : ""
         }`}
       ></div>
@@ -66,7 +66,7 @@ function HamburgerMenuButton({ onShowMenu, isOpenMenu }) {
       <div
         className={`bar ${
           isOpenMenu
-            ? "-translate-y-3.75 translate-x-0.25 rotate-50 mx-0 my-2 bg-red-600"
+            ? "mx-0 my-2 -translate-y-3.75 translate-x-0.25 rotate-50 bg-gradient-to-r from-red-500 to-orange-500"
             : ""
         }`}
       ></div>
@@ -84,7 +84,7 @@ function HamburgerMenu({ isOpenMenu, setIsOpenMenu }) {
   return (
     <ul
       ref={hamburgerMenuRef}
-      className={`top-22 absolute right-0 flex w-full flex-col overflow-hidden rounded-xl bg-slate-200 p-2 transition-all duration-75 ease-out md:hidden ${
+      className={`absolute right-0 top-22 z-10 flex w-full flex-col overflow-hidden rounded-xl bg-slate-200 p-2 transition-all duration-75 ease-out md:hidden ${
         isOpenMenu ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
       }`}
     >
@@ -235,7 +235,7 @@ function NavigationMenu() {
 function LoginSignupButton() {
   return (
     <div className="mr-2 md:mr-0">
-      <button className="rounded-xl bg-white p-2 text-sm font-medium italic text-slate-800 shadow-md hover:bg-slate-100">
+      <button className="rounded-xl p-2 text-sm font-medium italic text-slate-800 hover:bg-slate-100">
         Login/Signup
       </button>
     </div>

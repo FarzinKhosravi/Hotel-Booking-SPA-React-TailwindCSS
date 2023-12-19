@@ -8,6 +8,15 @@ export default {
         50: "50deg",
       },
 
+      backgroundImage: {
+        "img-home": "url('./src/assets/images/img-home.svg')",
+      },
+
+      fontFamily: {
+        Parisienne: ["Parisienne", "sans-serif"],
+        Rasa: ["Rasa", "sans-serif"],
+      },
+
       inset: {
         22: "5.5rem",
       },

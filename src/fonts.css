@@ -1,0 +1,20 @@
+@font-face {
+  font-family: "Parisienne";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../src/assets/fonts/Parisienne-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Rasa";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../src/assets/fonts/Rasa-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Rasa";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../src/assets/fonts/Rasa-Bold.ttf") format("truetype");
+}
