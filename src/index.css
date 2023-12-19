@@ -6,6 +6,6 @@
 
 @layer components {
   .bar {
-    @apply pointer-events-none mx-0 my-1 h-1 w-6 rounded-lg bg-gradient-to-r from-stone-500 to-stone-700 transition-all duration-200 ease-out;
+    @apply pointer-events-none mx-0 my-1 h-1 w-6 rounded-lg bg-gradient-to-r from-emerald-600 to-emerald-900 transition-all duration-200 ease-out;
   }
 }

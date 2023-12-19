@@ -19,6 +19,12 @@ export default {
 
       inset: {
         22: "5.5rem",
+        7.5: "30px",
+      },
+
+      margin: {
+        0.5: "2px",
+        1.6: "0.4rem",
       },
 
       translate: {
