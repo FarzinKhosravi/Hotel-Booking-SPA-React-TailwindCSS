@@ -93,13 +93,13 @@ function HamburgerMenu({ isOpenMenu, setIsOpenMenu }) {
       <li className="mb-4 flex flex-col">
         <div className="mb-3 flex items-center justify-start">
           <FireIcon className="h-6 w-6 text-red-600" />
-          <span className="mt-1.6 ml-0.5 block">Browse</span>
+          <span className="ml-0.5 mt-1.6 block">Browse</span>
         </div>
         <div
           onClick={() => setIsOpenMenu(false)}
           className="cursor-pointer pl-2 transition-all ease-in-out hover:rounded-md hover:bg-slate-900/30"
         >
-          <NavLink end to="/q">
+          <NavLink end to="/">
             {({ isActive }) => (
               <div className="flex py-1">
                 <div>
@@ -122,7 +122,7 @@ function HamburgerMenu({ isOpenMenu, setIsOpenMenu }) {
           onClick={() => setIsOpenMenu(false)}
           className="cursor-pointer pl-2 transition-all ease-in-out hover:rounded-md hover:bg-slate-900/30"
         >
-          <NavLink to="/a">
+          <NavLink to="/hotels-list">
             {({ isActive }) => (
               <div className="flex py-1">
                 <div>
@@ -169,7 +169,7 @@ function HamburgerMenu({ isOpenMenu, setIsOpenMenu }) {
       <li className="mb-4 flex flex-col">
         <div className="mb-3 flex items-center justify-start">
           <UserCircleIcon className="h-6 w-6 text-green-700" />
-          <span className="mt-1.6 ml-0.5 block">Account</span>
+          <span className="ml-0.5 mt-1.6 block">Account</span>
         </div>
         <div
           onClick={() => setIsOpenMenu(false)}
@@ -222,7 +222,7 @@ function HamburgerMenu({ isOpenMenu, setIsOpenMenu }) {
       <li className="flex flex-col">
         <div className="mb-3 flex items-center justify-start">
           <LifebuoyIcon className="h-6 w-6 text-sky-600" />
-          <span className="mt-1.6 ml-0.5 block">Help</span>
+          <span className="ml-0.5 mt-1.6 block">Help</span>
         </div>
         <div
           onClick={() => setIsOpenMenu(false)}
@@ -295,7 +295,7 @@ function NavigationMenu() {
             className={({ isActive }) =>
               isActive ? "text-yellow-500 " : "text-slate-900"
             }
-            to="/a"
+            to="/hotels-list"
           >
             <span className="block px-2 py-4 font-semibold">Hotels List</span>
           </NavLink>
@@ -338,7 +338,7 @@ function NavigationMenu() {
 function LoginSignupLink() {
   return (
     <div className="relative hidden items-center md:flex">
-      <div className="-top-7.5 absolute -left-9">
+      <div className="absolute -left-9 -top-7.5">
         <img src={loginSignupIcon} className="w-8" alt="login-signup-icon" />
       </div>
       <div>

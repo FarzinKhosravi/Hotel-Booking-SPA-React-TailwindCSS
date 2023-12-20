@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import introIcon from "../assets/images/introIcon.png";
 
 import separatorHome from "../assets/images/separator-home.png";
@@ -7,7 +8,7 @@ function HomePage() {
     <section className="min-h-screen px-4">
       <div className="flex flex-col">
         <div className="relative mx-auto mb-5 flex h-20 max-w-[300px] items-center justify-center">
-          <h2 className="font-Parisienne mr-4 text-4xl text-indigo-950">
+          <h2 className="mr-4 font-Parisienne text-4xl text-indigo-950">
             Hotel Booking
           </h2>
           <div className="absolute -right-1 -top-3">
@@ -30,9 +31,11 @@ function HomePage() {
             </p>
             <br />
             <div className="flex">
-              <span className="bg-img-home block bg-cover bg-center bg-no-repeat">
-                Let&apos;s Go See List of Hotels.
-              </span>
+              <Link to="/hotels-list">
+                <span className="block bg-img-home bg-cover bg-center bg-no-repeat">
+                  Let&apos;s Go See List of Hotels.
+                </span>
+              </Link>
               <span className="not-italic">📍</span>
             </div>
           </div>
