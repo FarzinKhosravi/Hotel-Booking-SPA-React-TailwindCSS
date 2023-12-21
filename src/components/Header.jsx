@@ -7,7 +7,7 @@ import {
   ClipboardDocumentListIcon,
   UserCircleIcon,
   LifebuoyIcon,
-  FireIcon,
+  GlobeAsiaAustraliaIcon,
   StarIcon,
 } from "@heroicons/react/24/outline";
 import { useRef, useState } from "react";
@@ -92,7 +92,7 @@ function HamburgerMenu({ isOpenMenu, setIsOpenMenu }) {
     >
       <li className="mb-4 flex flex-col">
         <div className="mb-3 flex items-center justify-start">
-          <FireIcon className="h-6 w-6 text-red-600" />
+          <GlobeAsiaAustraliaIcon className="h-6 w-6 text-red-600" />
           <span className="ml-0.5 mt-1.6 block">Browse</span>
         </div>
         <div

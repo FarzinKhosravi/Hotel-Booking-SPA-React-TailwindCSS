@@ -4,22 +4,74 @@ import {
   CalendarIcon,
 } from "@heroicons/react/24/outline";
 import {
-  BeakerIcon,
-  CalculatorIcon,
-  CheckBadgeIcon,
-  ShieldCheckIcon,
-  ChatBubbleOvalLeftEllipsisIcon,
+  TvIcon,
+  WifiIcon,
+  CreditCardIcon,
+  FireIcon,
+  LifebuoyIcon,
+  BellAlertIcon,
+  ComputerDesktopIcon,
 } from "@heroicons/react/24/solid";
 import pointerHotelsPage from "../assets/images/pointerHotelsPage.png";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Loader from "./../components/Loader";
+import ReactCountryFlag from "react-country-flag";
 
 function HotelsPage() {
   const [hotelsList, setHotelsList] = useState({
     hotels: null,
     loading: false,
   });
+
+  function renderAmenitiesIcons(item, index) {
+    switch (item) {
+      case "tv":
+        return (
+          <IconContainer key={index}>
+            <TvIcon className="h-5 w-5 text-indigo-950" />
+          </IconContainer>
+        );
+      case "wireless_internet":
+        return (
+          <IconContainer key={index}>
+            <WifiIcon className="h-5 w-5 text-indigo-950" />
+          </IconContainer>
+        );
+      case "safety_card":
+        return (
+          <IconContainer key={index}>
+            <CreditCardIcon className="h-5 w-5 text-indigo-950" />
+          </IconContainer>
+        );
+      case "fire_extinguisher":
+        return (
+          <IconContainer key={index}>
+            <FireIcon className="h-5 w-5 text-indigo-950" />
+          </IconContainer>
+        );
+      case "first_aid_kit":
+        return (
+          <IconContainer key={index}>
+            <LifebuoyIcon className="h-5 w-5 text-indigo-950" />
+          </IconContainer>
+        );
+      case "breakfast":
+        return (
+          <IconContainer key={index}>
+            <BellAlertIcon className="h-5 w-5 text-indigo-950" />
+          </IconContainer>
+        );
+      case "laptop_friendly_workspace":
+        return (
+          <IconContainer key={index}>
+            <ComputerDesktopIcon className="h-5 w-5 text-indigo-950" />
+          </IconContainer>
+        );
+      default:
+        return;
+    }
+  }
 
   useEffect(() => {
     setHotelsList({ ...hotelsList, loading: true });
@@ -222,9 +274,15 @@ function HotelsPage() {
                     <div className="mb-8 flex items-center justify-between">
                       <div className="flex flex-col">
                         <span className="font-semibold text-emerald-700">
-                          {hotel.country}
+                          {hotel.smart_location.split(",")[1].trim()}
                         </span>
-                        <span>flag</span>
+                        <span>
+                          <ReactCountryFlag
+                            svg
+                            countryCode={hotel.country_code}
+                            className="text-lg"
+                          />
+                        </span>
                       </div>
                       <span className="block">
                         <svg
@@ -242,28 +300,16 @@ function HotelsPage() {
                           {hotel.state}
                         </span>
                         <span className="font-semibold text-emerald-700">
-                          {hotel.city}
+                          {hotel.smart_location.split(",")[0]}
                         </span>
                       </div>
                     </div>
 
                     {/* Hotel Amenities */}
                     <div className="mb-12 flex items-center justify-between">
-                      <div>
-                        <BeakerIcon className="h-5 w-5" />
-                      </div>
-                      <div>
-                        <CalculatorIcon className="h-5 w-5" />
-                      </div>
-                      <div>
-                        <CheckBadgeIcon className="h-5 w-5" />
-                      </div>
-                      <div>
-                        <ShieldCheckIcon className="h-5 w-5" />
-                      </div>
-                      <div>
-                        <ChatBubbleOvalLeftEllipsisIcon className="h-5 w-5" />
-                      </div>
+                      {hotel.amenities.map((item, index) => {
+                        return renderAmenitiesIcons(item, index);
+                      })}
                     </div>
 
                     {/* Hotel Booking Button */}
@@ -313,3 +359,7 @@ function HotelsPage() {
 }
 
 export default HotelsPage;
+
+function IconContainer({ children }) {
+  return <div>{children}</div>;
+}
