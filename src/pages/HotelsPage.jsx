@@ -13,16 +13,61 @@ import {
   ComputerDesktopIcon,
 } from "@heroicons/react/24/solid";
 import pointerHotelsPage from "../assets/images/pointerHotelsPage.png";
-import { useEffect, useState } from "react";
+import { useEffect, useReducer, useState } from "react";
 import axios from "axios";
 import Loader from "./../components/Loader";
 import ReactCountryFlag from "react-country-flag";
+import "react-date-range/dist/styles.css";
+import "react-date-range/dist/theme/default.css";
+import { DateRange } from "react-date-range";
+import { format } from "date-fns";
+import { createSearchParams, useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
+
+const initialState = {
+  destination: "",
+  rooms: 1,
+};
+
+const hotelSpecsReducer = (state, action) => {
+  switch (action.type) {
+    case "destination":
+      return { ...state, destination: action.payload };
+
+    case "rooms":
+      return {
+        ...state,
+        rooms: action.payload.includes("increment")
+          ? (state.rooms += 1)
+          : (state.rooms -= 1),
+      };
+
+    default:
+      throw new Error(`Unknown action ${action.type}`);
+  }
+};
 
 function HotelsPage() {
+  const navigate = useNavigate();
+
+  const [hotelSpecs, dispatch] = useReducer(hotelSpecsReducer, initialState);
+
+  const [isValidDestination, setIsValidDestination] = useState(true);
+
   const [hotelsList, setHotelsList] = useState({
     hotels: null,
     loading: false,
   });
+
+  const [isOpenCalendar, setIsOpenCalendar] = useState(false);
+
+  const [calendar, setCalendar] = useState([
+    {
+      startDate: new Date(),
+      endDate: new Date(),
+      key: "selection",
+    },
+  ]);
 
   function renderAmenitiesIcons(item, index) {
     switch (item) {
@@ -84,6 +129,26 @@ function HotelsPage() {
       .catch((err) => console.log(err));
   }, []);
 
+  const filterHotelsHandler = () => {
+    if (!hotelSpecs.destination) {
+      toast.error("Please Enter Destination 🧐");
+
+      setIsValidDestination(false);
+
+      return;
+    }
+
+    setIsValidDestination(true);
+
+    const encodedParams = createSearchParams(hotelSpecs);
+    navigate({
+      pathname: "/hotels-results",
+      search: encodedParams.toString(),
+    });
+  };
+
+  console.log("hotelSpecs:", hotelSpecs);
+
   return (
     <section className="min-h-screen px-4">
       <div className="flex flex-col">
@@ -111,9 +176,20 @@ function HotelsPage() {
 
               <div className="w-full">
                 <input
-                  className="block w-full rounded-xl border-0 bg-slate-300 from-emerald-700 to-emerald-900 text-base text-emerald-900 placeholder:opacity-50 focus:bg-gradient-to-r focus:bg-clip-text focus:text-transparent"
+                  onChange={(event) =>
+                    dispatch({
+                      type: "destination",
+                      payload: event.target.value,
+                    })
+                  }
+                  value={hotelSpecs.destination}
+                  className={`block w-full rounded-xl border-0 bg-slate-300 from-emerald-700 to-emerald-900 text-base text-emerald-900 shadow-lg placeholder:opacity-50 focus:bg-gradient-to-r focus:bg-clip-text focus:text-transparent ${
+                    isValidDestination || hotelSpecs.destination
+                      ? ""
+                      : "border-2 border-red-600 placeholder:text-red-800"
+                  }`}
                   type="text"
-                  placeholder="Search Your Favorite Hotel..."
+                  placeholder="Search Your Favorite Destination..."
                 />
               </div>
             </div>
@@ -128,10 +204,41 @@ function HotelsPage() {
                 </h3>
               </div>
 
-              <div className="w-full">date range</div>
+              <div className="relative flex w-full flex-col items-center justify-center">
+                <div
+                  onClick={() => setIsOpenCalendar(!isOpenCalendar)}
+                  className="w-full rounded-2xl bg-slate-100 shadow-lg"
+                >
+                  <div className="mx-auto flex w-full max-w-[256px] items-center justify-around px-4 py-2 font-semibold">
+                    <span className="text-emerald-700">{`${format(
+                      calendar[0].startDate,
+                      "MM/dd/yyyy"
+                    )}`}</span>
+
+                    <span className="text-emerald-700">To</span>
+
+                    <span className="text-emerald-700">{`${format(
+                      calendar[0].endDate,
+                      "MM/dd/yyyy"
+                    )}`}</span>
+                  </div>
+                </div>
+
+                <div className="pt-4">
+                  {isOpenCalendar && (
+                    <DateRange
+                      onChange={(item) => setCalendar([item.selection])}
+                      ranges={calendar}
+                      minDate={new Date()}
+                      moveRangeOnFirstSelection={true}
+                      className="overflow-hidden rounded-xl text-[0.6rem] shadow-lg"
+                    />
+                  )}
+                </div>
+              </div>
             </div>
             {/* Persons Box */}
-            <div>
+            <div className="mb-8">
               <div className="mb-3 flex justify-start">
                 <div>
                   <UserGroupIcon className="h-5 w-5 text-emerald-700" />
@@ -159,13 +266,23 @@ function HotelsPage() {
                   </div>
                   <div className="flex items-center justify-center">
                     <div className="flex">
-                      <button className="block rounded-full bg-white px-4  text-red-600">
+                      <button
+                        disabled={hotelSpecs.rooms === 1 ? true : false}
+                        name="decrement"
+                        onClick={(event) =>
+                          dispatch({
+                            type: "rooms",
+                            payload: event.target.name,
+                          })
+                        }
+                        className="block rounded-full bg-white px-4 text-red-600  disabled:cursor-not-allowed disabled:bg-gray-400 disabled:text-white"
+                      >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 20 20"
                           fill="currentColor"
                           data-slot="icon"
-                          className="h-5 w-5"
+                          className="pointer-events-none h-5 w-5"
                         >
                           <path
                             fillRule="evenodd"
@@ -174,14 +291,25 @@ function HotelsPage() {
                           />
                         </svg>
                       </button>
-                      <span className="ml-4 text-lg font-semibold">0</span>
-                      <button className="ml-4 block rounded-full bg-white px-4  text-emerald-700">
+                      <span className="ml-4 text-lg font-semibold">
+                        {hotelSpecs.rooms}
+                      </span>
+                      <button
+                        name="increment"
+                        onClick={(event) =>
+                          dispatch({
+                            type: "rooms",
+                            payload: event.target.name,
+                          })
+                        }
+                        className="ml-4 block rounded-full bg-white px-4  text-emerald-700"
+                      >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 20 20"
                           fill="currentColor"
                           data-slot="icon"
-                          className="h-5 w-5"
+                          className="pointer-events-none h-5 w-5"
                         >
                           <path d="M10.75 4.75a.75.75 0 0 0-1.5 0v4.5h-4.5a.75.75 0 0 0 0 1.5h4.5v4.5a.75.75 0 0 0 1.5 0v-4.5h4.5a.75.75 0 0 0 0-1.5h-4.5v-4.5Z" />
                         </svg>
@@ -190,6 +318,33 @@ function HotelsPage() {
                   </div>
                 </div>
               </div>
+            </div>
+            {/* Search Button */}
+            <div>
+              <button
+                onClick={filterHotelsHandler}
+                className="block w-full rounded-xl bg-emerald-700 px-4 py-2"
+              >
+                <div className="flex items-center justify-between">
+                  <div>
+                    <span className="font-semibold text-white">Search</span>
+                  </div>
+                  <div className="text-white">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      className="h-5 w-5"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M9 3.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11ZM2 9a7 7 0 1 1 12.452 4.391l3.328 3.329a.75.75 0 1 1-1.06 1.06l-3.329-3.328A7 7 0 0 1 2 9Z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </button>
             </div>
           </div>
         </div>
