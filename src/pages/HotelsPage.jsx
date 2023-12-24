@@ -14,7 +14,6 @@ import {
 } from "@heroicons/react/24/solid";
 import pointerHotelsPage from "../assets/images/pointerHotelsPage.png";
 import { useEffect, useReducer, useState } from "react";
-import axios from "axios";
 import Loader from "./../components/Loader";
 import ReactCountryFlag from "react-country-flag";
 import "react-date-range/dist/styles.css";
@@ -23,6 +22,8 @@ import { DateRange } from "react-date-range";
 import { format } from "date-fns";
 import { createSearchParams, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
+import { useDispatch, useSelector } from "react-redux";
+import { getAsyncHotels } from "../features/hotels/hotelsSlice";
 
 const initialState = {
   destination: "",
@@ -48,19 +49,17 @@ const hotelSpecsReducer = (state, action) => {
 };
 
 function HotelsPage() {
-  const navigate = useNavigate();
-
-  const [hotelSpecs, dispatch] = useReducer(hotelSpecsReducer, initialState);
+  const [hotelSpecs, hotelSpecsDispatch] = useReducer(
+    hotelSpecsReducer,
+    initialState
+  );
 
   const [isValidDestination, setIsValidDestination] = useState(true);
 
-  const [hotelsList, setHotelsList] = useState({
-    hotels: null,
-    loading: false,
-  });
+  const dispatch = useDispatch();
+  const { loading, hotels, error } = useSelector((state) => state.hotels);
 
   const [isOpenCalendar, setIsOpenCalendar] = useState(false);
-
   const [calendar, setCalendar] = useState([
     {
       startDate: new Date(),
@@ -68,6 +67,8 @@ function HotelsPage() {
       key: "selection",
     },
   ]);
+
+  const navigate = useNavigate();
 
   function renderAmenitiesIcons(item, index) {
     switch (item) {
@@ -119,14 +120,7 @@ function HotelsPage() {
   }
 
   useEffect(() => {
-    setHotelsList({ ...hotelsList, loading: true });
-
-    axios
-      .get("http://localhost:3000/hotels")
-      .then(({ data }) =>
-        setHotelsList({ ...hotelsList, hotels: data, loading: false })
-      )
-      .catch((err) => console.log(err));
+    dispatch(getAsyncHotels());
   }, []);
 
   const filterHotelsHandler = () => {
@@ -141,10 +135,13 @@ function HotelsPage() {
     setIsValidDestination(true);
 
     const encodedParams = createSearchParams(hotelSpecs);
-    navigate({
-      pathname: "/hotels-results",
-      search: encodedParams.toString(),
-    });
+    navigate(
+      {
+        pathname: "/hotels-results",
+        search: encodedParams.toString(),
+      },
+      { state: hotels }
+    );
   };
 
   console.log("hotelSpecs:", hotelSpecs);
@@ -177,7 +174,7 @@ function HotelsPage() {
               <div className="w-full">
                 <input
                   onChange={(event) =>
-                    dispatch({
+                    hotelSpecsDispatch({
                       type: "destination",
                       payload: event.target.value,
                     })
@@ -270,7 +267,7 @@ function HotelsPage() {
                         disabled={hotelSpecs.rooms === 1 ? true : false}
                         name="decrement"
                         onClick={(event) =>
-                          dispatch({
+                          hotelSpecsDispatch({
                             type: "rooms",
                             payload: event.target.name,
                           })
@@ -297,7 +294,7 @@ function HotelsPage() {
                       <button
                         name="increment"
                         onClick={(event) =>
-                          dispatch({
+                          hotelSpecsDispatch({
                             type: "rooms",
                             payload: event.target.name,
                           })
@@ -360,10 +357,12 @@ function HotelsPage() {
 
           {/* Hotels Container */}
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {hotelsList.loading || !hotelsList.hotels ? (
+            {loading && !hotels ? (
               <Loader />
+            ) : error || !hotels ? (
+              <div>Error</div>
             ) : (
-              hotelsList.hotels.map((hotel) => {
+              hotels.map((hotel) => {
                 return (
                   <div
                     key={hotel.id}
