@@ -1,12 +1,12 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import axios from "axios";
 import toast from "react-hot-toast";
+import getHotels from "../../services/getHotelsService";
 
 export const getAsyncHotels = createAsyncThunk(
   "hotels/getAsyncHotels",
   async (_, { rejectWithValue }) => {
     try {
-      const { data } = await axios.get("http://localhost:3000/hotels");
+      const { data } = await getHotels();
 
       return data;
     } catch (error) {
