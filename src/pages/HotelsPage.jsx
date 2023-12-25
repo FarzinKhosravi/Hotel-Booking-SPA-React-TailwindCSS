@@ -3,15 +3,6 @@ import {
   UserGroupIcon,
   CalendarIcon,
 } from "@heroicons/react/24/outline";
-import {
-  TvIcon,
-  WifiIcon,
-  CreditCardIcon,
-  FireIcon,
-  LifebuoyIcon,
-  BellAlertIcon,
-  ComputerDesktopIcon,
-} from "@heroicons/react/24/solid";
 import pointerHotelsPage from "../assets/images/pointerHotelsPage.png";
 import { useEffect, useReducer, useState } from "react";
 import Loader from "./../components/Loader";
@@ -24,6 +15,7 @@ import { createSearchParams, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import { useDispatch, useSelector } from "react-redux";
 import { getAsyncHotels } from "../features/hotels/hotelsSlice";
+import AmenitiesIcons from "../common/AmenitiesIcons";
 
 const initialState = {
   destination: "",
@@ -69,55 +61,6 @@ function HotelsPage() {
   ]);
 
   const navigate = useNavigate();
-
-  function renderAmenitiesIcons(item, index) {
-    switch (item) {
-      case "tv":
-        return (
-          <IconContainer key={index}>
-            <TvIcon className="h-5 w-5 text-indigo-950" />
-          </IconContainer>
-        );
-      case "wireless_internet":
-        return (
-          <IconContainer key={index}>
-            <WifiIcon className="h-5 w-5 text-indigo-950" />
-          </IconContainer>
-        );
-      case "safety_card":
-        return (
-          <IconContainer key={index}>
-            <CreditCardIcon className="h-5 w-5 text-indigo-950" />
-          </IconContainer>
-        );
-      case "fire_extinguisher":
-        return (
-          <IconContainer key={index}>
-            <FireIcon className="h-5 w-5 text-indigo-950" />
-          </IconContainer>
-        );
-      case "first_aid_kit":
-        return (
-          <IconContainer key={index}>
-            <LifebuoyIcon className="h-5 w-5 text-indigo-950" />
-          </IconContainer>
-        );
-      case "breakfast":
-        return (
-          <IconContainer key={index}>
-            <BellAlertIcon className="h-5 w-5 text-indigo-950" />
-          </IconContainer>
-        );
-      case "laptop_friendly_workspace":
-        return (
-          <IconContainer key={index}>
-            <ComputerDesktopIcon className="h-5 w-5 text-indigo-950" />
-          </IconContainer>
-        );
-      default:
-        return;
-    }
-  }
 
   useEffect(() => {
     dispatch(getAsyncHotels());
@@ -462,7 +405,7 @@ function HotelsPage() {
                     {/* Hotel Amenities */}
                     <div className="mb-12 flex items-center justify-between">
                       {hotel.amenities.map((item, index) => {
-                        return renderAmenitiesIcons(item, index);
+                        return <AmenitiesIcons key={index} item={item} />;
                       })}
                     </div>
 
@@ -513,7 +456,3 @@ function HotelsPage() {
 }
 
 export default HotelsPage;
-
-function IconContainer({ children }) {
-  return <div>{children}</div>;
-}
