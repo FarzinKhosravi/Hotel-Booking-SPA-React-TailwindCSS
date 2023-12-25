@@ -37,8 +37,8 @@ function HotelsResults() {
   return (
     <div className="h-screen">
       <div>
-        <div className="relative mb-4 px-1">
-          <div className="sticky left-0 right-0 top-0 z-10 flex items-center justify-between">
+        <div className="mb-4 px-1">
+          <div className="flex items-center justify-between">
             <div className="flex">
               <span className="block bg-img-home bg-cover bg-center bg-no-repeat text-lg font-semibold italic">
                 Search Results

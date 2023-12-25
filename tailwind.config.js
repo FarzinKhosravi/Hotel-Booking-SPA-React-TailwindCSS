@@ -34,6 +34,10 @@ export default {
       },
     },
   },
-  // eslint-disable-next-line no-undef
-  plugins: [require("@tailwindcss/forms")],
+  plugins: [
+    // eslint-disable-next-line no-undef
+    require("@tailwindcss/forms"),
+    // eslint-disable-next-line no-undef
+    require("tailwind-scrollbar")({ nocompatible: true }),
+  ],
 };
