@@ -4,6 +4,7 @@ import HomePage from "./../pages/HomePage";
 import HotelsPage from "../pages/HotelsPage";
 import Hotels from "../components/Hotels/Hotels";
 import HotelsResults from "../components/HotelsResults/HotelsResults";
+import HotelDetail from "../components/HotelDetail/HotelDetail";
 
 function Routes() {
   let routes = useRoutes([
@@ -16,16 +17,20 @@ function Routes() {
           element: <HomePage />,
         },
         {
-          path: "/hotels-list",
+          path: "hotels-list",
           element: <HotelsPage />,
         },
         {
-          path: "/hotels-results",
+          path: "hotels-results",
           element: <Hotels />,
           children: [
             {
               index: true,
               element: <HotelsResults />,
+            },
+            {
+              path: ":hotelId",
+              element: <HotelDetail />,
             },
           ],
         },

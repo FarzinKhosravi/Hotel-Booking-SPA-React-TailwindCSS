@@ -27,7 +27,7 @@ function Header() {
   return (
     <header className="relative mb-8 p-4">
       <nav
-        className={`relative flex flex-wrap gap-x-6 rounded-xl bg-slate-200 px-3 py-4 ${
+        className={`relative flex flex-wrap gap-x-6 rounded-xl bg-slate-200 px-3 py-4 shadow-lg ${
           isOpenMenu ? "rounded-b-none md:rounded-xl" : ""
         }`}
       >
