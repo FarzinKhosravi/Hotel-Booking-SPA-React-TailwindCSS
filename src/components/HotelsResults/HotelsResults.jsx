@@ -23,12 +23,6 @@ function HotelsResults() {
   console.log("rooms:", rooms);
 
   useEffect(() => {
-    // if (!hotels) {
-    //   console.log("no hotels !!");
-    // }
-
-    console.log("filterHotels !!");
-
     dispatch(filterHotels({ destination, rooms, hotelsData }));
   }, []);
 
@@ -121,7 +115,7 @@ function HotelsResults() {
                     <div className="flex flex-col sm:ml-4 sm:justify-around">
                       {/* Hotel Name */}
                       <div className="mb-4 text-center">
-                        <span className="font-Parisienne text-lg font-semibold italic text-emerald-700">
+                        <span className="font-Parisienne text-lg font-semibold capitalize italic text-emerald-700">
                           {hotel.name}
                         </span>
                       </div>

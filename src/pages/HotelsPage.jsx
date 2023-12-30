@@ -366,7 +366,7 @@ function HotelsPage() {
 
                       {/* Hotel Name */}
                       <div className="mb-4 text-center">
-                        <span className="font-Parisienne text-lg font-semibold italic text-emerald-700">
+                        <span className="font-Parisienne text-lg font-semibold capitalize italic text-emerald-700">
                           {hotel.name}
                         </span>
                       </div>
