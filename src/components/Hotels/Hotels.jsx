@@ -2,6 +2,8 @@ import { Outlet } from "react-router-dom";
 import Map from "./../Map/Map";
 
 function Hotels() {
+  console.log("render Hotels Component...");
+
   return (
     <section className="px-4">
       <div className="flex h-[calc(100vh-160px)] flex-col lg:flex-row-reverse lg:items-stretch lg:justify-between">

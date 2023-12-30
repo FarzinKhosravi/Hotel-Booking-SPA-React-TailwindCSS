@@ -57,7 +57,10 @@ function HotelsResults() {
         <div className="flex flex-col gap-y-8">
           {hotels?.map((hotel) => {
             return (
-              <Link key={hotel.id} to={`/hotels-results/${hotel.id}`}>
+              <Link
+                key={hotel.id}
+                to={`/hotels-results/${hotel.id}?lat=${hotel.latitude}&lng=${hotel.longitude}`}
+              >
                 {/*  // Filtered Hotel : */}
                 <div className="flex flex-col rounded-xl bg-slate-200 p-4 shadow-lg">
                   {/* Top Section */}

@@ -313,7 +313,10 @@ function HotelsPage() {
             ) : (
               hotels.map((hotel) => {
                 return (
-                  <Link key={hotel.id} to={`/hotels-results/${hotel.id}`}>
+                  <Link
+                    key={hotel.id}
+                    to={`/hotels-results/${hotel.id}?lat=${hotel.latitude}&lng=${hotel.longitude}`}
+                  >
                     <div className="flex flex-col justify-between rounded-xl bg-slate-200 p-4 shadow-lg">
                       {/* Hotel Image */}
                       <div className="relative mb-4 overflow-hidden rounded-xl">
