@@ -22,6 +22,10 @@ export default {
         7.5: "30px",
       },
 
+      zIndex: {
+        1000: "1000",
+      },
+
       margin: {
         0.5: "2px",
         1.6: "0.4rem",

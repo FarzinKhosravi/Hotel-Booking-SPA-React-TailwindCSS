@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { MapContainer, Marker, Popup, TileLayer, useMap } from "react-leaflet";
 import { useSelector } from "react-redux";
 import { useSearchParams } from "react-router-dom";
+import useGeoLocation from "../../hooks/useGeoLocation";
 
 function Map() {
   const { hotels } = useSelector((state) => state.hotels);
@@ -13,21 +14,28 @@ function Map() {
   const latitude = searchParams.get("lat");
   const longitude = searchParams.get("lng");
 
+  const { isLoading, userLocation, getUserLocation } = useGeoLocation();
+
   useEffect(() => {
     if (latitude && longitude) setMapCenter([latitude, longitude]);
   }, [latitude, longitude]);
 
-  //   console.log("hotels in Map:", hotels);
+  useEffect(() => {
+    if (userLocation?.lat && userLocation?.lng)
+      setMapCenter([userLocation.lat, userLocation.lng]);
+  }, [userLocation]);
 
-  console.log("lat:", latitude, "lng:", longitude);
+  // console.log("lat:", latitude, "lng:", longitude);
 
-  console.log("mapCenter:", mapCenter);
+  // console.log("mapCenter:", mapCenter);
+
+  console.log("userLocation:", userLocation);
 
   return (
     <div>
       <div className="overflow-hidden">
         <MapContainer
-          className="h-[calc(100vh-160px)] rounded-lg"
+          className="relative h-[calc(100vh-160px)] rounded-lg"
           center={mapCenter}
           zoom={13}
           scrollWheelZoom={true}
@@ -36,6 +44,13 @@ function Map() {
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png"
           />
+
+          <button
+            onClick={getUserLocation}
+            className="z-1000 absolute bottom-4 left-4 rounded-xl bg-sky-600 px-4 py-2 font-semibold text-white"
+          >
+            {isLoading ? "Loading ..." : " Use Your Location"}
+          </button>
 
           <ChangeCenter position={mapCenter} />
 
