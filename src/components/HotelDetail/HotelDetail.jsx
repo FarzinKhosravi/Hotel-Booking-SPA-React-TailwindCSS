@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import getHotelDetail from "./../../services/getHotelDetailService";
 import ReactCountryFlag from "react-country-flag";
 import AmenitiesIcons from "../../common/AmenitiesIcons";
+import { useDispatch } from "react-redux";
+import { createCurrentHotel } from "../../features/currentHotel/currentHotelSlice";
 
 function HotelDetail() {
   const { hotelId } = useParams();
@@ -10,6 +12,8 @@ function HotelDetail() {
   const [hotelDetail, setHotelDetail] = useState(null);
 
   const [accordion, setAccordion] = useState(null);
+
+  const dispatch = useDispatch();
 
   useEffect(() => {
     const fetchHotelDetail = async () => {
@@ -20,6 +24,12 @@ function HotelDetail() {
 
     fetchHotelDetail();
   }, [hotelId]);
+
+  useEffect(() => {
+    // console.log("hotelDetail", hotelDetail);
+
+    dispatch(createCurrentHotel(hotelDetail));
+  }, [hotelDetail]);
 
   const hotelReserveHandler = (e) => {
     e.preventDefault();

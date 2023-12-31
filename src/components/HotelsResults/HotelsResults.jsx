@@ -14,6 +14,10 @@ function HotelsResults() {
   const dispatch = useDispatch();
   const { hotels } = useSelector((state) => state.hotels);
 
+  const { currentHotel } = useSelector((state) => state.currentHotel);
+
+  console.log("currentHotel:", currentHotel);
+
   const [searchParams] = useSearchParams();
 
   const destination = searchParams.get("destination");
@@ -62,7 +66,13 @@ function HotelsResults() {
                 to={`/hotels-results/${hotel.id}?lat=${hotel.latitude}&lng=${hotel.longitude}`}
               >
                 {/*  // Filtered Hotel : */}
-                <div className="flex flex-col rounded-xl bg-slate-200 p-4 shadow-lg">
+                <div
+                  className={`flex flex-col rounded-xl bg-slate-200 p-4 shadow-lg ${
+                    hotel.id === currentHotel?.id
+                      ? "border-4 border-emerald-700"
+                      : ""
+                  }`}
+                >
                   {/* Top Section */}
                   <div className="mb-8 flex flex-col sm:mb-4 sm:flex sm:flex-row sm:justify-start">
                     {/* Hotel Image */}
