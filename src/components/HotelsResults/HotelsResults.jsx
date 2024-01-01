@@ -21,13 +21,13 @@ function HotelsResults() {
   const [searchParams] = useSearchParams();
 
   const destination = searchParams.get("destination");
-  const rooms = searchParams.get("rooms");
+  const number = JSON.parse(searchParams.get("number"));
 
   console.log("destination:", destination);
-  console.log("rooms:", rooms);
+  console.log("number:", number);
 
   useEffect(() => {
-    dispatch(filterHotels({ destination, rooms, hotelsData }));
+    dispatch(filterHotels({ destination, number, hotelsData }));
   }, []);
 
   const hotelReserveHandler = (e) => {
@@ -57,6 +57,7 @@ function HotelsResults() {
             </div>
           </div>
         </div>
+
         {/* Container of Filtered Hotels */}
         <div className="flex flex-col gap-y-8">
           {hotels?.map((hotel) => {

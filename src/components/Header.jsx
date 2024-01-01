@@ -86,7 +86,7 @@ function HamburgerMenu({ isOpenMenu, setIsOpenMenu }) {
   return (
     <ul
       ref={hamburgerMenuRef}
-      className={`absolute right-0 top-16 z-10 flex w-full flex-col overflow-hidden rounded-xl bg-slate-200 px-2 pb-2 pt-6 transition-all duration-75 ease-out md:hidden ${
+      className={`absolute right-0 top-16 z-10 flex w-full flex-col overflow-hidden rounded-xl bg-slate-200 px-2 pb-2 pt-6 shadow-md transition-all duration-75 ease-out md:hidden ${
         isOpenMenu ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
       }`}
     >

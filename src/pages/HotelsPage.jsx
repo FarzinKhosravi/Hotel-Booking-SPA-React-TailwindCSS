@@ -19,7 +19,12 @@ import AmenitiesIcons from "../common/AmenitiesIcons";
 
 const initialState = {
   destination: "",
-  rooms: 1,
+
+  number: {
+    adult: 1,
+    children: 0,
+    rooms: 1,
+  },
 };
 
 const hotelSpecsReducer = (state, action) => {
@@ -27,12 +32,16 @@ const hotelSpecsReducer = (state, action) => {
     case "destination":
       return { ...state, destination: action.payload };
 
-    case "rooms":
+    case "number":
       return {
         ...state,
-        rooms: action.payload.includes("increment")
-          ? (state.rooms += 1)
-          : (state.rooms -= 1),
+        number: {
+          ...state.number,
+          [action.payload.name]:
+            action.payload.value === "increment"
+              ? (state.number[action.payload.name] += 1)
+              : (state.number[action.payload.name] -= 1),
+        },
       };
 
     default:
@@ -77,7 +86,10 @@ function HotelsPage() {
 
     setIsValidDestination(true);
 
-    const encodedParams = createSearchParams(hotelSpecs);
+    const encodedParams = createSearchParams({
+      destination: hotelSpecs.destination,
+      number: JSON.stringify(hotelSpecs.number),
+    });
     navigate(
       {
         pathname: "/hotels-results",
@@ -183,21 +195,21 @@ function HotelsPage() {
                 </div>
               </div>
             </div>
-            {/* Persons Box */}
-            <div className="mb-8">
-              <div className="mb-3 flex justify-start">
+            {/* Number Box */}
+            <div className="mb-12">
+              <div className="mb-6 flex justify-start">
                 <div>
                   <UserGroupIcon className="h-5 w-5 text-emerald-700" />
                 </div>
                 <h3 className="ml-1 bg-gradient-to-r from-emerald-700 to-emerald-900 bg-clip-text font-semibold text-transparent">
-                  How Many Rooms Do You Want ?
+                  Determine the Number of People and Your Rooms :
                 </h3>
               </div>
 
               {/* Buttons Container*/}
               <div className="w-full">
-                {/* Button */}
-                <div className="flex flex-col">
+                {/* Adult Button */}
+                <div className="mb-8 flex flex-col">
                   <div className="mb-2 inline-flex">
                     <span>
                       <img
@@ -207,18 +219,22 @@ function HotelsPage() {
                       />
                     </span>
                     <span className="ml-1 text-base font-semibold text-emerald-500">
-                      Room
+                      Adult
                     </span>
                   </div>
                   <div className="flex items-center justify-center">
                     <div className="flex">
                       <button
-                        disabled={hotelSpecs.rooms === 1 ? true : false}
-                        name="decrement"
+                        disabled={hotelSpecs.number.adult === 1 ? true : false}
+                        name="adult"
+                        value="decrement"
                         onClick={(event) =>
                           hotelSpecsDispatch({
-                            type: "rooms",
-                            payload: event.target.name,
+                            type: "number",
+                            payload: {
+                              name: event.target.name,
+                              value: event.target.value,
+                            },
                           })
                         }
                         className="block rounded-full bg-white px-4 text-red-600  disabled:cursor-not-allowed disabled:bg-gray-400 disabled:text-white"
@@ -238,14 +254,172 @@ function HotelsPage() {
                         </svg>
                       </button>
                       <span className="ml-4 text-lg font-semibold">
-                        {hotelSpecs.rooms}
+                        {hotelSpecs.number.adult}
                       </span>
                       <button
-                        name="increment"
+                        name="adult"
+                        value="increment"
                         onClick={(event) =>
                           hotelSpecsDispatch({
-                            type: "rooms",
-                            payload: event.target.name,
+                            type: "number",
+                            payload: {
+                              name: event.target.name,
+                              value: event.target.value,
+                            },
+                          })
+                        }
+                        className="ml-4 block rounded-full bg-white px-4  text-emerald-700"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                          data-slot="icon"
+                          className="pointer-events-none h-5 w-5"
+                        >
+                          <path d="M10.75 4.75a.75.75 0 0 0-1.5 0v4.5h-4.5a.75.75 0 0 0 0 1.5h4.5v4.5a.75.75 0 0 0 1.5 0v-4.5h4.5a.75.75 0 0 0 0-1.5h-4.5v-4.5Z" />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Children Button */}
+                <div className="mb-8 flex flex-col">
+                  <div className="mb-2 inline-flex">
+                    <span>
+                      <img
+                        src={pointerHotelsPage}
+                        className="h-3 w-3"
+                        alt="pointer-hotels-page"
+                      />
+                    </span>
+                    <span className="ml-1 text-base font-semibold text-emerald-500">
+                      Children
+                    </span>
+                  </div>
+                  <div className="flex items-center justify-center">
+                    <div className="flex">
+                      <button
+                        disabled={
+                          hotelSpecs.number.children === 0 ? true : false
+                        }
+                        name="children"
+                        value="decrement"
+                        onClick={(event) =>
+                          hotelSpecsDispatch({
+                            type: "number",
+                            payload: {
+                              name: event.target.name,
+                              value: event.target.value,
+                            },
+                          })
+                        }
+                        className="block rounded-full bg-white px-4 text-red-600  disabled:cursor-not-allowed disabled:bg-gray-400 disabled:text-white"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                          data-slot="icon"
+                          className="pointer-events-none h-5 w-5"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M4 10a.75.75 0 0 1 .75-.75h10.5a.75.75 0 0 1 0 1.5H4.75A.75.75 0 0 1 4 10Z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+                      </button>
+                      <span className="ml-4 text-lg font-semibold">
+                        {hotelSpecs.number.children}
+                      </span>
+                      <button
+                        name="children"
+                        value="increment"
+                        onClick={(event) =>
+                          hotelSpecsDispatch({
+                            type: "number",
+                            payload: {
+                              name: event.target.name,
+                              value: event.target.value,
+                            },
+                          })
+                        }
+                        className="ml-4 block rounded-full bg-white px-4  text-emerald-700"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                          data-slot="icon"
+                          className="pointer-events-none h-5 w-5"
+                        >
+                          <path d="M10.75 4.75a.75.75 0 0 0-1.5 0v4.5h-4.5a.75.75 0 0 0 0 1.5h4.5v4.5a.75.75 0 0 0 1.5 0v-4.5h4.5a.75.75 0 0 0 0-1.5h-4.5v-4.5Z" />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Rooms Button */}
+                <div className="flex flex-col">
+                  <div className="mb-2 inline-flex">
+                    <span>
+                      <img
+                        src={pointerHotelsPage}
+                        className="h-3 w-3"
+                        alt="pointer-hotels-page"
+                      />
+                    </span>
+                    <span className="ml-1 text-base font-semibold text-emerald-500">
+                      Rooms
+                    </span>
+                  </div>
+                  <div className="flex items-center justify-center">
+                    <div className="flex">
+                      <button
+                        disabled={hotelSpecs.number.rooms === 1 ? true : false}
+                        name="rooms"
+                        value="decrement"
+                        onClick={(event) =>
+                          hotelSpecsDispatch({
+                            type: "number",
+                            payload: {
+                              name: event.target.name,
+                              value: event.target.value,
+                            },
+                          })
+                        }
+                        className="block rounded-full bg-white px-4 text-red-600  disabled:cursor-not-allowed disabled:bg-gray-400 disabled:text-white"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                          data-slot="icon"
+                          className="pointer-events-none h-5 w-5"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M4 10a.75.75 0 0 1 .75-.75h10.5a.75.75 0 0 1 0 1.5H4.75A.75.75 0 0 1 4 10Z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+                      </button>
+                      <span className="ml-4 text-lg font-semibold">
+                        {hotelSpecs.number.rooms}
+                      </span>
+                      <button
+                        name="rooms"
+                        value="increment"
+                        onClick={(event) =>
+                          hotelSpecsDispatch({
+                            type: "number",
+                            payload: {
+                              name: event.target.name,
+                              value: event.target.value,
+                            },
                           })
                         }
                         className="ml-4 block rounded-full bg-white px-4  text-emerald-700"
