@@ -28,14 +28,16 @@ const hotelsSlice = createSlice({
   initialState,
   reducers: {
     filterHotels: (state, action) => {
-      const { hotelsData, destination, number } = action.payload;
+      const { hotelsData, destination, date, number } = action.payload;
 
       const filteredHotels = hotelsData.filter((hotel) => {
         return (
           hotel.name.toLowerCase().includes(destination.toLowerCase()) ||
           hotel.accommodates >= Number(number.rooms) ||
           hotel.number_of_adult >= Number(number.adult) ||
-          hotel.number_of_children >= Number(number.children)
+          hotel.number_of_children >= Number(number.children) ||
+          (date[0].startDate >= hotel.duration_of_stay.startDate &&
+            hotel.duration_of_stay.endDate >= date[0].endDate)
         );
       });
 

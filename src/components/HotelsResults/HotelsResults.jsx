@@ -22,12 +22,14 @@ function HotelsResults() {
 
   const destination = searchParams.get("destination");
   const number = JSON.parse(searchParams.get("number"));
+  const date = JSON.parse(searchParams.get("date"));
 
   console.log("destination:", destination);
   console.log("number:", number);
+  console.log("date:", date);
 
   useEffect(() => {
-    dispatch(filterHotels({ destination, number, hotelsData }));
+    dispatch(filterHotels({ destination, number, date, hotelsData }));
   }, []);
 
   const hotelReserveHandler = (e) => {

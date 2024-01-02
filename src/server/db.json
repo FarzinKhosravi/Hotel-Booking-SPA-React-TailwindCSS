@@ -16,6 +16,10 @@
       "access": "Access to shared use of the bathroom facilities  bedroom, living room, and kitchen.",
       "number_of_adult": 2,
       "number_of_children": 2,
+      "duration_of_stay": {
+        "startDate": "2024-02-01T08:43:28.890Z",
+        "endDate": "2024-03-01T08:43:28.890Z"
+      },
       "interaction": null,
       "house_rules": null,
       "thumbnail_url": "https://a0.muscache.com/im/pictures/74942550/415cd752_original.jpg?aki_policy=small",
@@ -129,6 +133,10 @@
       "experiences_offered": "none",
       "neighborhood_overview": "This is an apartment situated at the West side of the Vondelpark in Amsterdam. The apartmant is suitable for 1 or 2 people. The apartment is on the 1th floor. The Albert Heijn market is nearby (200 metres). There are a lot of restaurants on the street. The apartment is located nearby Vondelpark (1min walk), Museumplein (3min walk), Leidseplein and the centre of Amsterdam.",
       "notes": null,
+      "duration_of_stay": {
+        "startDate": "2024-01-01T08:43:28.890Z",
+        "endDate": "2024-02-01T08:43:28.890Z"
+      },
       "transit": "Vondelpark, Museum Square, Leidsplein is on walking distance, but the apartment is situated perfect for public transport (tram 1 stop across the street).  Tram tickets are available on the tram. Bikes can be rent at different shops nearby.",
       "access": null,
       "number_of_adult": 2,
@@ -260,6 +268,10 @@
       "number_of_adult": 5,
       "number_of_children": 10,
       "transit": null,
+      "duration_of_stay": {
+        "startDate": "2024-02-01T08:43:28.890Z",
+        "endDate": "2024-02-15T08:43:28.890Z"
+      },
       "access": null,
       "interaction": null,
       "house_rules": "The most important houserule is that you are going to enjoy your stay in Amsterdam. Anything you need, just let us know and we will help you.  Upon check in we will tell you all about our beautiful house and the use of e,g, high speed internet, the Nespressomachine in your room, etc...",
@@ -373,6 +385,10 @@
       "experiences_offered": "none",
       "neighborhood_overview": "Seriously one of the best neighbourhoods in town. A~nd we are not saying this because we live here ;-) The Bosboom Toussaintstraat is considered to be one of the most beautiful streets in Amsterdam. The area is very popular with many restaurants, bars, musea, shopping streets and of course the Vondelpark around the corner.",
       "notes": null,
+      "duration_of_stay": {
+        "startDate": "2024-03-01T08:43:28.890Z",
+        "endDate": "2024-04-01T08:43:28.890Z"
+      },
       "number_of_adult": 5,
       "number_of_children": 2,
       "transit": "1 min walk to public transportation which will bring you to literally every corner of Amsterdam. Furthermore it is possible to have rental bikes or rental scooters at a store close to the apartment, so you can move quickly through the city.",
@@ -501,6 +517,10 @@
       "experiences_offered": "none",
       "neighborhood_overview": null,
       "notes": null,
+      "duration_of_stay": {
+        "startDate": "2024-01-05T08:43:28.890Z",
+        "endDate": "2024-01-20T08:43:28.890Z"
+      },
       "number_of_adult": 2,
       "number_of_children": 5,
       "transit": null,
@@ -628,6 +648,10 @@
       "experiences_offered": "none",
       "neighborhood_overview": null,
       "notes": null,
+      "duration_of_stay": {
+        "startDate": "2024-03-01T08:43:28.890Z",
+        "endDate": "2024-04-20T08:43:28.890Z"
+      },
       "transit": null,
       "access": null,
       "number_of_adult": 3,
@@ -745,6 +769,10 @@
       "experiences_offered": "none",
       "neighborhood_overview": null,
       "notes": null,
+      "duration_of_stay": {
+        "startDate": "2024-02-01T08:43:28.890Z",
+        "endDate": "2024-02-30T08:43:28.890Z"
+      },
       "number_of_adult": 1,
       "number_of_children": 0,
       "transit": null,
@@ -872,6 +900,10 @@
       "experiences_offered": "none",
       "neighborhood_overview": "A lot of stores and restaurants around the corner",
       "notes": null,
+      "duration_of_stay": {
+        "startDate": "2024-05-01T08:43:28.890Z",
+        "endDate": "2024-06-01T08:43:28.890Z"
+      },
       "number_of_adult": 2,
       "number_of_children": 0,
       "transit": "1 minute walk to public transfer and direct line of 15 minutes to Amsterdam central, dam square and leidseplein.",
@@ -989,6 +1021,10 @@
       "experiences_offered": "none",
       "neighborhood_overview": "Oud West is a vibrant neighborhood, just next to the famous canal area and next to Amsterdam's best park, the Vondelpark. You will find in this neighborhood lots of students and young people as well as families with children. Oud West is full of nice restaurants, bars, cafes and shops. In our street there are some great places to eat or drink.  We are also close to the museum area, where you can visit the Rijksmuseum and the Van Goghmuseum.",
       "notes": null,
+      "duration_of_stay": {
+        "startDate": "2024-02-01T08:43:28.890Z",
+        "endDate": "2024-02-10T08:43:28.890Z"
+      },
       "number_of_adult": 6,
       "number_of_children": 2,
       "transit": "Best way to explore Amsterdam is by bike, but there are also several trams close to our home.",
@@ -1110,6 +1146,10 @@
       "experiences_offered": "none",
       "neighborhood_overview": "De Baarsjes is a young and creative neighborhood which has become more and more popular over the past few years. I love it for the great mix of people -every age group and background is represented-, and the local public amenities reflect that variety. You will find cheap local grocery stores and a brand new mosque alongside beautiful design stores and great coffee places.",
       "notes": null,
+      "duration_of_stay": {
+        "startDate": "2024-02-01T08:43:28.890Z",
+        "endDate": "2024-02-15T08:43:28.890Z"
+      },
       "number_of_adult": 5,
       "number_of_children": 0,
       "transit": "To reach my house from Central Station, you catch tram 13 (direction Geuzenveld) to tramstop Admiraal de Ruyterweg, which takes approximately 12 minutes. From there, it's a 5 minute walk to my house.  To reach my house from Schiphol, you catch a train to Amsterdam Lelylaan (7 mins) and take tram 17 (direction Centraal Station) to tramstop 'Witte de Withstraat' (6 mins). From the tramstop, it's a 5 min walk to my house. If you're travelling by car, there's usually plenty of space to park in front of or nearby the house. There's paid parking (2,40/hour) from Monday til Saturday 09h-24h. You can reach the city center (f.e. Dam Square) by foot in about 30 minutes. If you'd rather explore the city the way the locals do -by bike!- there's several bike rental shops closeby.",

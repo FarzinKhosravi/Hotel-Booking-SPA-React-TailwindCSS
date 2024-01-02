@@ -19,12 +19,12 @@ import AmenitiesIcons from "../common/AmenitiesIcons";
 
 const initialState = {
   destination: "",
-
   number: {
     adult: 1,
     children: 0,
     rooms: 1,
   },
+  date: null,
 };
 
 const hotelSpecsReducer = (state, action) => {
@@ -43,6 +43,9 @@ const hotelSpecsReducer = (state, action) => {
               : (state.number[action.payload.name] -= 1),
         },
       };
+
+    case "date":
+      return { ...state, date: action.payload };
 
     default:
       throw new Error(`Unknown action ${action.type}`);
@@ -75,6 +78,10 @@ function HotelsPage() {
     dispatch(getAsyncHotels());
   }, []);
 
+  useEffect(() => {
+    hotelSpecsDispatch({ type: "date", payload: calendar });
+  }, [calendar]);
+
   const filterHotelsHandler = () => {
     if (!hotelSpecs.destination) {
       toast.error("Please Enter Destination 🧐");
@@ -89,6 +96,7 @@ function HotelsPage() {
     const encodedParams = createSearchParams({
       destination: hotelSpecs.destination,
       number: JSON.stringify(hotelSpecs.number),
+      date: JSON.stringify(hotelSpecs.date),
     });
     navigate(
       {
@@ -104,6 +112,8 @@ function HotelsPage() {
 
     console.log("invoked hotel reservation !!");
   };
+
+  console.log("calendar:", calendar);
 
   console.log("hotelSpecs:", hotelSpecs);
 
