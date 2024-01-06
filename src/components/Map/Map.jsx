@@ -1,16 +1,28 @@
 import { useEffect, useState } from "react";
-import { MapContainer, Marker, Popup, TileLayer, useMap } from "react-leaflet";
+import {
+  MapContainer,
+  Marker,
+  Popup,
+  TileLayer,
+  useMap,
+  useMapEvent,
+} from "react-leaflet";
 import { useSelector } from "react-redux";
-import { useSearchParams } from "react-router-dom";
+import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
 import useGeoLocation from "../../hooks/useGeoLocation";
 
 function Map() {
+  const location = useLocation();
+
+  console.log("location:", location);
+
   const { hotels } = useSelector((state) => state.hotels);
 
   const [mapCenter, setMapCenter] = useState([51, -3]);
 
-  const [searchParams] = useSearchParams();
+  // *** Convert to Custom Hook ***
 
+  const [searchParams] = useSearchParams();
   const latitude = searchParams.get("lat");
   const longitude = searchParams.get("lng");
 
@@ -35,7 +47,7 @@ function Map() {
     <div>
       <div className="overflow-hidden">
         <MapContainer
-          className="relative h-[calc(100vh-160px)] rounded-lg"
+          className="relative min-h-screen rounded-lg lg:h-[calc(100vh-160px)] lg:min-h-0"
           center={mapCenter}
           zoom={13}
           scrollWheelZoom={true}
@@ -45,16 +57,20 @@ function Map() {
             url="https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png"
           />
 
+          <DetectClickOnMap />
+
+          {/* Convert to Component */}
           <button
             onClick={getUserLocation}
-            className="z-1000 absolute bottom-4 left-4 rounded-xl bg-sky-600 px-4 py-2 font-semibold text-white"
+            className="absolute bottom-4 left-4 z-1000 rounded-xl bg-sky-600 px-4 py-2 font-semibold text-white"
           >
             {isLoading ? "Loading ..." : " Use Your Location"}
           </button>
 
           <ChangeCenter position={mapCenter} />
 
-          {latitude && longitude ? (
+          {location.pathname === "/bookmarks/add" ? null : latitude &&
+            longitude ? (
             <Marker position={[latitude, longitude]}>
               <Popup>Lorem, ipsum dolor.</Popup>
             </Marker>
@@ -82,6 +98,19 @@ function ChangeCenter({ position }) {
   const map = useMap();
 
   map.setView(position);
+
+  return null;
+}
+
+function DetectClickOnMap() {
+  const navigate = useNavigate();
+
+  useMapEvent({
+    click: (event) =>
+      navigate(
+        `/bookmarks/add?lat=${event.latlng.lat}&lng=${event.latlng.lng}`
+      ),
+  });
 
   return null;
 }

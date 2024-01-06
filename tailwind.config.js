@@ -22,6 +22,10 @@ export default {
         7.5: "30px",
       },
 
+      padding: {
+        6.88: "27.5px",
+      },
+
       zIndex: {
         1000: "1000",
       },

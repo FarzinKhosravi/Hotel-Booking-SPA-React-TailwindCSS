@@ -5,6 +5,8 @@ import HotelsPage from "../pages/HotelsPage";
 import Hotels from "../components/Hotels/Hotels";
 import HotelsResults from "../components/HotelsResults/HotelsResults";
 import HotelDetail from "../components/HotelDetail/HotelDetail";
+import Bookmarks from "../components/Bookmarks/Bookmarks";
+import AddNewBookmark from "../components/AddNewBookmark/AddNewBookmark";
 
 function Routes() {
   let routes = useRoutes([
@@ -31,6 +33,16 @@ function Routes() {
             {
               path: ":hotelId",
               element: <HotelDetail />,
+            },
+          ],
+        },
+        {
+          path: "bookmarks",
+          element: <Bookmarks />,
+          children: [
+            {
+              path: "add",
+              element: <AddNewBookmark />,
             },
           ],
         },

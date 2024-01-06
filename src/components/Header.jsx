@@ -157,7 +157,7 @@ function HamburgerMenu({ isOpenMenu, setIsOpenMenu }) {
                 </div>
                 <div className="ml-1 text-base font-medium text-slate-900 sm:text-lg">
                   <span className={isActive ? "text-yellow-500" : ""}>
-                    Bookmark
+                    Bookmarks
                   </span>
                 </div>
               </div>
@@ -307,7 +307,7 @@ function NavigationMenu() {
             }
             to="/c"
           >
-            <span className="block px-2 py-4 font-semibold">Bookmark</span>
+            <span className="block px-2 py-4 font-semibold">Bookmarks</span>
           </NavLink>
         </li>
         <li className="transition-all hover:rounded-md hover:bg-slate-900/30">

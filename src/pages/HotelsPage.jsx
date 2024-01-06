@@ -151,7 +151,7 @@ function HotelsPage() {
                     })
                   }
                   value={hotelSpecs.destination}
-                  className={`block w-full rounded-xl border-0 bg-slate-300 from-emerald-700 to-emerald-900 text-base text-emerald-900 shadow-lg placeholder:opacity-50 focus:bg-gradient-to-r focus:bg-clip-text focus:text-transparent ${
+                  className={`block w-full rounded-xl border-0 bg-slate-300 from-emerald-700 to-emerald-900 text-base text-emerald-900 shadow-lg placeholder:opacity-50 focus:bg-gradient-to-r focus:bg-clip-text ${
                     isValidDestination || hotelSpecs.destination
                       ? ""
                       : "border-2 border-red-600 placeholder:text-red-800"
