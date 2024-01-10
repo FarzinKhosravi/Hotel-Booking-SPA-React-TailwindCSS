@@ -145,7 +145,7 @@ function HamburgerMenu({ isOpenMenu, setIsOpenMenu }) {
           onClick={() => setIsOpenMenu(false)}
           className="cursor-pointer pl-2 transition-all ease-in-out hover:rounded-md hover:bg-slate-900/30"
         >
-          <NavLink to="/w">
+          <NavLink to="/bookmarks">
             {({ isActive }) => (
               <div className="flex py-1">
                 <div>
@@ -305,7 +305,7 @@ function NavigationMenu() {
             className={({ isActive }) =>
               isActive ? "text-yellow-500" : "text-slate-900"
             }
-            to="/c"
+            to="/bookmarks"
           >
             <span className="block px-2 py-4 font-semibold">Bookmarks</span>
           </NavLink>

@@ -24,6 +24,13 @@ export default {
 
       padding: {
         6.88: "27.5px",
+        34: "8.5rem",
+        2.5: "10px",
+      },
+
+      maxWidth: {
+        64: "256px",
+        55: "220px",
       },
 
       zIndex: {

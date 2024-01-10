@@ -10,6 +10,8 @@ import {
 import { useSelector } from "react-redux";
 import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
 import useGeoLocation from "../../hooks/useGeoLocation";
+import generateRandomNumbers from "../../utils/generateRandomNumbers";
+import generateRandomNames from "../../utils/generateRandomNames";
 
 function Map() {
   const location = useLocation();
@@ -17,6 +19,7 @@ function Map() {
   console.log("location:", location);
 
   const { hotels } = useSelector((state) => state.hotels);
+  const { bookmarksList } = useSelector((state) => state.bookmarksList);
 
   const [mapCenter, setMapCenter] = useState([51, -3]);
 
@@ -42,6 +45,8 @@ function Map() {
   // console.log("mapCenter:", mapCenter);
 
   console.log("userLocation:", userLocation);
+
+  console.log("hotels:", hotels);
 
   return (
     <div>
@@ -74,7 +79,7 @@ function Map() {
             <Marker position={[latitude, longitude]}>
               <Popup>Lorem, ipsum dolor.</Popup>
             </Marker>
-          ) : (
+          ) : location.pathname === "/hotels-results" ? (
             hotels?.map((hotel) => {
               return (
                 <Marker
@@ -82,6 +87,17 @@ function Map() {
                   position={[hotel.latitude, hotel.longitude]}
                 >
                   <Popup>{hotel.host_location}</Popup>
+                </Marker>
+              );
+            })
+          ) : (
+            bookmarksList?.map((bookmark) => {
+              return (
+                <Marker
+                  key={bookmark.id}
+                  position={[bookmark.latitude, bookmark.longitude]}
+                >
+                  <Popup>{bookmark.principalSubdivision}</Popup>
                 </Marker>
               );
             })
@@ -105,10 +121,16 @@ function ChangeCenter({ position }) {
 function DetectClickOnMap() {
   const navigate = useNavigate();
 
+  const price = generateRandomNumbers();
+
+  const locationName = generateRandomNames();
+
+  console.log("price:", price, "locationName:", locationName);
+
   useMapEvent({
     click: (event) =>
       navigate(
-        `/bookmarks/add?lat=${event.latlng.lat}&lng=${event.latlng.lng}`
+        `/bookmarks/add?lat=${event.latlng.lat}&lng=${event.latlng.lng}&locationName=${locationName}&price=${price}`
       ),
   });
 

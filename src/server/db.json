@@ -55,7 +55,12 @@
       "host_neighbourhood": null,
       "host_listings_count": 1,
       "host_total_listings_count": 1,
-      "host_verifications": ["email", "phone", "facebook", "reviews"],
+      "host_verifications": [
+        "email",
+        "phone",
+        "facebook",
+        "reviews"
+      ],
       "street": "Amsterdam, Noord-Holland 1054, Netherlands",
       "neighbourhood": null,
       "neighbourhood_cleansed": "De Baarsjes - Oud-West",
@@ -119,7 +124,9 @@
         "lon": 2.35,
         "lat": 48.86
       },
-      "features": ["Host Has Profile Pic"]
+      "features": [
+        "Host Has Profile Pic"
+      ]
     },
     {
       "id": "9192415",
@@ -307,7 +314,11 @@
       "host_neighbourhood": "Oud-West",
       "host_listings_count": 3,
       "host_total_listings_count": 3,
-      "host_verifications": ["email", "phone", "reviews"],
+      "host_verifications": [
+        "email",
+        "phone",
+        "reviews"
+      ],
       "street": "Oud-West, Amsterdam, North Holland 1054, Netherlands",
       "neighbourhood": "Oud-West",
       "neighbourhood_cleansed": "De Baarsjes - Oud-West",
@@ -371,7 +382,10 @@
         "lon": 4.875639539930118,
         "lat": 52.36456756846072
       },
-      "features": ["Host Has Profile Pic", "Is Location Exact"]
+      "features": [
+        "Host Has Profile Pic",
+        "Is Location Exact"
+      ]
     },
     {
       "id": "13153299",
@@ -691,7 +705,10 @@
       "host_neighbourhood": null,
       "host_listings_count": 1,
       "host_total_listings_count": 1,
-      "host_verifications": ["email", "reviews"],
+      "host_verifications": [
+        "email",
+        "reviews"
+      ],
       "street": "Amsterdam, North Holland, Netherlands",
       "neighbourhood": null,
       "neighbourhood_cleansed": "De Baarsjes - Oud-West",
@@ -755,7 +772,9 @@
         "lon": 4.865594943841575,
         "lat": 52.36667871194905
       },
-      "features": ["Host Has Profile Pic"]
+      "features": [
+        "Host Has Profile Pic"
+      ]
     },
     {
       "id": "13465532",
@@ -943,7 +962,11 @@
       "host_neighbourhood": null,
       "host_listings_count": 0,
       "host_total_listings_count": 0,
-      "host_verifications": ["email", "phone", "reviews"],
+      "host_verifications": [
+        "email",
+        "phone",
+        "reviews"
+      ],
       "street": "Amsterdam, NH 1056, Netherlands",
       "neighbourhood": null,
       "neighbourhood_cleansed": "De Baarsjes - Oud-West",
@@ -1007,7 +1030,9 @@
         "lon": 4.853345068114508,
         "lat": 52.37080138742488
       },
-      "features": ["Host Has Profile Pic"]
+      "features": [
+        "Host Has Profile Pic"
+      ]
     },
     {
       "id": "7890890",
@@ -1064,7 +1089,12 @@
       "host_neighbourhood": "Oud-West",
       "host_listings_count": 1,
       "host_total_listings_count": 1,
-      "host_verifications": ["email", "phone", "reviews", "jumio"],
+      "host_verifications": [
+        "email",
+        "phone",
+        "reviews",
+        "jumio"
+      ],
       "street": "Oud-West, Amsterdam, Noord-Holland 1054, Netherlands",
       "neighbourhood": "Oud-West",
       "neighbourhood_cleansed": "De Baarsjes - Oud-West",
@@ -1189,7 +1219,12 @@
       "host_neighbourhood": "Oud-West",
       "host_listings_count": 2,
       "host_total_listings_count": 2,
-      "host_verifications": ["email", "phone", "reviews", "jumio"],
+      "host_verifications": [
+        "email",
+        "phone",
+        "reviews",
+        "jumio"
+      ],
       "street": "Oud-West, Amsterdam, Noord-Holland 1057, Netherlands",
       "neighbourhood": "Oud-West",
       "neighbourhood_cleansed": "De Baarsjes - Oud-West",
@@ -1259,6 +1294,528 @@
         "Host Identity Verified",
         "Is Location Exact"
       ]
+    }
+  ],
+  "bookmarks": [
+    {
+      "latitude": 51.01872229798176,
+      "lookupSource": "coordinates",
+      "longitude": -3.054885864257813,
+      "localityLanguageRequested": "en",
+      "continent": "Europe",
+      "continentCode": "EU",
+      "countryName": "United Kingdom of Great Britain and Northern Ireland (the)",
+      "countryCode": "GB",
+      "principalSubdivision": "England",
+      "principalSubdivisionCode": "GB-ENG",
+      "city": "Taunton",
+      "locality": "Ruishton",
+      "postcode": "TA3 5",
+      "plusCode": "9C3R2W9W+F2",
+      "localityInfo": {
+        "administrative": [
+          {
+            "name": "United Kingdom of Great Britain and Northern Ireland (the)",
+            "description": "country in Western Europe",
+            "isoName": "United Kingdom of Great Britain and Northern Ireland (the)",
+            "order": 3,
+            "adminLevel": 2,
+            "isoCode": "GB",
+            "wikidataId": "Q145",
+            "geonameId": 2635167
+          },
+          {
+            "name": "England",
+            "description": "home nation of the United Kingdom",
+            "isoName": "England",
+            "order": 6,
+            "adminLevel": 4,
+            "isoCode": "GB-ENG",
+            "wikidataId": "Q21",
+            "geonameId": 6269131
+          },
+          {
+            "name": "Somerset",
+            "description": "unitary authority area in Somerset, England (doesn't include Bath and North-East Somerset or North Somerset)",
+            "isoName": "Somerset",
+            "order": 8,
+            "adminLevel": 6,
+            "isoCode": "GB-SOM",
+            "wikidataId": "Q21694741",
+            "geonameId": 2637532
+          },
+          {
+            "name": "Taunton",
+            "description": "town in Somerset, England",
+            "order": 11,
+            "adminLevel": 10,
+            "wikidataId": "Q845619",
+            "geonameId": 2636177
+          },
+          {
+            "name": "West Monkton",
+            "description": "village in Somerset, England, UK",
+            "order": 14,
+            "adminLevel": 10,
+            "wikidataId": "Q949458",
+            "geonameId": 2634339
+          },
+          {
+            "name": "Ruishton",
+            "description": "village in the United Kingdom",
+            "order": 15,
+            "adminLevel": 10,
+            "wikidataId": "Q2717595",
+            "geonameId": 11593383
+          }
+        ],
+        "informative": [
+          {
+            "name": "Europe",
+            "description": "continent",
+            "isoName": "Europe",
+            "order": 1,
+            "isoCode": "EU",
+            "wikidataId": "Q46",
+            "geonameId": 6255148
+          },
+          {
+            "name": "British Isles",
+            "description": "group of islands in northwest Europe",
+            "order": 2,
+            "wikidataId": "Q38272",
+            "geonameId": 2654669
+          },
+          {
+            "name": "Europe/London",
+            "description": "time zone",
+            "order": 4
+          },
+          {
+            "name": "Great Britain",
+            "description": "island in the North Atlantic Ocean off the northwest coast of continental Europe",
+            "order": 5,
+            "wikidataId": "Q23666",
+            "geonameId": 2648147
+          },
+          {
+            "name": "South West England",
+            "description": "region of England",
+            "order": 7,
+            "wikidataId": "Q48026",
+            "geonameId": 11591956
+          },
+          {
+            "name": "Somerset",
+            "order": 9
+          },
+          {
+            "name": "Somerset",
+            "description": "ceremonial county of England",
+            "order": 10,
+            "wikidataId": "Q23157",
+            "geonameId": 11609046
+          },
+          {
+            "name": "Somerset West and Taunton",
+            "description": "district in Somerset, England",
+            "order": 12,
+            "wikidataId": "Q54554249"
+          },
+          {
+            "name": "Taunton Deane",
+            "description": "former local government district with borough status in Somerset, England",
+            "order": 13,
+            "wikidataId": "Q1853334",
+            "geonameId": 7290626
+          },
+          {
+            "name": "Ruishton & Creech District Ward",
+            "order": 16
+          },
+          {
+            "name": "TA3 5",
+            "description": "postal code",
+            "order": 17
+          }
+        ]
+      },
+      "price": "95",
+      "locationName": "Adorable History",
+      "bookmarkName": "first BM",
+      "bookmarkDescription": "",
+      "id": 1
+    },
+    {
+      "latitude": 51.013103964654334,
+      "lookupSource": "coordinates",
+      "longitude": -2.9934310913085938,
+      "localityLanguageRequested": "en",
+      "continent": "Europe",
+      "continentCode": "EU",
+      "countryName": "United Kingdom of Great Britain and Northern Ireland (the)",
+      "countryCode": "GB",
+      "principalSubdivision": "England",
+      "principalSubdivisionCode": "GB-ENG",
+      "city": "Taunton",
+      "locality": "North Curry",
+      "postcode": "TA3 6",
+      "plusCode": "9C3V2274+6J",
+      "localityInfo": {
+        "administrative": [
+          {
+            "name": "United Kingdom of Great Britain and Northern Ireland (the)",
+            "description": "country in Western Europe",
+            "isoName": "United Kingdom of Great Britain and Northern Ireland (the)",
+            "order": 3,
+            "adminLevel": 2,
+            "isoCode": "GB",
+            "wikidataId": "Q145",
+            "geonameId": 2635167
+          },
+          {
+            "name": "England",
+            "description": "home nation of the United Kingdom",
+            "isoName": "England",
+            "order": 6,
+            "adminLevel": 4,
+            "isoCode": "GB-ENG",
+            "wikidataId": "Q21",
+            "geonameId": 6269131
+          },
+          {
+            "name": "Somerset",
+            "description": "unitary authority area in Somerset, England (doesn't include Bath and North-East Somerset or North Somerset)",
+            "isoName": "Somerset",
+            "order": 8,
+            "adminLevel": 6,
+            "isoCode": "GB-SOM",
+            "wikidataId": "Q21694741",
+            "geonameId": 2637532
+          },
+          {
+            "name": "Taunton",
+            "description": "town in Somerset, England",
+            "order": 11,
+            "adminLevel": 10,
+            "wikidataId": "Q845619",
+            "geonameId": 2636177
+          },
+          {
+            "name": "North Curry",
+            "description": "a village located in Taunton Deane, United Kingdom",
+            "order": 14,
+            "adminLevel": 10,
+            "wikidataId": "Q647024",
+            "geonameId": 2641379
+          }
+        ],
+        "informative": [
+          {
+            "name": "Europe",
+            "description": "continent",
+            "isoName": "Europe",
+            "order": 1,
+            "isoCode": "EU",
+            "wikidataId": "Q46",
+            "geonameId": 6255148
+          },
+          {
+            "name": "British Isles",
+            "description": "group of islands in northwest Europe",
+            "order": 2,
+            "wikidataId": "Q38272",
+            "geonameId": 2654669
+          },
+          {
+            "name": "Europe/London",
+            "description": "time zone",
+            "order": 4
+          },
+          {
+            "name": "Great Britain",
+            "description": "island in the North Atlantic Ocean off the northwest coast of continental Europe",
+            "order": 5,
+            "wikidataId": "Q23666",
+            "geonameId": 2648147
+          },
+          {
+            "name": "South West England",
+            "description": "region of England",
+            "order": 7,
+            "wikidataId": "Q48026",
+            "geonameId": 11591956
+          },
+          {
+            "name": "Somerset",
+            "order": 9
+          },
+          {
+            "name": "Somerset",
+            "description": "ceremonial county of England",
+            "order": 10,
+            "wikidataId": "Q23157",
+            "geonameId": 11609046
+          },
+          {
+            "name": "Somerset West and Taunton",
+            "description": "district in Somerset, England",
+            "order": 12,
+            "wikidataId": "Q54554249"
+          },
+          {
+            "name": "Taunton Deane",
+            "description": "former local government district with borough status in Somerset, England",
+            "order": 13,
+            "wikidataId": "Q1853334",
+            "geonameId": 7290626
+          },
+          {
+            "name": "Monkton and North Curry ED",
+            "order": 15
+          },
+          {
+            "name": "North Curry & Stoke St Gregory District Ward",
+            "order": 16
+          },
+          {
+            "name": "TA3 6",
+            "description": "postal code",
+            "order": 17
+          }
+        ]
+      },
+      "price": "94",
+      "locationName": "Able Art",
+      "bookmarkName": "second BM",
+      "bookmarkDescription": "",
+      "id": 2
+    },
+    {
+      "latitude": 51.01224266087926,
+      "lookupSource": "coordinates",
+      "longitude": -3.0214782684798673,
+      "localityLanguageRequested": "en",
+      "continent": "Europe",
+      "continentCode": "EU",
+      "countryName": "United Kingdom of Great Britain and Northern Ireland (the)",
+      "countryCode": "GB",
+      "principalSubdivision": "England",
+      "principalSubdivisionCode": "GB-ENG",
+      "city": "Taunton",
+      "locality": "Thornfalcon",
+      "postcode": "TA3 5",
+      "plusCode": "9C3R2X6H+VC",
+      "localityInfo": {
+        "administrative": [
+          {
+            "name": "United Kingdom of Great Britain and Northern Ireland (the)",
+            "description": "country in Western Europe",
+            "isoName": "United Kingdom of Great Britain and Northern Ireland (the)",
+            "order": 3,
+            "adminLevel": 2,
+            "isoCode": "GB",
+            "wikidataId": "Q145",
+            "geonameId": 2635167
+          },
+          {
+            "name": "England",
+            "description": "home nation of the United Kingdom",
+            "isoName": "England",
+            "order": 6,
+            "adminLevel": 4,
+            "isoCode": "GB-ENG",
+            "wikidataId": "Q21",
+            "geonameId": 6269131
+          },
+          {
+            "name": "Somerset",
+            "description": "unitary authority area in Somerset, England (doesn't include Bath and North-East Somerset or North Somerset)",
+            "isoName": "Somerset",
+            "order": 8,
+            "adminLevel": 6,
+            "isoCode": "GB-SOM",
+            "wikidataId": "Q21694741",
+            "geonameId": 2637532
+          },
+          {
+            "name": "Taunton",
+            "description": "town in Somerset, England",
+            "order": 11,
+            "adminLevel": 10,
+            "wikidataId": "Q845619",
+            "geonameId": 2636177
+          },
+          {
+            "name": "Thornfalcon",
+            "description": "village in the United Kingdom",
+            "order": 14,
+            "adminLevel": 10,
+            "wikidataId": "Q2471602",
+            "geonameId": 2635990
+          }
+        ],
+        "informative": [
+          {
+            "name": "Europe",
+            "description": "continent",
+            "isoName": "Europe",
+            "order": 1,
+            "isoCode": "EU",
+            "wikidataId": "Q46",
+            "geonameId": 6255148
+          },
+          {
+            "name": "British Isles",
+            "description": "group of islands in northwest Europe",
+            "order": 2,
+            "wikidataId": "Q38272",
+            "geonameId": 2654669
+          },
+          {
+            "name": "Europe/London",
+            "description": "time zone",
+            "order": 4
+          },
+          {
+            "name": "Great Britain",
+            "description": "island in the North Atlantic Ocean off the northwest coast of continental Europe",
+            "order": 5,
+            "wikidataId": "Q23666",
+            "geonameId": 2648147
+          },
+          {
+            "name": "South West England",
+            "description": "region of England",
+            "order": 7,
+            "wikidataId": "Q48026",
+            "geonameId": 11591956
+          },
+          {
+            "name": "Somerset",
+            "order": 9
+          },
+          {
+            "name": "Somerset",
+            "description": "ceremonial county of England",
+            "order": 10,
+            "wikidataId": "Q23157",
+            "geonameId": 11609046
+          },
+          {
+            "name": "Somerset West and Taunton",
+            "description": "district in Somerset, England",
+            "order": 12,
+            "wikidataId": "Q54554249"
+          },
+          {
+            "name": "Taunton Deane",
+            "description": "former local government district with borough status in Somerset, England",
+            "order": 13,
+            "wikidataId": "Q1853334",
+            "geonameId": 7290626
+          },
+          {
+            "name": "Ruishton & Creech District Ward",
+            "order": 15
+          },
+          {
+            "name": "TA3 5",
+            "description": "postal code",
+            "order": 16
+          }
+        ]
+      },
+      "price": "494",
+      "locationName": "Rocky Government",
+      "bookmarkName": "third BM",
+      "bookmarkDescription": "",
+      "id": 3
+    },
+    {
+      "latitude": 44.57481835998543,
+      "lookupSource": "coordinates",
+      "longitude": 10.226076096296312,
+      "localityLanguageRequested": "en",
+      "continent": "Europe",
+      "continentCode": "EU",
+      "countryName": "Italy",
+      "countryCode": "IT",
+      "principalSubdivision": "Emilia-Romagna",
+      "principalSubdivisionCode": "IT-45",
+      "city": "Langhirano",
+      "locality": "Langhirano",
+      "postcode": "",
+      "plusCode": "8FPGH6FG+WC",
+      "localityInfo": {
+        "administrative": [
+          {
+            "name": "Italy",
+            "description": "republic in Southern Europe",
+            "isoName": "Italy",
+            "order": 3,
+            "adminLevel": 2,
+            "isoCode": "IT",
+            "wikidataId": "Q38",
+            "geonameId": 3175395
+          },
+          {
+            "name": "Emilia-Romagna",
+            "description": "region in Italy",
+            "isoName": "Emilia-Romagna",
+            "order": 5,
+            "adminLevel": 4,
+            "isoCode": "IT-45",
+            "wikidataId": "Q1263",
+            "geonameId": 3177401
+          },
+          {
+            "name": "Provincia di Parma",
+            "description": "province of Italy",
+            "isoName": "Provincia di Parma",
+            "order": 6,
+            "adminLevel": 6,
+            "isoCode": "IT-PR",
+            "wikidataId": "Q16228",
+            "geonameId": 3171456
+          },
+          {
+            "name": "Langhirano",
+            "description": "Italian comune",
+            "order": 7,
+            "adminLevel": 8,
+            "wikidataId": "Q100829",
+            "geonameId": 3175163
+          }
+        ],
+        "informative": [
+          {
+            "name": "Europe",
+            "description": "continent",
+            "isoName": "Europe",
+            "order": 1,
+            "isoCode": "EU",
+            "wikidataId": "Q46",
+            "geonameId": 6255148
+          },
+          {
+            "name": "Europe/Rome",
+            "description": "time zone",
+            "order": 2
+          },
+          {
+            "name": "Italian Peninsula",
+            "description": "peninsula of southern Europe",
+            "order": 4,
+            "wikidataId": "Q145694"
+          }
+        ]
+      },
+      "price": "35",
+      "locationName": "Adventurous History",
+      "bookmarkName": "fav hotel",
+      "bookmarkDescription": "",
+      "id": 4
     }
   ]
 }
