@@ -44,7 +44,7 @@ function AddNewBookmark() {
     async function fetchBookmarks() {
       const { data: bookmarks } = await getBookmarksList();
 
-      console.log("fetch bookmarks:", bookmarks);
+      // console.log("fetch bookmarks:", bookmarks);
 
       const duplicateBookmark = bookmarks.find(
         (bookmark) => bookmark.bookmarkName === userBookmark.bookmarkName
@@ -88,9 +88,9 @@ function AddNewBookmark() {
   const locationName = searchParams.get("locationName");
   const price = searchParams.get("price");
 
-  console.log(latitude, longitude);
+  // console.log(latitude, longitude);
 
-  console.log(locationName, price);
+  // console.log(locationName, price);
 
   useEffect(() => {
     async function fetchLocationData() {
@@ -99,7 +99,7 @@ function AddNewBookmark() {
           `${BASE_LOCATION_DATA_URL}?latitude=${latitude}&longitude=${longitude}&localityLanguage=en`
         );
 
-        console.log(locationData);
+        // console.log(locationData);
 
         setSelectedLocation({ ...locationData, price, locationName });
       } catch (error) {
@@ -114,15 +114,15 @@ function AddNewBookmark() {
     setDuplicateBookmarkName("");
   }, [formik.values.bookmarkName]);
 
-  console.log("selectedLocation:", selectedLocation);
+  // console.log("selectedLocation:", selectedLocation);
 
   if (!selectedLocation?.city) return <div>Please select a city !!</div>;
 
-  console.log("values :", formik.values);
-  console.log("form visited :", formik.touched);
-  console.log("errors :", formik.errors);
+  // console.log("values :", formik.values);
+  // console.log("form visited :", formik.touched);
+  // console.log("errors :", formik.errors);
 
-  console.log("duplicate bookmark:", duplicateBookmarkName);
+  // console.log("duplicate bookmark:", duplicateBookmarkName);
 
   return (
     <div className="h-screen">

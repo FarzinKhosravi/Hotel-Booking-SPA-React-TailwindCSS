@@ -20,6 +20,7 @@ export default {
       inset: {
         22: "5.5rem",
         7.5: "30px",
+        18: "4.5rem",
       },
 
       padding: {
