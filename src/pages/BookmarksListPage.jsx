@@ -10,6 +10,8 @@ function BookmarksListPage() {
     (state) => state.bookmarksList
   );
 
+  const { currentBookmark } = useSelector((state) => state.currentBookmark);
+
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -17,6 +19,8 @@ function BookmarksListPage() {
   }, []);
 
   console.log("bookmarksList:", bookmarksList);
+
+  console.log("currentBookmark:", currentBookmark);
 
   return (
     <section>
@@ -48,6 +52,47 @@ function BookmarksListPage() {
                     key={bookmark.id}
                     className="overflow-hidden rounded-xl bg-slate-200 shadow-md last:mb-0"
                   >
+                    {/* Last Visited Bookmark Section */}
+                    <div
+                      className={`w-full items-center justify-center bg-yellow-400 py-2 font-semibold text-stone-800 shadow-md ${
+                        bookmark?.id === currentBookmark?.id ? "flex" : "hidden"
+                      }`}
+                    >
+                      <span>Last Visited Bookmark</span>
+                      <sup className="ml-0.5">
+                        <span className="relative flex h-4 w-4">
+                          <span className="absolute inline-block animate-ping rounded-full text-xs">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 20 20"
+                              fill="currentColor"
+                              className="h-4 w-4 text-stone-800"
+                            >
+                              <path
+                                fillRule="evenodd"
+                                d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+                                clipRule="evenodd"
+                              />
+                            </svg>
+                          </span>
+                          <span className="relative inline-flex h-4 w-4">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 20 20"
+                              fill="currentColor"
+                              className="h-4 w-4 text-stone-800"
+                            >
+                              <path
+                                fillRule="evenodd"
+                                d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+                                clipRule="evenodd"
+                              />
+                            </svg>
+                          </span>
+                        </span>
+                      </sup>
+                    </div>
+
                     {/* Top Section */}
                     <div className="mb-8 flex flex-col px-4 pb-4 pt-6">
                       {/* Bookmark Name */}
@@ -123,7 +168,13 @@ function BookmarksListPage() {
                       <Link
                         to={`/bookmarks/${bookmark.id}?lat=${bookmark.latitude}&lng=${bookmark.longitude}`}
                       >
-                        <button className="block w-full rounded-t-sm bg-emerald-800 text-white">
+                        <button
+                          className={`block w-full rounded-t-sm ${
+                            bookmark?.id === currentBookmark?.id
+                              ? "bg-yellow-400 text-stone-800"
+                              : "bg-emerald-800 text-white"
+                          }`}
+                        >
                           <div className="flex items-center justify-between py-2 pl-3 pr-2">
                             <div>
                               <span className="font-semibold">More Detail</span>

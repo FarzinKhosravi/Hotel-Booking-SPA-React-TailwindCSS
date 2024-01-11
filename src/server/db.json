@@ -55,7 +55,12 @@
       "host_neighbourhood": null,
       "host_listings_count": 1,
       "host_total_listings_count": 1,
-      "host_verifications": ["email", "phone", "facebook", "reviews"],
+      "host_verifications": [
+        "email",
+        "phone",
+        "facebook",
+        "reviews"
+      ],
       "street": "Amsterdam, Noord-Holland 1054, Netherlands",
       "neighbourhood": null,
       "neighbourhood_cleansed": "De Baarsjes - Oud-West",
@@ -119,7 +124,9 @@
         "lon": 2.35,
         "lat": 48.86
       },
-      "features": ["Host Has Profile Pic"]
+      "features": [
+        "Host Has Profile Pic"
+      ]
     },
     {
       "id": "9192415",
@@ -307,7 +314,11 @@
       "host_neighbourhood": "Oud-West",
       "host_listings_count": 3,
       "host_total_listings_count": 3,
-      "host_verifications": ["email", "phone", "reviews"],
+      "host_verifications": [
+        "email",
+        "phone",
+        "reviews"
+      ],
       "street": "Oud-West, Amsterdam, North Holland 1054, Netherlands",
       "neighbourhood": "Oud-West",
       "neighbourhood_cleansed": "De Baarsjes - Oud-West",
@@ -371,7 +382,10 @@
         "lon": 4.875639539930118,
         "lat": 52.36456756846072
       },
-      "features": ["Host Has Profile Pic", "Is Location Exact"]
+      "features": [
+        "Host Has Profile Pic",
+        "Is Location Exact"
+      ]
     },
     {
       "id": "13153299",
@@ -510,7 +524,7 @@
       "listing_url": "https://www.airbnb.com/rooms/277011",
       "scrape_id": "20170402075052",
       "last_scraped": "2017-04-02",
-      "name": "nice apartment in centre amsterdam",
+      "name": "nice apartment",
       "summary": null,
       "space": "This beautiful apartment has a spacious living and cosy dining room, kitchen with all the facilities you need, separate bedroom and bathroom with shower and bathtub. There are two balcony's, one on the south side so there's always sun.  The house is located next to the famous Vondelpark, in a quiet street in a cosy neighbourhood with a variety of shops and restaurants. The area is on walking distance from the city centre and there are many public transport facilities. There is no longer a cat to be taken care of (if you read my reviews).",
       "description": "This beautiful apartment has a spacious living and cosy dining room, kitchen with all the facilities you need, separate bedroom and bathroom with shower and bathtub. There are two balcony's, one on the south side so there's always sun.  The house is located next to the famous Vondelpark, in a quiet street in a cosy neighbourhood with a variety of shops and restaurants. The area is on walking distance from the city centre and there are many public transport facilities. There is no longer a cat to be taken care of (if you read my reviews).",
@@ -691,7 +705,10 @@
       "host_neighbourhood": null,
       "host_listings_count": 1,
       "host_total_listings_count": 1,
-      "host_verifications": ["email", "reviews"],
+      "host_verifications": [
+        "email",
+        "reviews"
+      ],
       "street": "Amsterdam, North Holland, Netherlands",
       "neighbourhood": null,
       "neighbourhood_cleansed": "De Baarsjes - Oud-West",
@@ -755,7 +772,9 @@
         "lon": 4.865594943841575,
         "lat": 52.36667871194905
       },
-      "features": ["Host Has Profile Pic"]
+      "features": [
+        "Host Has Profile Pic"
+      ]
     },
     {
       "id": "13465532",
@@ -943,7 +962,11 @@
       "host_neighbourhood": null,
       "host_listings_count": 0,
       "host_total_listings_count": 0,
-      "host_verifications": ["email", "phone", "reviews"],
+      "host_verifications": [
+        "email",
+        "phone",
+        "reviews"
+      ],
       "street": "Amsterdam, NH 1056, Netherlands",
       "neighbourhood": null,
       "neighbourhood_cleansed": "De Baarsjes - Oud-West",
@@ -1007,14 +1030,16 @@
         "lon": 4.853345068114508,
         "lat": 52.37080138742488
       },
-      "features": ["Host Has Profile Pic"]
+      "features": [
+        "Host Has Profile Pic"
+      ]
     },
     {
       "id": "7890890",
       "listing_url": "https://www.airbnb.com/rooms/7890890",
       "scrape_id": "20170402075052",
       "last_scraped": "2017-04-02",
-      "name": "Family home with garden, Oud West",
+      "name": "Family home with garden",
       "summary": "Comfortable family home in one of Amsterdam's nicest neighborhoods. Two story townhouse, with very sunny and flowery garden. Super cosy fireplace. Perfect house for families!",
       "space": "We live in a beautiful old home in the center of Amsterdam. The house is very centrally located, only steps away from the canal area and Museum square. Our neighbourhood is residential, yet lively with lots of restaurants and a good mix of people.  The appartment is on the ground and first floor of an old townhouse, built in 1890, with lots of original ornaments from that time. At the back side of the apartment there is a small but sunny garden and a balcony on the first floor facing the south.  On the ground floor there is a living room with a big sofa, a fireplace and a TV with dvd. The living area is connected to the dining area and the open kitchen. From the dining area doors swing open to the garden, which has a BBQ and nice teak wooden table with chairs. The kitchen has all the necessary appliances (refrigerator, freezer, microwave, oven, espressomachine) In the hallway leading to the first floor there is a separate toilet.  Upstairs there is a large master bedroom with a walk-in",
       "description": "Comfortable family home in one of Amsterdam's nicest neighborhoods. Two story townhouse, with very sunny and flowery garden. Super cosy fireplace. Perfect house for families! We live in a beautiful old home in the center of Amsterdam. The house is very centrally located, only steps away from the canal area and Museum square. Our neighbourhood is residential, yet lively with lots of restaurants and a good mix of people.  The appartment is on the ground and first floor of an old townhouse, built in 1890, with lots of original ornaments from that time. At the back side of the apartment there is a small but sunny garden and a balcony on the first floor facing the south.  On the ground floor there is a living room with a big sofa, a fireplace and a TV with dvd. The living area is connected to the dining area and the open kitchen. From the dining area doors swing open to the garden, which has a BBQ and nice teak wooden table with chairs. The kitchen has all the necessary appliances (refriger",
@@ -1064,7 +1089,12 @@
       "host_neighbourhood": "Oud-West",
       "host_listings_count": 1,
       "host_total_listings_count": 1,
-      "host_verifications": ["email", "phone", "reviews", "jumio"],
+      "host_verifications": [
+        "email",
+        "phone",
+        "reviews",
+        "jumio"
+      ],
       "street": "Oud-West, Amsterdam, Noord-Holland 1054, Netherlands",
       "neighbourhood": "Oud-West",
       "neighbourhood_cleansed": "De Baarsjes - Oud-West",
@@ -1189,7 +1219,12 @@
       "host_neighbourhood": "Oud-West",
       "host_listings_count": 2,
       "host_total_listings_count": 2,
-      "host_verifications": ["email", "phone", "reviews", "jumio"],
+      "host_verifications": [
+        "email",
+        "phone",
+        "reviews",
+        "jumio"
+      ],
       "street": "Oud-West, Amsterdam, Noord-Holland 1057, Netherlands",
       "neighbourhood": "Oud-West",
       "neighbourhood_cleansed": "De Baarsjes - Oud-West",
@@ -1263,57 +1298,79 @@
   ],
   "bookmarks": [
     {
-      "latitude": 40.42109689894352,
+      "latitude": 50.29297262488126,
       "lookupSource": "coordinates",
-      "longitude": -3.711662292480469,
+      "longitude": 7.602539062500001,
       "localityLanguageRequested": "en",
       "continent": "Europe",
       "continentCode": "EU",
-      "countryName": "Spain",
-      "countryCode": "ES",
-      "principalSubdivision": "Comunidad de Madrid",
-      "principalSubdivisionCode": "ES-M",
-      "city": "Madrid",
-      "locality": "Centro",
-      "postcode": "",
-      "plusCode": "8CGRC7CQ+C8",
+      "countryName": "Germany",
+      "countryCode": "DE",
+      "principalSubdivision": "Rheinland-Pfalz",
+      "principalSubdivisionCode": "DE-RP",
+      "city": "Koblenz",
+      "locality": "Rhens",
+      "postcode": "56321",
+      "plusCode": "9F297JV3+52",
       "localityInfo": {
         "administrative": [
           {
-            "name": "Spain",
-            "description": "constitutional monarchy in Southwest Europe",
-            "isoName": "Spain",
-            "order": 2,
+            "name": "Germany",
+            "description": "country in central Europe",
+            "isoName": "Germany",
+            "order": 3,
             "adminLevel": 2,
-            "isoCode": "ES",
-            "wikidataId": "Q29",
-            "geonameId": 2510769
+            "isoCode": "DE",
+            "wikidataId": "Q183",
+            "geonameId": 2921044
           },
           {
-            "name": "Comunidad de Madrid",
-            "description": "autonomous community of Spain",
-            "isoName": "Comunidad de Madrid",
-            "order": 5,
-            "adminLevel": 6,
-            "isoCode": "ES-M",
-            "wikidataId": "Q5756",
-            "geonameId": 3117732
+            "name": "Rheinland-Pfalz",
+            "description": "state of the Federal Republic of Germany",
+            "isoName": "Rheinland-Pfalz",
+            "order": 4,
+            "adminLevel": 4,
+            "isoCode": "DE-RP",
+            "wikidataId": "Q1200",
+            "geonameId": 2847618
           },
           {
-            "name": "Madrid",
-            "description": "municipality and capital of Spain",
-            "order": 6,
-            "adminLevel": 8,
-            "wikidataId": "Q2807",
-            "geonameId": 3117735
-          },
-          {
-            "name": "Centro",
-            "description": "central district of the 21 districts of Madrid",
+            "name": "Mayen-Koblenz",
+            "description": "district of Rhineland-Palatinate, Germany",
             "order": 7,
-            "adminLevel": 9,
-            "wikidataId": "Q1763376",
-            "geonameId": 6544494
+            "adminLevel": 6,
+            "wikidataId": "Q8593",
+            "geonameId": 3247461
+          },
+          {
+            "name": "Koblenz",
+            "description": "German city on the banks of the Rhine and of the Moselle",
+            "order": 8,
+            "adminLevel": 6,
+            "wikidataId": "Q3104",
+            "geonameId": 2886946
+          },
+          {
+            "name": "Rhein-Mosel",
+            "order": 9,
+            "adminLevel": 7,
+            "wikidataId": "Q2514009"
+          },
+          {
+            "name": "Lahnstein",
+            "description": "city in Rhein-Lahn-Kreis in Rhineland-Palatinate, Germany",
+            "order": 10,
+            "adminLevel": 8,
+            "wikidataId": "Q569639",
+            "geonameId": 2881889
+          },
+          {
+            "name": "Rhens",
+            "description": "municipality of Germany",
+            "order": 11,
+            "adminLevel": 8,
+            "wikidataId": "Q552498",
+            "geonameId": 2847588
           }
         ],
         "informative": [
@@ -1327,84 +1384,95 @@
             "geonameId": 6255148
           },
           {
-            "name": "Europe/Madrid",
+            "name": "Europe/Berlin",
             "description": "time zone",
-            "order": 3
+            "order": 2
           },
           {
-            "name": "Iberian Peninsula",
-            "description": "peninsula located in the extreme southwest of Europe",
-            "order": 4,
-            "wikidataId": "Q12837",
-            "geonameId": 2267430
+            "name": "Verkehrsverbund Rhein-Mosel",
+            "order": 5
+          },
+          {
+            "name": "Rettungsdienstbereich Koblenz",
+            "order": 6
+          },
+          {
+            "name": "Rhens",
+            "description": "former Verbandsgemeinde in Rhineland-Palatinate",
+            "order": 12,
+            "wikidataId": "Q598574"
+          },
+          {
+            "name": "56321",
+            "description": "postal code",
+            "order": 13
           }
         ]
       },
-      "price": "3",
-      "locationName": "Rocky Family",
-      "bookmarkName": "first BM",
+      "price": "148",
+      "locationName": "Absolute Government",
+      "bookmarkName": "qwert",
       "bookmarkDescription": "",
       "id": 1
     },
     {
-      "latitude": 40.38124796522525,
+      "latitude": 50.28913470171943,
       "lookupSource": "coordinates",
-      "longitude": -3.7944030761718754,
+      "longitude": 7.581253051757813,
       "localityLanguageRequested": "en",
       "continent": "Europe",
       "continentCode": "EU",
-      "countryName": "Spain",
-      "countryCode": "ES",
-      "principalSubdivision": "Comunidad de Madrid",
-      "principalSubdivisionCode": "ES-M",
-      "city": "Madrid",
-      "locality": "Campamento",
-      "postcode": "",
-      "plusCode": "8CGR96J4+F6",
+      "countryName": "Germany",
+      "countryCode": "DE",
+      "principalSubdivision": "Rheinland-Pfalz",
+      "principalSubdivisionCode": "DE-RP",
+      "city": "Rhens",
+      "locality": "Koblenzer Stadtwald",
+      "postcode": "56321",
+      "plusCode": "9F297HQJ+MG",
       "localityInfo": {
         "administrative": [
           {
-            "name": "Spain",
-            "description": "constitutional monarchy in Southwest Europe",
-            "isoName": "Spain",
-            "order": 2,
+            "name": "Germany",
+            "description": "country in central Europe",
+            "isoName": "Germany",
+            "order": 3,
             "adminLevel": 2,
-            "isoCode": "ES",
-            "wikidataId": "Q29",
-            "geonameId": 2510769
+            "isoCode": "DE",
+            "wikidataId": "Q183",
+            "geonameId": 2921044
           },
           {
-            "name": "Comunidad de Madrid",
-            "description": "autonomous community of Spain",
-            "isoName": "Comunidad de Madrid",
-            "order": 5,
-            "adminLevel": 6,
-            "isoCode": "ES-M",
-            "wikidataId": "Q5756",
-            "geonameId": 3117732
+            "name": "Rheinland-Pfalz",
+            "description": "state of the Federal Republic of Germany",
+            "isoName": "Rheinland-Pfalz",
+            "order": 4,
+            "adminLevel": 4,
+            "isoCode": "DE-RP",
+            "wikidataId": "Q1200",
+            "geonameId": 2847618
           },
           {
-            "name": "Madrid",
-            "description": "municipality and capital of Spain",
-            "order": 6,
-            "adminLevel": 8,
-            "wikidataId": "Q2807",
-            "geonameId": 3117735
-          },
-          {
-            "name": "Latina",
-            "description": "district of Madrid, Spain",
-            "order": 7,
-            "adminLevel": 9,
-            "wikidataId": "Q794954",
-            "geonameId": 6544489
-          },
-          {
-            "name": "Campamento",
-            "description": "neighborhood in Madrid",
+            "name": "Mayen-Koblenz",
+            "description": "district of Rhineland-Palatinate, Germany",
             "order": 8,
-            "adminLevel": 10,
-            "wikidataId": "Q31169"
+            "adminLevel": 6,
+            "wikidataId": "Q8593",
+            "geonameId": 3247461
+          },
+          {
+            "name": "Rhein-Mosel",
+            "order": 9,
+            "adminLevel": 7,
+            "wikidataId": "Q2514009"
+          },
+          {
+            "name": "Rhens",
+            "description": "municipality of Germany",
+            "order": 10,
+            "adminLevel": 8,
+            "wikidataId": "Q552498",
+            "geonameId": 2847588
           }
         ],
         "informative": [
@@ -1418,24 +1486,152 @@
             "geonameId": 6255148
           },
           {
-            "name": "Europe/Madrid",
+            "name": "Europe/Berlin",
             "description": "time zone",
-            "order": 3
+            "order": 2
           },
           {
-            "name": "Iberian Peninsula",
-            "description": "peninsula located in the extreme southwest of Europe",
-            "order": 4,
-            "wikidataId": "Q12837",
-            "geonameId": 2267430
+            "name": "Verkehrsverbund Rhein-Mosel",
+            "order": 5
+          },
+          {
+            "name": "Hunsruck",
+            "description": "low mountain range in Germany",
+            "order": 6,
+            "wikidataId": "Q311234",
+            "geonameId": 2897306
+          },
+          {
+            "name": "Rettungsdienstbereich Koblenz",
+            "order": 7
+          },
+          {
+            "name": "Rhens",
+            "description": "former Verbandsgemeinde in Rhineland-Palatinate",
+            "order": 11,
+            "wikidataId": "Q598574"
+          },
+          {
+            "name": "Koblenzer Stadtwald",
+            "order": 12
+          },
+          {
+            "name": "56321",
+            "description": "postal code",
+            "order": 13
           }
         ]
       },
-      "price": "360",
-      "locationName": "Academic History",
+      "price": "241",
+      "locationName": "Adorable Government",
       "bookmarkName": "second BM",
       "bookmarkDescription": "",
       "id": 2
+    },
+    {
+      "latitude": 50.25875953145724,
+      "lookupSource": "coordinates",
+      "longitude": 7.542800903320313,
+      "localityLanguageRequested": "en",
+      "continent": "Europe",
+      "continentCode": "EU",
+      "countryName": "Germany",
+      "countryCode": "DE",
+      "principalSubdivision": "Rheinland-Pfalz",
+      "principalSubdivisionCode": "DE-RP",
+      "city": "Boppard",
+      "locality": "Rhens",
+      "postcode": "56154",
+      "plusCode": "9F297G5V+G4",
+      "localityInfo": {
+        "administrative": [
+          {
+            "name": "Germany",
+            "description": "country in central Europe",
+            "isoName": "Germany",
+            "order": 3,
+            "adminLevel": 2,
+            "isoCode": "DE",
+            "wikidataId": "Q183",
+            "geonameId": 2921044
+          },
+          {
+            "name": "Rheinland-Pfalz",
+            "description": "state of the Federal Republic of Germany",
+            "isoName": "Rheinland-Pfalz",
+            "order": 4,
+            "adminLevel": 4,
+            "isoCode": "DE-RP",
+            "wikidataId": "Q1200",
+            "geonameId": 2847618
+          },
+          {
+            "name": "Rhein-Hunsruck-Kreis",
+            "description": "district of Rhineland-Palatinate, Germany",
+            "order": 8,
+            "adminLevel": 6,
+            "wikidataId": "Q8574",
+            "geonameId": 3247463
+          },
+          {
+            "name": "Boppard",
+            "description": "town in Rhineland-Palatinate, Germany",
+            "order": 9,
+            "adminLevel": 8,
+            "wikidataId": "Q521148",
+            "geonameId": 2946366
+          },
+          {
+            "name": "Rhens",
+            "description": "municipality of Germany",
+            "order": 11,
+            "adminLevel": 8,
+            "wikidataId": "Q552498",
+            "geonameId": 2847588
+          }
+        ],
+        "informative": [
+          {
+            "name": "Europe",
+            "description": "continent",
+            "isoName": "Europe",
+            "order": 1,
+            "isoCode": "EU",
+            "wikidataId": "Q46",
+            "geonameId": 6255148
+          },
+          {
+            "name": "Europe/Berlin",
+            "description": "time zone",
+            "order": 2
+          },
+          {
+            "name": "Verkehrsverbund Rhein-Mosel",
+            "order": 5
+          },
+          {
+            "name": "Hunsruck",
+            "description": "low mountain range in Germany",
+            "order": 6,
+            "wikidataId": "Q311234",
+            "geonameId": 2897306
+          },
+          {
+            "name": "Rettungsdienstbereich Bad Kreuznach",
+            "order": 7
+          },
+          {
+            "name": "56154",
+            "description": "postal code",
+            "order": 10
+          }
+        ]
+      },
+      "price": "159",
+      "locationName": "Adorable World",
+      "bookmarkName": "third BM",
+      "bookmarkDescription": "",
+      "id": 3
     }
   ]
 }

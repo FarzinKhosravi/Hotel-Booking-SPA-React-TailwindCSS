@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import getBookmarkDetail from "./../../services/getBookmarkDetailService";
 import ReactCountryFlag from "react-country-flag";
+import { useDispatch } from "react-redux";
+import { createCurrentBookmark } from "../../features/currentBookmark/currentBookmarkSlice";
 
 function BookmarkDetail() {
   const { bookmarkId } = useParams();
@@ -9,6 +11,8 @@ function BookmarkDetail() {
   const [bookmarkDetail, setBookmarkDetail] = useState(null);
 
   const [accordion, setAccordion] = useState(false);
+
+  const dispatch = useDispatch();
 
   console.log("bookmarkId:", bookmarkId);
 
@@ -23,6 +27,12 @@ function BookmarkDetail() {
 
     fetchBookmarkDetail();
   }, [bookmarkId]);
+
+  useEffect(() => {
+    // console.log("bookmarkDetail", bookmarkDetail);
+
+    dispatch(createCurrentBookmark(bookmarkDetail));
+  }, [bookmarkDetail]);
 
   console.log("bookmarkDetail:", bookmarkDetail);
 
