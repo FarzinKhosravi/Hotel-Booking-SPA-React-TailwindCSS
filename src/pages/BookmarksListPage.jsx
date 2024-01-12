@@ -60,7 +60,9 @@ function BookmarksListPage() {
                     {/* Last Visited Bookmark Section */}
                     <div
                       className={`mb-1 w-full items-center justify-center bg-yellow-400 py-2 font-semibold text-stone-800 shadow-md ${
-                        bookmark?.id === currentBookmark?.id ? "flex" : "hidden"
+                        bookmark?.plusCode === currentBookmark?.plusCode
+                          ? "flex"
+                          : "hidden"
                       }`}
                     >
                       <span>Last Visited Bookmark</span>
@@ -221,7 +223,7 @@ function BookmarksListPage() {
                       >
                         <button
                           className={`block w-full rounded-t-sm ${
-                            bookmark?.id === currentBookmark?.id
+                            bookmark?.plusCode === currentBookmark?.plusCode
                               ? "bg-yellow-400 text-stone-800"
                               : "bg-emerald-800 text-white"
                           }`}

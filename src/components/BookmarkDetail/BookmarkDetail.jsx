@@ -1,16 +1,21 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import getBookmarkDetail from "./../../services/getBookmarkDetailService";
 import ReactCountryFlag from "react-country-flag";
 import { useDispatch } from "react-redux";
 import { createCurrentBookmark } from "../../features/currentBookmark/currentBookmarkSlice";
+import { removeAsyncBookmark } from "../../features/bookmarksList/bookmarksListSlice";
 
 function BookmarkDetail() {
   const { bookmarkId } = useParams();
 
+  const navigate = useNavigate();
+
   const [bookmarkDetail, setBookmarkDetail] = useState(null);
 
   const [isOpenAccordion, setIsOpenAccordion] = useState(false);
+
+  const [isOpenMenu, setIsOpenMenu] = useState(false);
 
   const dispatch = useDispatch();
 
@@ -34,6 +39,12 @@ function BookmarkDetail() {
     dispatch(createCurrentBookmark(bookmarkDetail));
   }, [bookmarkDetail]);
 
+  const removeBookmarkHandler = (id) => {
+    dispatch(removeAsyncBookmark(id));
+
+    navigate("/bookmarks");
+  };
+
   console.log("bookmarkDetail:", bookmarkDetail);
 
   return (
@@ -55,8 +66,48 @@ function BookmarkDetail() {
 
         {/* Bookmark Detail Section */}
         <div className="overflow-hidden rounded-2xl bg-slate-200 shadow-md">
+          {/* Bookmark Menu Section */}
+          <div
+            className={`relative flex py-4 pr-4 ${
+              isOpenMenu
+                ? "mb-2 flex-col items-end justify-start"
+                : "items-center justify-end"
+            }`}
+          >
+            {/* Menu Icon */}
+            <div
+              className="cursor-pointer"
+              onClick={() => setIsOpenMenu(!isOpenMenu)}
+            >
+              <span className="block">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  className="h-6 w-6 text-stone-800"
+                >
+                  <path d="M3 10a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0ZM8.5 10a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0ZM15.5 8.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Z" />
+                </svg>
+              </span>
+            </div>
+
+            {/* Menu Options */}
+            <div
+              className={`absolute top-11 z-20 flex-col overflow-hidden rounded-xl bg-slate-100 py-1 shadow-lg ${
+                isOpenMenu ? "flex" : "hidden"
+              }`}
+            >
+              <span
+                onClick={() => removeBookmarkHandler(bookmarkDetail.id)}
+                className="cursor-pointer px-4 py-2 text-sm font-semibold text-red-600"
+              >
+                Remove Bookmark
+              </span>
+            </div>
+          </div>
+
           {/* Top Section */}
-          <div className="mb-8 flex flex-col px-4 pb-4 pt-6">
+          <div className="mb-8 flex flex-col px-4 pb-4">
             {/* Bookmark Name */}
             <div className="mb-16 flex items-center justify-center">
               <div className="relative mt-4 flex w-full max-w-64 items-center justify-start sm:mx-auto">
