@@ -55,12 +55,7 @@
       "host_neighbourhood": null,
       "host_listings_count": 1,
       "host_total_listings_count": 1,
-      "host_verifications": [
-        "email",
-        "phone",
-        "facebook",
-        "reviews"
-      ],
+      "host_verifications": ["email", "phone", "facebook", "reviews"],
       "street": "Amsterdam, Noord-Holland 1054, Netherlands",
       "neighbourhood": null,
       "neighbourhood_cleansed": "De Baarsjes - Oud-West",
@@ -124,9 +119,7 @@
         "lon": 2.35,
         "lat": 48.86
       },
-      "features": [
-        "Host Has Profile Pic"
-      ]
+      "features": ["Host Has Profile Pic"]
     },
     {
       "id": "9192415",
@@ -314,11 +307,7 @@
       "host_neighbourhood": "Oud-West",
       "host_listings_count": 3,
       "host_total_listings_count": 3,
-      "host_verifications": [
-        "email",
-        "phone",
-        "reviews"
-      ],
+      "host_verifications": ["email", "phone", "reviews"],
       "street": "Oud-West, Amsterdam, North Holland 1054, Netherlands",
       "neighbourhood": "Oud-West",
       "neighbourhood_cleansed": "De Baarsjes - Oud-West",
@@ -382,10 +371,7 @@
         "lon": 4.875639539930118,
         "lat": 52.36456756846072
       },
-      "features": [
-        "Host Has Profile Pic",
-        "Is Location Exact"
-      ]
+      "features": ["Host Has Profile Pic", "Is Location Exact"]
     },
     {
       "id": "13153299",
@@ -705,10 +691,7 @@
       "host_neighbourhood": null,
       "host_listings_count": 1,
       "host_total_listings_count": 1,
-      "host_verifications": [
-        "email",
-        "reviews"
-      ],
+      "host_verifications": ["email", "reviews"],
       "street": "Amsterdam, North Holland, Netherlands",
       "neighbourhood": null,
       "neighbourhood_cleansed": "De Baarsjes - Oud-West",
@@ -772,9 +755,7 @@
         "lon": 4.865594943841575,
         "lat": 52.36667871194905
       },
-      "features": [
-        "Host Has Profile Pic"
-      ]
+      "features": ["Host Has Profile Pic"]
     },
     {
       "id": "13465532",
@@ -962,11 +943,7 @@
       "host_neighbourhood": null,
       "host_listings_count": 0,
       "host_total_listings_count": 0,
-      "host_verifications": [
-        "email",
-        "phone",
-        "reviews"
-      ],
+      "host_verifications": ["email", "phone", "reviews"],
       "street": "Amsterdam, NH 1056, Netherlands",
       "neighbourhood": null,
       "neighbourhood_cleansed": "De Baarsjes - Oud-West",
@@ -1030,9 +1007,7 @@
         "lon": 4.853345068114508,
         "lat": 52.37080138742488
       },
-      "features": [
-        "Host Has Profile Pic"
-      ]
+      "features": ["Host Has Profile Pic"]
     },
     {
       "id": "7890890",
@@ -1089,12 +1064,7 @@
       "host_neighbourhood": "Oud-West",
       "host_listings_count": 1,
       "host_total_listings_count": 1,
-      "host_verifications": [
-        "email",
-        "phone",
-        "reviews",
-        "jumio"
-      ],
+      "host_verifications": ["email", "phone", "reviews", "jumio"],
       "street": "Oud-West, Amsterdam, Noord-Holland 1054, Netherlands",
       "neighbourhood": "Oud-West",
       "neighbourhood_cleansed": "De Baarsjes - Oud-West",
@@ -1219,12 +1189,7 @@
       "host_neighbourhood": "Oud-West",
       "host_listings_count": 2,
       "host_total_listings_count": 2,
-      "host_verifications": [
-        "email",
-        "phone",
-        "reviews",
-        "jumio"
-      ],
+      "host_verifications": ["email", "phone", "reviews", "jumio"],
       "street": "Oud-West, Amsterdam, Noord-Holland 1057, Netherlands",
       "neighbourhood": "Oud-West",
       "neighbourhood_cleansed": "De Baarsjes - Oud-West",
@@ -1298,296 +1263,228 @@
   ],
   "bookmarks": [
     {
-      "latitude": 50.29297262488126,
+      "latitude": 47.559064472766764,
       "lookupSource": "coordinates",
-      "longitude": 7.602539062500001,
+      "longitude": -0.21093964576721194,
       "localityLanguageRequested": "en",
       "continent": "Europe",
       "continentCode": "EU",
-      "countryName": "Germany",
-      "countryCode": "DE",
-      "principalSubdivision": "Rheinland-Pfalz",
-      "principalSubdivisionCode": "DE-RP",
-      "city": "Koblenz",
-      "locality": "Rhens",
-      "postcode": "56321",
-      "plusCode": "9F297JV3+52",
+      "countryName": "France",
+      "countryCode": "FR",
+      "principalSubdivision": "Pays de la Loire",
+      "principalSubdivisionCode": "FR-PDL",
+      "city": "Jarze Villages",
+      "locality": "Jarze",
+      "postcode": "49140",
+      "plusCode": "8CVXHQ5Q+JJ",
       "localityInfo": {
         "administrative": [
           {
-            "name": "Germany",
-            "description": "country in central Europe",
-            "isoName": "Germany",
+            "name": "France",
+            "description": "country with territory in Europe and several overseas regions and territories",
+            "isoName": "France",
             "order": 3,
             "adminLevel": 2,
-            "isoCode": "DE",
-            "wikidataId": "Q183",
-            "geonameId": 2921044
+            "isoCode": "FR",
+            "wikidataId": "Q142",
+            "geonameId": 3017382
           },
           {
-            "name": "Rheinland-Pfalz",
-            "description": "state of the Federal Republic of Germany",
-            "isoName": "Rheinland-Pfalz",
-            "order": 4,
-            "adminLevel": 4,
-            "isoCode": "DE-RP",
-            "wikidataId": "Q1200",
-            "geonameId": 2847618
+            "name": "Metropolitan France",
+            "description": "part of France located in Europe",
+            "order": 5,
+            "adminLevel": 3,
+            "wikidataId": "Q212429"
           },
           {
-            "name": "Mayen-Koblenz",
-            "description": "district of Rhineland-Palatinate, Germany",
-            "order": 7,
-            "adminLevel": 6,
-            "wikidataId": "Q8593",
-            "geonameId": 3247461
-          },
-          {
-            "name": "Koblenz",
-            "description": "German city on the banks of the Rhine and of the Moselle",
-            "order": 8,
-            "adminLevel": 6,
-            "wikidataId": "Q3104",
-            "geonameId": 2886946
-          },
-          {
-            "name": "Rhein-Mosel",
-            "order": 9,
-            "adminLevel": 7,
-            "wikidataId": "Q2514009"
-          },
-          {
-            "name": "Lahnstein",
-            "description": "city in Rhein-Lahn-Kreis in Rhineland-Palatinate, Germany",
-            "order": 10,
-            "adminLevel": 8,
-            "wikidataId": "Q569639",
-            "geonameId": 2881889
-          },
-          {
-            "name": "Rhens",
-            "description": "municipality of Germany",
-            "order": 11,
-            "adminLevel": 8,
-            "wikidataId": "Q552498",
-            "geonameId": 2847588
-          }
-        ],
-        "informative": [
-          {
-            "name": "Europe",
-            "description": "continent",
-            "isoName": "Europe",
-            "order": 1,
-            "isoCode": "EU",
-            "wikidataId": "Q46",
-            "geonameId": 6255148
-          },
-          {
-            "name": "Europe/Berlin",
-            "description": "time zone",
-            "order": 2
-          },
-          {
-            "name": "Verkehrsverbund Rhein-Mosel",
-            "order": 5
-          },
-          {
-            "name": "Rettungsdienstbereich Koblenz",
-            "order": 6
-          },
-          {
-            "name": "Rhens",
-            "description": "former Verbandsgemeinde in Rhineland-Palatinate",
-            "order": 12,
-            "wikidataId": "Q598574"
-          },
-          {
-            "name": "56321",
-            "description": "postal code",
-            "order": 13
-          }
-        ]
-      },
-      "price": "148",
-      "locationName": "Absolute Government",
-      "bookmarkName": "qwert",
-      "bookmarkDescription": "",
-      "id": 1
-    },
-    {
-      "latitude": 50.28913470171943,
-      "lookupSource": "coordinates",
-      "longitude": 7.581253051757813,
-      "localityLanguageRequested": "en",
-      "continent": "Europe",
-      "continentCode": "EU",
-      "countryName": "Germany",
-      "countryCode": "DE",
-      "principalSubdivision": "Rheinland-Pfalz",
-      "principalSubdivisionCode": "DE-RP",
-      "city": "Rhens",
-      "locality": "Koblenzer Stadtwald",
-      "postcode": "56321",
-      "plusCode": "9F297HQJ+MG",
-      "localityInfo": {
-        "administrative": [
-          {
-            "name": "Germany",
-            "description": "country in central Europe",
-            "isoName": "Germany",
-            "order": 3,
-            "adminLevel": 2,
-            "isoCode": "DE",
-            "wikidataId": "Q183",
-            "geonameId": 2921044
-          },
-          {
-            "name": "Rheinland-Pfalz",
-            "description": "state of the Federal Republic of Germany",
-            "isoName": "Rheinland-Pfalz",
-            "order": 4,
-            "adminLevel": 4,
-            "isoCode": "DE-RP",
-            "wikidataId": "Q1200",
-            "geonameId": 2847618
-          },
-          {
-            "name": "Mayen-Koblenz",
-            "description": "district of Rhineland-Palatinate, Germany",
-            "order": 8,
-            "adminLevel": 6,
-            "wikidataId": "Q8593",
-            "geonameId": 3247461
-          },
-          {
-            "name": "Rhein-Mosel",
-            "order": 9,
-            "adminLevel": 7,
-            "wikidataId": "Q2514009"
-          },
-          {
-            "name": "Rhens",
-            "description": "municipality of Germany",
-            "order": 10,
-            "adminLevel": 8,
-            "wikidataId": "Q552498",
-            "geonameId": 2847588
-          }
-        ],
-        "informative": [
-          {
-            "name": "Europe",
-            "description": "continent",
-            "isoName": "Europe",
-            "order": 1,
-            "isoCode": "EU",
-            "wikidataId": "Q46",
-            "geonameId": 6255148
-          },
-          {
-            "name": "Europe/Berlin",
-            "description": "time zone",
-            "order": 2
-          },
-          {
-            "name": "Verkehrsverbund Rhein-Mosel",
-            "order": 5
-          },
-          {
-            "name": "Hunsruck",
-            "description": "low mountain range in Germany",
+            "name": "Pays de la Loire",
+            "description": "administrative region of France",
+            "isoName": "Pays de la Loire",
             "order": 6,
-            "wikidataId": "Q311234",
-            "geonameId": 2897306
+            "adminLevel": 4,
+            "isoCode": "FR-PDL",
+            "wikidataId": "Q16994",
+            "geonameId": 2988289
           },
           {
-            "name": "Rettungsdienstbereich Koblenz",
-            "order": 7
+            "name": "Maine-et-Loire",
+            "description": "French department",
+            "isoName": "Maine-et-Loire",
+            "order": 8,
+            "adminLevel": 6,
+            "isoCode": "FR-49",
+            "wikidataId": "Q12584",
+            "geonameId": 2996663
           },
           {
-            "name": "Rhens",
-            "description": "former Verbandsgemeinde in Rhineland-Palatinate",
+            "name": "arrondissement of Angers",
+            "description": "arrondissement of France",
+            "order": 9,
+            "adminLevel": 7,
+            "wikidataId": "Q700420",
+            "geonameId": 3037655
+          },
+          {
+            "name": "Jarze Villages",
+            "description": "commune in Maine-et-Loire, France",
+            "order": 17,
+            "adminLevel": 8,
+            "wikidataId": "Q21979919",
+            "geonameId": 6435224
+          },
+          {
+            "name": "Jarze",
+            "description": "former commune in Maine-et-Loire, France",
+            "order": 18,
+            "adminLevel": 9,
+            "wikidataId": "Q819372",
+            "geonameId": 6435224
+          }
+        ],
+        "informative": [
+          {
+            "name": "Europe",
+            "description": "continent",
+            "isoName": "Europe",
+            "order": 1,
+            "isoCode": "EU",
+            "wikidataId": "Q46",
+            "geonameId": 6255148
+          },
+          {
+            "name": "North European Plain",
+            "description": "geomorphological region in Europe iceland",
+            "order": 2,
+            "wikidataId": "Q560549"
+          },
+          {
+            "name": "Europe/Paris",
+            "description": "time zone",
+            "order": 4
+          },
+          {
+            "name": "Academy of Nantes",
+            "description": "state educational institution in France",
+            "order": 7,
+            "wikidataId": "Q2822317"
+          },
+          {
+            "name": "Pole metropolitain Loire Angers",
+            "description": "consolidated public services in Maine-et-Loire",
+            "order": 10,
+            "wikidataId": "Q3373327"
+          },
+          {
+            "name": "Maine-et-Loire's 3rd constituency",
+            "description": "constituency of the French Fifth Republic",
             "order": 11,
-            "wikidataId": "Q598574"
+            "wikidataId": "Q3540099"
           },
           {
-            "name": "Koblenzer Stadtwald",
-            "order": 12
+            "name": "Communaute de communes Anjou Loir et Sarthe",
+            "order": 12,
+            "wikidataId": "Q28496349"
           },
           {
-            "name": "56321",
+            "name": "canton of Angers-6",
+            "description": "canton of France",
+            "order": 13,
+            "wikidataId": "Q17173674"
+          },
+          {
+            "name": "49140",
             "description": "postal code",
-            "order": 13
+            "order": 14
+          },
+          {
+            "name": "canton of Seiches-sur-le-Loir",
+            "description": "canton of France (until March 2015)",
+            "order": 15,
+            "wikidataId": "Q734562"
+          },
+          {
+            "name": "Communaute de communes du Loir",
+            "order": 16,
+            "wikidataId": "Q2988466"
           }
         ]
       },
-      "price": "241",
-      "locationName": "Adorable Government",
+      "price": "216",
+      "locationName": "Adventurous Rocky",
       "bookmarkName": "second BM",
       "bookmarkDescription": "",
-      "id": 2
+      "id": 5
     },
     {
-      "latitude": 50.25875953145724,
+      "latitude": 52.616583697616306,
       "lookupSource": "coordinates",
-      "longitude": 7.542800903320313,
+      "longitude": 17.89452910423279,
       "localityLanguageRequested": "en",
       "continent": "Europe",
       "continentCode": "EU",
-      "countryName": "Germany",
-      "countryCode": "DE",
-      "principalSubdivision": "Rheinland-Pfalz",
-      "principalSubdivisionCode": "DE-RP",
-      "city": "Boppard",
-      "locality": "Rhens",
-      "postcode": "56154",
-      "plusCode": "9F297G5V+G4",
+      "countryName": "Poland",
+      "countryCode": "PL",
+      "principalSubdivision": "Greater Poland Voivodeship",
+      "principalSubdivisionCode": "PL-30",
+      "city": "Mogilno",
+      "locality": "Trzemeszno",
+      "postcode": "",
+      "plusCode": "9F4VJV8V+JR",
       "localityInfo": {
         "administrative": [
           {
-            "name": "Germany",
-            "description": "country in central Europe",
-            "isoName": "Germany",
-            "order": 3,
-            "adminLevel": 2,
-            "isoCode": "DE",
-            "wikidataId": "Q183",
-            "geonameId": 2921044
-          },
-          {
-            "name": "Rheinland-Pfalz",
-            "description": "state of the Federal Republic of Germany",
-            "isoName": "Rheinland-Pfalz",
+            "name": "Poland",
+            "description": "republic in Central-Eastern Europe",
+            "isoName": "Poland",
             "order": 4,
-            "adminLevel": 4,
-            "isoCode": "DE-RP",
-            "wikidataId": "Q1200",
-            "geonameId": 2847618
+            "adminLevel": 2,
+            "isoCode": "PL",
+            "wikidataId": "Q36",
+            "geonameId": 798544
           },
           {
-            "name": "Rhein-Hunsruck-Kreis",
-            "description": "district of Rhineland-Palatinate, Germany",
+            "name": "Greater Poland Voivodeship",
+            "description": "voivodeship of Poland",
+            "isoName": "Greater Poland Voivodeship",
+            "order": 5,
+            "adminLevel": 4,
+            "isoCode": "PL-30",
+            "wikidataId": "Q54187",
+            "geonameId": 3337498
+          },
+          {
+            "name": "Kuyavian-Pomeranian Voivodeship",
+            "description": "voivodeship of Poland",
+            "isoName": "Kuyavian-Pomeranian Voivodeship",
+            "order": 6,
+            "adminLevel": 4,
+            "isoCode": "PL-04",
+            "wikidataId": "Q54153",
+            "geonameId": 3337500
+          },
+          {
+            "name": "Gniezno County",
+            "description": "powiat of Poland",
             "order": 8,
             "adminLevel": 6,
-            "wikidataId": "Q8574",
-            "geonameId": 3247463
+            "wikidataId": "Q133166",
+            "geonameId": 7531081
           },
           {
-            "name": "Boppard",
-            "description": "town in Rhineland-Palatinate, Germany",
+            "name": "Mogilno",
+            "description": "urban-rural gmina of Poland",
             "order": 9,
-            "adminLevel": 8,
-            "wikidataId": "Q521148",
-            "geonameId": 2946366
+            "adminLevel": 7,
+            "wikidataId": "Q2182076",
+            "geonameId": 3091523
           },
           {
-            "name": "Rhens",
-            "description": "municipality of Germany",
-            "order": 11,
-            "adminLevel": 8,
-            "wikidataId": "Q552498",
-            "geonameId": 2847588
+            "name": "Trzemeszno",
+            "description": "urban-rural gmina of Poland",
+            "order": 10,
+            "adminLevel": 7,
+            "wikidataId": "Q555415",
+            "geonameId": 3083077
           }
         ],
         "informative": [
@@ -1601,37 +1498,29 @@
             "geonameId": 6255148
           },
           {
-            "name": "Europe/Berlin",
+            "name": "North European Plain",
+            "description": "geomorphological region in Europe iceland",
+            "order": 2,
+            "wikidataId": "Q560549"
+          },
+          {
+            "name": "Europe/Warsaw",
             "description": "time zone",
-            "order": 2
+            "order": 3
           },
           {
-            "name": "Verkehrsverbund Rhein-Mosel",
-            "order": 5
-          },
-          {
-            "name": "Hunsruck",
-            "description": "low mountain range in Germany",
-            "order": 6,
-            "wikidataId": "Q311234",
-            "geonameId": 2897306
-          },
-          {
-            "name": "Rettungsdienstbereich Bad Kreuznach",
-            "order": 7
-          },
-          {
-            "name": "56154",
-            "description": "postal code",
-            "order": 10
+            "name": "37th electoral district for the Sejm of the Republic of Poland",
+            "description": "electoral district for the Sejm of the Republic of Poland",
+            "order": 7,
+            "wikidataId": "Q11797371"
           }
         ]
       },
-      "price": "159",
-      "locationName": "Adorable World",
+      "price": "212",
+      "locationName": "Absolute Government",
       "bookmarkName": "third BM",
       "bookmarkDescription": "",
-      "id": 3
+      "id": 6
     }
   ]
 }

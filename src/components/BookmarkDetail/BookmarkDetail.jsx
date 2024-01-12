@@ -10,7 +10,7 @@ function BookmarkDetail() {
 
   const [bookmarkDetail, setBookmarkDetail] = useState(null);
 
-  const [accordion, setAccordion] = useState(false);
+  const [isOpenAccordion, setIsOpenAccordion] = useState(false);
 
   const dispatch = useDispatch();
 
@@ -96,7 +96,7 @@ function BookmarkDetail() {
                 {/* Country */}
                 <div className="flex w-full justify-center sm:mb-0">
                   <div className="relative flex w-full max-w-64 items-center justify-start lg:max-w-55 xl:max-w-64">
-                    <div className="left-18 xl:left-18 absolute -top-4 flex justify-start rounded-xl bg-white px-4 py-2 font-semibold lg:left-14">
+                    <div className="absolute -top-4 left-18 flex justify-start rounded-xl bg-white px-4 py-2 font-semibold lg:left-14 xl:left-18">
                       <span className="block">Country</span>
                       <span className="ml-2 block">
                         <ReactCountryFlag
@@ -131,7 +131,7 @@ function BookmarkDetail() {
                 {/* Locality */}
                 <div className="flex w-full justify-center">
                   <div className="relative flex w-full max-w-64 items-center justify-start lg:max-w-55 xl:max-w-64">
-                    <div className="lg:left-18 absolute -top-4 left-22 rounded-xl bg-white px-4 py-2 font-semibold xl:left-22">
+                    <div className="absolute -top-4 left-22 rounded-xl bg-white px-4 py-2 font-semibold lg:left-18 xl:left-22">
                       Locality
                     </div>
                     <div className="flex h-auto w-full items-center justify-center rounded-xl bg-emerald-800 px-2 pb-2 pt-8 text-white shadow-lg">
@@ -207,9 +207,9 @@ function BookmarkDetail() {
               <div>
                 {/* Top Section */}
                 <div
-                  onClick={() => setAccordion(!accordion)}
+                  onClick={() => setIsOpenAccordion(!isOpenAccordion)}
                   className={`flex cursor-pointer items-center justify-between rounded-xl bg-slate-200 p-4 ${
-                    accordion ? "rounded-b-none" : ""
+                    isOpenAccordion ? "rounded-b-none" : ""
                   }`}
                 >
                   <div className="pointer-events-none">
@@ -218,7 +218,7 @@ function BookmarkDetail() {
                     </span>
                     <span
                       className={`border border-yellow-500 ${
-                        accordion ? "block " : "hidden "
+                        isOpenAccordion ? "block " : "hidden "
                       }`}
                     ></span>
                   </div>
@@ -229,7 +229,7 @@ function BookmarkDetail() {
                         viewBox="0 0 20 20"
                         fill="currentColor"
                         className={`h-5 w-5 transition-all duration-300 ${
-                          accordion ? "rotate-180" : ""
+                          isOpenAccordion ? "rotate-180" : ""
                         }`}
                       >
                         <path
@@ -245,7 +245,7 @@ function BookmarkDetail() {
                 {/* Down Section */}
                 <div
                   className={`rounded-b-xl bg-slate-200 px-6 pt-1 capitalize text-emerald-700 ${
-                    accordion
+                    isOpenAccordion
                       ? "pb-4 opacity-100 transition-all"
                       : "max-h-0 overflow-hidden opacity-0 transition-all duration-300"
                   }`}
