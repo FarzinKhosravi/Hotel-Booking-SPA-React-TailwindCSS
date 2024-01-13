@@ -36,6 +36,7 @@ export default {
 
       zIndex: {
         1000: "1000",
+        2000: "2000",
       },
 
       margin: {

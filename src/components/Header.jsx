@@ -25,7 +25,7 @@ function Header() {
   };
 
   return (
-    <header className="relative mb-8 p-4">
+    <header className="z-2000 sticky top-0 mb-8 p-4 backdrop-blur-md">
       <nav
         className={`relative flex flex-wrap gap-x-6 rounded-xl bg-slate-200 px-3 py-4 shadow-lg ${
           isOpenMenu ? "rounded-b-none md:rounded-xl" : ""
@@ -87,30 +87,32 @@ function HamburgerMenu({ isOpenMenu, setIsOpenMenu }) {
     <ul
       ref={hamburgerMenuRef}
       className={`absolute right-0 top-16 z-10 flex w-full flex-col overflow-hidden rounded-xl bg-slate-200 px-2 pb-2 pt-6 shadow-md transition-all duration-75 ease-out md:hidden ${
-        isOpenMenu ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
+        isOpenMenu
+          ? "max-h-screen rounded-t-none opacity-100"
+          : "max-h-0 opacity-0"
       }`}
     >
-      <li className="mb-4 flex flex-col">
-        <div className="mb-3 flex items-center justify-start">
-          <GlobeAsiaAustraliaIcon className="h-6 w-6 text-red-600" />
-          <span className="ml-0.5 mt-1.6 block">Browse</span>
+      <li className="mb-2 flex flex-col">
+        <div className="mb-2 flex items-center justify-start">
+          <GlobeAsiaAustraliaIcon className="h-6 w-6" />
+          <span className="ml-0.5 mt-1.6 block sm:text-lg">Browse</span>
         </div>
         <div
           onClick={() => setIsOpenMenu(false)}
-          className="cursor-pointer pl-2 transition-all ease-in-out hover:rounded-md hover:bg-slate-900/30"
+          className="cursor-pointer pl-2 transition-all ease-in-out hover:rounded-md hover:bg-slate-300"
         >
           <NavLink end to="/">
             {({ isActive }) => (
               <div className="flex py-1">
-                <div>
+                <div className="flex items-center justify-center">
                   <HomeIcon
-                    className={`h-5 w-5 sm:h-6 sm:w-6 ${
-                      isActive ? "text-rose-500" : ""
+                    className={`h-4 w-4 sm:h-5 sm:w-5 ${
+                      isActive ? "text-emerald-900" : ""
                     }`}
                   />
                 </div>
-                <div className="ml-1 text-base font-medium text-slate-900 sm:text-lg">
-                  <span className={isActive ? "text-yellow-500" : ""}>
+                <div className="ml-1 mt-1 text-sm text-slate-900 sm:text-base">
+                  <span className={isActive ? "text-emerald-700" : ""}>
                     Home
                   </span>
                 </div>
@@ -120,20 +122,20 @@ function HamburgerMenu({ isOpenMenu, setIsOpenMenu }) {
         </div>
         <div
           onClick={() => setIsOpenMenu(false)}
-          className="cursor-pointer pl-2 transition-all ease-in-out hover:rounded-md hover:bg-slate-900/30"
+          className="cursor-pointer pl-2 transition-all ease-in-out hover:rounded-md hover:bg-slate-300"
         >
           <NavLink to="/hotels-list">
             {({ isActive }) => (
               <div className="flex py-1">
-                <div>
+                <div className="flex items-center justify-center">
                   <BuildingOfficeIcon
-                    className={`h-5 w-5 sm:h-6 sm:w-6 ${
-                      isActive ? "text-rose-500" : ""
+                    className={`h-4 w-4 sm:h-5 sm:w-5 ${
+                      isActive ? "text-emerald-900" : ""
                     }`}
                   />
                 </div>
-                <div className="ml-1 text-base font-medium text-slate-900 sm:text-lg">
-                  <span className={isActive ? "text-yellow-500" : ""}>
+                <div className="ml-1 mt-1 text-sm text-slate-900 sm:text-base">
+                  <span className={isActive ? "text-emerald-700" : ""}>
                     Hotels List
                   </span>
                 </div>
@@ -143,20 +145,20 @@ function HamburgerMenu({ isOpenMenu, setIsOpenMenu }) {
         </div>
         <div
           onClick={() => setIsOpenMenu(false)}
-          className="cursor-pointer pl-2 transition-all ease-in-out hover:rounded-md hover:bg-slate-900/30"
+          className="cursor-pointer pl-2 transition-all ease-in-out hover:rounded-md hover:bg-slate-300"
         >
           <NavLink to="/bookmarks">
             {({ isActive }) => (
               <div className="flex py-1">
-                <div>
+                <div className="flex items-center justify-center">
                   <StarIcon
-                    className={`h-5 w-5 sm:h-6 sm:w-6 ${
-                      isActive ? "text-rose-500" : ""
+                    className={`h-4 w-4 sm:h-5 sm:w-5 ${
+                      isActive ? "text-emerald-900" : ""
                     }`}
                   />
                 </div>
-                <div className="ml-1 text-base font-medium text-slate-900 sm:text-lg">
-                  <span className={isActive ? "text-yellow-500" : ""}>
+                <div className="ml-1 mt-1 text-sm text-slate-900 sm:text-base">
+                  <span className={isActive ? "text-emerald-700" : ""}>
                     Bookmarks
                   </span>
                 </div>
@@ -166,27 +168,27 @@ function HamburgerMenu({ isOpenMenu, setIsOpenMenu }) {
         </div>
       </li>
 
-      <li className="mb-4 flex flex-col">
-        <div className="mb-3 flex items-center justify-start">
-          <UserCircleIcon className="h-6 w-6 text-green-700" />
-          <span className="ml-0.5 mt-1.6 block">Account</span>
+      <li className="mb-2 flex flex-col">
+        <div className="mb-2 flex items-center justify-start">
+          <UserCircleIcon className="h-6 w-6" />
+          <span className="ml-0.5 mt-1.6 block sm:text-lg">Account</span>
         </div>
         <div
           onClick={() => setIsOpenMenu(false)}
-          className="mb-1 cursor-pointer pl-2 transition-all ease-in-out hover:rounded-md hover:bg-slate-900/30"
+          className="mb-1 cursor-pointer pl-2 transition-all ease-in-out hover:rounded-md hover:bg-slate-300"
         >
           <NavLink to="/b">
             {({ isActive }) => (
               <div className="flex py-1">
-                <div>
+                <div className="flex items-center justify-center">
                   <ArrowRightOnRectangleIcon
-                    className={`h-5 w-5 sm:h-6 sm:w-6 ${
-                      isActive ? "text-rose-500" : ""
+                    className={`h-4 w-4 sm:h-5 sm:w-5 ${
+                      isActive ? "text-emerald-900" : ""
                     }`}
                   />
                 </div>
-                <div className="ml-1 text-base font-medium text-slate-900 sm:text-lg">
-                  <span className={isActive ? "text-yellow-500" : ""}>
+                <div className="ml-1 mt-1 text-sm text-slate-900 sm:text-base">
+                  <span className={isActive ? "text-emerald-700" : ""}>
                     Login
                   </span>
                 </div>
@@ -196,20 +198,20 @@ function HamburgerMenu({ isOpenMenu, setIsOpenMenu }) {
         </div>
         <div
           onClick={() => setIsOpenMenu(false)}
-          className="mb-1 cursor-pointer pl-2 transition-all ease-in-out hover:rounded-md hover:bg-slate-900/30"
+          className="mb-1 cursor-pointer pl-2 transition-all ease-in-out hover:rounded-md hover:bg-slate-300"
         >
           <NavLink to="/c">
             {({ isActive }) => (
               <div className="flex py-1">
-                <div>
+                <div className="flex items-center justify-center">
                   <ClipboardDocumentListIcon
-                    className={`h-5 w-5 sm:h-6 sm:w-6 ${
-                      isActive ? "text-rose-500" : ""
+                    className={`h-4 w-4 sm:h-5 sm:w-5 ${
+                      isActive ? "text-emerald-900" : ""
                     }`}
                   />
                 </div>
-                <div className="ml-1 text-base font-medium text-slate-900 sm:text-lg">
-                  <span className={isActive ? "text-yellow-500" : ""}>
+                <div className="ml-1 mt-1 text-sm text-slate-900 sm:text-base">
+                  <span className={isActive ? "text-emerald-700" : ""}>
                     Sign Up
                   </span>
                 </div>
@@ -221,25 +223,25 @@ function HamburgerMenu({ isOpenMenu, setIsOpenMenu }) {
 
       <li className="flex flex-col">
         <div className="mb-3 flex items-center justify-start">
-          <LifebuoyIcon className="h-6 w-6 text-sky-600" />
-          <span className="ml-0.5 mt-1.6 block">Help</span>
+          <LifebuoyIcon className="h-6 w-6" />
+          <span className="ml-0.5 mt-1.6 block sm:text-lg">Help</span>
         </div>
         <div
           onClick={() => setIsOpenMenu(false)}
-          className="mb-1 cursor-pointer pl-2 transition-all ease-in-out hover:rounded-md hover:bg-slate-900/30"
+          className="mb-1 cursor-pointer pl-2 transition-all ease-in-out hover:rounded-md hover:bg-slate-300"
         >
           <NavLink to="/b">
             {({ isActive }) => (
               <div className="flex py-1">
-                <div>
+                <div className="flex items-center justify-center">
                   <PhoneArrowDownLeftIcon
-                    className={`h-5 w-5 sm:h-6 sm:w-6 ${
-                      isActive ? "text-rose-500" : ""
+                    className={`h-4 w-4 sm:h-5 sm:w-5 ${
+                      isActive ? "text-emerald-900" : ""
                     }`}
                   />
                 </div>
-                <div className="ml-1 text-base font-medium text-slate-900 sm:text-lg">
-                  <span className={isActive ? "text-yellow-500" : ""}>
+                <div className="ml-1 mt-1 text-sm text-slate-900 sm:text-base">
+                  <span className={isActive ? "text-emerald-700" : ""}>
                     Contact Us
                   </span>
                 </div>
@@ -249,20 +251,20 @@ function HamburgerMenu({ isOpenMenu, setIsOpenMenu }) {
         </div>
         <div
           onClick={() => setIsOpenMenu(false)}
-          className="mb-1 cursor-pointer pl-2 transition-all ease-in-out hover:rounded-md hover:bg-slate-900/30"
+          className="mb-1 cursor-pointer pl-2 transition-all ease-in-out hover:rounded-md hover:bg-slate-300"
         >
           <NavLink to="/c">
             {({ isActive }) => (
               <div className="flex py-1">
-                <div>
+                <div className="flex items-center justify-center">
                   <UserGroupIcon
-                    className={`h-5 w-5 sm:h-6 sm:w-6 ${
-                      isActive ? "text-rose-500" : ""
+                    className={`h-4 w-4 sm:h-5 sm:w-5 ${
+                      isActive ? "text-emerald-900" : ""
                     }`}
                   />
                 </div>
-                <div className="ml-1 text-base font-medium text-slate-900 sm:text-lg">
-                  <span className={isActive ? "text-yellow-500" : ""}>
+                <div className="ml-1 mt-1 text-sm text-slate-900 sm:text-base">
+                  <span className={isActive ? "text-emerald-700" : ""}>
                     About Us
                   </span>
                 </div>
@@ -279,52 +281,42 @@ function NavigationMenu() {
   return (
     <div className="mr-8 hidden md:block">
       <ul className="flex gap-x-1">
-        <li className="transition-all hover:rounded-md hover:bg-slate-900/30">
+        <li className="transition-all hover:rounded-md hover:bg-slate-300">
           <NavLink
-            className={({ isActive }) =>
-              isActive ? "text-yellow-500" : "text-slate-900"
-            }
+            className={({ isActive }) => (isActive ? "text-emerald-700" : "")}
             end
             to="/"
           >
             <span className="block px-2 py-4 font-semibold">Home</span>
           </NavLink>
         </li>
-        <li className="transition-all hover:rounded-md hover:bg-slate-900/30">
+        <li className="transition-all hover:rounded-md hover:bg-slate-300">
           <NavLink
-            className={({ isActive }) =>
-              isActive ? "text-yellow-500 " : "text-slate-900"
-            }
+            className={({ isActive }) => (isActive ? "text-emerald-700" : "")}
             to="/hotels-list"
           >
             <span className="block px-2 py-4 font-semibold">Hotels List</span>
           </NavLink>
         </li>
-        <li className="transition-all hover:rounded-md hover:bg-slate-900/30">
+        <li className="transition-all hover:rounded-md hover:bg-slate-300">
           <NavLink
-            className={({ isActive }) =>
-              isActive ? "text-yellow-500" : "text-slate-900"
-            }
+            className={({ isActive }) => (isActive ? "text-emerald-700" : "")}
             to="/bookmarks"
           >
             <span className="block px-2 py-4 font-semibold">Bookmarks</span>
           </NavLink>
         </li>
-        <li className="transition-all hover:rounded-md hover:bg-slate-900/30">
+        <li className="transition-all hover:rounded-md hover:bg-slate-300">
           <NavLink
-            className={({ isActive }) =>
-              isActive ? "text-yellow-500" : "text-slate-900"
-            }
+            className={({ isActive }) => (isActive ? "text-emerald-700" : "")}
             to="/b"
           >
             <span className="block px-2 py-4 font-semibold">Contact Us</span>
           </NavLink>
         </li>
-        <li className="transition-all hover:rounded-md hover:bg-slate-900/30">
+        <li className="transition-all hover:rounded-md hover:bg-slate-300">
           <NavLink
-            className={({ isActive }) =>
-              isActive ? "text-yellow-500" : "text-slate-900"
-            }
+            className={({ isActive }) => (isActive ? "text-emerald-700" : "")}
             to="/c"
           >
             <span className="block px-2 py-4 font-semibold">About Us</span>
