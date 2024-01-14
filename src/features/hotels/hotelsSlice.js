@@ -10,7 +10,7 @@ export const getAsyncHotels = createAsyncThunk(
 
       return data;
     } catch (error) {
-      toast.error(`404 ERROR 🧐`);
+      toast.error(`Not Found List of Hotels 🧐`);
 
       return rejectWithValue(error.message);
     }
@@ -49,12 +49,12 @@ const hotelsSlice = createSlice({
       .addCase(getAsyncHotels.pending, (state) => {
         state.loading = true;
         state.hotels = null;
-        state.error = "";
+        state.error = null;
       })
       .addCase(getAsyncHotels.fulfilled, (state, action) => {
         state.loading = false;
         state.hotels = action.payload;
-        state.error = "";
+        state.error = null;
       })
       .addCase(getAsyncHotels.rejected, (state, action) => {
         state.loading = false;
