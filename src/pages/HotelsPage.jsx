@@ -2,6 +2,7 @@ import {
   MapPinIcon,
   UserGroupIcon,
   CalendarIcon,
+  ExclamationTriangleIcon,
 } from "@heroicons/react/24/outline";
 import pointerHotelsPage from "../assets/images/pointerHotelsPage.png";
 import { useEffect, useReducer, useState } from "react";
@@ -16,7 +17,7 @@ import toast from "react-hot-toast";
 import { useDispatch, useSelector } from "react-redux";
 import { getAsyncHotels } from "../features/hotels/hotelsSlice";
 import AmenitiesIcons from "../common/AmenitiesIcons";
-import ErrorMessage from "./../common/ErrorMessage";
+import Message from "../common/Message";
 
 const initialState = {
   destination: "",
@@ -122,7 +123,11 @@ function HotelsPage() {
     <section className="min-h-screen px-4">
       <div>
         {error && !hotels ? (
-          <ErrorMessage />
+          <Message message={error}>
+            <span className="block">
+              <ExclamationTriangleIcon className="h-20 w-20 text-red-700" />
+            </span>
+          </Message>
         ) : (
           <div className="flex flex-col">
             {/* Filter of Hotels */}

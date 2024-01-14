@@ -1,36 +1,12 @@
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { Link, useLocation, useSearchParams } from "react-router-dom";
-import { filterHotels } from "../../features/hotels/hotelsSlice";
+import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import ReactCountryFlag from "react-country-flag";
 import AmenitiesIcons from "./../../common/AmenitiesIcons";
 
 function HotelsResults() {
-  const location = useLocation();
-  const hotelsData = location.state;
-
-  console.log("hotelsData:", hotelsData);
-
-  const dispatch = useDispatch();
   const { hotels } = useSelector((state) => state.hotels);
 
   const { currentHotel } = useSelector((state) => state.currentHotel);
-
-  console.log("currentHotel:", currentHotel);
-
-  const [searchParams] = useSearchParams();
-
-  const destination = searchParams.get("destination");
-  const number = JSON.parse(searchParams.get("number"));
-  const date = JSON.parse(searchParams.get("date"));
-
-  console.log("destination:", destination);
-  console.log("number:", number);
-  console.log("date:", date);
-
-  useEffect(() => {
-    dispatch(filterHotels({ destination, number, date, hotelsData }));
-  }, []);
 
   const hotelReserveHandler = (e) => {
     e.preventDefault();

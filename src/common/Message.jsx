@@ -1,7 +1,9 @@
-import { ExclamationTriangleIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
 
-function ErrorMessage() {
+function Message({
+  message = { title: "Nothing", description: "Nothing Found" },
+  children,
+}) {
   return (
     <div className="flex flex-col">
       {/* Top Section */}
@@ -18,19 +20,19 @@ function ErrorMessage() {
               <span className="-mt-1 block">to be on</span>
             </div>
             <div>
-              <span className="ml-1 block text-4xl font-extrabold text-red-700">
-                ERROR
+              <span
+                className={`ml-1 block text-3xl font-extrabold text-red-700 ${
+                  message.title === "ERROR" ? "text-4xl" : ""
+                }`}
+              >
+                {message.title}
               </span>
             </div>
           </div>
         </div>
 
         {/* Error Icon */}
-        <div>
-          <span className="block">
-            <ExclamationTriangleIcon className="h-20 w-20 text-red-700" />
-          </span>
-        </div>
+        <div>{children}</div>
       </div>
 
       {/* Middle Section */}
@@ -40,15 +42,15 @@ function ErrorMessage() {
           <span className="inline-flex rotate-12">LOST</span>
         </span>
         <span className="block w-full px-8 text-center text-sm font-semibold">
-          The Page You are Looking for Not Available!
+          {message.description}
         </span>
       </div>
 
       {/* Down Section */}
       <div className="flex w-full items-center justify-center">
-        <Link to="/">
+        <Link to={message.title === "ERROR" ? "/" : "/hotels-list"}>
           <button className="block rounded-full bg-emerald-800 px-8 py-2 text-white shadow-lg">
-            Go Back Home
+            {message.title === "ERROR" ? "Go Back Home" : "Go Back Hotels List"}
           </button>
         </Link>
       </div>
@@ -56,4 +58,4 @@ function ErrorMessage() {
   );
 }
 
-export default ErrorMessage;
+export default Message;

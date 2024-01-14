@@ -12,7 +12,10 @@ export const getAsyncHotels = createAsyncThunk(
     } catch (error) {
       toast.error(`Not Found List of Hotels 🧐`);
 
-      return rejectWithValue(error.message);
+      return rejectWithValue({
+        title: "ERROR",
+        description: "The Page You are Looking for Not Available!",
+      });
     }
   }
 );
