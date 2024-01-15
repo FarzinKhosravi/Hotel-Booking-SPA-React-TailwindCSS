@@ -223,7 +223,14 @@ function BookmarksListPage() {
                     {/* Down Section */}
                     <div className="w-full shadow-lg">
                       <Link
-                        to={`/bookmarks/${bookmark.id}?lat=${bookmark.latitude}&lng=${bookmark.longitude}&hostLocation=${bookmark.locality}`}
+                        to={`/bookmarks/${bookmark.id}?lat=${
+                          bookmark.latitude
+                        }&lng=${bookmark.longitude}&hostLocation=${
+                          bookmark.locality
+                        }&mapTitle=${`${bookmark.bookmarkName.slice(
+                          0,
+                          5
+                        )} Bookmark`}`}
                       >
                         <button
                           className={`block w-full rounded-t-sm ${

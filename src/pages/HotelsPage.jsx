@@ -99,6 +99,7 @@ function HotelsPage() {
       destination: hotelSpecs.destination,
       number: JSON.stringify(hotelSpecs.number),
       date: JSON.stringify(hotelSpecs.date),
+      mapTitle: "Hotels List",
     });
     navigate(
       {
@@ -511,7 +512,11 @@ function HotelsPage() {
                     return (
                       <Link
                         key={hotel.id}
-                        to={`/hotels-results/${hotel.id}?lat=${hotel.latitude}&lng=${hotel.longitude}&hostLocation=${hotel.host_location}`}
+                        to={`/hotels-results/${hotel.id}?lat=${
+                          hotel.latitude
+                        }&lng=${hotel.longitude}&hostLocation=${
+                          hotel.host_location
+                        }&mapTitle=${`${hotel.name.slice(0, 5)} Hotel`}`}
                       >
                         <div className="flex flex-col justify-between rounded-xl bg-slate-200 p-4 shadow-lg">
                           {/* Hotel Image */}

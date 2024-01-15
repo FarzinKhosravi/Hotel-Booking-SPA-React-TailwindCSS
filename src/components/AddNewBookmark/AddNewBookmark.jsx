@@ -58,7 +58,7 @@ function AddNewBookmark() {
       } else {
         createUserBookmark();
 
-        navigate("/bookmarks");
+        navigate("/bookmarks?mapTitle=Bookmarks List");
       }
     }
 

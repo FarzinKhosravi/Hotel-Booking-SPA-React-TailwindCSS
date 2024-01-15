@@ -43,7 +43,11 @@ function HotelsResults() {
             return (
               <Link
                 key={hotel.id}
-                to={`/hotels-results/${hotel.id}?lat=${hotel.latitude}&lng=${hotel.longitude}&hostLocation=${hotel.host_location}`}
+                to={`/hotels-results/${hotel.id}?lat=${hotel.latitude}&lng=${
+                  hotel.longitude
+                }&hostLocation=${
+                  hotel.host_location
+                }&mapTitle=${`${hotel.name.slice(0, 5)} Hotel`}`}
               >
                 {/*  // Filtered Hotel : */}
                 <div

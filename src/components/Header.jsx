@@ -25,7 +25,7 @@ function Header() {
   };
 
   return (
-    <header className="z-2000 sticky top-0 mb-8 p-4 backdrop-blur-md">
+    <header className="sticky top-0 z-2000 mb-8 p-4 backdrop-blur-md">
       <nav
         className={`relative flex flex-wrap gap-x-6 rounded-xl bg-slate-200 px-3 py-4 shadow-lg ${
           isOpenMenu ? "rounded-b-none md:rounded-xl" : ""
@@ -147,7 +147,7 @@ function HamburgerMenu({ isOpenMenu, setIsOpenMenu }) {
           onClick={() => setIsOpenMenu(false)}
           className="cursor-pointer pl-2 transition-all ease-in-out hover:rounded-md hover:bg-slate-300"
         >
-          <NavLink to="/bookmarks">
+          <NavLink to="/bookmarks?mapTitle=Bookmarks List">
             {({ isActive }) => (
               <div className="flex py-1">
                 <div className="flex items-center justify-center">
@@ -301,7 +301,7 @@ function NavigationMenu() {
         <li className="transition-all hover:rounded-md hover:bg-slate-300">
           <NavLink
             className={({ isActive }) => (isActive ? "text-emerald-700" : "")}
-            to="/bookmarks"
+            to="/bookmarks?mapTitle=Bookmarks List"
           >
             <span className="block px-2 py-4 font-semibold">Bookmarks</span>
           </NavLink>
