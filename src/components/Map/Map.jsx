@@ -28,6 +28,7 @@ function Map() {
   const [searchParams] = useSearchParams();
   const latitude = searchParams.get("lat");
   const longitude = searchParams.get("lng");
+  const hostLocation = searchParams.get("hostLocation");
 
   const { isLoading, userLocation, getUserLocation } = useGeoLocation();
 
@@ -47,6 +48,8 @@ function Map() {
   console.log("userLocation:", userLocation);
 
   console.log("hotels:", hotels);
+
+  console.log("hostLocation:", hostLocation);
 
   return (
     <div>
@@ -77,7 +80,7 @@ function Map() {
           {location.pathname === "/bookmarks/add" ? null : latitude &&
             longitude ? (
             <Marker position={[latitude, longitude]}>
-              <Popup>Lorem, ipsum dolor.</Popup>
+              <Popup>{hostLocation}</Popup>
             </Marker>
           ) : location.pathname === "/hotels-results" ? (
             hotels?.map((hotel) => {

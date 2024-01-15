@@ -27,15 +27,20 @@ function Hotels() {
   const number = JSON.parse(searchParams.get("number"));
   const date = JSON.parse(searchParams.get("date"));
 
+  console.log("hotelsData:", hotelsData);
+
+  console.log("location:", location.pathname);
+
   useEffect(() => {
-    dispatch(filterHotels({ destination, number, date, hotelsData }));
+    if (location.pathname === "/hotels-results")
+      dispatch(filterHotels({ destination, number, date, hotelsData }));
   }, []);
 
   console.log("render Hotels Component...");
 
   return (
     <section className="px-4">
-      {!hotels?.length ? (
+      {!hotels?.length && location.pathname === "/hotels-results" ? (
         <Message>
           <img
             className="ml-1 block w-32"

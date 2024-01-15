@@ -511,7 +511,7 @@ function HotelsPage() {
                     return (
                       <Link
                         key={hotel.id}
-                        to={`/hotels-results/${hotel.id}?lat=${hotel.latitude}&lng=${hotel.longitude}`}
+                        to={`/hotels-results/${hotel.id}?lat=${hotel.latitude}&lng=${hotel.longitude}&hostLocation=${hotel.host_location}`}
                       >
                         <div className="flex flex-col justify-between rounded-xl bg-slate-200 p-4 shadow-lg">
                           {/* Hotel Image */}
