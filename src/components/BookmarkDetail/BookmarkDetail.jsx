@@ -5,6 +5,7 @@ import ReactCountryFlag from "react-country-flag";
 import { useDispatch } from "react-redux";
 import { createCurrentBookmark } from "../../features/currentBookmark/currentBookmarkSlice";
 import { removeAsyncBookmark } from "../../features/bookmarksList/bookmarksListSlice";
+import BackButton from "./../../common/BackButton";
 
 function BookmarkDetail() {
   const { bookmarkId } = useParams();
@@ -51,7 +52,7 @@ function BookmarkDetail() {
     <div>
       <div>
         {/* Bookmark Detail Title */}
-        <div className="mb-12 px-1">
+        <div className="mb-8 px-1">
           <div className="flex items-center justify-between">
             <div>
               <span className="block bg-img-home bg-cover bg-center bg-no-repeat text-lg font-semibold italic">
@@ -59,7 +60,7 @@ function BookmarkDetail() {
               </span>
             </div>
             <div>
-              <span>📍</span>
+              <BackButton />
             </div>
           </div>
         </div>

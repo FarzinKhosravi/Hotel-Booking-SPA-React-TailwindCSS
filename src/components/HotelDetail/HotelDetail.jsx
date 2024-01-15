@@ -5,6 +5,7 @@ import ReactCountryFlag from "react-country-flag";
 import AmenitiesIcons from "../../common/AmenitiesIcons";
 import { useDispatch } from "react-redux";
 import { createCurrentHotel } from "../../features/currentHotel/currentHotelSlice";
+import BackButton from "./../../common/BackButton";
 
 function HotelDetail() {
   const { hotelId } = useParams();
@@ -59,7 +60,7 @@ function HotelDetail() {
               </span>
             </div>
             <div>
-              <span>📍</span>
+              <BackButton />
             </div>
           </div>
         </div>

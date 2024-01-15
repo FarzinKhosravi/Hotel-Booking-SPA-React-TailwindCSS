@@ -5,17 +5,20 @@ import {
   useSearchParams,
 } from "react-router-dom";
 import Map from "./../Map/Map";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { filterHotels } from "../../features/hotels/hotelsSlice";
 import Message from "../../common/Message";
 import nothingImage from "../../assets/images/nothingImg.png";
+import Loader from "./../Loader";
 
 function Hotels() {
   const { hotelId } = useParams();
   const location = useLocation();
 
   const hotelsData = location.state;
+
+  const [loading, setLoading] = useState(true);
 
   const dispatch = useDispatch();
 
@@ -27,20 +30,21 @@ function Hotels() {
   const number = JSON.parse(searchParams.get("number"));
   const date = JSON.parse(searchParams.get("date"));
 
-  console.log("hotelsData:", hotelsData);
-
-  console.log("location:", location.pathname);
-
   useEffect(() => {
-    if (location.pathname === "/hotels-results")
+    if (location.pathname === "/hotels-results") {
       dispatch(filterHotels({ destination, number, date, hotelsData }));
-  }, []);
+
+      setLoading(false);
+    }
+  }, [hotelsData]);
 
   console.log("render Hotels Component...");
 
   return (
     <section className="px-4">
-      {!hotels?.length && location.pathname === "/hotels-results" ? (
+      {loading && location.pathname === "/hotels-results" ? (
+        <Loader />
+      ) : !hotels?.length && location.pathname === "/hotels-results" ? (
         <Message>
           <img
             className="ml-1 block w-32"

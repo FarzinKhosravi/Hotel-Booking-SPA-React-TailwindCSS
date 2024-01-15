@@ -7,6 +7,7 @@ import {
 import ReactCountryFlag from "react-country-flag";
 import Loader from "./../components/Loader";
 import { Link } from "react-router-dom";
+import BackButton from "../common/BackButton";
 
 function BookmarksListPage() {
   const { loading, bookmarksList } = useSelector(
@@ -31,15 +32,18 @@ function BookmarksListPage() {
     <section>
       <div>
         {/* Bookmarks List Title */}
-        <div className="mb-12 px-1">
+        <div className="mb-10 px-1">
           <div className="flex items-center justify-between">
-            <div>
+            <div className="flex">
               <span className="block bg-img-home bg-cover bg-center bg-no-repeat text-lg font-semibold italic">
                 Bookmarks List
               </span>
+              <span className="ml-2 flex h-6 w-6 items-center justify-center rounded-full bg-slate-200 text-lg font-semibold shadow-md">
+                {bookmarksList?.length}
+              </span>
             </div>
             <div>
-              <span>📍</span>
+              <BackButton />
             </div>
           </div>
         </div>

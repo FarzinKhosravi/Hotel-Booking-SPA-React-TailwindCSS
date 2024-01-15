@@ -7,6 +7,7 @@ import http from "./../../services/httpService";
 import ReactCountryFlag from "react-country-flag";
 import toast from "react-hot-toast";
 import getBookmarksList from "../../services/getBookmarksListService";
+import BackButton from "./../../common/BackButton";
 
 const BASE_LOCATION_DATA_URL =
   "https://api.bigdatacloud.net/data/reverse-geocode-client";
@@ -128,15 +129,15 @@ function AddNewBookmark() {
     <div className="h-screen">
       <div>
         {/* Add New Bookmark Form Title */}
-        <div className="mb-4 px-1">
+        <div className="mb-4">
           <div className="flex items-center justify-between">
-            <div>
+            <div className="pl-1">
               <span className="block bg-img-home bg-cover bg-center bg-no-repeat text-lg font-semibold italic">
                 Add New Bookmark Form
               </span>
             </div>
-            <div>
-              <span>📍</span>
+            <div className="pr-2">
+              <BackButton />
             </div>
           </div>
         </div>

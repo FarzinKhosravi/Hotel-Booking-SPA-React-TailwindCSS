@@ -2,6 +2,7 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import ReactCountryFlag from "react-country-flag";
 import AmenitiesIcons from "./../../common/AmenitiesIcons";
+import BackButton from "../../common/BackButton";
 
 function HotelsResults() {
   const { hotels } = useSelector((state) => state.hotels);
@@ -31,7 +32,7 @@ function HotelsResults() {
               </span>
             </div>
             <div>
-              <span>📍</span>
+              <BackButton />
             </div>
           </div>
         </div>
