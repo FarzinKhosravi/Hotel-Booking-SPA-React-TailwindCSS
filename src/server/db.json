@@ -55,12 +55,7 @@
       "host_neighbourhood": null,
       "host_listings_count": 1,
       "host_total_listings_count": 1,
-      "host_verifications": [
-        "email",
-        "phone",
-        "facebook",
-        "reviews"
-      ],
+      "host_verifications": ["email", "phone", "facebook", "reviews"],
       "street": "Amsterdam, Noord-Holland 1054, Netherlands",
       "neighbourhood": null,
       "neighbourhood_cleansed": "De Baarsjes - Oud-West",
@@ -124,9 +119,7 @@
         "lon": 2.35,
         "lat": 48.86
       },
-      "features": [
-        "Host Has Profile Pic"
-      ]
+      "features": ["Host Has Profile Pic"]
     },
     {
       "id": "9192415",
@@ -314,11 +307,7 @@
       "host_neighbourhood": "Oud-West",
       "host_listings_count": 3,
       "host_total_listings_count": 3,
-      "host_verifications": [
-        "email",
-        "phone",
-        "reviews"
-      ],
+      "host_verifications": ["email", "phone", "reviews"],
       "street": "Oud-West, Amsterdam, North Holland 1054, Netherlands",
       "neighbourhood": "Oud-West",
       "neighbourhood_cleansed": "De Baarsjes - Oud-West",
@@ -382,10 +371,7 @@
         "lon": 4.875639539930118,
         "lat": 52.36456756846072
       },
-      "features": [
-        "Host Has Profile Pic",
-        "Is Location Exact"
-      ]
+      "features": ["Host Has Profile Pic", "Is Location Exact"]
     },
     {
       "id": "13153299",
@@ -705,10 +691,7 @@
       "host_neighbourhood": null,
       "host_listings_count": 1,
       "host_total_listings_count": 1,
-      "host_verifications": [
-        "email",
-        "reviews"
-      ],
+      "host_verifications": ["email", "reviews"],
       "street": "Amsterdam, North Holland, Netherlands",
       "neighbourhood": null,
       "neighbourhood_cleansed": "De Baarsjes - Oud-West",
@@ -772,9 +755,7 @@
         "lon": 4.865594943841575,
         "lat": 52.36667871194905
       },
-      "features": [
-        "Host Has Profile Pic"
-      ]
+      "features": ["Host Has Profile Pic"]
     },
     {
       "id": "13465532",
@@ -962,11 +943,7 @@
       "host_neighbourhood": null,
       "host_listings_count": 0,
       "host_total_listings_count": 0,
-      "host_verifications": [
-        "email",
-        "phone",
-        "reviews"
-      ],
+      "host_verifications": ["email", "phone", "reviews"],
       "street": "Amsterdam, NH 1056, Netherlands",
       "neighbourhood": null,
       "neighbourhood_cleansed": "De Baarsjes - Oud-West",
@@ -1030,9 +1007,7 @@
         "lon": 4.853345068114508,
         "lat": 52.37080138742488
       },
-      "features": [
-        "Host Has Profile Pic"
-      ]
+      "features": ["Host Has Profile Pic"]
     },
     {
       "id": "7890890",
@@ -1089,12 +1064,7 @@
       "host_neighbourhood": "Oud-West",
       "host_listings_count": 1,
       "host_total_listings_count": 1,
-      "host_verifications": [
-        "email",
-        "phone",
-        "reviews",
-        "jumio"
-      ],
+      "host_verifications": ["email", "phone", "reviews", "jumio"],
       "street": "Oud-West, Amsterdam, Noord-Holland 1054, Netherlands",
       "neighbourhood": "Oud-West",
       "neighbourhood_cleansed": "De Baarsjes - Oud-West",
@@ -1219,12 +1189,7 @@
       "host_neighbourhood": "Oud-West",
       "host_listings_count": 2,
       "host_total_listings_count": 2,
-      "host_verifications": [
-        "email",
-        "phone",
-        "reviews",
-        "jumio"
-      ],
+      "host_verifications": ["email", "phone", "reviews", "jumio"],
       "street": "Oud-West, Amsterdam, Noord-Holland 1057, Netherlands",
       "neighbourhood": "Oud-West",
       "neighbourhood_cleansed": "De Baarsjes - Oud-West",
@@ -1449,438 +1414,9 @@
       "id": 7
     },
     {
-      "latitude": 48.36654918466149,
+      "latitude": 50.987169259817385,
       "lookupSource": "coordinates",
-      "longitude": 3.251953125,
-      "localityLanguageRequested": "en",
-      "continent": "Europe",
-      "continentCode": "EU",
-      "countryName": "France",
-      "countryCode": "FR",
-      "principalSubdivision": "Bourgogne-Franche-Comte",
-      "principalSubdivisionCode": "FR-BFC",
-      "city": "Sergines",
-      "locality": "Montigny-le-Guesdier",
-      "postcode": "77480",
-      "plusCode": "8FW59782+JQ",
-      "localityInfo": {
-        "administrative": [
-          {
-            "name": "France",
-            "description": "country with territory in Europe and several overseas regions and territories",
-            "isoName": "France",
-            "order": 2,
-            "adminLevel": 2,
-            "isoCode": "FR",
-            "wikidataId": "Q142",
-            "geonameId": 3017382
-          },
-          {
-            "name": "Metropolitan France",
-            "description": "part of France located in Europe",
-            "order": 4,
-            "adminLevel": 3,
-            "wikidataId": "Q212429"
-          },
-          {
-            "name": "Bourgogne-Franche-Comte",
-            "description": "administrative region of France",
-            "isoName": "Bourgogne-Franche-Comte",
-            "order": 5,
-            "adminLevel": 4,
-            "isoCode": "FR-BFC",
-            "wikidataId": "Q18578267",
-            "geonameId": 11071619
-          },
-          {
-            "name": "Ile-de-France",
-            "description": "region in France where the capital Paris is located",
-            "isoName": "Ile-de-France",
-            "order": 6,
-            "adminLevel": 4,
-            "isoCode": "FR-IDF",
-            "wikidataId": "Q13917",
-            "geonameId": 3012874
-          },
-          {
-            "name": "Yonne",
-            "description": "French department",
-            "isoName": "Yonne",
-            "order": 7,
-            "adminLevel": 6,
-            "isoCode": "FR-89",
-            "wikidataId": "Q12816",
-            "geonameId": 2967222
-          },
-          {
-            "name": "Seine-et-Marne",
-            "description": "French department",
-            "isoName": "Seine-et-Marne",
-            "order": 8,
-            "adminLevel": 6,
-            "isoCode": "FR-77",
-            "wikidataId": "Q12753",
-            "geonameId": 2975249
-          },
-          {
-            "name": "arrondissement of Provins",
-            "description": "arrondissement of France",
-            "order": 10,
-            "adminLevel": 7,
-            "wikidataId": "Q258745",
-            "geonameId": 2985228
-          },
-          {
-            "name": "Sergines",
-            "description": "commune in Yonne, France",
-            "order": 16,
-            "adminLevel": 8,
-            "wikidataId": "Q1173189",
-            "geonameId": 2974937
-          },
-          {
-            "name": "Compigny",
-            "description": "commune in Yonne, France",
-            "order": 17,
-            "adminLevel": 8,
-            "wikidataId": "Q936143",
-            "geonameId": 3024063
-          },
-          {
-            "name": "Montigny-le-Guesdier",
-            "description": "commune in Seine-et-Marne, France",
-            "order": 18,
-            "adminLevel": 8,
-            "wikidataId": "Q252866",
-            "geonameId": 2992411
-          }
-        ],
-        "informative": [
-          {
-            "name": "Europe",
-            "description": "continent",
-            "isoName": "Europe",
-            "order": 1,
-            "isoCode": "EU",
-            "wikidataId": "Q46",
-            "geonameId": 6255148
-          },
-          {
-            "name": "Europe/Paris",
-            "description": "time zone",
-            "order": 3
-          },
-          {
-            "name": "Academy of Creteil",
-            "order": 9,
-            "wikidataId": "Q2822294"
-          },
-          {
-            "name": "077-04",
-            "order": 11
-          },
-          {
-            "name": "Provins",
-            "order": 12
-          },
-          {
-            "name": "Communaute de communes de la Bassee - Montois",
-            "description": "Community of communes in France",
-            "order": 13,
-            "wikidataId": "Q16304154"
-          },
-          {
-            "name": "Bray-sur-Seine",
-            "order": 14
-          },
-          {
-            "name": "77480",
-            "description": "postal code",
-            "order": 15
-          }
-        ]
-      },
-      "price": "479",
-      "locationName": "Absolute World",
-      "bookmarkName": "third BM",
-      "bookmarkDescription": "",
-      "id": 8
-    },
-    {
-      "latitude": 46.972315029501424,
-      "lookupSource": "coordinates",
-      "longitude": 0.7470703125000001,
-      "localityLanguageRequested": "en",
-      "continent": "Europe",
-      "continentCode": "EU",
-      "countryName": "France",
-      "countryCode": "FR",
-      "principalSubdivision": "Centre-Val de Loire",
-      "principalSubdivisionCode": "FR-CVL",
-      "city": "Descartes",
-      "locality": "Neuilly-le-Brignon",
-      "postcode": "37160",
-      "plusCode": "8FR2XPCW+WR",
-      "localityInfo": {
-        "administrative": [
-          {
-            "name": "France",
-            "description": "country with territory in Europe and several overseas regions and territories",
-            "isoName": "France",
-            "order": 3,
-            "adminLevel": 2,
-            "isoCode": "FR",
-            "wikidataId": "Q142",
-            "geonameId": 3017382
-          },
-          {
-            "name": "Metropolitan France",
-            "description": "part of France located in Europe",
-            "order": 5,
-            "adminLevel": 3,
-            "wikidataId": "Q212429"
-          },
-          {
-            "name": "Centre-Val de Loire",
-            "description": "French administrative region",
-            "isoName": "Centre-Val de Loire",
-            "order": 6,
-            "adminLevel": 4,
-            "isoCode": "FR-CVL",
-            "wikidataId": "Q13947",
-            "geonameId": 3027939
-          },
-          {
-            "name": "Indre-et-Loire",
-            "description": "French department in Centre-Val de Loire",
-            "isoName": "Indre-et-Loire",
-            "order": 8,
-            "adminLevel": 6,
-            "isoCode": "FR-37",
-            "wikidataId": "Q12556",
-            "geonameId": 3012804
-          },
-          {
-            "name": "arrondissement of Loches",
-            "description": "arrondissement of France",
-            "order": 9,
-            "adminLevel": 7,
-            "wikidataId": "Q701543",
-            "geonameId": 2997995
-          },
-          {
-            "name": "Descartes",
-            "description": "commune in Indre-et-Loire, France",
-            "order": 16,
-            "adminLevel": 8,
-            "wikidataId": "Q320299",
-            "geonameId": 3008759
-          },
-          {
-            "name": "Abilly",
-            "description": "commune in Indre-et-Loire, France",
-            "order": 17,
-            "adminLevel": 8,
-            "wikidataId": "Q1069923",
-            "geonameId": 3038768
-          },
-          {
-            "name": "Neuilly-le-Brignon",
-            "description": "commune in Indre-et-Loire, France",
-            "order": 18,
-            "adminLevel": 8,
-            "wikidataId": "Q737178",
-            "geonameId": 2990624
-          }
-        ],
-        "informative": [
-          {
-            "name": "Europe",
-            "description": "continent",
-            "isoName": "Europe",
-            "order": 1,
-            "isoCode": "EU",
-            "wikidataId": "Q46",
-            "geonameId": 6255148
-          },
-          {
-            "name": "North European Plain",
-            "description": "geomorphological region in Europe iceland",
-            "order": 2,
-            "wikidataId": "Q560549"
-          },
-          {
-            "name": "Europe/Paris",
-            "description": "time zone",
-            "order": 4
-          },
-          {
-            "name": "Academie d'Orleans-Tours",
-            "order": 7,
-            "wikidataId": "Q2822277"
-          },
-          {
-            "name": "037-03",
-            "order": 10
-          },
-          {
-            "name": "communaute de communes Loches Sud Touraine",
-            "description": "French community of communes",
-            "order": 11,
-            "wikidataId": "Q28495841"
-          },
-          {
-            "name": "Descartes",
-            "order": 12
-          },
-          {
-            "name": "Communaute de Communes de la Touraine du Sud",
-            "order": 13
-          },
-          {
-            "name": "canton of Descartes",
-            "description": "canton of France",
-            "order": 14,
-            "wikidataId": "Q1151261"
-          },
-          {
-            "name": "37160",
-            "description": "postal code",
-            "order": 15
-          }
-        ]
-      },
-      "price": "340",
-      "locationName": "Adventurous Rocky",
-      "bookmarkName": "second BM",
-      "bookmarkDescription": "",
-      "id": 9
-    },
-    {
-      "latitude": 51.51454213272574,
-      "lookupSource": "coordinates",
-      "longitude": -0.10591506958007814,
-      "localityLanguageRequested": "en",
-      "continent": "Europe",
-      "continentCode": "EU",
-      "countryName": "United Kingdom of Great Britain and Northern Ireland (the)",
-      "countryCode": "GB",
-      "principalSubdivision": "England",
-      "principalSubdivisionCode": "GB-ENG",
-      "city": "London",
-      "locality": "City of London",
-      "postcode": "EC4A 4",
-      "plusCode": "9C3XGV7V+RJ",
-      "localityInfo": {
-        "administrative": [
-          {
-            "name": "United Kingdom of Great Britain and Northern Ireland (the)",
-            "description": "country in Western Europe",
-            "isoName": "United Kingdom of Great Britain and Northern Ireland (the)",
-            "order": 3,
-            "adminLevel": 2,
-            "isoCode": "GB",
-            "wikidataId": "Q145",
-            "geonameId": 2635167
-          },
-          {
-            "name": "England",
-            "description": "home nation of the United Kingdom",
-            "isoName": "England",
-            "order": 6,
-            "adminLevel": 4,
-            "isoCode": "GB-ENG",
-            "wikidataId": "Q21",
-            "geonameId": 6269131
-          },
-          {
-            "name": "London",
-            "description": "capital and largest city of the United Kingdom",
-            "order": 7,
-            "adminLevel": 5,
-            "wikidataId": "Q84",
-            "geonameId": 2643743
-          },
-          {
-            "name": "Greater London",
-            "description": "administrative area and ceremonial county in England",
-            "order": 8,
-            "adminLevel": 5,
-            "wikidataId": "Q23306",
-            "geonameId": 2648110
-          },
-          {
-            "name": "City of London",
-            "description": "city, ceremonial county and local government district that contains the historic center and the primary central business district in the London Region in England, UK",
-            "order": 10,
-            "adminLevel": 6,
-            "wikidataId": "Q23311",
-            "geonameId": 2643741
-          },
-          {
-            "name": "London, City of",
-            "description": "city, ceremonial county and local government district that contains the historic center and the primary central business district in the London Region in England, UK",
-            "isoName": "London, City of",
-            "order": 11,
-            "adminLevel": 6,
-            "isoCode": "GB-LND",
-            "wikidataId": "Q23311",
-            "geonameId": 2643741
-          }
-        ],
-        "informative": [
-          {
-            "name": "Europe",
-            "description": "continent",
-            "isoName": "Europe",
-            "order": 1,
-            "isoCode": "EU",
-            "wikidataId": "Q46",
-            "geonameId": 6255148
-          },
-          {
-            "name": "British Isles",
-            "description": "group of islands in northwest Europe",
-            "order": 2,
-            "wikidataId": "Q38272",
-            "geonameId": 2654669
-          },
-          {
-            "name": "Europe/London",
-            "description": "time zone",
-            "order": 4
-          },
-          {
-            "name": "Great Britain",
-            "description": "island in the North Atlantic Ocean off the northwest coast of continental Europe",
-            "order": 5,
-            "wikidataId": "Q23666",
-            "geonameId": 2648147
-          },
-          {
-            "name": "Middlesex",
-            "description": "historic county of England",
-            "order": 9,
-            "wikidataId": "Q19186",
-            "geonameId": 2642605
-          },
-          {
-            "name": "EC4A 4",
-            "description": "postal code",
-            "order": 12
-          }
-        ]
-      },
-      "price": "64",
-      "locationName": "Able Art",
-      "bookmarkName": "qqweqwe",
-      "bookmarkDescription": "",
-      "id": 10
-    },
-    {
-      "latitude": 51.01227003614202,
-      "lookupSource": "coordinates",
-      "longitude": -2.9822731018066406,
+      "longitude": -2.990341186523438,
       "localityLanguageRequested": "en",
       "continent": "Europe",
       "continentCode": "EU",
@@ -1889,9 +1425,9 @@
       "principalSubdivision": "England",
       "principalSubdivisionCode": "GB-ENG",
       "city": "Taunton",
-      "locality": "North Curry",
+      "locality": "Hatch Beauchamp",
       "postcode": "TA3 6",
-      "plusCode": "9C3V2269+W3",
+      "plusCode": "9C2VX2P5+VV",
       "localityInfo": {
         "administrative": [
           {
@@ -1939,6 +1475,22 @@
             "adminLevel": 10,
             "wikidataId": "Q647024",
             "geonameId": 2641379
+          },
+          {
+            "name": "West Hatch",
+            "description": "village in the United Kingdom",
+            "order": 15,
+            "adminLevel": 10,
+            "wikidataId": "Q4993272",
+            "geonameId": 7297874
+          },
+          {
+            "name": "Hatch Beauchamp",
+            "description": "village in the United Kingdom",
+            "order": 16,
+            "adminLevel": 10,
+            "wikidataId": "Q4504079",
+            "geonameId": 2647352
           }
         ],
         "informative": [
@@ -2002,25 +1554,17 @@
             "geonameId": 7290626
           },
           {
-            "name": "Monkton and North Curry ED",
-            "order": 15
-          },
-          {
-            "name": "North Curry & Stoke St Gregory District Ward",
-            "order": 16
-          },
-          {
             "name": "TA3 6",
             "description": "postal code",
             "order": 17
           }
         ]
       },
-      "price": "217",
-      "locationName": "Academic History",
-      "bookmarkName": "dsadsa",
+      "price": "469",
+      "locationName": "Able Rocky",
+      "bookmarkName": "asdas",
       "bookmarkDescription": "",
-      "id": 11
+      "id": 8
     }
   ]
 }

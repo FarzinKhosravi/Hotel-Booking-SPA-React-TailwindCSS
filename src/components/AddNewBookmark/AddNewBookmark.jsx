@@ -1,4 +1,3 @@
-import axios from "axios";
 import { useFormik } from "formik";
 import { useEffect, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
@@ -8,9 +7,11 @@ import ReactCountryFlag from "react-country-flag";
 import toast from "react-hot-toast";
 import getBookmarksList from "../../services/getBookmarksListService";
 import BackButton from "./../../common/BackButton";
-
-const BASE_LOCATION_DATA_URL =
-  "https://api.bigdatacloud.net/data/reverse-geocode-client";
+import { useDispatch, useSelector } from "react-redux";
+import { getAsyncSelectedLocation } from "../../features/selectedLocation/selectedLocationSlice";
+import Loader from "./../Loader";
+import Message from "./../../common/Message";
+import { MapPinIcon } from "@heroicons/react/24/outline";
 
 const initialValues = {
   bookmarkName: "",
@@ -76,9 +77,14 @@ function AddNewBookmark() {
     validateOnMount: true,
   });
 
+  const dispatch = useDispatch();
+
+  const { loading, selectedLocation } = useSelector(
+    (state) => state.selectedLocation
+  );
+
   const navigate = useNavigate();
 
-  const [selectedLocation, setSelectedLocation] = useState(null);
   const [duplicateBookmarkName, setDuplicateBookmarkName] = useState("");
 
   // *** Convert to Custom Hook ***
@@ -89,41 +95,33 @@ function AddNewBookmark() {
   const locationName = searchParams.get("locationName");
   const price = searchParams.get("price");
 
-  // console.log(latitude, longitude);
-
-  // console.log(locationName, price);
-
   useEffect(() => {
-    async function fetchLocationData() {
-      try {
-        const { data: locationData } = await axios.get(
-          `${BASE_LOCATION_DATA_URL}?latitude=${latitude}&longitude=${longitude}&localityLanguage=en`
-        );
-
-        // console.log(locationData);
-
-        setSelectedLocation({ ...locationData, price, locationName });
-      } catch (error) {
-        console.log(error);
-      }
-    }
-
-    fetchLocationData();
+    dispatch(
+      getAsyncSelectedLocation({ latitude, longitude, price, locationName })
+    );
   }, [latitude, longitude]);
 
   useEffect(() => {
     setDuplicateBookmarkName("");
   }, [formik.values.bookmarkName]);
 
-  // console.log("selectedLocation:", selectedLocation);
+  console.log("selectedLocation:", selectedLocation);
+  console.log("loading:", loading);
 
-  if (!selectedLocation?.city) return <div>Please select a city !!</div>;
+  if (loading) return <Loader />;
 
-  // console.log("values :", formik.values);
-  // console.log("form visited :", formik.touched);
-  // console.log("errors :", formik.errors);
-
-  // console.log("duplicate bookmark:", duplicateBookmarkName);
+  if (!selectedLocation?.city)
+    return (
+      <Message
+        message={{
+          title: "Not City",
+          description:
+            "The Location You have Chosen is Not City, Please Choose Another Location !",
+        }}
+      >
+        <MapPinIcon className="h-20 w-20 text-red-700" />
+      </Message>
+    );
 
   return (
     <div className="h-screen">
