@@ -2,6 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import toast from "react-hot-toast";
 import getBookmarksList from "./../../services/getBookmarksListService";
 import removeBookmark from "./../../services/removeBookmarkService";
+import createBookmark from "../../services/createBookmarkService";
 
 export const getAsyncBookmarksList = createAsyncThunk(
   "bookmarksList/getAsyncBookmarksList",
@@ -32,6 +33,19 @@ export const removeAsyncBookmark = createAsyncThunk(
     } catch (error) {
       toast.error(`404 ERROR 🧐`);
 
+      return rejectWithValue(error.message);
+    }
+  }
+);
+
+export const postAsyncBookmark = createAsyncThunk(
+  "bookmarksList/postAsyncBookmark",
+  async (payload, { rejectWithValue }) => {
+    try {
+      const { data: createdBookmark } = await createBookmark(payload);
+
+      return createdBookmark;
+    } catch (error) {
       return rejectWithValue(error.message);
     }
   }
@@ -77,6 +91,9 @@ const bookmarksListSlice = createSlice({
         state.loading = false;
         state.bookmarksList = null;
         state.error = action.payload;
+      })
+      .addCase(postAsyncBookmark.fulfilled, (state, action) => {
+        state.bookmarksList = state.bookmarksList?.push(action.payload);
       });
   },
 });

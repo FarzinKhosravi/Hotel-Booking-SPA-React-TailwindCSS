@@ -2,7 +2,6 @@ import { useFormik } from "formik";
 import { useEffect, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import * as Yup from "yup";
-import http from "./../../services/httpService";
 import ReactCountryFlag from "react-country-flag";
 import toast from "react-hot-toast";
 import getBookmarksList from "../../services/getBookmarksListService";
@@ -12,6 +11,7 @@ import { getAsyncSelectedLocation } from "../../features/selectedLocation/select
 import Loader from "./../Loader";
 import Message from "./../../common/Message";
 import { MapPinIcon } from "@heroicons/react/24/outline";
+import { postAsyncBookmark } from "../../features/bookmarksList/bookmarksListSlice";
 
 const initialValues = {
   bookmarkName: "",
@@ -64,7 +64,7 @@ function AddNewBookmark() {
     }
 
     async function createUserBookmark() {
-      http.post("/bookmarks", userBookmark);
+      dispatch(postAsyncBookmark(userBookmark));
     }
 
     fetchBookmarks();
