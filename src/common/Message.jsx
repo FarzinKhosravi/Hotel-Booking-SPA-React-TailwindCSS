@@ -44,13 +44,17 @@ function Message({
           <span className="inline-flex rotate-12">LOST</span>
         </span>
         <div
-          className={`block w-full rounded-lg text-center text-sm font-semibold ${
-            message.title === "Not City" ? "bg-yellow-400 px-3 py-2" : "px-8"
+          className={`block rounded-lg text-center text-sm font-semibold ${
+            message.title === "Not City" || message.title === "Empty List"
+              ? "w-auto bg-yellow-400 p-3"
+              : "w-full  px-8"
           }`}
         >
           <span
             className={`mb-1 items-center justify-center ${
-              message.title === "Not City" ? "flex" : "hidden"
+              message.title === "Not City" || message.title === "Empty List"
+                ? "flex"
+                : "hidden"
             }`}
           >
             <span className="relative flex h-5 w-5">
@@ -91,7 +95,9 @@ function Message({
       {/* Down Section */}
       <div
         className={`w-full items-center justify-center ${
-          message.title === "Not City" ? "hidden" : "flex"
+          message.title === "Not City" || message.title === "Empty List"
+            ? "hidden"
+            : "flex"
         }`}
       >
         <button

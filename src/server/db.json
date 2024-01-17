@@ -55,12 +55,7 @@
       "host_neighbourhood": null,
       "host_listings_count": 1,
       "host_total_listings_count": 1,
-      "host_verifications": [
-        "email",
-        "phone",
-        "facebook",
-        "reviews"
-      ],
+      "host_verifications": ["email", "phone", "facebook", "reviews"],
       "street": "Amsterdam, Noord-Holland 1054, Netherlands",
       "neighbourhood": null,
       "neighbourhood_cleansed": "De Baarsjes - Oud-West",
@@ -124,9 +119,7 @@
         "lon": 2.35,
         "lat": 48.86
       },
-      "features": [
-        "Host Has Profile Pic"
-      ]
+      "features": ["Host Has Profile Pic"]
     },
     {
       "id": "9192415",
@@ -314,11 +307,7 @@
       "host_neighbourhood": "Oud-West",
       "host_listings_count": 3,
       "host_total_listings_count": 3,
-      "host_verifications": [
-        "email",
-        "phone",
-        "reviews"
-      ],
+      "host_verifications": ["email", "phone", "reviews"],
       "street": "Oud-West, Amsterdam, North Holland 1054, Netherlands",
       "neighbourhood": "Oud-West",
       "neighbourhood_cleansed": "De Baarsjes - Oud-West",
@@ -382,10 +371,7 @@
         "lon": 4.875639539930118,
         "lat": 52.36456756846072
       },
-      "features": [
-        "Host Has Profile Pic",
-        "Is Location Exact"
-      ]
+      "features": ["Host Has Profile Pic", "Is Location Exact"]
     },
     {
       "id": "13153299",
@@ -705,10 +691,7 @@
       "host_neighbourhood": null,
       "host_listings_count": 1,
       "host_total_listings_count": 1,
-      "host_verifications": [
-        "email",
-        "reviews"
-      ],
+      "host_verifications": ["email", "reviews"],
       "street": "Amsterdam, North Holland, Netherlands",
       "neighbourhood": null,
       "neighbourhood_cleansed": "De Baarsjes - Oud-West",
@@ -772,9 +755,7 @@
         "lon": 4.865594943841575,
         "lat": 52.36667871194905
       },
-      "features": [
-        "Host Has Profile Pic"
-      ]
+      "features": ["Host Has Profile Pic"]
     },
     {
       "id": "13465532",
@@ -962,11 +943,7 @@
       "host_neighbourhood": null,
       "host_listings_count": 0,
       "host_total_listings_count": 0,
-      "host_verifications": [
-        "email",
-        "phone",
-        "reviews"
-      ],
+      "host_verifications": ["email", "phone", "reviews"],
       "street": "Amsterdam, NH 1056, Netherlands",
       "neighbourhood": null,
       "neighbourhood_cleansed": "De Baarsjes - Oud-West",
@@ -1030,9 +1007,7 @@
         "lon": 4.853345068114508,
         "lat": 52.37080138742488
       },
-      "features": [
-        "Host Has Profile Pic"
-      ]
+      "features": ["Host Has Profile Pic"]
     },
     {
       "id": "7890890",
@@ -1089,12 +1064,7 @@
       "host_neighbourhood": "Oud-West",
       "host_listings_count": 1,
       "host_total_listings_count": 1,
-      "host_verifications": [
-        "email",
-        "phone",
-        "reviews",
-        "jumio"
-      ],
+      "host_verifications": ["email", "phone", "reviews", "jumio"],
       "street": "Oud-West, Amsterdam, Noord-Holland 1054, Netherlands",
       "neighbourhood": "Oud-West",
       "neighbourhood_cleansed": "De Baarsjes - Oud-West",
@@ -1219,12 +1189,7 @@
       "host_neighbourhood": "Oud-West",
       "host_listings_count": 2,
       "host_total_listings_count": 2,
-      "host_verifications": [
-        "email",
-        "phone",
-        "reviews",
-        "jumio"
-      ],
+      "host_verifications": ["email", "phone", "reviews", "jumio"],
       "street": "Oud-West, Amsterdam, Noord-Holland 1057, Netherlands",
       "neighbourhood": "Oud-West",
       "neighbourhood_cleansed": "De Baarsjes - Oud-West",
@@ -1298,9 +1263,9 @@
   ],
   "bookmarks": [
     {
-      "latitude": 50.98688858080416,
+      "latitude": 50.973901456789754,
       "lookupSource": "coordinates",
-      "longitude": -2.9915428161621094,
+      "longitude": -2.98553466796875,
       "localityLanguageRequested": "en",
       "continent": "Europe",
       "continentCode": "EU",
@@ -1309,9 +1274,9 @@
       "principalSubdivision": "England",
       "principalSubdivisionCode": "GB-ENG",
       "city": "Taunton",
-      "locality": "Hatch Beauchamp",
+      "locality": "Beercrocombe",
       "postcode": "TA3 6",
-      "plusCode": "9C2VX2P5+Q9",
+      "plusCode": "9C2VX2F7+HQ",
       "localityInfo": {
         "administrative": [
           {
@@ -1351,30 +1316,22 @@
             "adminLevel": 10,
             "wikidataId": "Q845619",
             "geonameId": 2636177
-          },
-          {
-            "name": "North Curry",
-            "description": "a village located in Taunton Deane, United Kingdom",
-            "order": 14,
-            "adminLevel": 10,
-            "wikidataId": "Q647024",
-            "geonameId": 2641379
-          },
-          {
-            "name": "West Hatch",
-            "description": "village in the United Kingdom",
-            "order": 15,
-            "adminLevel": 10,
-            "wikidataId": "Q4993272",
-            "geonameId": 7297874
           },
           {
             "name": "Hatch Beauchamp",
             "description": "village in the United Kingdom",
-            "order": 16,
+            "order": 14,
             "adminLevel": 10,
             "wikidataId": "Q4504079",
             "geonameId": 2647352
+          },
+          {
+            "name": "Beercrocombe",
+            "description": "a village located in South Somerset, United Kingdom",
+            "order": 15,
+            "adminLevel": 10,
+            "wikidataId": "Q961105",
+            "geonameId": 12266004
           }
         ],
         "informative": [
@@ -1440,20 +1397,20 @@
           {
             "name": "TA3 6",
             "description": "postal code",
-            "order": 17
+            "order": 16
           }
         ]
       },
-      "price": "422",
-      "locationName": "Rocky Family",
-      "bookmarkName": "first BM",
+      "price": "92",
+      "locationName": "Rocky Government",
+      "bookmarkName": "fav hotel",
       "bookmarkDescription": "",
       "id": 1
     },
     {
-      "latitude": 50.9922283236487,
+      "latitude": 50.96061666667788,
       "lookupSource": "coordinates",
-      "longitude": -3.0133438110351562,
+      "longitude": -3.022613525390625,
       "localityLanguageRequested": "en",
       "continent": "Europe",
       "continentCode": "EU",
@@ -1462,9 +1419,9 @@
       "principalSubdivision": "England",
       "principalSubdivisionCode": "GB-ENG",
       "city": "Taunton",
-      "locality": "Thornfalcon",
-      "postcode": "TA3 5",
-      "plusCode": "9C2RXXRP+VM",
+      "locality": "Bickenhall",
+      "postcode": "TA3 6",
+      "plusCode": "9C2RXX6G+6X",
       "localityInfo": {
         "administrative": [
           {
@@ -1506,20 +1463,20 @@
             "geonameId": 2636177
           },
           {
-            "name": "West Hatch",
-            "description": "village in the United Kingdom",
+            "name": "Curland",
+            "description": "a village located in Taunton Deane, United Kingdom",
             "order": 14,
             "adminLevel": 10,
-            "wikidataId": "Q4993272",
-            "geonameId": 7297874
+            "wikidataId": "Q979171",
+            "geonameId": 2651692
           },
           {
-            "name": "Thornfalcon",
+            "name": "Bickenhall",
             "description": "village in the United Kingdom",
             "order": 15,
             "adminLevel": 10,
-            "wikidataId": "Q2471602",
-            "geonameId": 2635990
+            "wikidataId": "Q4903651",
+            "geonameId": 7297221
           }
         ],
         "informative": [
@@ -1583,22 +1540,22 @@
             "geonameId": 7290626
           },
           {
-            "name": "TA3 5",
+            "name": "TA3 6",
             "description": "postal code",
             "order": 16
           }
         ]
       },
-      "price": "423",
-      "locationName": "Academic Art",
-      "bookmarkName": "second BM",
+      "price": "163",
+      "locationName": "Adventurous World",
+      "bookmarkName": "third BM",
       "bookmarkDescription": "",
       "id": 2
     },
     {
-      "latitude": 50.97534454886939,
+      "latitude": 50.937692568115075,
       "lookupSource": "coordinates",
-      "longitude": -3.109817504882813,
+      "longitude": -3.043212890625,
       "localityLanguageRequested": "en",
       "continent": "Europe",
       "continentCode": "EU",
@@ -1607,9 +1564,9 @@
       "principalSubdivision": "England",
       "principalSubdivisionCode": "GB-ENG",
       "city": "Taunton",
-      "locality": "Pitminster",
-      "postcode": "TA3 7",
-      "plusCode": "9C2RXVGR+43",
+      "locality": "Curland",
+      "postcode": "TA20 3",
+      "plusCode": "9C2RWXQ4+3P",
       "localityInfo": {
         "administrative": [
           {
@@ -1651,149 +1608,20 @@
             "geonameId": 2636177
           },
           {
-            "name": "Pitminster",
-            "description": "village and civil parish in Somerset, England",
-            "order": 14,
+            "name": "Staple Fitzpaine",
+            "description": "village in the United Kingdom",
+            "order": 15,
             "adminLevel": 10,
-            "wikidataId": "Q2677744",
-            "geonameId": 2640251
-          }
-        ],
-        "informative": [
-          {
-            "name": "Europe",
-            "description": "continent",
-            "isoName": "Europe",
-            "order": 1,
-            "isoCode": "EU",
-            "wikidataId": "Q46",
-            "geonameId": 6255148
+            "wikidataId": "Q2692649",
+            "geonameId": 2637026
           },
           {
-            "name": "British Isles",
-            "description": "group of islands in northwest Europe",
-            "order": 2,
-            "wikidataId": "Q38272",
-            "geonameId": 2654669
-          },
-          {
-            "name": "Europe/London",
-            "description": "time zone",
-            "order": 4
-          },
-          {
-            "name": "Great Britain",
-            "description": "island in the North Atlantic Ocean off the northwest coast of continental Europe",
-            "order": 5,
-            "wikidataId": "Q23666",
-            "geonameId": 2648147
-          },
-          {
-            "name": "South West England",
-            "description": "region of England",
-            "order": 7,
-            "wikidataId": "Q48026",
-            "geonameId": 11591956
-          },
-          {
-            "name": "Somerset",
-            "order": 9
-          },
-          {
-            "name": "Somerset",
-            "description": "ceremonial county of England",
-            "order": 10,
-            "wikidataId": "Q23157",
-            "geonameId": 11609046
-          },
-          {
-            "name": "Somerset West and Taunton",
-            "description": "district in Somerset, England",
-            "order": 12,
-            "wikidataId": "Q54554249"
-          },
-          {
-            "name": "Taunton Deane",
-            "description": "former local government district with borough status in Somerset, England",
-            "order": 13,
-            "wikidataId": "Q1853334",
-            "geonameId": 7290626
-          },
-          {
-            "name": "TA3 7",
-            "description": "postal code",
-            "order": 15
-          }
-        ]
-      },
-      "price": "245",
-      "locationName": "Absolute Government",
-      "bookmarkName": "third BM",
-      "bookmarkDescription": "",
-      "id": 3
-    },
-    {
-      "latitude": 51.00946069200998,
-      "lookupSource": "coordinates",
-      "longitude": -3.001327514648438,
-      "localityLanguageRequested": "en",
-      "continent": "Europe",
-      "continentCode": "EU",
-      "countryName": "United Kingdom of Great Britain and Northern Ireland (the)",
-      "countryCode": "GB",
-      "principalSubdivision": "England",
-      "principalSubdivisionCode": "GB-ENG",
-      "city": "Taunton",
-      "locality": "North Curry",
-      "postcode": "TA3 6",
-      "plusCode": "9C3R2X5X+QF",
-      "localityInfo": {
-        "administrative": [
-          {
-            "name": "United Kingdom of Great Britain and Northern Ireland (the)",
-            "description": "country in Western Europe",
-            "isoName": "United Kingdom of Great Britain and Northern Ireland (the)",
-            "order": 3,
-            "adminLevel": 2,
-            "isoCode": "GB",
-            "wikidataId": "Q145",
-            "geonameId": 2635167
-          },
-          {
-            "name": "England",
-            "description": "home nation of the United Kingdom",
-            "isoName": "England",
-            "order": 6,
-            "adminLevel": 4,
-            "isoCode": "GB-ENG",
-            "wikidataId": "Q21",
-            "geonameId": 6269131
-          },
-          {
-            "name": "Somerset",
-            "description": "unitary authority area in Somerset, England (doesn't include Bath and North-East Somerset or North Somerset)",
-            "isoName": "Somerset",
-            "order": 8,
-            "adminLevel": 6,
-            "isoCode": "GB-SOM",
-            "wikidataId": "Q21694741",
-            "geonameId": 2637532
-          },
-          {
-            "name": "Taunton",
-            "description": "town in Somerset, England",
-            "order": 11,
-            "adminLevel": 10,
-            "wikidataId": "Q845619",
-            "geonameId": 2636177
-          },
-          {
-            "name": "North Curry",
+            "name": "Curland",
             "description": "a village located in Taunton Deane, United Kingdom",
-            "order": 14,
+            "order": 16,
             "adminLevel": 10,
-            "wikidataId": "Q647024",
-            "geonameId": 2641379
+            "wikidataId": "Q979171",
+            "geonameId": 2651692
           }
         ],
         "informative": [
@@ -1857,25 +1685,24 @@
             "geonameId": 7290626
           },
           {
-            "name": "Monkton and North Curry ED",
-            "order": 15
+            "name": "Blackdown Hills",
+            "description": "hill range and natural landscape region in Devon and Somerset, England, UK",
+            "order": 14,
+            "wikidataId": "Q4922787",
+            "geonameId": 2655503
           },
           {
-            "name": "North Curry & Stoke St Gregory District Ward",
-            "order": 16
-          },
-          {
-            "name": "TA3 6",
+            "name": "TA20 3",
             "description": "postal code",
             "order": 17
           }
         ]
       },
-      "price": "361",
-      "locationName": "Rocky Government",
-      "bookmarkName": "fav hotel",
+      "price": "40",
+      "locationName": "Able Rocky",
+      "bookmarkName": "second BM",
       "bookmarkDescription": "",
-      "id": 4
+      "id": 3
     }
   ]
 }
