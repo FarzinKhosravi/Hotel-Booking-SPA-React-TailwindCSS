@@ -6,6 +6,9 @@ import { useDispatch } from "react-redux";
 import { createCurrentBookmark } from "../../features/currentBookmark/currentBookmarkSlice";
 import { removeAsyncBookmark } from "../../features/bookmarksList/bookmarksListSlice";
 import BackButton from "./../../common/BackButton";
+import saveLocalStorage from "./../../localStorage/saveLocalStorage";
+
+const CURRENT_BOOKMARK = "CURRENT_BOOKMARK";
 
 function BookmarkDetail() {
   const { bookmarkId } = useParams();
@@ -35,9 +38,9 @@ function BookmarkDetail() {
   }, [bookmarkId]);
 
   useEffect(() => {
-    // console.log("bookmarkDetail", bookmarkDetail);
-
     dispatch(createCurrentBookmark(bookmarkDetail));
+
+    saveLocalStorage(CURRENT_BOOKMARK, bookmarkDetail);
   }, [bookmarkDetail]);
 
   const removeBookmarkHandler = (id) => {

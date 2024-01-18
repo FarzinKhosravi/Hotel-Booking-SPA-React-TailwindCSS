@@ -1,9 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
+import getLocalStorage from "./../../localStorage/getLocalStorage";
+
+const CURRENT_BOOKMARK = "CURRENT_BOOKMARK";
 
 const currentBookmarkSlice = createSlice({
   name: "currentBookmark",
   initialState: {
-    currentBookmark: null,
+    currentBookmark: getLocalStorage(CURRENT_BOOKMARK) || null,
   },
 
   reducers: {

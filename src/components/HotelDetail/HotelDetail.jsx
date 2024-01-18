@@ -6,6 +6,9 @@ import AmenitiesIcons from "../../common/AmenitiesIcons";
 import { useDispatch } from "react-redux";
 import { createCurrentHotel } from "../../features/currentHotel/currentHotelSlice";
 import BackButton from "./../../common/BackButton";
+import saveLocalStorage from "./../../localStorage/saveLocalStorage";
+
+const CURRENT_HOTEL = "CURRENT_HOTEL";
 
 function HotelDetail() {
   const { hotelId } = useParams();
@@ -27,9 +30,9 @@ function HotelDetail() {
   }, [hotelId]);
 
   useEffect(() => {
-    // console.log("hotelDetail", hotelDetail);
-
     dispatch(createCurrentHotel(hotelDetail));
+
+    saveLocalStorage(CURRENT_HOTEL, hotelDetail);
   }, [hotelDetail]);
 
   const hotelReserveHandler = (e) => {

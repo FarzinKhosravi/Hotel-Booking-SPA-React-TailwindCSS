@@ -1,9 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
+import getLocalStorage from "./../../localStorage/getLocalStorage";
+
+const CURRENT_HOTEL = "CURRENT_HOTEL";
 
 const currentHotelSlice = createSlice({
   name: "currentHotel",
   initialState: {
-    currentHotel: null,
+    currentHotel: getLocalStorage(CURRENT_HOTEL) || null,
   },
 
   reducers: {
