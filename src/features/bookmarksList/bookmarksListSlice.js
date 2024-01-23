@@ -3,6 +3,7 @@ import toast from "react-hot-toast";
 import getBookmarksList from "./../../services/getBookmarksListService";
 import removeBookmark from "./../../services/removeBookmarkService";
 import createBookmark from "../../services/createBookmarkService";
+import updateBookmark from "../../services/updateBookmarkService";
 
 export const getAsyncBookmarksList = createAsyncThunk(
   "bookmarksList/getAsyncBookmarksList",
@@ -38,13 +39,32 @@ export const removeAsyncBookmark = createAsyncThunk(
   }
 );
 
-export const postAsyncBookmark = createAsyncThunk(
-  "bookmarksList/postAsyncBookmark",
+export const createAsyncBookmark = createAsyncThunk(
+  "bookmarksList/createAsyncBookmark",
   async (payload, { rejectWithValue }) => {
     try {
       const { data: createdBookmark } = await createBookmark(payload);
 
       return createdBookmark;
+    } catch (error) {
+      return rejectWithValue(error.message);
+    }
+  }
+);
+
+export const updateAsyncBookmark = createAsyncThunk(
+  "bookmarksList/updateAsyncBookmark",
+  async (payload, { rejectWithValue }) => {
+    try {
+      const { updatedBookmarkId, updatedBookmark } = payload;
+
+      await updateBookmark(updatedBookmarkId, updatedBookmark);
+
+      const { data: updatedBookmarksList } = await getBookmarksList();
+
+      console.log("updatedBookmarksList:", updatedBookmarksList);
+
+      return updatedBookmarksList;
     } catch (error) {
       return rejectWithValue(error.message);
     }
@@ -92,8 +112,11 @@ const bookmarksListSlice = createSlice({
         state.bookmarksList = null;
         state.error = action.payload;
       })
-      .addCase(postAsyncBookmark.fulfilled, (state, action) => {
+      .addCase(createAsyncBookmark.fulfilled, (state, action) => {
         state.bookmarksList = state.bookmarksList?.push(action.payload);
+      })
+      .addCase(updateAsyncBookmark.fulfilled, (state, action) => {
+        state.bookmarksList = action.payload;
       });
   },
 });

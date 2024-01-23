@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import introIcon from "../assets/images/introIcon.png";
 
-import separatorHome from "../assets/images/separator-home.png";
+import separator from "../assets/images/separator.png";
 
 function HomePage() {
   return (
@@ -18,11 +18,7 @@ function HomePage() {
         <div>
           <div className="italic text-indigo-950">
             <div className="mb-6 flex items-center justify-center">
-              <img
-                className="block w-48"
-                src={separatorHome}
-                alt="separator-home"
-              />
+              <img className="block w-48" src={separator} alt="separator" />
             </div>
             <p>
               A Hotel Reservation Site that Allows You to Find the Desired Hotel

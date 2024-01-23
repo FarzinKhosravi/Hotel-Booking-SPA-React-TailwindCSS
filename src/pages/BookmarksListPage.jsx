@@ -7,7 +7,7 @@ import {
 import { StarIcon } from "@heroicons/react/24/outline";
 import ReactCountryFlag from "react-country-flag";
 import Loader from "./../components/Loader";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import BackButton from "../common/BackButton";
 import Message from "../common/Message";
 
@@ -15,6 +15,8 @@ function BookmarksListPage() {
   const { loading, bookmarksList } = useSelector(
     (state) => state.bookmarksList
   );
+
+  const navigate = useNavigate();
 
   const { currentBookmark } = useSelector((state) => state.currentBookmark);
 
@@ -154,6 +156,24 @@ function BookmarksListPage() {
                             bookmarkMenu === bookmark.id ? "flex" : "hidden"
                           }`}
                         >
+                          <span
+                            onClick={() =>
+                              navigate(
+                                `/bookmarks/update/${bookmark.id}?lat=${
+                                  bookmark.latitude
+                                }&lng=${bookmark.longitude}&hostLocation=${
+                                  bookmark.locality
+                                }&mapTitle=${`${bookmark.bookmarkName.slice(
+                                  0,
+                                  5
+                                )} Bookmark`}`
+                              )
+                            }
+                            className="cursor-pointer px-4 py-2 text-sm font-semibold"
+                          >
+                            Update Bookmark
+                          </span>
+
                           <span
                             onClick={() =>
                               dispatch(removeAsyncBookmark(bookmark.id))

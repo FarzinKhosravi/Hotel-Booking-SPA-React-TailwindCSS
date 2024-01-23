@@ -9,6 +9,7 @@ import Bookmarks from "../components/Bookmarks/Bookmarks";
 import AddNewBookmark from "../components/AddNewBookmark/AddNewBookmark";
 import BookmarksListPage from "../pages/BookmarksListPage";
 import BookmarkDetail from "../components/BookmarkDetail/BookmarkDetail";
+import UpdateBookmark from "../components/UpdateBookmark/UpdateBookmark";
 
 function Routes() {
   let routes = useRoutes([
@@ -53,6 +54,10 @@ function Routes() {
             {
               path: "add",
               element: <AddNewBookmark />,
+            },
+            {
+              path: "update/:bookmarkId",
+              element: <UpdateBookmark />,
             },
           ],
         },

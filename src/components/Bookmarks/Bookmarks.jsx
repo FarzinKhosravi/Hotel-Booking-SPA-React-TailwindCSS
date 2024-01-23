@@ -3,6 +3,7 @@ import Map from "../Map/Map";
 import { useSelector } from "react-redux";
 import Message from "./../../common/Message";
 import { XCircleIcon } from "@heroicons/react/24/outline";
+import separator from "../../assets/images/separator.png";
 
 function Bookmarks() {
   const { error } = useSelector((state) => state.selectedLocation);
@@ -19,9 +20,14 @@ function Bookmarks() {
         </Message>
       ) : (
         <div className="flex min-h-screen flex-col lg:h-[calc(100vh-160px)] lg:min-h-0 lg:flex-row-reverse lg:items-stretch lg:justify-between">
-          <div className="mb-16 lg:mb-0 lg:w-1/2">
+          <div className="mb-8 lg:mb-0 lg:w-1/2">
             <Map />
           </div>
+
+          <div className="mb-8 flex items-center justify-center lg:hidden">
+            <img className="block w-48" src={separator} alt="separator" />
+          </div>
+
           <div className="scrollbarStyle overflow-y-auto lg:w-1/2 lg:pr-4">
             <Outlet />
           </div>

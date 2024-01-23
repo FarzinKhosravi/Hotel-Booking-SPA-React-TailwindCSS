@@ -11,7 +11,7 @@ import { getAsyncSelectedLocation } from "../../features/selectedLocation/select
 import Loader from "./../Loader";
 import Message from "./../../common/Message";
 import { MapPinIcon } from "@heroicons/react/24/outline";
-import { postAsyncBookmark } from "../../features/bookmarksList/bookmarksListSlice";
+import { createAsyncBookmark } from "../../features/bookmarksList/bookmarksListSlice";
 
 const initialValues = {
   bookmarkName: "",
@@ -64,7 +64,7 @@ function AddNewBookmark() {
     }
 
     async function createUserBookmark() {
-      dispatch(postAsyncBookmark(userBookmark));
+      dispatch(createAsyncBookmark(userBookmark));
     }
 
     fetchBookmarks();
@@ -170,7 +170,7 @@ function AddNewBookmark() {
               </div>
 
               {/* Location Specs */}
-              <div className="mb-8 flex flex-col sm:flex-row sm:items-center sm:justify-between sm:gap-x-8 lg:gap-x-4">
+              <div className="mb-8 flex flex-col sm:flex-row sm:items-center sm:justify-between sm:gap-x-8 lg:gap-x-[10px]">
                 <div className="relative mb-12 flex flex-col sm:mb-0 sm:w-full">
                   {/* Convert to Component  */}
 
@@ -205,8 +205,7 @@ function AddNewBookmark() {
                     </div>
 
                     <div className="h-auto w-full whitespace-nowrap rounded-xl bg-emerald-800 px-2 pb-2 pt-8 text-white shadow-lg sm:pl-32 sm:pt-2">
-                      {selectedLocation.countryName.slice(0, 15).trim() +
-                        " ..."}
+                      {selectedLocation.countryName.slice(0, 15).trim()}
                     </div>
                   </div>
                 </div>
@@ -216,21 +215,21 @@ function AddNewBookmark() {
 
                   {/* City */}
                   <div className="relative mb-10 flex w-full items-center justify-start">
-                    <div className="absolute -top-4 left-0 rounded-xl bg-white px-6.88 py-2 font-semibold sm:top-0">
+                    <div className="absolute -top-4 left-0 rounded-xl bg-white px-6.88 py-2 font-semibold sm:top-0 lg:px-5">
                       City
                     </div>
-                    <div className="h-auto w-full rounded-xl bg-emerald-800 px-2 pb-2 pt-8 text-white shadow-lg sm:pl-24 sm:pt-2">
+                    <div className="h-auto w-full rounded-xl bg-emerald-800 px-2 pb-2 pt-8 text-white shadow-lg sm:pl-24 sm:pt-2 lg:pl-20">
                       {selectedLocation.city}
                     </div>
                   </div>
 
                   {/* Locality */}
                   <div className="relative flex w-full items-center justify-start">
-                    <div className="absolute -top-4 left-0 rounded-xl bg-white px-4 py-2 font-semibold sm:top-0">
+                    <div className="absolute -top-4 left-0 rounded-xl bg-white px-4 py-2 font-semibold sm:top-0 lg:px-3.5">
                       Locality
                     </div>
-                    <div className="h-auto w-full whitespace-nowrap rounded-xl bg-emerald-800 px-2 pb-2 pt-8 text-white shadow-lg sm:pl-24 sm:pt-2">
-                      {selectedLocation.locality}
+                    <div className="h-auto w-full whitespace-nowrap rounded-xl bg-emerald-800 px-2 pb-2 pt-8 text-white shadow-lg sm:pl-24 sm:pt-2 lg:pl-24">
+                      {selectedLocation.locality.slice(0, 10).trim()}
                     </div>
                   </div>
                 </div>
@@ -424,7 +423,7 @@ function AddNewBookmark() {
             </div>
 
             {/* Add Bookmark Button */}
-            <div className="w-full">
+            <div className="mb-6 w-full">
               <button
                 type="submit"
                 disabled={!formik.isValid}
@@ -454,6 +453,21 @@ function AddNewBookmark() {
                         </div>
                       </sup>
                     </span>
+                  </div>
+                </div>
+              </button>
+            </div>
+
+            {/* Cancel Button */}
+            <div className="w-full">
+              <button
+                type="button"
+                onClick={() => navigate("/bookmarks?mapTitle=Bookmarks List")}
+                className="block w-full rounded-xl bg-red-700 shadow-lg"
+              >
+                <div className="flex items-center justify-center">
+                  <div className="w-full p-3">
+                    <span className="block text-white">Cancel</span>
                   </div>
                 </div>
               </button>

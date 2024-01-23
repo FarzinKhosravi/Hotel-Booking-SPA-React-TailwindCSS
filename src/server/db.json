@@ -1403,8 +1403,8 @@
       },
       "price": "92",
       "locationName": "Rocky Government",
-      "bookmarkName": "fav hotel",
-      "bookmarkDescription": "",
+      "bookmarkName": "feriiizzz",
+      "bookmarkDescription": "farziiiiiiiiiiiiiiin",
       "id": 1
     },
     {
@@ -1548,161 +1548,9 @@
       },
       "price": "163",
       "locationName": "Adventurous World",
-      "bookmarkName": "third BM",
-      "bookmarkDescription": "",
+      "bookmarkName": "abasd",
+      "bookmarkDescription": "abolfazllllllll",
       "id": 2
-    },
-    {
-      "latitude": 50.937692568115075,
-      "lookupSource": "coordinates",
-      "longitude": -3.043212890625,
-      "localityLanguageRequested": "en",
-      "continent": "Europe",
-      "continentCode": "EU",
-      "countryName": "United Kingdom of Great Britain and Northern Ireland (the)",
-      "countryCode": "GB",
-      "principalSubdivision": "England",
-      "principalSubdivisionCode": "GB-ENG",
-      "city": "Taunton",
-      "locality": "Curland",
-      "postcode": "TA20 3",
-      "plusCode": "9C2RWXQ4+3P",
-      "localityInfo": {
-        "administrative": [
-          {
-            "name": "United Kingdom of Great Britain and Northern Ireland (the)",
-            "description": "country in Western Europe",
-            "isoName": "United Kingdom of Great Britain and Northern Ireland (the)",
-            "order": 3,
-            "adminLevel": 2,
-            "isoCode": "GB",
-            "wikidataId": "Q145",
-            "geonameId": 2635167
-          },
-          {
-            "name": "England",
-            "description": "home nation of the United Kingdom",
-            "isoName": "England",
-            "order": 6,
-            "adminLevel": 4,
-            "isoCode": "GB-ENG",
-            "wikidataId": "Q21",
-            "geonameId": 6269131
-          },
-          {
-            "name": "Somerset",
-            "description": "unitary authority area in Somerset, England (doesn't include Bath and North-East Somerset or North Somerset)",
-            "isoName": "Somerset",
-            "order": 8,
-            "adminLevel": 6,
-            "isoCode": "GB-SOM",
-            "wikidataId": "Q21694741",
-            "geonameId": 2637532
-          },
-          {
-            "name": "Taunton",
-            "description": "town in Somerset, England",
-            "order": 11,
-            "adminLevel": 10,
-            "wikidataId": "Q845619",
-            "geonameId": 2636177
-          },
-          {
-            "name": "Staple Fitzpaine",
-            "description": "village in the United Kingdom",
-            "order": 15,
-            "adminLevel": 10,
-            "wikidataId": "Q2692649",
-            "geonameId": 2637026
-          },
-          {
-            "name": "Curland",
-            "description": "a village located in Taunton Deane, United Kingdom",
-            "order": 16,
-            "adminLevel": 10,
-            "wikidataId": "Q979171",
-            "geonameId": 2651692
-          }
-        ],
-        "informative": [
-          {
-            "name": "Europe",
-            "description": "continent",
-            "isoName": "Europe",
-            "order": 1,
-            "isoCode": "EU",
-            "wikidataId": "Q46",
-            "geonameId": 6255148
-          },
-          {
-            "name": "British Isles",
-            "description": "group of islands in northwest Europe",
-            "order": 2,
-            "wikidataId": "Q38272",
-            "geonameId": 2654669
-          },
-          {
-            "name": "Europe/London",
-            "description": "time zone",
-            "order": 4
-          },
-          {
-            "name": "Great Britain",
-            "description": "island in the North Atlantic Ocean off the northwest coast of continental Europe",
-            "order": 5,
-            "wikidataId": "Q23666",
-            "geonameId": 2648147
-          },
-          {
-            "name": "South West England",
-            "description": "region of England",
-            "order": 7,
-            "wikidataId": "Q48026",
-            "geonameId": 11591956
-          },
-          {
-            "name": "Somerset",
-            "order": 9
-          },
-          {
-            "name": "Somerset",
-            "description": "ceremonial county of England",
-            "order": 10,
-            "wikidataId": "Q23157",
-            "geonameId": 11609046
-          },
-          {
-            "name": "Somerset West and Taunton",
-            "description": "district in Somerset, England",
-            "order": 12,
-            "wikidataId": "Q54554249"
-          },
-          {
-            "name": "Taunton Deane",
-            "description": "former local government district with borough status in Somerset, England",
-            "order": 13,
-            "wikidataId": "Q1853334",
-            "geonameId": 7290626
-          },
-          {
-            "name": "Blackdown Hills",
-            "description": "hill range and natural landscape region in Devon and Somerset, England, UK",
-            "order": 14,
-            "wikidataId": "Q4922787",
-            "geonameId": 2655503
-          },
-          {
-            "name": "TA20 3",
-            "description": "postal code",
-            "order": 17
-          }
-        ]
-      },
-      "price": "40",
-      "locationName": "Able Rocky",
-      "bookmarkName": "second BM",
-      "bookmarkDescription": "",
-      "id": 3
     }
   ]
 }

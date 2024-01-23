@@ -23,10 +23,15 @@ export default {
         18: "4.5rem",
       },
 
+      gap: {
+        2.5: "10px",
+      },
+
       padding: {
         6.88: "27.5px",
         34: "8.5rem",
         2.5: "10px",
+        3.5: "14px",
       },
 
       maxWidth: {
