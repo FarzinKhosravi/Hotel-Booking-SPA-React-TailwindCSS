@@ -43,9 +43,13 @@ export const createAsyncBookmark = createAsyncThunk(
   "bookmarksList/createAsyncBookmark",
   async (payload, { rejectWithValue }) => {
     try {
-      const { data: createdBookmark } = await createBookmark(payload);
+      await createBookmark(payload);
 
-      return createdBookmark;
+      const { data: updatedBookmarksList } = await getBookmarksList();
+
+      console.log("updatedBookmarksList:", updatedBookmarksList);
+
+      return updatedBookmarksList;
     } catch (error) {
       return rejectWithValue(error.message);
     }
@@ -113,7 +117,7 @@ const bookmarksListSlice = createSlice({
         state.error = action.payload;
       })
       .addCase(createAsyncBookmark.fulfilled, (state, action) => {
-        state.bookmarksList = state.bookmarksList?.push(action.payload);
+        state.bookmarksList = action.payload;
       })
       .addCase(updateAsyncBookmark.fulfilled, (state, action) => {
         state.bookmarksList = action.payload;

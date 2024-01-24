@@ -65,7 +65,7 @@ function BookmarkDetail() {
               <div
                 className={`relative flex py-4 pr-4 ${
                   isOpenMenu
-                    ? "mb-2 flex-col items-end justify-start"
+                    ? "flex-col items-end justify-start"
                     : "items-center justify-end"
                 }`}
               >

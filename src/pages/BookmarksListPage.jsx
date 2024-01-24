@@ -125,7 +125,7 @@ function BookmarksListPage() {
                       <div
                         className={`relative flex py-4 pr-4 ${
                           bookmarkMenu === bookmark.id
-                            ? "mb-2 flex-col items-end justify-start"
+                            ? "flex-col items-end justify-start"
                             : "items-center justify-end"
                         }`}
                       >

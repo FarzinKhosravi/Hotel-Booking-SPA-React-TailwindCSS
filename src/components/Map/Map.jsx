@@ -42,15 +42,7 @@ function Map() {
       setMapCenter([userLocation.lat, userLocation.lng]);
   }, [userLocation]);
 
-  // console.log("lat:", latitude, "lng:", longitude);
-
-  // console.log("mapCenter:", mapCenter);
-
-  console.log("userLocation:", userLocation);
-
-  console.log("hotels:", hotels);
-
-  console.log("hostLocation:", hostLocation);
+  console.log("BOOKMARKS_LIST:", bookmarksList);
 
   return (
     <div>
