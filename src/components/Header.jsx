@@ -200,7 +200,7 @@ function HamburgerMenu({ isOpenMenu, setIsOpenMenu }) {
           onClick={() => setIsOpenMenu(false)}
           className="mb-1 cursor-pointer pl-2 transition-all ease-in-out hover:rounded-md hover:bg-slate-300"
         >
-          <NavLink to="/c">
+          <NavLink to="/signup">
             {({ isActive }) => (
               <div className="flex py-1">
                 <div className="flex items-center justify-center">

@@ -1263,9 +1263,9 @@
   ],
   "bookmarks": [
     {
-      "latitude": 51.01672447536637,
+      "latitude": 51.020607093004394,
       "lookupSource": "coordinates",
-      "longitude": -2.998580932617188,
+      "longitude": -2.9360961914062504,
       "localityLanguageRequested": "en",
       "continent": "Europe",
       "continentCode": "EU",
@@ -1274,9 +1274,9 @@
       "principalSubdivision": "England",
       "principalSubdivisionCode": "GB-ENG",
       "city": "Taunton",
-      "locality": "North Curry",
+      "locality": "Fivehead",
       "postcode": "TA3 6",
-      "plusCode": "9C3V2282+MH",
+      "plusCode": "9C3V23C7+6H",
       "localityInfo": {
         "administrative": [
           {
@@ -1324,6 +1324,14 @@
             "adminLevel": 10,
             "wikidataId": "Q647024",
             "geonameId": 2641379
+          },
+          {
+            "name": "Fivehead",
+            "description": "village in the United Kingdom",
+            "order": 17,
+            "adminLevel": 10,
+            "wikidataId": "Q2048773",
+            "geonameId": 2649348
           }
         ],
         "informative": [
@@ -1397,168 +1405,15 @@
           {
             "name": "TA3 6",
             "description": "postal code",
-            "order": 17
+            "order": 18
           }
         ]
       },
-      "price": "362",
-      "locationName": "Academic History",
+      "price": "354",
+      "locationName": "Adventurous History",
       "bookmarkName": "first BM",
-      "bookmarkDescription": "this is first BM",
-      "id": 1
-    },
-    {
-      "latitude": 50.99700103073686,
-      "lookupSource": "coordinates",
-      "longitude": -3.003044128417969,
-      "localityLanguageRequested": "en",
-      "continent": "Europe",
-      "continentCode": "EU",
-      "countryName": "United Kingdom of Great Britain and Northern Ireland (the)",
-      "countryCode": "GB",
-      "principalSubdivision": "England",
-      "principalSubdivisionCode": "GB-ENG",
-      "city": "Taunton",
-      "locality": "Thornfalcon",
-      "postcode": "TA3 6",
-      "plusCode": "9C2RXXWW+RQ",
-      "localityInfo": {
-        "administrative": [
-          {
-            "name": "United Kingdom of Great Britain and Northern Ireland (the)",
-            "description": "country in Western Europe",
-            "isoName": "United Kingdom of Great Britain and Northern Ireland (the)",
-            "order": 3,
-            "adminLevel": 2,
-            "isoCode": "GB",
-            "wikidataId": "Q145",
-            "geonameId": 2635167
-          },
-          {
-            "name": "England",
-            "description": "home nation of the United Kingdom",
-            "isoName": "England",
-            "order": 6,
-            "adminLevel": 4,
-            "isoCode": "GB-ENG",
-            "wikidataId": "Q21",
-            "geonameId": 6269131
-          },
-          {
-            "name": "Somerset",
-            "description": "unitary authority area in Somerset, England (doesn't include Bath and North-East Somerset or North Somerset)",
-            "isoName": "Somerset",
-            "order": 8,
-            "adminLevel": 6,
-            "isoCode": "GB-SOM",
-            "wikidataId": "Q21694741",
-            "geonameId": 2637532
-          },
-          {
-            "name": "Taunton",
-            "description": "town in Somerset, England",
-            "order": 11,
-            "adminLevel": 10,
-            "wikidataId": "Q845619",
-            "geonameId": 2636177
-          },
-          {
-            "name": "North Curry",
-            "description": "a village located in Taunton Deane, United Kingdom",
-            "order": 14,
-            "adminLevel": 10,
-            "wikidataId": "Q647024",
-            "geonameId": 2641379
-          },
-          {
-            "name": "West Hatch",
-            "description": "village in the United Kingdom",
-            "order": 15,
-            "adminLevel": 10,
-            "wikidataId": "Q4993272",
-            "geonameId": 7297874
-          },
-          {
-            "name": "Thornfalcon",
-            "description": "village in the United Kingdom",
-            "order": 16,
-            "adminLevel": 10,
-            "wikidataId": "Q2471602",
-            "geonameId": 2635990
-          }
-        ],
-        "informative": [
-          {
-            "name": "Europe",
-            "description": "continent",
-            "isoName": "Europe",
-            "order": 1,
-            "isoCode": "EU",
-            "wikidataId": "Q46",
-            "geonameId": 6255148
-          },
-          {
-            "name": "British Isles",
-            "description": "group of islands in northwest Europe",
-            "order": 2,
-            "wikidataId": "Q38272",
-            "geonameId": 2654669
-          },
-          {
-            "name": "Europe/London",
-            "description": "time zone",
-            "order": 4
-          },
-          {
-            "name": "Great Britain",
-            "description": "island in the North Atlantic Ocean off the northwest coast of continental Europe",
-            "order": 5,
-            "wikidataId": "Q23666",
-            "geonameId": 2648147
-          },
-          {
-            "name": "South West England",
-            "description": "region of England",
-            "order": 7,
-            "wikidataId": "Q48026",
-            "geonameId": 11591956
-          },
-          {
-            "name": "Somerset",
-            "order": 9
-          },
-          {
-            "name": "Somerset",
-            "description": "ceremonial county of England",
-            "order": 10,
-            "wikidataId": "Q23157",
-            "geonameId": 11609046
-          },
-          {
-            "name": "Somerset West and Taunton",
-            "description": "district in Somerset, England",
-            "order": 12,
-            "wikidataId": "Q54554249"
-          },
-          {
-            "name": "Taunton Deane",
-            "description": "former local government district with borough status in Somerset, England",
-            "order": 13,
-            "wikidataId": "Q1853334",
-            "geonameId": 7290626
-          },
-          {
-            "name": "TA3 6",
-            "description": "postal code",
-            "order": 17
-          }
-        ]
-      },
-      "price": "325",
-      "locationName": "Rocky Government",
-      "bookmarkName": "second BM",
       "bookmarkDescription": "",
-      "id": 2
+      "id": 1
     }
   ]
 }
