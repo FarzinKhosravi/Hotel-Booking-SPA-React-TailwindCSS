@@ -13,4 +13,14 @@
   .scrollbarStyle {
     @apply scrollbar-thin scrollbar-track-slate-200 scrollbar-thumb-emerald-800 scrollbar-track-rounded scrollbar-thumb-rounded;
   }
+
+  .remove-arrow::-webkit-inner-spin-button,
+  .remove-arrow::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  .remove-arrow {
+    -moz-appearance: textfield;
+  }
 }

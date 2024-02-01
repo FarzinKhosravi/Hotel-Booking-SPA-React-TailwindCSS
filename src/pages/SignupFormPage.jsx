@@ -1,8 +1,88 @@
+import { useState } from "react";
 import introIcon from "../assets/images/introIcon.png";
 import separator from "../assets/images/separator.png";
 import BackButton from "../common/BackButton";
+import { useFormik } from "formik";
+import * as Yup from "yup";
+
+const initialValues = {
+  username: "",
+  fullName: "",
+  email: "",
+  phoneNumber: "",
+  age: 18,
+  gender: "",
+  password: "",
+  confirmPassword: "",
+  address: "",
+  avatar: "",
+  terms: false,
+};
+
+const validationSchema = Yup.object({
+  username: Yup.string()
+    .required("Please Enter Your Username ⚡")
+    .min(3, "Username Length Too Short 🧐")
+    .max(10, "Username Length Too Long 🧐"),
+
+  fullName: Yup.string()
+    .required("Please Enter Your Full Name ⚡")
+    .max(20, "Full Name Length Too Long 🧐")
+    .matches(
+      /^([A-Za-z\u00C0-\u00D6\u00D8-\u00f6\u00f8-\u00ff\s]*)$/gi,
+      "Full Name Can Only Contain Latin Letters 🧐"
+    ),
+
+  email: Yup.string()
+    .required("Please Enter Your Email ⚡")
+    .email("Invalid Email Format 🧐"),
+
+  phoneNumber: Yup.string()
+    .required("Please Enter Your Phone Number ⚡")
+    .matches(/^[0-9]{4}-[0-9]{7}$/, "Phone Number is Not Valid 🧐"),
+
+  age: Yup.number()
+    .required("Please Enter Your Age ⚡")
+    .integer("The Entered Age is Non-Integer 🧐")
+    .min(18, "The Entered Age is Not Allowed 🧐")
+    .max(80, "The Entered Age More Than 80 🧐"),
+
+  gender: Yup.string().required("Please Enter Your Gender ⚡"),
+
+  password: Yup.string()
+    .required("Please Enter Your Password ⚡")
+    .min(10, "Password is Too Short (Should Be 10 Digit Minimum) 🧐")
+    .matches(
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,})/,
+      "Password Must Contain 8 Characters, One Uppercase, One Lowercase, One Number and One Special Case Character 🧐"
+    ),
+
+  confirmPassword: Yup.string()
+    .required("Please Enter Your Password Confirm ⚡")
+    .oneOf([Yup.ref("password"), null], "Password Must Match 🧐"),
+
+  avatar: Yup.string().required("Please Enter Your Avatar ⚡"),
+
+  terms: Yup.boolean().oneOf(
+    [true],
+    "You Must Accept All The Terms & Conditions 🧐"
+  ),
+});
 
 function SignupFormPage() {
+  const [showGuide, setShowGuide] = useState("");
+
+  const formik = useFormik({
+    initialValues,
+    validationSchema,
+    // onSubmit,
+    validateOnMount: true,
+  });
+
+  console.log("values:", formik.values);
+  console.log("errors:", formik.errors);
+  console.log("touched:", formik.touched);
+
   return (
     <section className="min-h-screen px-4">
       <div>
@@ -72,8 +152,9 @@ function SignupFormPage() {
                 </span>
               </div>
 
-              {/* UserName Field */}
+              {/* UserName Section */}
               <div className="mb-4">
+                {/* UserName Field Title */}
                 <div className="pl-1">
                   <label
                     htmlFor="userName"
@@ -83,7 +164,8 @@ function SignupFormPage() {
                   </label>
                 </div>
 
-                <div className="relative flex justify-start">
+                {/* UserName Field */}
+                <div className="relative mb-2 flex justify-start">
                   <span className="pointer-events-none absolute left-2 top-2.5 block">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -101,14 +183,28 @@ function SignupFormPage() {
                   <input
                     id="userName"
                     type="text"
+                    name="username"
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    value={formik.values.username}
                     placeholder="Enter Username Please..."
                     className="block w-full cursor-pointer rounded-xl border-0 bg-slate-300 from-emerald-700 to-emerald-900 pl-8 text-base text-emerald-900 shadow-lg placeholder:text-sm placeholder:opacity-50 focus:bg-gradient-to-r focus:bg-clip-text"
                   />
                 </div>
+
+                {/* Show Error For UserName Field */}
+                <div>
+                  {formik.errors.username && formik.touched.username && (
+                    <span className="block w-full pl-2 font-semibold text-red-600">
+                      {formik.errors.username}
+                    </span>
+                  )}
+                </div>
               </div>
 
-              {/* FullName Field */}
+              {/* FullName Section */}
               <div className="mb-4">
+                {/* FullName Field Title */}
                 <div className="pl-1">
                   <label
                     htmlFor="fullName"
@@ -118,7 +214,8 @@ function SignupFormPage() {
                   </label>
                 </div>
 
-                <div className="relative flex justify-start">
+                {/* FullName Field */}
+                <div className="relative mb-2 flex justify-start">
                   <span className="pointer-events-none absolute left-2 top-2.5 block">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -132,14 +229,28 @@ function SignupFormPage() {
                   <input
                     id="fullName"
                     type="text"
+                    name="fullName"
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    value={formik.values.fullName}
                     placeholder="Enter Full Name Please..."
                     className="block w-full cursor-pointer rounded-xl border-0 bg-slate-300 from-emerald-700 to-emerald-900 pl-8 text-base text-emerald-900 shadow-lg placeholder:text-sm placeholder:opacity-50 focus:bg-gradient-to-r focus:bg-clip-text"
                   />
                 </div>
+
+                {/* Show Error For FullName Field */}
+                <div>
+                  {formik.errors.fullName && formik.touched.fullName && (
+                    <span className="block w-full pl-2 font-semibold text-red-600">
+                      {formik.errors.fullName}
+                    </span>
+                  )}
+                </div>
               </div>
 
-              {/* Email Field */}
+              {/* Email Section */}
               <div className="mb-4">
+                {/* Email Field Title */}
                 <div className="pl-1">
                   <label
                     htmlFor="email"
@@ -149,7 +260,8 @@ function SignupFormPage() {
                   </label>
                 </div>
 
-                <div className="relative flex justify-start">
+                {/* Email Field */}
+                <div className="relative mb-2 flex justify-start">
                   <span className="pointer-events-none absolute left-2 top-2.5 block">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -164,24 +276,76 @@ function SignupFormPage() {
                   <input
                     id="email"
                     type="email"
+                    name="email"
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    value={formik.values.email}
                     placeholder="Enter Email Please..."
                     className="block w-full cursor-pointer rounded-xl border-0 bg-slate-300 from-emerald-700 to-emerald-900 pl-9 text-base text-emerald-900 shadow-lg placeholder:text-sm placeholder:opacity-50 focus:bg-gradient-to-r focus:bg-clip-text"
                   />
                 </div>
+
+                {/* Show Error For Email Field */}
+                <div>
+                  {formik.errors.email && formik.touched.email && (
+                    <span className="block w-full pl-2 font-semibold text-red-600">
+                      {formik.errors.email}
+                    </span>
+                  )}
+                </div>
               </div>
 
-              {/* Phone Number Field */}
+              {/* Phone Number Section */}
               <div className="mb-4">
-                <div className="pl-1">
+                {/* Phone Number Field Title */}
+                <div className="flex items-center justify-between px-1">
                   <label
                     htmlFor="phoneNumber"
                     className="cursor-pointer text-sm font-semibold text-emerald-900"
                   >
                     Phone Number
                   </label>
+
+                  <div className="relative flex w-1/2 flex-col items-end">
+                    <span
+                      onMouseOver={(event) =>
+                        event.target.dataset.id === "phoneNumber"
+                          ? setShowGuide("phoneNumber")
+                          : ""
+                      }
+                      onMouseLeave={() => setShowGuide("")}
+                      className="block h-4 w-4 cursor-pointer"
+                      data-id="phoneNumber"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        className="pointer-events-none h-4 w-4 text-sky-600"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0Zm-7-4a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM9 9a.75.75 0 0 0 0 1.5h.253a.25.25 0 0 1 .244.304l-.459 2.066A1.75 1.75 0 0 0 10.747 15H11a.75.75 0 0 0 0-1.5h-.253a.25.25 0 0 1-.244-.304l.459-2.066A1.75 1.75 0 0 0 9.253 9H9Z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </span>
+                    <span
+                      className={`absolute right-0 top-5 z-50 rounded-xl bg-emerald-800 px-3 py-2 text-xs text-white
+                      ${showGuide === "phoneNumber" ? "block" : "hidden"}
+                      `}
+                    >
+                      <span className="inline-block h-1 w-1 rounded-full bg-white"></span>
+                      <span className="ml-1">Format Example:</span>
+                      <span className="block text-center text-yellow-400">
+                        0123-4567891
+                      </span>
+                    </span>
+                  </div>
                 </div>
 
-                <div className="relative flex justify-start">
+                {/* Phone Number Field */}
+                <div className="relative mb-2 flex justify-start">
                   <span className="pointer-events-none absolute left-2 top-2.5 block">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -198,25 +362,84 @@ function SignupFormPage() {
                   </span>
                   <input
                     id="phoneNumber"
-                    type="text"
+                    type="tel"
+                    name="phoneNumber"
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    value={formik.values.phoneNumber}
                     placeholder="Enter Phone Number Please..."
                     className="block w-full cursor-pointer rounded-xl border-0 bg-slate-300 from-emerald-700 to-emerald-900 pl-9 text-base text-emerald-900 shadow-lg placeholder:text-sm placeholder:opacity-50 focus:bg-gradient-to-r focus:bg-clip-text"
                   />
                 </div>
+
+                {/* Show Error For Phone Number Field */}
+                <div>
+                  {formik.errors.phoneNumber && formik.touched.phoneNumber && (
+                    <span className="block w-full pl-2 font-semibold text-red-600">
+                      {formik.errors.phoneNumber}
+                    </span>
+                  )}
+                </div>
               </div>
 
-              {/* Age Field */}
+              {/* Age Section */}
               <div className="mb-4">
-                <div className="pl-1">
+                {/* Age Field Title */}
+                <div className="flex items-center justify-between px-1">
                   <label
                     htmlFor="age"
                     className="cursor-pointer text-sm font-semibold text-emerald-900"
                   >
                     Age
                   </label>
+
+                  <div className="relative flex w-1/2 flex-col items-end">
+                    <span
+                      onMouseOver={(event) =>
+                        event.target.dataset.id === "age"
+                          ? setShowGuide("age")
+                          : ""
+                      }
+                      onMouseLeave={() => setShowGuide("")}
+                      className="block h-4 w-4 cursor-pointer"
+                      data-id="age"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        className="pointer-events-none h-4 w-4 text-sky-600"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0Zm-7-4a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM9 9a.75.75 0 0 0 0 1.5h.253a.25.25 0 0 1 .244.304l-.459 2.066A1.75 1.75 0 0 0 10.747 15H11a.75.75 0 0 0 0-1.5h-.253a.25.25 0 0 1-.244-.304l.459-2.066A1.75 1.75 0 0 0 9.253 9H9Z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </span>
+                    <span
+                      className={`// absolute right-0 top-5 z-50 rounded-xl bg-emerald-800 px-3 py-2 text-xs
+                      text-white ${showGuide === "age" ? "block" : "hidden"}
+                      `}
+                    >
+                      <span className="inline-block h-1 w-1 rounded-full bg-white"></span>
+                      <span className="ml-0.5">
+                        You can enter your desired age by using the
+                      </span>
+                      <span className="text-yellow-400">
+                        &nbsp;up and down arrows
+                      </span>
+                      &nbsp;or by
+                      <span className="text-yellow-400">
+                        &nbsp;typing a number
+                      </span>
+                      &nbsp;!
+                    </span>
+                  </div>
                 </div>
 
-                <div className="relative flex justify-start">
+                {/* Age Field */}
+                <div className="relative mb-2 flex justify-start">
                   <span className="pointer-events-none absolute left-2 top-2.5 block">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -234,14 +457,30 @@ function SignupFormPage() {
                   <input
                     id="age"
                     type="number"
+                    min="18"
+                    max="80"
+                    name="age"
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    value={formik.values.age}
                     placeholder="Enter Age Please..."
-                    className="block w-full cursor-pointer rounded-xl border-0 bg-slate-300 from-emerald-700 to-emerald-900 pl-9 text-base text-emerald-900 shadow-lg placeholder:text-sm placeholder:opacity-50 focus:bg-gradient-to-r focus:bg-clip-text"
+                    className="remove-arrow m-0 block w-full cursor-pointer appearance-none rounded-xl border-0 bg-slate-300 from-emerald-700 to-emerald-900 pl-9 text-base text-emerald-900 shadow-lg placeholder:text-sm placeholder:opacity-50 focus:bg-gradient-to-r focus:bg-clip-text"
                   />
+                </div>
+
+                {/* Show Error For Age Field */}
+                <div>
+                  {formik.errors.age && formik.touched.age && (
+                    <span className="block w-full pl-2 font-semibold text-red-600">
+                      {formik.errors.age}
+                    </span>
+                  )}
                 </div>
               </div>
 
-              {/* Gender Field */}
+              {/* Gender Section */}
               <div className="mb-4">
+                {/* Gender Field Title */}
                 <div className="pl-1">
                   <span className="text-sm font-semibold text-emerald-900">
                     Gender
@@ -249,12 +488,16 @@ function SignupFormPage() {
                 </div>
 
                 {/* Radio Buttons Container */}
-                <div className="flex items-center justify-start rounded-xl bg-slate-300 p-4">
+                <div className="mb-1 flex items-center justify-start rounded-xl bg-slate-300 p-4">
                   <div className="flex">
                     <input
                       type="radio"
-                      name="gender"
                       id="male"
+                      name="gender"
+                      onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
+                      value="male"
+                      checked={formik.values.gender === "male"}
                       className="h-4 w-4 text-emerald-900 focus:ring-emerald-800"
                     />
                     <label htmlFor="male" className="ml-1 text-sm">
@@ -264,8 +507,12 @@ function SignupFormPage() {
                   <div className="ml-4 flex">
                     <input
                       type="radio"
-                      name="gender"
                       id="female"
+                      name="gender"
+                      onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
+                      value="female"
+                      checked={formik.values.gender === "female"}
                       className="h-4 w-4 text-emerald-900 focus:ring-emerald-800"
                     />
                     <label htmlFor="female" className="ml-1 text-sm">
@@ -273,10 +520,20 @@ function SignupFormPage() {
                     </label>
                   </div>
                 </div>
+
+                {/* Show Error For Gender Field */}
+                <div>
+                  {formik.errors.gender && formik.touched.gender && (
+                    <span className="block w-full pl-2 font-semibold text-red-600">
+                      {formik.errors.gender}
+                    </span>
+                  )}
+                </div>
               </div>
 
-              {/* Password Field */}
+              {/* Password Section */}
               <div className="mb-4">
+                {/* Password Field Title */}
                 <div className="pl-1">
                   <label
                     htmlFor="password"
@@ -286,7 +543,8 @@ function SignupFormPage() {
                   </label>
                 </div>
 
-                <div className="relative flex justify-start">
+                {/* Password Field */}
+                <div className="relative mb-2 flex justify-start">
                   <span className="pointer-events-none absolute left-2 top-2.5 block">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -302,16 +560,30 @@ function SignupFormPage() {
                     </svg>
                   </span>
                   <input
-                    id="password"
                     type="text"
+                    id="password"
+                    name="password"
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    value={formik.values.password}
                     placeholder="Enter Password Please..."
                     className="block w-full cursor-pointer rounded-xl border-0 bg-slate-300 from-emerald-700 to-emerald-900 pl-9 text-base text-emerald-900 shadow-lg placeholder:text-sm placeholder:opacity-50 focus:bg-gradient-to-r focus:bg-clip-text"
                   />
                 </div>
+
+                {/* Show Error For Password Field */}
+                <div>
+                  {formik.errors.password && formik.touched.password && (
+                    <span className="block w-full pl-2 font-semibold text-red-600">
+                      {formik.errors.password}
+                    </span>
+                  )}
+                </div>
               </div>
 
-              {/* Confirm Password Field */}
+              {/* Confirm Password Section */}
               <div className="mb-4">
+                {/* Confirm Password Field Title */}
                 <div className="pl-1">
                   <label
                     htmlFor="confirmPassword"
@@ -321,7 +593,8 @@ function SignupFormPage() {
                   </label>
                 </div>
 
-                <div className="relative flex justify-start">
+                {/* Confirm Password Field */}
+                <div className="relative mb-2 flex justify-start">
                   <span className="pointer-events-none absolute left-2 top-2.5 block">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -344,14 +617,29 @@ function SignupFormPage() {
                   <input
                     id="confirmPassword"
                     type="text"
+                    name="confirmPassword"
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    value={formik.values.confirmPassword}
                     placeholder="Enter Confirm Password Please..."
                     className="block w-full cursor-pointer rounded-xl border-0 bg-slate-300 from-emerald-700 to-emerald-900 pl-9 text-base text-emerald-900 shadow-lg placeholder:text-sm placeholder:opacity-50 focus:bg-gradient-to-r focus:bg-clip-text"
                   />
                 </div>
+
+                {/* Show Error For Confirm Password Field */}
+                <div>
+                  {formik.errors.confirmPassword &&
+                    formik.touched.confirmPassword && (
+                      <span className="block w-full pl-2 font-semibold text-red-600">
+                        {formik.errors.confirmPassword}
+                      </span>
+                    )}
+                </div>
               </div>
 
-              {/* Address Field */}
+              {/* Address Section */}
               <div className="mb-4">
+                {/* Address Field Title */}
                 <div className="pl-1">
                   <label
                     htmlFor="address"
@@ -361,6 +649,7 @@ function SignupFormPage() {
                   </label>
                 </div>
 
+                {/* Address Field */}
                 <div className="relative flex justify-start">
                   <span className="pointer-events-none absolute left-2 top-2.5 block">
                     <svg
@@ -379,27 +668,77 @@ function SignupFormPage() {
                   <input
                     id="address"
                     type="text"
+                    name="address"
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    value={formik.values.address}
                     placeholder="Enter Address Please..."
                     className="block w-full cursor-pointer rounded-xl border-0 bg-slate-300 from-emerald-700 to-emerald-900 pl-9 text-base text-emerald-900 shadow-lg placeholder:text-sm placeholder:opacity-50 focus:bg-gradient-to-r focus:bg-clip-text"
                   />
                 </div>
               </div>
 
-              {/* Avatar Field */}
-              <div className="mb-8">
+              {/* Avatar Section */}
+              <div className="mb-6">
+                {/* Avatar Field Title */}
                 <div className="pl-1">
                   <span className="text-sm font-semibold text-emerald-900">
                     Avatar
                   </span>
                 </div>
 
-                <div className="w-full">
-                  <select className="w-full cursor-pointer rounded-xl border-0 bg-slate-300 text-base text-slate-800 shadow-lg">
+                {/* Avatar Field */}
+                <div className="mb-2 w-full">
+                  <select
+                    name="avatar"
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    value={formik.values.avatar}
+                    className="w-full cursor-pointer rounded-xl border-0 bg-slate-300 text-base text-emerald-900 shadow-lg"
+                  >
                     <option value="">Select Your Avatar:</option>
                     <option value="programmer">Programmer 🧑🏼‍💻</option>
                     <option value="bookworm">Bookworm 🤓</option>
                     <option value="adventurer">Adventurer 😎</option>
                   </select>
+                </div>
+
+                {/* Show Error For Avatar Field */}
+                <div>
+                  {formik.errors.avatar && formik.touched.avatar && (
+                    <span className="block w-full pl-2 font-semibold text-red-600">
+                      {formik.errors.avatar}
+                    </span>
+                  )}
+                </div>
+              </div>
+
+              {/* Terms & Conditions Section */}
+              <div className="mb-8">
+                {/* Terms & Conditions Field */}
+                <div className="flex items-center justify-start rounded-xl bg-slate-300 p-4">
+                  <input
+                    type="checkbox"
+                    id="terms"
+                    name="terms"
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    value={true}
+                    checked={formik.values.terms}
+                    className="rounded-md text-emerald-900 focus:ring-emerald-800"
+                  />
+                  <label htmlFor="terms" className="ml-2 text-emerald-900">
+                    I Accept All Terms & Conditions
+                  </label>
+                </div>
+
+                {/* Show Error For Terms & Conditions Field */}
+                <div>
+                  {formik.errors.terms && formik.touched.terms && (
+                    <span className="block w-full pl-2 font-semibold text-red-600">
+                      {formik.errors.terms}
+                    </span>
+                  )}
                 </div>
               </div>
 
@@ -407,9 +746,9 @@ function SignupFormPage() {
               <div className="mb-3 w-full">
                 <button
                   // type="submit"
-                  // disabled={!formik.isValid}
+                  disabled={!formik.isValid}
                   onClick={(e) => e.preventDefault()}
-                  className="flex w-full items-center justify-center rounded-xl bg-emerald-800 p-4 shadow-lg"
+                  className="flex w-full items-center justify-center rounded-xl bg-emerald-800 p-4 shadow-lg disabled:bg-gray-500"
                 >
                   <span className="block text-white">Register Now</span>
                 </button>
