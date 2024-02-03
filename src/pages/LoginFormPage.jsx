@@ -1,9 +1,11 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import introIcon from "../assets/images/introIcon.png";
 import separator from "../assets/images/separator.png";
 import BackButton from "../common/BackButton";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { useEffect, useState } from "react";
+import getUsers from "./../services/getUsersService";
 
 const initialValues = {
   email: "",
@@ -17,18 +19,45 @@ const validationSchema = Yup.object({
 });
 
 function LoginFormPage() {
+  const [userDetail, setUserDetail] = useState(null);
+
   const formik = useFormik({
-    initialValues,
+    initialValues: userDetail || initialValues,
     validationSchema,
     // onSubmit,
     validateOnMount: true,
+    enableReinitialize: true,
   });
 
+  const [searchParams] = useSearchParams();
+
+  const username = searchParams.get("username");
+
+  console.log("USERNAME_SEARCH_PARAMS", username);
+
   const navigate = useNavigate();
+
+  useEffect(() => {
+    async function fetchUser() {
+      const { data: users } = await getUsers();
+
+      if (users) {
+        const foundUser = users.find((user) => user.username === username);
+
+        console.log("foundUser:", foundUser);
+
+        if (foundUser) setUserDetail(foundUser);
+      }
+    }
+
+    if (username) fetchUser();
+  }, [username]);
 
   console.log("values:", formik.values);
   console.log("errors:", formik.errors);
   console.log("touched:", formik.touched);
+
+  console.log("userDetail:", userDetail);
 
   return (
     <section className="min-h-screen px-4">
