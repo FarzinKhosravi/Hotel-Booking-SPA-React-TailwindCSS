@@ -11,6 +11,7 @@ import BookmarksListPage from "../pages/BookmarksListPage";
 import BookmarkDetail from "../components/BookmarkDetail/BookmarkDetail";
 import UpdateBookmark from "../components/UpdateBookmark/UpdateBookmark";
 import SignupFormPage from "../pages/SignupFormPage";
+import LoginFormPage from "../pages/LoginFormPage";
 
 function Routes() {
   let routes = useRoutes([
@@ -65,6 +66,10 @@ function Routes() {
         {
           path: "signup",
           element: <SignupFormPage />,
+        },
+        {
+          path: "login",
+          element: <LoginFormPage />,
         },
       ],
     },

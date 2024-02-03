@@ -36,7 +36,6 @@ function Header() {
         </div>
         <div className="flex flex-auto items-center justify-end">
           <NavigationMenu />
-          <LoginSignupLink />
           <HamburgerMenuButton
             onShowMenu={showHamburgerMenuHandler}
             isOpenMenu={isOpenMenu}
@@ -177,7 +176,7 @@ function HamburgerMenu({ isOpenMenu, setIsOpenMenu }) {
           onClick={() => setIsOpenMenu(false)}
           className="mb-1 cursor-pointer pl-2 transition-all ease-in-out hover:rounded-md hover:bg-slate-300"
         >
-          <NavLink to="/b">
+          <NavLink to="/login">
             {({ isActive }) => (
               <div className="flex py-1">
                 <div className="flex items-center justify-center">
@@ -279,7 +278,7 @@ function HamburgerMenu({ isOpenMenu, setIsOpenMenu }) {
 
 function NavigationMenu() {
   return (
-    <div className="mr-8 hidden md:block">
+    <div className="hidden md:block">
       <ul className="flex gap-x-1">
         <li className="transition-all hover:rounded-md hover:bg-slate-300">
           <NavLink
@@ -322,20 +321,26 @@ function NavigationMenu() {
             <span className="block px-2 py-4 font-semibold">About Us</span>
           </NavLink>
         </li>
+        <li className="ml-4 transition-all hover:rounded-md hover:bg-slate-300">
+          <div className="relative flex items-center">
+            <div className="-left-7.25 -top-2.75 absolute">
+              <img
+                src={loginSignupIcon}
+                className="w-7"
+                alt="login-signup-icon"
+              />
+            </div>
+            <NavLink
+              className={({ isActive }) => (isActive ? "text-emerald-700" : "")}
+              to="/login"
+            >
+              <span className="block px-2 py-4 font-semibold">
+                Login/Signup
+              </span>
+            </NavLink>
+          </div>
+        </li>
       </ul>
-    </div>
-  );
-}
-
-function LoginSignupLink() {
-  return (
-    <div className="relative hidden items-center md:flex">
-      <div className="absolute -left-9 -top-7.5">
-        <img src={loginSignupIcon} className="w-8" alt="login-signup-icon" />
-      </div>
-      <div>
-        <span className="font-semibold">Login/Signup</span>
-      </div>
     </div>
   );
 }

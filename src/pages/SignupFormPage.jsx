@@ -7,6 +7,7 @@ import * as Yup from "yup";
 import toast from "react-hot-toast";
 import getUsers from "../services/getUsersService";
 import createUser from "../services/createUserService";
+import { useNavigate } from "react-router-dom";
 
 const fields = [
   { name: "username", message: "Your Username is Already Selected 🧐" },
@@ -139,6 +140,8 @@ function SignupFormPage() {
           const { data } = await createUser(userData);
 
           console.log("CREATE_USER_IN_DATABASE...", data);
+
+          navigate(`/login?username=${userData.username}`, { replace: true });
         }
       }
     }
@@ -153,6 +156,8 @@ function SignupFormPage() {
     email: "",
     password: "",
   });
+
+  const navigate = useNavigate();
 
   const formik = useFormik({
     initialValues,
@@ -878,7 +883,7 @@ function SignupFormPage() {
               <div className="w-full">
                 <button
                   type="button"
-                  // onClick={() => navigate("/bookmarks?mapTitle=Bookmarks List")}
+                  onClick={() => navigate("/")}
                   className="block w-full rounded-xl bg-red-700 shadow-lg"
                 >
                   <div className="flex items-center justify-center">
