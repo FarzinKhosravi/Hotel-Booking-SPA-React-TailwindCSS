@@ -1415,5 +1415,49 @@
       "bookmarkDescription": "",
       "id": 1
     }
+  ],
+  "users": [
+    {
+      "username": "farzinqqzx",
+      "fullName": "sadasdasda",
+      "email": "abcasd@gmail.com",
+      "phoneNumber": "0901-4334978",
+      "age": 18,
+      "gender": "male",
+      "password": "qwe$s1zXqqq",
+      "confirmPassword": "qwe$s1zXqqq",
+      "address": "",
+      "avatar": "programmer",
+      "terms": true,
+      "id": 1
+    },
+    {
+      "username": "farzinq",
+      "fullName": "sadasdasda",
+      "email": "abc@gmail.com",
+      "phoneNumber": "0901-4334978",
+      "age": 18,
+      "gender": "male",
+      "password": "qwe$s1zXqq",
+      "confirmPassword": "qwe$s1zXqq",
+      "address": "",
+      "avatar": "programmer",
+      "terms": true,
+      "id": 2
+    },
+    {
+      "username": "asdsa",
+      "fullName": "sdasdd",
+      "email": "qwe@gmail.com",
+      "phoneNumber": "1234-5678912",
+      "age": 18,
+      "gender": "male",
+      "password": "qweas$1Xqqwe",
+      "confirmPassword": "qweas$1Xqqwe",
+      "address": "",
+      "avatar": "programmer",
+      "terms": true,
+      "id": 3
+    }
   ]
 }

@@ -1,9 +1,20 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import introIcon from "../assets/images/introIcon.png";
 import separator from "../assets/images/separator.png";
 import BackButton from "../common/BackButton";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import toast from "react-hot-toast";
+import getUsers from "../services/getUsersService";
+import createUser from "../services/createUserService";
+
+const fields = [
+  { name: "username", message: "Your Username is Already Selected 🧐" },
+  { name: "email", message: "Your Email is Not Allowed 🧐" },
+  { name: "password", message: "Your Password is Not Allowed 🧐" },
+];
+
+let isContinue;
 
 const initialValues = {
   username: "",
@@ -70,18 +81,107 @@ const validationSchema = Yup.object({
 });
 
 function SignupFormPage() {
+  const onSubmit = (userData) => {
+    async function fetchUsers() {
+      return await getUsers();
+    }
+
+    async function checkDuplicateFields() {
+      function generateErrorMessage(field) {
+        const foundDuplicateField = users.find(
+          (user) => user[field] === userData[field]
+        );
+
+        console.log("duplicateField_Found:", foundDuplicateField);
+
+        if (foundDuplicateField) {
+          const { message } = fields.find((item) => item.name === field);
+
+          console.log("errorMessage:", message);
+
+          toast.error(
+            `Your ${field[0].toUpperCase() + field.slice(1)} is Duplicate 🧐`
+          );
+
+          setDuplicateFields({
+            ...duplicateFields,
+            [field]: message,
+          });
+
+          return false;
+        }
+
+        return true;
+      }
+
+      const { data: users } = await fetchUsers();
+
+      console.log("USERS:", users);
+
+      // *** CHECK !! ***
+
+      if (users) {
+        isContinue = generateErrorMessage("username");
+
+        console.log("isContinue:", isContinue);
+
+        if (isContinue) {
+          isContinue = generateErrorMessage("email");
+        }
+
+        if (isContinue) {
+          isContinue = generateErrorMessage("password");
+        }
+
+        if (isContinue) {
+          console.log("SAVED USER_DATA IN DATABASE...");
+
+          const { data } = await createUser(userData);
+
+          console.log("CREATE_USER_IN_DATABASE...", data);
+        }
+      }
+    }
+
+    checkDuplicateFields();
+  };
+
   const [showGuide, setShowGuide] = useState("");
+
+  const [duplicateFields, setDuplicateFields] = useState({
+    username: "",
+    email: "",
+    password: "",
+  });
 
   const formik = useFormik({
     initialValues,
     validationSchema,
-    // onSubmit,
+    onSubmit,
     validateOnMount: true,
   });
+
+  // *** CHECK !! ***
+
+  const { username, email, password } = formik.values;
+
+  useEffect(() => {
+    setDuplicateFields({ ...duplicateFields, username: "" });
+  }, [username]);
+
+  useEffect(() => {
+    setDuplicateFields({ ...duplicateFields, email: "" });
+  }, [email]);
+
+  useEffect(() => {
+    setDuplicateFields({ ...duplicateFields, password: "" });
+  }, [password]);
 
   console.log("values:", formik.values);
   console.log("errors:", formik.errors);
   console.log("touched:", formik.touched);
+
+  console.log("duplicateFields:", duplicateFields);
 
   return (
     <section className="min-h-screen px-4">
@@ -130,7 +230,10 @@ function SignupFormPage() {
           </div>
 
           <div>
-            <form className="rounded-xl bg-slate-200 p-4">
+            <form
+              onSubmit={formik.handleSubmit}
+              className="rounded-xl bg-slate-200 p-4"
+            >
               {/* Signup Form Description */}
               <div className="mb-6 flex justify-start">
                 <span className="block">
@@ -197,6 +300,12 @@ function SignupFormPage() {
                   {formik.errors.username && formik.touched.username && (
                     <span className="block w-full pl-2 font-semibold text-red-600">
                       {formik.errors.username}
+                    </span>
+                  )}
+
+                  {duplicateFields.username && (
+                    <span className="block w-full pl-2 font-semibold text-red-600">
+                      {duplicateFields.username}
                     </span>
                   )}
                 </div>
@@ -290,6 +399,12 @@ function SignupFormPage() {
                   {formik.errors.email && formik.touched.email && (
                     <span className="block w-full pl-2 font-semibold text-red-600">
                       {formik.errors.email}
+                    </span>
+                  )}
+
+                  {duplicateFields.email && (
+                    <span className="block w-full pl-2 font-semibold text-red-600">
+                      {duplicateFields.email}
                     </span>
                   )}
                 </div>
@@ -578,6 +693,12 @@ function SignupFormPage() {
                       {formik.errors.password}
                     </span>
                   )}
+
+                  {duplicateFields.password && (
+                    <span className="block w-full pl-2 font-semibold text-red-600">
+                      {duplicateFields.password}
+                    </span>
+                  )}
                 </div>
               </div>
 
@@ -745,9 +866,8 @@ function SignupFormPage() {
               {/* Register Button */}
               <div className="mb-3 w-full">
                 <button
-                  // type="submit"
+                  type="submit"
                   disabled={!formik.isValid}
-                  onClick={(e) => e.preventDefault()}
                   className="flex w-full items-center justify-center rounded-xl bg-emerald-800 p-4 shadow-lg disabled:bg-gray-500"
                 >
                   <span className="block text-white">Register Now</span>
