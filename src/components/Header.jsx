@@ -3,7 +3,7 @@ import {
   BuildingOfficeIcon,
   PhoneArrowDownLeftIcon,
   UserGroupIcon,
-  ArrowRightOnRectangleIcon,
+  ArrowLeftOnRectangleIcon,
   ClipboardDocumentListIcon,
   UserCircleIcon,
   LifebuoyIcon,
@@ -16,13 +16,18 @@ import { NavLink } from "react-router-dom";
 
 import appLogo from "../assets/images/appLogo.png";
 import loginSignupIcon from "../assets/images/loginSignupIcon.png";
+import { useSelector } from "react-redux";
 
 function Header() {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
 
+  const { loggedInUser } = useSelector((state) => state.loggedInUser);
+
   const showHamburgerMenuHandler = () => {
     setIsOpenMenu(!isOpenMenu);
   };
+
+  console.log("loggedInUser in HEADER:", loggedInUser);
 
   return (
     <header className="sticky top-0 z-2000 mb-8 p-4 backdrop-blur-md">
@@ -35,13 +40,20 @@ function Header() {
           <AppLogo />
         </div>
         <div className="flex flex-auto items-center justify-end">
-          <NavigationMenu />
+          <NavigationMenu loggedInUser={loggedInUser} />
+
+          {loggedInUser ? <UserPanel loggedInUser={loggedInUser} /> : null}
+
           <HamburgerMenuButton
             onShowMenu={showHamburgerMenuHandler}
             isOpenMenu={isOpenMenu}
           />
         </div>
-        <HamburgerMenu isOpenMenu={isOpenMenu} setIsOpenMenu={setIsOpenMenu} />
+        <HamburgerMenu
+          isOpenMenu={isOpenMenu}
+          setIsOpenMenu={setIsOpenMenu}
+          loggedInUser={loggedInUser}
+        />
       </nav>
     </header>
   );
@@ -75,7 +87,7 @@ function HamburgerMenuButton({ onShowMenu, isOpenMenu }) {
   );
 }
 
-function HamburgerMenu({ isOpenMenu, setIsOpenMenu }) {
+function HamburgerMenu({ isOpenMenu, setIsOpenMenu, loggedInUser }) {
   const hamburgerMenuRef = useRef();
 
   useOutsideClick(hamburgerMenuRef, "hamburgerMenuButton", () =>
@@ -91,6 +103,8 @@ function HamburgerMenu({ isOpenMenu, setIsOpenMenu }) {
           : "max-h-0 opacity-0"
       }`}
     >
+      {loggedInUser ? <UserSpecs loggedInUser={loggedInUser} /> : null}
+
       <li className="mb-2 flex flex-col">
         <div className="mb-2 flex items-center justify-start">
           <GlobeAsiaAustraliaIcon className="h-6 w-6" />
@@ -167,58 +181,60 @@ function HamburgerMenu({ isOpenMenu, setIsOpenMenu }) {
         </div>
       </li>
 
-      <li className="mb-2 flex flex-col">
-        <div className="mb-2 flex items-center justify-start">
-          <UserCircleIcon className="h-6 w-6" />
-          <span className="ml-0.5 mt-1.6 block sm:text-lg">Account</span>
-        </div>
-        <div
-          onClick={() => setIsOpenMenu(false)}
-          className="mb-1 cursor-pointer pl-2 transition-all ease-in-out hover:rounded-md hover:bg-slate-300"
-        >
-          <NavLink to="/login">
-            {({ isActive }) => (
-              <div className="flex py-1">
-                <div className="flex items-center justify-center">
-                  <ArrowRightOnRectangleIcon
-                    className={`h-4 w-4 sm:h-5 sm:w-5 ${
-                      isActive ? "text-emerald-900" : ""
-                    }`}
-                  />
+      {loggedInUser ? null : (
+        <li className="mb-2 flex flex-col">
+          <div className="mb-2 flex items-center justify-start">
+            <UserCircleIcon className="h-6 w-6" />
+            <span className="ml-0.5 mt-1.6 block sm:text-lg">Account</span>
+          </div>
+          <div
+            onClick={() => setIsOpenMenu(false)}
+            className="mb-1 cursor-pointer pl-2 transition-all ease-in-out hover:rounded-md hover:bg-slate-300"
+          >
+            <NavLink to="/login">
+              {({ isActive }) => (
+                <div className="flex py-1">
+                  <div className="flex items-center justify-center">
+                    <ArrowLeftOnRectangleIcon
+                      className={`h-4 w-4 sm:h-5 sm:w-5 ${
+                        isActive ? "text-emerald-900" : ""
+                      }`}
+                    />
+                  </div>
+                  <div className="ml-1 mt-1 text-sm text-slate-900 sm:text-base">
+                    <span className={isActive ? "text-emerald-700" : ""}>
+                      Login
+                    </span>
+                  </div>
                 </div>
-                <div className="ml-1 mt-1 text-sm text-slate-900 sm:text-base">
-                  <span className={isActive ? "text-emerald-700" : ""}>
-                    Login
-                  </span>
+              )}
+            </NavLink>
+          </div>
+          <div
+            onClick={() => setIsOpenMenu(false)}
+            className="mb-1 cursor-pointer pl-2 transition-all ease-in-out hover:rounded-md hover:bg-slate-300"
+          >
+            <NavLink to="/signup">
+              {({ isActive }) => (
+                <div className="flex py-1">
+                  <div className="flex items-center justify-center">
+                    <ClipboardDocumentListIcon
+                      className={`h-4 w-4 sm:h-5 sm:w-5 ${
+                        isActive ? "text-emerald-900" : ""
+                      }`}
+                    />
+                  </div>
+                  <div className="ml-1 mt-1 text-sm text-slate-900 sm:text-base">
+                    <span className={isActive ? "text-emerald-700" : ""}>
+                      Sign Up
+                    </span>
+                  </div>
                 </div>
-              </div>
-            )}
-          </NavLink>
-        </div>
-        <div
-          onClick={() => setIsOpenMenu(false)}
-          className="mb-1 cursor-pointer pl-2 transition-all ease-in-out hover:rounded-md hover:bg-slate-300"
-        >
-          <NavLink to="/signup">
-            {({ isActive }) => (
-              <div className="flex py-1">
-                <div className="flex items-center justify-center">
-                  <ClipboardDocumentListIcon
-                    className={`h-4 w-4 sm:h-5 sm:w-5 ${
-                      isActive ? "text-emerald-900" : ""
-                    }`}
-                  />
-                </div>
-                <div className="ml-1 mt-1 text-sm text-slate-900 sm:text-base">
-                  <span className={isActive ? "text-emerald-700" : ""}>
-                    Sign Up
-                  </span>
-                </div>
-              </div>
-            )}
-          </NavLink>
-        </div>
-      </li>
+              )}
+            </NavLink>
+          </div>
+        </li>
+      )}
 
       <li className="flex flex-col">
         <div className="mb-3 flex items-center justify-start">
@@ -276,9 +292,9 @@ function HamburgerMenu({ isOpenMenu, setIsOpenMenu }) {
   );
 }
 
-function NavigationMenu() {
+function NavigationMenu({ loggedInUser }) {
   return (
-    <div className="hidden md:block">
+    <div className={`hidden md:block ${loggedInUser ? "mr-2" : ""}`}>
       <ul className="flex gap-x-1">
         <li className="transition-all hover:rounded-md hover:bg-slate-300">
           <NavLink
@@ -321,25 +337,30 @@ function NavigationMenu() {
             <span className="block px-2 py-4 font-semibold">About Us</span>
           </NavLink>
         </li>
-        <li className="ml-4 transition-all hover:rounded-md hover:bg-slate-300">
-          <div className="relative flex items-center">
-            <div className="-left-7.25 -top-2.75 absolute">
-              <img
-                src={loginSignupIcon}
-                className="w-7"
-                alt="login-signup-icon"
-              />
+
+        {loggedInUser ? null : (
+          <li className="ml-4 transition-all hover:rounded-md hover:bg-slate-300">
+            <div className="relative flex items-center">
+              <div className="absolute -left-7.25 -top-2.75">
+                <img
+                  src={loginSignupIcon}
+                  className="w-7"
+                  alt="login-signup-icon"
+                />
+              </div>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "text-emerald-700" : ""
+                }
+                to="/login"
+              >
+                <span className="block px-2 py-4 font-semibold">
+                  Login/Signup
+                </span>
+              </NavLink>
             </div>
-            <NavLink
-              className={({ isActive }) => (isActive ? "text-emerald-700" : "")}
-              to="/login"
-            >
-              <span className="block px-2 py-4 font-semibold">
-                Login/Signup
-              </span>
-            </NavLink>
-          </div>
-        </li>
+          </li>
+        )}
       </ul>
     </div>
   );
@@ -349,6 +370,214 @@ function AppLogo() {
   return (
     <div className="w-16">
       <img className="block" src={appLogo} alt="App-Logo" />
+    </div>
+  );
+}
+
+function UserPanel({ loggedInUser }) {
+  const [isShowUserPanel, setIsShowUserPanel] = useState(false);
+
+  const { username, avatar, fullName, phoneNumber } = loggedInUser;
+
+  return (
+    // User Panel Section
+    <div className="relative mr-4 flex flex-col md:mr-0">
+      {/* User Panel Button */}
+      <div
+        onClick={() => setIsShowUserPanel(!isShowUserPanel)}
+        className="flex cursor-pointer rounded-xl bg-slate-300 p-1"
+      >
+        <span className="pointer-events-none block">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            className="h-5 w-5 text-emerald-800"
+          >
+            <path
+              fillRule="evenodd"
+              d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+              clipRule="evenodd"
+            />
+          </svg>
+        </span>
+        <span className="pointer-events-none block">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth="1.5"
+            stroke="currentColor"
+            className="h-5 w-5 text-emerald-800"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
+            />
+          </svg>
+        </span>
+      </div>
+
+      {/* User Panel */}
+      <div
+        className={`absolute right-0 top-8 w-40 flex-col rounded-lg bg-slate-100 px-2 py-3 shadow-lg ${
+          isShowUserPanel ? "flex" : "hidden"
+        }`}
+      >
+        {/* User Specs */}
+        <div className="mb-1 flex flex-col px-1 text-emerald-800">
+          {/* Username Spec */}
+          <div className="mb-1 flex justify-between">
+            <div className="flex items-center">
+              <span className="block">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="1.5"
+                  stroke="currentColor"
+                  className="h-4 w-4"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                  />
+                </svg>
+              </span>
+              <span className="ml-1 block text-sm capitalize">{username}</span>
+            </div>
+            <div>
+              <span className="block text-sm">{avatar}</span>
+            </div>
+          </div>
+          {/* Full Name Spec */}
+          <div className="mb-1 flex items-center">
+            <span className="block">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="1.5"
+                stroke="currentColor"
+                className="h-4 w-4"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
+                />
+              </svg>
+            </span>
+            <span className="ml-1 block text-sm capitalize">{fullName}</span>
+          </div>
+          {/* Phone Number Spec */}
+          <div className="mb-1 flex items-center">
+            <span className="block">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="1.5"
+                stroke="currentColor"
+                className="h-4 w-4"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"
+                />
+              </svg>
+            </span>
+            <span className="ml-1 block text-sm">{phoneNumber}</span>
+          </div>
+        </div>
+
+        {/* Separator Line */}
+        <div className="mb-2 border-b border-slate-400 opacity-30"></div>
+
+        {/* Sign out Section */}
+        <div className="flex items-center justify-start px-1">
+          <span className="block">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              className="h-4 w-4 text-red-700"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9"
+              />
+            </svg>
+          </span>
+          <span className="ml-1 block text-sm capitalize text-red-700">
+            sign out
+          </span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function UserSpecs({ loggedInUser }) {
+  const { username, avatar, fullName, phoneNumber, gender } = loggedInUser;
+
+  return (
+    <div className="mb-4 flex flex-col rounded-lg bg-emerald-800 px-3 py-2 shadow-lg">
+      <div className="mb-2 text-center text-white">
+        <span className="block w-full">{`Welcome ${
+          gender === "male" ? "Mr." : "Mrs."
+        }${fullName[0].toUpperCase() + fullName.slice(1)} ${avatar}`}</span>
+      </div>
+
+      <div className="mx-auto flex w-full max-w-[256px] items-center justify-around">
+        {/* Username Spec */}
+        <div className="flex text-white">
+          <span className="block">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              className="h-4 w-4"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+              />
+            </svg>
+          </span>
+          <span className="ml-1 block text-sm capitalize">{username}</span>
+        </div>
+
+        {/* Phone Number Spec */}
+        <div className="flex text-white">
+          <span className="block">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              className="h-4 w-4"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"
+              />
+            </svg>
+          </span>
+          <span className="ml-1 block text-sm">{phoneNumber}</span>
+        </div>
+      </div>
     </div>
   );
 }

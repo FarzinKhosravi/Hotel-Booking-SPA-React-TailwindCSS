@@ -83,10 +83,6 @@ const validationSchema = Yup.object({
 
 function SignupFormPage() {
   const onSubmit = (userData) => {
-    async function fetchUsers() {
-      return await getUsers();
-    }
-
     async function checkDuplicateFields() {
       function generateErrorMessage(field) {
         const foundDuplicateField = users.find(
@@ -115,7 +111,7 @@ function SignupFormPage() {
         return true;
       }
 
-      const { data: users } = await fetchUsers();
+      const { data: users } = await getUsers();
 
       console.log("USERS:", users);
 
@@ -823,9 +819,9 @@ function SignupFormPage() {
                     className="w-full cursor-pointer rounded-xl border-0 bg-slate-300 text-base text-emerald-900 shadow-lg"
                   >
                     <option value="">Select Your Avatar:</option>
-                    <option value="programmer">Programmer 🧑🏼‍💻</option>
-                    <option value="bookworm">Bookworm 🤓</option>
-                    <option value="adventurer">Adventurer 😎</option>
+                    <option value="🧑🏼‍💻">Programmer 🧑🏼‍💻</option>
+                    <option value="🤓">Bookworm 🤓</option>
+                    <option value="😎">Adventurer 😎</option>
                   </select>
                 </div>
 

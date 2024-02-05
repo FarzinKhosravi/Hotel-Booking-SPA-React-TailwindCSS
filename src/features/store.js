@@ -4,6 +4,7 @@ import currentHotelReducer from "./currentHotel/currentHotelSlice";
 import bookmarksListReducer from "./bookmarksList/bookmarksListSlice";
 import currentBookmarkReducer from "./currentBookmark/currentBookmarkSlice";
 import selectedLocationReducer from "./selectedLocation/selectedLocationSlice";
+import loggedInUserReducer from "./loggedInUser/loggedInUserSlice";
 
 const store = configureStore({
   reducer: {
@@ -12,6 +13,7 @@ const store = configureStore({
     bookmarksList: bookmarksListReducer,
     currentBookmark: currentBookmarkReducer,
     selectedLocation: selectedLocationReducer,
+    loggedInUser: loggedInUserReducer,
   },
 });
 

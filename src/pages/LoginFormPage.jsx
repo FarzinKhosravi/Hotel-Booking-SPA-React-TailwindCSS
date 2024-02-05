@@ -6,6 +6,19 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useEffect, useState } from "react";
 import getUsers from "./../services/getUsersService";
+import toast from "react-hot-toast";
+import { useDispatch } from "react-redux";
+import { createLoggedInUserData } from "../features/loggedInUser/loggedInUserSlice";
+import saveLocalStorage from "./../localStorage/saveLocalStorage";
+
+const USER_DATA = "USER_DATA";
+
+const fields = [
+  { name: "email", message: "Your Email is Unrecognized 🧐" },
+  { name: "password", message: "Your Password is Unrecognized 🧐" },
+];
+
+let isContinue;
 
 const initialValues = {
   email: "",
@@ -19,12 +32,91 @@ const validationSchema = Yup.object({
 });
 
 function LoginFormPage() {
+  const onSubmit = (userData) => {
+    // *** CHECK !! ***
+
+    async function checkUserData() {
+      function generateErrorMessage(field) {
+        const existsUserData = users.find(
+          (user) => user[field] === userData[field]
+        );
+
+        console.log("existsUserData:", existsUserData);
+
+        if (!existsUserData) {
+          const { message } = fields.find((item) => item.name === field);
+
+          console.log("errorMessage:", message);
+
+          toast.error(
+            `Your ${field[0].toUpperCase() + field.slice(1)} is Unrecognized 🧐`
+          );
+
+          setUnrecognizedData({
+            ...unrecognizedData,
+            [field]: message,
+          });
+
+          return false;
+        }
+
+        return true;
+      }
+
+      const { data: users } = await getUsers();
+
+      if (users) {
+        isContinue = generateErrorMessage("email");
+
+        console.log("isContinue:", isContinue);
+
+        if (isContinue) {
+          isContinue = generateErrorMessage("password");
+        }
+
+        if (isContinue) {
+          console.log("Authentication was successful !!");
+
+          const foundUserData = users.find(
+            (user) => user.email === userData.email
+          );
+
+          if (foundUserData) {
+            const { username, avatar, fullName, phoneNumber, gender } =
+              foundUserData;
+
+            dispatch(createLoggedInUserData(foundUserData));
+
+            saveLocalStorage(USER_DATA, {
+              username,
+              avatar,
+              fullName,
+              phoneNumber,
+              gender,
+            });
+
+            navigate("/");
+          }
+        }
+      }
+    }
+
+    checkUserData();
+  };
+
+  const dispatch = useDispatch();
+
+  const [unrecognizedData, setUnrecognizedData] = useState({
+    email: "",
+    password: "",
+  });
+
   const [userDetail, setUserDetail] = useState(null);
 
   const formik = useFormik({
     initialValues: userDetail || initialValues,
     validationSchema,
-    // onSubmit,
+    onSubmit,
     validateOnMount: true,
     enableReinitialize: true,
   });
@@ -53,11 +145,25 @@ function LoginFormPage() {
     if (username) fetchUser();
   }, [username]);
 
+  // *** CHECK !! ***
+
+  const { email, password } = formik.values;
+
+  useEffect(() => {
+    setUnrecognizedData({ ...unrecognizedData, email: "" });
+  }, [email]);
+
+  useEffect(() => {
+    setUnrecognizedData({ ...unrecognizedData, password: "" });
+  }, [password]);
+
   console.log("values:", formik.values);
   console.log("errors:", formik.errors);
   console.log("touched:", formik.touched);
 
   console.log("userDetail:", userDetail);
+
+  console.log("unrecognizedData:", unrecognizedData);
 
   return (
     <section className="min-h-screen px-4">
@@ -107,7 +213,7 @@ function LoginFormPage() {
 
           <div>
             <form
-              //   onSubmit={formik.handleSubmit}
+              onSubmit={formik.handleSubmit}
               className="rounded-xl bg-slate-200 p-4"
             >
               {/* Login Form Description */}
@@ -175,6 +281,12 @@ function LoginFormPage() {
                       {formik.errors.email}
                     </span>
                   )}
+
+                  {unrecognizedData.email && (
+                    <span className="block w-full pl-2 font-semibold text-red-600">
+                      {unrecognizedData.email}
+                    </span>
+                  )}
                 </div>
               </div>
 
@@ -225,14 +337,19 @@ function LoginFormPage() {
                       {formik.errors.password}
                     </span>
                   )}
+
+                  {unrecognizedData.password && (
+                    <span className="block w-full pl-2 font-semibold text-red-600">
+                      {unrecognizedData.password}
+                    </span>
+                  )}
                 </div>
               </div>
 
               {/* Login Button */}
               <div className="mb-3 w-full">
                 <button
-                  //   type="submit"
-                  onClick={(e) => e.preventDefault()}
+                  type="submit"
                   disabled={!formik.isValid}
                   className="flex w-full items-center justify-center rounded-xl bg-emerald-800 p-4 shadow-lg disabled:bg-gray-500"
                 >
