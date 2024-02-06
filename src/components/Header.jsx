@@ -12,11 +12,15 @@ import {
 } from "@heroicons/react/24/outline";
 import { useRef, useState } from "react";
 import useOutsideClick from "./../hooks/useOutsideClick";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 import appLogo from "../assets/images/appLogo.png";
 import loginSignupIcon from "../assets/images/loginSignupIcon.png";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { signOutUser } from "../features/loggedInUser/loggedInUserSlice";
+import removeLocalStorage from "./../localStorage/removeLocalStorage";
+
+const USER_DATA = "USER_DATA";
 
 function Header() {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
@@ -379,6 +383,18 @@ function UserPanel({ loggedInUser }) {
 
   const { username, avatar, fullName, phoneNumber } = loggedInUser;
 
+  const dispatch = useDispatch();
+
+  const navigate = useNavigate();
+
+  const signOutUserHandler = () => {
+    dispatch(signOutUser());
+
+    removeLocalStorage(USER_DATA);
+
+    navigate("/");
+  };
+
   return (
     // User Panel Section
     <div className="relative mr-4 flex flex-col md:mr-0">
@@ -452,6 +468,7 @@ function UserPanel({ loggedInUser }) {
               <span className="block text-sm">{avatar}</span>
             </div>
           </div>
+
           {/* Full Name Spec */}
           <div className="mb-1 flex items-center">
             <span className="block">
@@ -472,6 +489,7 @@ function UserPanel({ loggedInUser }) {
             </span>
             <span className="ml-1 block text-sm capitalize">{fullName}</span>
           </div>
+
           {/* Phone Number Spec */}
           <div className="mb-1 flex items-center">
             <span className="block">
@@ -498,8 +516,11 @@ function UserPanel({ loggedInUser }) {
         <div className="mb-2 border-b border-slate-400 opacity-30"></div>
 
         {/* Sign out Section */}
-        <div className="flex items-center justify-start px-1">
-          <span className="block">
+        <div
+          onClick={signOutUserHandler}
+          className="flex cursor-pointer items-center justify-start p-1 hover:rounded-lg hover:bg-slate-200"
+        >
+          <span className="pointer-events-none block">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -515,7 +536,7 @@ function UserPanel({ loggedInUser }) {
               />
             </svg>
           </span>
-          <span className="ml-1 block text-sm capitalize text-red-700">
+          <span className="pointer-events-none ml-1 block text-sm capitalize text-red-700">
             sign out
           </span>
         </div>
