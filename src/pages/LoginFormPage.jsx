@@ -1,4 +1,4 @@
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import introIcon from "../assets/images/introIcon.png";
 import separator from "../assets/images/separator.png";
 import BackButton from "../common/BackButton";
@@ -358,7 +358,7 @@ function LoginFormPage() {
               </div>
 
               {/* Cancel Button */}
-              <div className="w-full">
+              <div className="mb-4 w-full">
                 <button
                   type="button"
                   onClick={() => navigate("/")}
@@ -370,6 +370,16 @@ function LoginFormPage() {
                     </div>
                   </div>
                 </button>
+              </div>
+
+              <div className="flex items-center justify-center text-emerald-800">
+                <span className="block">Don&apos;t Have an Account?</span>
+                <Link
+                  to="/signup"
+                  className="ml-1 border-b-2 border-yellow-500"
+                >
+                  Signup Now
+                </Link>
               </div>
             </form>
           </div>

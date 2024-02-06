@@ -7,7 +7,7 @@ import * as Yup from "yup";
 import toast from "react-hot-toast";
 import getUsers from "../services/getUsersService";
 import createUser from "../services/createUserService";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const fields = [
   { name: "username", message: "Your Username is Already Selected 🧐" },
@@ -604,7 +604,7 @@ function SignupFormPage() {
                 </div>
 
                 {/* Radio Buttons Container */}
-                <div className="mb-1 flex items-center justify-start rounded-xl bg-slate-300 p-4">
+                <div className="mb-1 flex items-center justify-start rounded-xl bg-slate-300 p-4 shadow-lg">
                   <div className="flex">
                     <input
                       type="radio"
@@ -838,7 +838,7 @@ function SignupFormPage() {
               {/* Terms & Conditions Section */}
               <div className="mb-8">
                 {/* Terms & Conditions Field */}
-                <div className="flex items-center justify-start rounded-xl bg-slate-300 p-4">
+                <div className="flex items-center justify-start rounded-xl bg-slate-300 p-4 shadow-lg">
                   <input
                     type="checkbox"
                     id="terms"
@@ -876,7 +876,7 @@ function SignupFormPage() {
               </div>
 
               {/* Cancel Button */}
-              <div className="w-full">
+              <div className="mb-4 w-full">
                 <button
                   type="button"
                   onClick={() => navigate("/")}
@@ -888,6 +888,13 @@ function SignupFormPage() {
                     </div>
                   </div>
                 </button>
+              </div>
+
+              <div className="flex items-center justify-center text-emerald-800">
+                <span className="block">Already Have an Account?</span>
+                <Link to="/login" className="ml-1 border-b-2 border-yellow-500">
+                  Login Now
+                </Link>
               </div>
             </form>
           </div>
