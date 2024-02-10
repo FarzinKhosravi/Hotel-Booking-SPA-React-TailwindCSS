@@ -71,7 +71,7 @@ function BookmarkDetail() {
               >
                 {/* Menu Icon */}
                 <div
-                  className="cursor-pointer"
+                  className="cursor-pointer rounded-full bg-emerald-800 px-1"
                   onClick={() => setIsOpenMenu(!isOpenMenu)}
                 >
                   <span className="block">
@@ -79,7 +79,7 @@ function BookmarkDetail() {
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 20 20"
                       fill="currentColor"
-                      className="h-6 w-6 text-stone-800"
+                      className="h-6 w-6 text-white"
                     >
                       <path d="M3 10a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0ZM8.5 10a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0ZM15.5 8.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Z" />
                     </svg>
@@ -105,7 +105,7 @@ function BookmarkDetail() {
                         )} Bookmark`}`
                       )
                     }
-                    className="cursor-pointer px-4 py-2 text-sm font-semibold"
+                    className="cursor-pointer px-4 py-2 text-sm font-semibold text-emerald-800"
                   >
                     Update Bookmark
                   </span>

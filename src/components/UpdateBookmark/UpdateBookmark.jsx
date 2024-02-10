@@ -6,7 +6,7 @@ import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import useBookmarkDetail from "../../hooks/useBookmarkDetail";
 import { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { updateAsyncBookmark } from "../../features/bookmarksList/bookmarksListSlice";
 import Loader from "./../Loader";
 
@@ -70,7 +70,13 @@ function UpdateBookmark() {
     }
 
     async function updateUserBookmark() {
-      dispatch(updateAsyncBookmark({ updatedBookmarkId, updatedBookmark }));
+      dispatch(
+        updateAsyncBookmark({
+          updatedBookmarkId,
+          updatedBookmark,
+          loggedInUser,
+        })
+      );
     }
 
     fetchBookmarks();
@@ -85,6 +91,8 @@ function UpdateBookmark() {
     validateOnMount: true,
     enableReinitialize: true,
   });
+
+  const { loggedInUser } = useSelector((state) => state.loggedInUser);
 
   const dispatch = useDispatch();
 

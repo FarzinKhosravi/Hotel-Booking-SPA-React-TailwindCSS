@@ -12,6 +12,7 @@ import Loader from "./../Loader";
 import Message from "./../../common/Message";
 import { MapPinIcon } from "@heroicons/react/24/outline";
 import { createAsyncBookmark } from "../../features/bookmarksList/bookmarksListSlice";
+import getUsers from "./../../services/getUsersService";
 
 const initialValues = {
   bookmarkName: "",
@@ -39,32 +40,46 @@ const validationSchema = Yup.object({
 
 function AddNewBookmark() {
   const onSubmit = (bookmarkData) => {
-    const userBookmark = { ...selectedLocation, ...bookmarkData };
+    async function createUserBookmark() {
+      const { data: users } = await getUsers();
 
-    console.log("userBookmark:", userBookmark);
-
-    async function fetchBookmarks() {
-      const { data: bookmarks } = await getBookmarksList();
-
-      // console.log("fetch bookmarks:", bookmarks);
-
-      const duplicateBookmark = bookmarks.find(
-        (bookmark) => bookmark.bookmarkName === userBookmark.bookmarkName
+      const foundUser = users.find(
+        (user) => user.username === loggedInUser.username
       );
 
-      if (duplicateBookmark) {
-        setDuplicateBookmarkName("This Name has Already Been Chosen ⚡");
-
-        toast.error("Your Bookmark Name is Duplicate 🧐");
-      } else {
-        createUserBookmark();
-
-        navigate("/bookmarks?mapTitle=Bookmarks List");
-      }
+      if (foundUser)
+        // Bookmark Data
+        return {
+          ...selectedLocation,
+          ...bookmarkData,
+          user: foundUser,
+        };
     }
 
-    async function createUserBookmark() {
-      dispatch(createAsyncBookmark(userBookmark));
+    async function fetchBookmarks() {
+      const userBookmark = await createUserBookmark();
+
+      console.log("USER_BOOKMARK:", userBookmark);
+
+      if (userBookmark) {
+        const { data: bookmarks } = await getBookmarksList();
+
+        const duplicateBookmark = bookmarks.find(
+          (bookmark) => bookmark.bookmarkName === userBookmark.bookmarkName
+        );
+
+        if (duplicateBookmark) {
+          setDuplicateBookmarkName("This Name has Already Been Chosen ⚡");
+
+          toast.error("Your Bookmark Name is Duplicate 🧐");
+        } else {
+          console.log("USER_BOOKMARK_SAVED_IN_SERVER:", userBookmark);
+
+          dispatch(createAsyncBookmark({ userBookmark, loggedInUser }));
+
+          navigate("/bookmarks?mapTitle=Bookmarks List");
+        }
+      }
     }
 
     fetchBookmarks();
@@ -82,6 +97,8 @@ function AddNewBookmark() {
   const { loading, selectedLocation } = useSelector(
     (state) => state.selectedLocation
   );
+
+  const { loggedInUser } = useSelector((state) => state.loggedInUser);
 
   const navigate = useNavigate();
 

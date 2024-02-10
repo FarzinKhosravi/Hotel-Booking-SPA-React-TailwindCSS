@@ -7,11 +7,23 @@ import updateBookmark from "../../services/updateBookmarkService";
 
 export const getAsyncBookmarksList = createAsyncThunk(
   "bookmarksList/getAsyncBookmarksList",
-  async (_, { rejectWithValue }) => {
+  async (payload, { rejectWithValue }) => {
     try {
-      const { data } = await getBookmarksList();
+      const { loggedInUser } = payload;
 
-      return data;
+      // *** Convert to createUserBookmarks Function ***
+
+      const { data: bookmarksList } = await getBookmarksList();
+
+      console.log("bookmarksList:", bookmarksList);
+
+      const userBookmarksList = bookmarksList.filter(
+        (bookmark) => bookmark.user.username === loggedInUser.username
+      );
+
+      console.log("USER_BOOKMARKS_SLICE:", userBookmarksList);
+
+      return userBookmarksList;
     } catch (error) {
       toast.error(`404 ERROR 🧐`);
 
@@ -22,15 +34,25 @@ export const getAsyncBookmarksList = createAsyncThunk(
 
 export const removeAsyncBookmark = createAsyncThunk(
   "bookmarksList/removeAsyncBookmark",
-  async (bookmarkId, { rejectWithValue }) => {
+  async (payload, { rejectWithValue }) => {
     try {
+      const { bookmarkId, loggedInUser } = payload;
+
       await removeBookmark(bookmarkId);
 
-      const { data: updatedBookmarksList } = await getBookmarksList();
+      // *** Convert to createUserBookmarks Function ***
 
-      console.log("updatedBookmarksList:", updatedBookmarksList);
+      const { data: bookmarksList } = await getBookmarksList();
 
-      return updatedBookmarksList;
+      console.log("bookmarksList:", bookmarksList);
+
+      const userBookmarksList = bookmarksList.filter(
+        (bookmark) => bookmark.user.username === loggedInUser.username
+      );
+
+      console.log("USER_BOOKMARKS_SLICE:", userBookmarksList);
+
+      return userBookmarksList;
     } catch (error) {
       toast.error(`404 ERROR 🧐`);
 
@@ -43,13 +65,23 @@ export const createAsyncBookmark = createAsyncThunk(
   "bookmarksList/createAsyncBookmark",
   async (payload, { rejectWithValue }) => {
     try {
-      await createBookmark(payload);
+      const { userBookmark, loggedInUser } = payload;
+
+      await createBookmark(userBookmark);
+
+      // *** Convert to createUserBookmarks Function ***
 
       const { data: updatedBookmarksList } = await getBookmarksList();
 
       console.log("updatedBookmarksList:", updatedBookmarksList);
 
-      return updatedBookmarksList;
+      const userBookmarksList = updatedBookmarksList.filter(
+        (bookmark) => bookmark.user.username === loggedInUser.username
+      );
+
+      console.log("USER_BOOKMARKS_SLICE:", userBookmarksList);
+
+      return userBookmarksList;
     } catch (error) {
       return rejectWithValue(error.message);
     }
@@ -60,15 +92,23 @@ export const updateAsyncBookmark = createAsyncThunk(
   "bookmarksList/updateAsyncBookmark",
   async (payload, { rejectWithValue }) => {
     try {
-      const { updatedBookmarkId, updatedBookmark } = payload;
+      const { updatedBookmarkId, updatedBookmark, loggedInUser } = payload;
 
       await updateBookmark(updatedBookmarkId, updatedBookmark);
 
-      const { data: updatedBookmarksList } = await getBookmarksList();
+      // *** Convert to createUserBookmarks Function ***
 
-      console.log("updatedBookmarksList:", updatedBookmarksList);
+      const { data: bookmarksList } = await getBookmarksList();
 
-      return updatedBookmarksList;
+      console.log("bookmarksList:", bookmarksList);
+
+      const userBookmarksList = bookmarksList.filter(
+        (bookmark) => bookmark.user.username === loggedInUser.username
+      );
+
+      console.log("USER_BOOKMARKS_SLICE:", userBookmarksList);
+
+      return userBookmarksList;
     } catch (error) {
       return rejectWithValue(error.message);
     }
