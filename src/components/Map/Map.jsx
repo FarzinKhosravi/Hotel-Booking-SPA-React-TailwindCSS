@@ -20,6 +20,7 @@ function Map() {
 
   const { hotels } = useSelector((state) => state.hotels);
   const { bookmarksList } = useSelector((state) => state.bookmarksList);
+  const { loggedInUser } = useSelector((state) => state.loggedInUser);
 
   const [mapCenter, setMapCenter] = useState([51, -3]);
 
@@ -58,7 +59,7 @@ function Map() {
             url="https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png"
           />
 
-          <DetectClickOnMap />
+          <DetectClickOnMap loggedInUser={loggedInUser} />
 
           {/* Map Title */}
           <div className="absolute right-2 top-2 z-1000 flex items-center justify-center rounded-full bg-yellow-400 px-3 py-2 font-Rasa text-sm font-semibold text-stone-800">
@@ -151,7 +152,7 @@ function ChangeCenter({ position }) {
   return null;
 }
 
-function DetectClickOnMap() {
+function DetectClickOnMap({ loggedInUser }) {
   const navigate = useNavigate();
 
   const price = generateRandomNumbers();
@@ -163,7 +164,19 @@ function DetectClickOnMap() {
   useMapEvent({
     click: (event) =>
       navigate(
-        `/bookmarks/add?lat=${event.latlng.lat}&lng=${event.latlng.lng}&locationName=${locationName}&price=${price}&mapTitle=Bookmark Form`
+        `${
+          loggedInUser
+            ? `/bookmarks/add?lat=${event.latlng.lat}&lng=${event.latlng.lng}&locationName=${locationName}&price=${price}&mapTitle=Bookmark Form`
+            : "/login?redirect=addNewBookmark"
+        }`,
+        {
+          state: {
+            latitude: event.latlng.lat,
+            longitude: event.latlng.lng,
+            locationName,
+            price,
+          },
+        }
       ),
   });
 

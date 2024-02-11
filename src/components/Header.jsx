@@ -164,7 +164,13 @@ function HamburgerMenu({ isOpenMenu, setIsOpenMenu, loggedInUser }) {
           onClick={() => setIsOpenMenu(false)}
           className="cursor-pointer pl-2 transition-all ease-in-out hover:rounded-md hover:bg-slate-300"
         >
-          <NavLink to="/bookmarks?mapTitle=Bookmarks List">
+          <NavLink
+            to={`${
+              loggedInUser
+                ? "/bookmarks?mapTitle=Bookmarks List"
+                : "/login?redirect=bookmarksList"
+            }`}
+          >
             {({ isActive }) => (
               <div className="flex py-1">
                 <div className="flex items-center justify-center">
@@ -320,7 +326,11 @@ function NavigationMenu({ loggedInUser }) {
         <li className="transition-all hover:rounded-md hover:bg-slate-300">
           <NavLink
             className={({ isActive }) => (isActive ? "text-emerald-700" : "")}
-            to="/bookmarks?mapTitle=Bookmarks List"
+            to={`${
+              loggedInUser
+                ? "/bookmarks?mapTitle=Bookmarks List"
+                : "/login?redirect=bookmarksList"
+            }`}
           >
             <span className="block px-2 py-4 font-semibold">Bookmarks</span>
           </NavLink>

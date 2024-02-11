@@ -1,4 +1,9 @@
-import { Link, useNavigate, useSearchParams } from "react-router-dom";
+import {
+  Link,
+  useLocation,
+  useNavigate,
+  useSearchParams,
+} from "react-router-dom";
 import introIcon from "../assets/images/introIcon.png";
 import separator from "../assets/images/separator.png";
 import BackButton from "../common/BackButton";
@@ -95,7 +100,10 @@ function LoginFormPage() {
               gender,
             });
 
-            navigate("/");
+            console.log("userRedirect:::", userRedirect);
+
+            if (userRedirect) redirectSwitcher(userRedirect);
+            else navigate("/");
           }
         }
       }
@@ -104,12 +112,18 @@ function LoginFormPage() {
     checkUserData();
   };
 
+  const location = useLocation();
+
+  console.log("LOCATION:", location);
+
   const dispatch = useDispatch();
 
   const [unrecognizedData, setUnrecognizedData] = useState({
     email: "",
     password: "",
   });
+
+  const [userRedirect, setUserRedirect] = useState("");
 
   const [userDetail, setUserDetail] = useState(null);
 
@@ -125,7 +139,9 @@ function LoginFormPage() {
 
   const username = searchParams.get("username");
 
-  console.log("USERNAME_SEARCH_PARAMS", username);
+  const redirect = searchParams.get("redirect");
+
+  console.log("REDIRECT", redirect);
 
   const navigate = useNavigate();
 
@@ -157,13 +173,33 @@ function LoginFormPage() {
     setUnrecognizedData({ ...unrecognizedData, password: "" });
   }, [password]);
 
-  console.log("values:", formik.values);
-  console.log("errors:", formik.errors);
-  console.log("touched:", formik.touched);
+  // *** *** ***
 
-  console.log("userDetail:", userDetail);
+  useEffect(() => {
+    if (redirect) setUserRedirect(redirect);
+  }, []);
 
-  console.log("unrecognizedData:", unrecognizedData);
+  console.log("USER_REDIRECT", userRedirect);
+
+  function redirectSwitcher(userRedirect) {
+    switch (userRedirect) {
+      case "bookmarksList":
+        navigate("/bookmarks?mapTitle=Bookmarks List");
+        break;
+
+      case "addNewBookmark": {
+        const { latitude, longitude, locationName, price } = location.state;
+
+        navigate(
+          `/bookmarks/add?lat=${latitude}&lng=${longitude}&locationName=${locationName}&price=${price}&mapTitle=Bookmark Form`
+        );
+        break;
+      }
+
+      default:
+        return;
+    }
+  }
 
   return (
     <section className="min-h-screen px-4">
