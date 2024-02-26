@@ -133,7 +133,12 @@ function SignupFormPage() {
         if (isContinue) {
           console.log("SAVED USER_DATA IN DATABASE...");
 
-          const { data } = await createUser(userData);
+          // console.log("CHECK_USER_DATA:", { ...userData, hotelsReserved: [] });
+
+          const { data } = await createUser({
+            ...userData,
+            hotelsReserved: [],
+          });
 
           console.log("CREATE_USER_IN_DATABASE...", data);
 

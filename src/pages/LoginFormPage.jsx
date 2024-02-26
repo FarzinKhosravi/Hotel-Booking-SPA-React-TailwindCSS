@@ -87,8 +87,17 @@ function LoginFormPage() {
           );
 
           if (foundUserData) {
-            const { username, avatar, fullName, phoneNumber, gender } =
-              foundUserData;
+            const {
+              username,
+              avatar,
+              fullName,
+              phoneNumber,
+              gender,
+              id,
+              hotelsReserved,
+            } = foundUserData;
+
+            console.log("foundUserData:", foundUserData);
 
             dispatch(createLoggedInUserData(foundUserData));
 
@@ -98,6 +107,8 @@ function LoginFormPage() {
               fullName,
               phoneNumber,
               gender,
+              id,
+              hotelsReserved,
             });
 
             console.log("userRedirect:::", userRedirect);

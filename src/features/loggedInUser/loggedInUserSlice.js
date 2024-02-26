@@ -17,10 +17,25 @@ const loggedInUserSlice = createSlice({
     signOutUser: (state) => {
       state.loggedInUser = null;
     },
+
+    createHotelReserved: (state, action) => {
+      state.loggedInUser.hotelsReserved.push(action.payload);
+    },
+
+    removeHotelReserved: (state, action) => {
+      state.loggedInUser.hotelsReserved =
+        state.loggedInUser.hotelsReserved.filter(
+          (hotel) => hotel.id !== action.payload
+        );
+    },
   },
 });
 
-export const { createLoggedInUserData, signOutUser } =
-  loggedInUserSlice.actions;
+export const {
+  createLoggedInUserData,
+  signOutUser,
+  createHotelReserved,
+  removeHotelReserved,
+} = loggedInUserSlice.actions;
 
 export default loggedInUserSlice.reducer;

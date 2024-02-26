@@ -20,6 +20,7 @@
         "startDate": "2024-02-01T08:43:28.890Z",
         "endDate": "2024-03-01T08:43:28.890Z"
       },
+      "hotelReserved": false,
       "interaction": null,
       "house_rules": null,
       "thumbnail_url": "https://a0.muscache.com/im/pictures/74942550/415cd752_original.jpg?aki_policy=small",
@@ -142,6 +143,7 @@
       "number_of_adult": 2,
       "number_of_children": 4,
       "interaction": null,
+      "hotelReserved": false,
       "house_rules": "-smoking in the house is strictly forbidden, but is allowed on the balcony. -we have neighbours below and above us, we ask that you be respectful of any noise.   -please shut down the lights and close all the windows and doors when you leave the house. and ... enjoy!",
       "thumbnail_url": "https://a0.muscache.com/im/pictures/eb9e20e1-9c88-43fb-9e0a-e634dfc6e35a.jpg?aki_policy=small",
       "medium_url": "https://a0.muscache.com/im/pictures/eb9e20e1-9c88-43fb-9e0a-e634dfc6e35a.jpg?aki_policy=medium",
@@ -265,6 +267,7 @@
       "experiences_offered": "none",
       "neighborhood_overview": null,
       "notes": null,
+      "hotelReserved": false,
       "number_of_adult": 5,
       "number_of_children": 10,
       "transit": null,
@@ -385,6 +388,7 @@
       "experiences_offered": "none",
       "neighborhood_overview": "Seriously one of the best neighbourhoods in town. A~nd we are not saying this because we live here ;-) The Bosboom Toussaintstraat is considered to be one of the most beautiful streets in Amsterdam. The area is very popular with many restaurants, bars, musea, shopping streets and of course the Vondelpark around the corner.",
       "notes": null,
+      "hotelReserved": false,
       "duration_of_stay": {
         "startDate": "2024-03-01T08:43:28.890Z",
         "endDate": "2024-04-01T08:43:28.890Z"
@@ -517,6 +521,7 @@
       "experiences_offered": "none",
       "neighborhood_overview": null,
       "notes": null,
+      "hotelReserved": false,
       "duration_of_stay": {
         "startDate": "2024-01-05T08:43:28.890Z",
         "endDate": "2024-01-20T08:43:28.890Z"
@@ -644,6 +649,7 @@
       "name": "amsterdam, oud-west",
       "summary": "Cozy private room with a double bed in Oud-West, Amsterdam. Typical Dutch local neighborhood quiet but with live. All sorts of facilities: supermarkets, stores, cafés 1 min walking. Great location: 5min to the center, 7min Leidseplein (restaurants, bars, shops, etc.), the marvelous famous FoodHallen (restaurants), Waterkant (bar), Kade West (café).",
       "space": null,
+      "hotelReserved": false,
       "description": "Cozy private room with a double bed in Oud-West, Amsterdam. Typical Dutch local neighborhood quiet but with live. All sorts of facilities: supermarkets, stores, cafés 1 min walking. Great location: 5min to the center, 7min Leidseplein (restaurants, bars, shops, etc.), the marvelous famous FoodHallen (restaurants), Waterkant (bar), Kade West (café).",
       "experiences_offered": "none",
       "neighborhood_overview": null,
@@ -769,6 +775,7 @@
       "experiences_offered": "none",
       "neighborhood_overview": null,
       "notes": null,
+      "hotelReserved": false,
       "duration_of_stay": {
         "startDate": "2024-02-01T08:43:28.890Z",
         "endDate": "2024-02-30T08:43:28.890Z"
@@ -900,6 +907,7 @@
       "experiences_offered": "none",
       "neighborhood_overview": "A lot of stores and restaurants around the corner",
       "notes": null,
+      "hotelReserved": false,
       "duration_of_stay": {
         "startDate": "2024-05-01T08:43:28.890Z",
         "endDate": "2024-06-01T08:43:28.890Z"
@@ -1021,6 +1029,7 @@
       "experiences_offered": "none",
       "neighborhood_overview": "Oud West is a vibrant neighborhood, just next to the famous canal area and next to Amsterdam's best park, the Vondelpark. You will find in this neighborhood lots of students and young people as well as families with children. Oud West is full of nice restaurants, bars, cafes and shops. In our street there are some great places to eat or drink.  We are also close to the museum area, where you can visit the Rijksmuseum and the Van Goghmuseum.",
       "notes": null,
+      "hotelReserved": false,
       "duration_of_stay": {
         "startDate": "2024-02-01T08:43:28.890Z",
         "endDate": "2024-02-10T08:43:28.890Z"
@@ -1146,6 +1155,7 @@
       "experiences_offered": "none",
       "neighborhood_overview": "De Baarsjes is a young and creative neighborhood which has become more and more popular over the past few years. I love it for the great mix of people -every age group and background is represented-, and the local public amenities reflect that variety. You will find cheap local grocery stores and a brand new mosque alongside beautiful design stores and great coffee places.",
       "notes": null,
+      "hotelReserved": false,
       "duration_of_stay": {
         "startDate": "2024-02-01T08:43:28.890Z",
         "endDate": "2024-02-15T08:43:28.890Z"
@@ -1263,9 +1273,9 @@
   ],
   "bookmarks": [
     {
-      "latitude": 51.017727461549754,
+      "latitude": 50.99300582439098,
       "lookupSource": "coordinates",
-      "longitude": -2.971458435058594,
+      "longitude": -3.0027008056640625,
       "localityLanguageRequested": "en",
       "continent": "Europe",
       "continentCode": "EU",
@@ -1274,327 +1284,9 @@
       "principalSubdivision": "England",
       "principalSubdivisionCode": "GB-ENG",
       "city": "Taunton",
-      "locality": "North Curry",
-      "postcode": "TA3 6",
-      "plusCode": "9C3V229H+3C",
-      "localityInfo": {
-        "administrative": [
-          {
-            "name": "United Kingdom of Great Britain and Northern Ireland (the)",
-            "description": "country in Western Europe",
-            "isoName": "United Kingdom of Great Britain and Northern Ireland (the)",
-            "order": 3,
-            "adminLevel": 2,
-            "isoCode": "GB",
-            "wikidataId": "Q145",
-            "geonameId": 2635167
-          },
-          {
-            "name": "England",
-            "description": "home nation of the United Kingdom",
-            "isoName": "England",
-            "order": 6,
-            "adminLevel": 4,
-            "isoCode": "GB-ENG",
-            "wikidataId": "Q21",
-            "geonameId": 6269131
-          },
-          {
-            "name": "Somerset",
-            "description": "unitary authority area in Somerset, England (doesn't include Bath and North-East Somerset or North Somerset)",
-            "isoName": "Somerset",
-            "order": 8,
-            "adminLevel": 6,
-            "isoCode": "GB-SOM",
-            "wikidataId": "Q21694741",
-            "geonameId": 2637532
-          },
-          {
-            "name": "Taunton",
-            "description": "town in Somerset, England",
-            "order": 11,
-            "adminLevel": 10,
-            "wikidataId": "Q845619",
-            "geonameId": 2636177
-          },
-          {
-            "name": "North Curry",
-            "description": "a village located in Taunton Deane, United Kingdom",
-            "order": 14,
-            "adminLevel": 10,
-            "wikidataId": "Q647024",
-            "geonameId": 2641379
-          }
-        ],
-        "informative": [
-          {
-            "name": "Europe",
-            "description": "continent",
-            "isoName": "Europe",
-            "order": 1,
-            "isoCode": "EU",
-            "wikidataId": "Q46",
-            "geonameId": 6255148
-          },
-          {
-            "name": "British Isles",
-            "description": "group of islands in northwest Europe",
-            "order": 2,
-            "wikidataId": "Q38272",
-            "geonameId": 2654669
-          },
-          {
-            "name": "Europe/London",
-            "description": "time zone",
-            "order": 4
-          },
-          {
-            "name": "Great Britain",
-            "description": "island in the North Atlantic Ocean off the northwest coast of continental Europe",
-            "order": 5,
-            "wikidataId": "Q23666",
-            "geonameId": 2648147
-          },
-          {
-            "name": "South West England",
-            "description": "region of England",
-            "order": 7,
-            "wikidataId": "Q48026",
-            "geonameId": 11591956
-          },
-          {
-            "name": "Somerset",
-            "order": 9
-          },
-          {
-            "name": "Somerset",
-            "description": "ceremonial county of England",
-            "order": 10,
-            "wikidataId": "Q23157",
-            "geonameId": 11609046
-          },
-          {
-            "name": "Somerset West and Taunton",
-            "description": "district in Somerset, England",
-            "order": 12,
-            "wikidataId": "Q54554249"
-          },
-          {
-            "name": "Taunton Deane",
-            "description": "former local government district with borough status in Somerset, England",
-            "order": 13,
-            "wikidataId": "Q1853334",
-            "geonameId": 7290626
-          },
-          {
-            "name": "Monkton and North Curry ED",
-            "order": 15
-          },
-          {
-            "name": "North Curry & Stoke St Gregory District Ward",
-            "order": 16
-          },
-          {
-            "name": "TA3 6",
-            "description": "postal code",
-            "order": 17
-          }
-        ]
-      },
-      "price": "127",
-      "locationName": "Rocky History",
-      "bookmarkName": "secondxxx",
-      "bookmarkDescription": "",
-      "user": {
-        "username": "Farzin_01",
-        "fullName": "farzin khosravi",
-        "email": "f.kh.s.1372f1@gmail.com",
-        "phoneNumber": "0901-4334908",
-        "age": 30,
-        "gender": "male",
-        "password": "farzin_KH_@_01",
-        "confirmPassword": "farzin_KH_@_01",
-        "address": "",
-        "avatar": "🧑🏼‍💻",
-        "terms": true,
-        "id": 1
-      },
-      "id": 2
-    },
-    {
-      "latitude": 51.013147164595445,
-      "lookupSource": "coordinates",
-      "longitude": -2.9951477050781254,
-      "localityLanguageRequested": "en",
-      "continent": "Europe",
-      "continentCode": "EU",
-      "countryName": "United Kingdom of Great Britain and Northern Ireland (the)",
-      "countryCode": "GB",
-      "principalSubdivision": "England",
-      "principalSubdivisionCode": "GB-ENG",
-      "city": "Taunton",
-      "locality": "North Curry",
-      "postcode": "TA3 6",
-      "plusCode": "9C3V2273+7W",
-      "localityInfo": {
-        "administrative": [
-          {
-            "name": "United Kingdom of Great Britain and Northern Ireland (the)",
-            "description": "country in Western Europe",
-            "isoName": "United Kingdom of Great Britain and Northern Ireland (the)",
-            "order": 3,
-            "adminLevel": 2,
-            "isoCode": "GB",
-            "wikidataId": "Q145",
-            "geonameId": 2635167
-          },
-          {
-            "name": "England",
-            "description": "home nation of the United Kingdom",
-            "isoName": "England",
-            "order": 6,
-            "adminLevel": 4,
-            "isoCode": "GB-ENG",
-            "wikidataId": "Q21",
-            "geonameId": 6269131
-          },
-          {
-            "name": "Somerset",
-            "description": "unitary authority area in Somerset, England (doesn't include Bath and North-East Somerset or North Somerset)",
-            "isoName": "Somerset",
-            "order": 8,
-            "adminLevel": 6,
-            "isoCode": "GB-SOM",
-            "wikidataId": "Q21694741",
-            "geonameId": 2637532
-          },
-          {
-            "name": "Taunton",
-            "description": "town in Somerset, England",
-            "order": 11,
-            "adminLevel": 10,
-            "wikidataId": "Q845619",
-            "geonameId": 2636177
-          },
-          {
-            "name": "North Curry",
-            "description": "a village located in Taunton Deane, United Kingdom",
-            "order": 14,
-            "adminLevel": 10,
-            "wikidataId": "Q647024",
-            "geonameId": 2641379
-          }
-        ],
-        "informative": [
-          {
-            "name": "Europe",
-            "description": "continent",
-            "isoName": "Europe",
-            "order": 1,
-            "isoCode": "EU",
-            "wikidataId": "Q46",
-            "geonameId": 6255148
-          },
-          {
-            "name": "British Isles",
-            "description": "group of islands in northwest Europe",
-            "order": 2,
-            "wikidataId": "Q38272",
-            "geonameId": 2654669
-          },
-          {
-            "name": "Europe/London",
-            "description": "time zone",
-            "order": 4
-          },
-          {
-            "name": "Great Britain",
-            "description": "island in the North Atlantic Ocean off the northwest coast of continental Europe",
-            "order": 5,
-            "wikidataId": "Q23666",
-            "geonameId": 2648147
-          },
-          {
-            "name": "South West England",
-            "description": "region of England",
-            "order": 7,
-            "wikidataId": "Q48026",
-            "geonameId": 11591956
-          },
-          {
-            "name": "Somerset",
-            "order": 9
-          },
-          {
-            "name": "Somerset",
-            "description": "ceremonial county of England",
-            "order": 10,
-            "wikidataId": "Q23157",
-            "geonameId": 11609046
-          },
-          {
-            "name": "Somerset West and Taunton",
-            "description": "district in Somerset, England",
-            "order": 12,
-            "wikidataId": "Q54554249"
-          },
-          {
-            "name": "Taunton Deane",
-            "description": "former local government district with borough status in Somerset, England",
-            "order": 13,
-            "wikidataId": "Q1853334",
-            "geonameId": 7290626
-          },
-          {
-            "name": "Monkton and North Curry ED",
-            "order": 15
-          },
-          {
-            "name": "North Curry & Stoke St Gregory District Ward",
-            "order": 16
-          },
-          {
-            "name": "TA3 6",
-            "description": "postal code",
-            "order": 17
-          }
-        ]
-      },
-      "price": "152",
-      "locationName": "Absolute World",
-      "bookmarkName": "abolfazlaa",
-      "bookmarkDescription": "",
-      "user": {
-        "username": "AbolfazlKH",
-        "fullName": "abolfazl khosravi",
-        "email": "abolfazl.abc@gmail.com",
-        "phoneNumber": "0901-4334911",
-        "age": 24,
-        "gender": "male",
-        "password": "qweas$1Xaaa",
-        "confirmPassword": "qweas$1Xaaa",
-        "address": "",
-        "avatar": "😎",
-        "terms": true,
-        "id": 2
-      },
-      "id": 3
-    },
-    {
-      "latitude": 50.99612063607375,
-      "lookupSource": "coordinates",
-      "longitude": -3.022613525390625,
-      "localityLanguageRequested": "en",
-      "continent": "Europe",
-      "continentCode": "EU",
-      "countryName": "United Kingdom of Great Britain and Northern Ireland (the)",
-      "countryCode": "GB",
-      "principalSubdivision": "England",
-      "principalSubdivisionCode": "GB-ENG",
-      "city": "Taunton",
-      "locality": "Thornfalcon",
+      "locality": "West Hatch",
       "postcode": "TA3 5",
-      "plusCode": "9C2RXXWG+CX",
+      "plusCode": "9C2RXXVW+6W",
       "localityInfo": {
         "administrative": [
           {
@@ -1642,22 +1334,6 @@
             "adminLevel": 10,
             "wikidataId": "Q4993272",
             "geonameId": 7297874
-          },
-          {
-            "name": "Stoke St Mary",
-            "description": "village and civil parish in Somerset, United Kingdom",
-            "order": 15,
-            "adminLevel": 10,
-            "wikidataId": "Q930735",
-            "geonameId": 12265925
-          },
-          {
-            "name": "Thornfalcon",
-            "description": "village in the United Kingdom",
-            "order": 16,
-            "adminLevel": 10,
-            "wikidataId": "Q2471602",
-            "geonameId": 2635990
           }
         ],
         "informative": [
@@ -1721,40 +1397,37 @@
             "geonameId": 7290626
           },
           {
-            "name": "Ruishton & Creech District Ward",
-            "order": 17
-          },
-          {
             "name": "TA3 5",
             "description": "postal code",
-            "order": 18
+            "order": 15
           }
         ]
       },
-      "price": "50",
-      "locationName": "Able Art",
-      "bookmarkName": "amirBM",
-      "bookmarkDescription": "i am amir ",
+      "price": "197",
+      "locationName": "Adorable Rocky",
+      "bookmarkName": "first BM",
+      "bookmarkDescription": "",
       "user": {
-        "username": "amir_am",
-        "fullName": "amir bigdeli",
-        "email": "qwe@gmail.com",
-        "phoneNumber": "0901-4334933",
-        "age": 32,
+        "username": "farzin01",
+        "fullName": "farzin khosravi",
+        "email": "f.kh.s.1372f1@gmail.com",
+        "phoneNumber": "0901-4334900",
+        "age": 18,
         "gender": "male",
-        "password": "qwe$s1zXzzz",
-        "confirmPassword": "qwe$s1zXzzz",
+        "password": "qweas$1Xaaa",
+        "confirmPassword": "qweas$1Xaaa",
         "address": "",
-        "avatar": "🤓",
+        "avatar": "🧑🏼‍💻",
         "terms": true,
-        "id": 3
+        "hotelsReserved": [],
+        "id": 1
       },
-      "id": 6
+      "id": 1
     },
     {
-      "latitude": 51.05898372081598,
+      "latitude": 51.03125668749942,
       "lookupSource": "coordinates",
-      "longitude": -3.226684788241983,
+      "longitude": -1.9044035378312945,
       "localityLanguageRequested": "en",
       "continent": "Europe",
       "continentCode": "EU",
@@ -1762,10 +1435,10 @@
       "countryCode": "GB",
       "principalSubdivision": "England",
       "principalSubdivisionCode": "GB-ENG",
-      "city": "Taunton",
-      "locality": "Ash Priors",
-      "postcode": "TA4 3",
-      "plusCode": "9C3R3Q5F+H8",
+      "city": "Bishopstone",
+      "locality": "Bishopstone",
+      "postcode": "SP5 4",
+      "plusCode": "9C3W23JW+G6",
       "localityInfo": {
         "administrative": [
           {
@@ -1789,38 +1462,22 @@
             "geonameId": 6269131
           },
           {
-            "name": "Somerset",
-            "description": "unitary authority area in Somerset, England (doesn't include Bath and North-East Somerset or North Somerset)",
-            "isoName": "Somerset",
+            "name": "Wiltshire",
+            "description": "unitary authority (doesn't include Swindon) in Wiltshire, South West England, United Kingdom",
+            "isoName": "Wiltshire",
             "order": 8,
             "adminLevel": 6,
-            "isoCode": "GB-SOM",
-            "wikidataId": "Q21694741",
-            "geonameId": 2637532
+            "isoCode": "GB-WIL",
+            "wikidataId": "Q21694746",
+            "geonameId": 2633868
           },
           {
-            "name": "Taunton",
-            "description": "town in Somerset, England",
-            "order": 11,
+            "name": "Bishopstone",
+            "description": "village and civil parish near Salisbury, Wiltshire, UK",
+            "order": 12,
             "adminLevel": 10,
-            "wikidataId": "Q845619",
-            "geonameId": 2636177
-          },
-          {
-            "name": "Halse",
-            "description": "village and civil parish in Taunton Deane, Somerset, England",
-            "order": 16,
-            "adminLevel": 10,
-            "wikidataId": "Q974429",
-            "geonameId": 2647607
-          },
-          {
-            "name": "Ash Priors",
-            "description": "village and civil parish in Somerset, United Kingdom",
-            "order": 17,
-            "adminLevel": 10,
-            "wikidataId": "Q2573097",
-            "geonameId": 2656927
+            "wikidataId": "Q2330366",
+            "geonameId": 2655554
           }
         ],
         "informative": [
@@ -1860,116 +1517,105 @@
             "geonameId": 11591956
           },
           {
-            "name": "Somerset",
+            "name": "Wiltshire",
             "order": 9
           },
           {
-            "name": "Somerset",
+            "name": "Wiltshire",
             "description": "ceremonial county of England",
             "order": 10,
-            "wikidataId": "Q23157",
-            "geonameId": 11609046
+            "wikidataId": "Q23183",
+            "geonameId": 11609014
           },
           {
-            "name": "Somerset West and Taunton",
-            "description": "district in Somerset, England",
-            "order": 12,
-            "wikidataId": "Q54554249"
+            "name": "Cranborne Chase",
+            "description": "Plateau in southern England",
+            "order": 11,
+            "wikidataId": "Q5181922",
+            "geonameId": 2652089
           },
           {
-            "name": "Taunton Deane",
-            "description": "former local government district with borough status in Somerset, England",
-            "order": 13,
-            "wikidataId": "Q1853334",
-            "geonameId": 7290626
-          },
-          {
-            "name": "Lydeard ED",
-            "order": 14
-          },
-          {
-            "name": "Bishop's Lydeard District Ward",
-            "order": 15
-          },
-          {
-            "name": "TA4 3",
+            "name": "SP5 4",
             "description": "postal code",
-            "order": 18
+            "order": 13
           }
         ]
       },
-      "price": "243",
-      "locationName": "Able History",
-      "bookmarkName": "first BM",
+      "price": "178",
+      "locationName": "Academic World",
+      "bookmarkName": "BSMAA",
       "bookmarkDescription": "",
       "user": {
-        "username": "Farzin_01",
-        "fullName": "farzin khosravi",
-        "email": "f.kh.s.1372f1@gmail.com",
-        "phoneNumber": "0901-4334908",
-        "age": 30,
-        "gender": "male",
-        "password": "farzin_KH_@_01",
-        "confirmPassword": "farzin_KH_@_01",
+        "username": "f & m",
+        "fullName": "maryam bagherpur",
+        "email": "maryam.bagherpurr@gmail.com",
+        "phoneNumber": "0901-4334900",
+        "age": 24,
+        "gender": "female",
+        "password": "@mF12345678",
+        "confirmPassword": "@mF12345678",
         "address": "",
         "avatar": "🧑🏼‍💻",
         "terms": true,
-        "id": 1
+        "hotelsReserved": [],
+        "id": 2
       },
-      "id": 7
+      "id": 2
     },
     {
-      "latitude": 40.41805561622234,
+      "latitude": 51.0461327234017,
       "lookupSource": "coordinates",
-      "longitude": -3.6972427368164067,
+      "longitude": -2.3240661900372883,
       "localityLanguageRequested": "en",
       "continent": "Europe",
       "continentCode": "EU",
-      "countryName": "Spain",
-      "countryCode": "ES",
-      "principalSubdivision": "Comunidad de Madrid",
-      "principalSubdivisionCode": "ES-M",
-      "city": "Madrid",
-      "locality": "Centro",
-      "postcode": "",
-      "plusCode": "8CGRC893+64",
+      "countryName": "United Kingdom of Great Britain and Northern Ireland (the)",
+      "countryCode": "GB",
+      "principalSubdivision": "England",
+      "principalSubdivisionCode": "GB-ENG",
+      "city": "Gillingham",
+      "locality": "Gillingham",
+      "postcode": "SP8 5",
+      "plusCode": "9C3V2MWG+F9",
       "localityInfo": {
         "administrative": [
           {
-            "name": "Spain",
-            "description": "constitutional monarchy in Southwest Europe",
-            "isoName": "Spain",
-            "order": 2,
+            "name": "United Kingdom of Great Britain and Northern Ireland (the)",
+            "description": "country in Western Europe",
+            "isoName": "United Kingdom of Great Britain and Northern Ireland (the)",
+            "order": 3,
             "adminLevel": 2,
-            "isoCode": "ES",
-            "wikidataId": "Q29",
-            "geonameId": 2510769
+            "isoCode": "GB",
+            "wikidataId": "Q145",
+            "geonameId": 2635167
           },
           {
-            "name": "Comunidad de Madrid",
-            "description": "autonomous community of Spain",
-            "isoName": "Comunidad de Madrid",
-            "order": 5,
-            "adminLevel": 6,
-            "isoCode": "ES-M",
-            "wikidataId": "Q5756",
-            "geonameId": 3117732
-          },
-          {
-            "name": "Madrid",
-            "description": "municipality and capital of Spain",
+            "name": "England",
+            "description": "home nation of the United Kingdom",
+            "isoName": "England",
             "order": 6,
-            "adminLevel": 8,
-            "wikidataId": "Q2807",
-            "geonameId": 3117735
+            "adminLevel": 4,
+            "isoCode": "GB-ENG",
+            "wikidataId": "Q21",
+            "geonameId": 6269131
           },
           {
-            "name": "Centro",
-            "description": "central district of the 21 districts of Madrid",
-            "order": 7,
-            "adminLevel": 9,
-            "wikidataId": "Q1763376",
-            "geonameId": 6544494
+            "name": "Dorset",
+            "description": "unitary authority area in the ceremonial county of Dorset, South West England, United Kingdom",
+            "isoName": "Dorset",
+            "order": 8,
+            "adminLevel": 6,
+            "isoCode": "GB-DOR",
+            "wikidataId": "Q55231693",
+            "geonameId": 2651079
+          },
+          {
+            "name": "Gillingham",
+            "description": "town and civil parish in Dorset, England",
+            "order": 13,
+            "adminLevel": 10,
+            "wikidataId": "Q1234847",
+            "geonameId": 2648658
           }
         ],
         "informative": [
@@ -1983,180 +1629,887 @@
             "geonameId": 6255148
           },
           {
-            "name": "Europe/Madrid",
-            "description": "time zone",
-            "order": 3
-          },
-          {
-            "name": "Iberian Peninsula",
-            "description": "peninsula located in the extreme southwest of Europe",
-            "order": 4,
-            "wikidataId": "Q12837",
-            "geonameId": 2267430
-          }
-        ]
-      },
-      "price": "482",
-      "locationName": "Able Rocky",
-      "bookmarkName": "third BM",
-      "bookmarkDescription": "",
-      "user": {
-        "username": "Farzin_01",
-        "fullName": "farzin khosravi",
-        "email": "f.kh.s.1372f1@gmail.com",
-        "phoneNumber": "0901-4334908",
-        "age": 30,
-        "gender": "male",
-        "password": "farzin_KH_@_01",
-        "confirmPassword": "farzin_KH_@_01",
-        "address": "",
-        "avatar": "🧑🏼‍💻",
-        "terms": true,
-        "id": 1
-      },
-      "id": 8
-    },
-    {
-      "latitude": 40.41258458191064,
-      "lookupSource": "coordinates",
-      "longitude": -3.6972427368164067,
-      "localityLanguageRequested": "en",
-      "continent": "Europe",
-      "continentCode": "EU",
-      "countryName": "Spain",
-      "countryCode": "ES",
-      "principalSubdivision": "Comunidad de Madrid",
-      "principalSubdivisionCode": "ES-M",
-      "city": "Madrid",
-      "locality": "Centro",
-      "postcode": "",
-      "plusCode": "8CGRC873+24",
-      "localityInfo": {
-        "administrative": [
-          {
-            "name": "Spain",
-            "description": "constitutional monarchy in Southwest Europe",
-            "isoName": "Spain",
+            "name": "British Isles",
+            "description": "group of islands in northwest Europe",
             "order": 2,
-            "adminLevel": 2,
-            "isoCode": "ES",
-            "wikidataId": "Q29",
-            "geonameId": 2510769
+            "wikidataId": "Q38272",
+            "geonameId": 2654669
           },
           {
-            "name": "Comunidad de Madrid",
-            "description": "autonomous community of Spain",
-            "isoName": "Comunidad de Madrid",
-            "order": 5,
-            "adminLevel": 6,
-            "isoCode": "ES-M",
-            "wikidataId": "Q5756",
-            "geonameId": 3117732
-          },
-          {
-            "name": "Madrid",
-            "description": "municipality and capital of Spain",
-            "order": 6,
-            "adminLevel": 8,
-            "wikidataId": "Q2807",
-            "geonameId": 3117735
-          },
-          {
-            "name": "Centro",
-            "description": "central district of the 21 districts of Madrid",
-            "order": 7,
-            "adminLevel": 9,
-            "wikidataId": "Q1763376",
-            "geonameId": 6544494
-          }
-        ],
-        "informative": [
-          {
-            "name": "Europe",
-            "description": "continent",
-            "isoName": "Europe",
-            "order": 1,
-            "isoCode": "EU",
-            "wikidataId": "Q46",
-            "geonameId": 6255148
-          },
-          {
-            "name": "Europe/Madrid",
+            "name": "Europe/London",
             "description": "time zone",
-            "order": 3
+            "order": 4
           },
           {
-            "name": "Iberian Peninsula",
-            "description": "peninsula located in the extreme southwest of Europe",
-            "order": 4,
-            "wikidataId": "Q12837",
-            "geonameId": 2267430
+            "name": "Great Britain",
+            "description": "island in the North Atlantic Ocean off the northwest coast of continental Europe",
+            "order": 5,
+            "wikidataId": "Q23666",
+            "geonameId": 2648147
+          },
+          {
+            "name": "South West England",
+            "description": "region of England",
+            "order": 7,
+            "wikidataId": "Q48026",
+            "geonameId": 11591956
+          },
+          {
+            "name": "Dorset",
+            "description": "ceremonial county of South West England, UK",
+            "order": 9,
+            "wikidataId": "Q23159",
+            "geonameId": 11609032
+          },
+          {
+            "name": "Dorset",
+            "order": 10
+          },
+          {
+            "name": "Dorset",
+            "order": 11
+          },
+          {
+            "name": "North Dorset",
+            "description": "former local government district in Dorset, England",
+            "order": 12,
+            "wikidataId": "Q1752494",
+            "geonameId": 7290682
+          },
+          {
+            "name": "SP8 5",
+            "description": "postal code",
+            "order": 14
           }
         ]
       },
-      "price": "279",
-      "locationName": "Adorable Art",
-      "bookmarkName": "forth BM",
+      "price": "261",
+      "locationName": "Absolute Government",
+      "bookmarkName": "BSMAAS",
       "bookmarkDescription": "",
       "user": {
-        "username": "Farzin_01",
-        "fullName": "farzin khosravi",
-        "email": "f.kh.s.1372f1@gmail.com",
-        "phoneNumber": "0901-4334908",
-        "age": 30,
-        "gender": "male",
-        "password": "farzin_KH_@_01",
-        "confirmPassword": "farzin_KH_@_01",
+        "username": "f & m",
+        "fullName": "maryam bagherpur",
+        "email": "maryam.bagherpurr@gmail.com",
+        "phoneNumber": "0901-4334900",
+        "age": 24,
+        "gender": "female",
+        "password": "@mF12345678",
+        "confirmPassword": "@mF12345678",
         "address": "",
         "avatar": "🧑🏼‍💻",
         "terms": true,
-        "id": 1
+        "hotelsReserved": [],
+        "id": 2
       },
-      "id": 9
+      "id": 3
     }
   ],
   "users": [
     {
-      "username": "Farzin_01",
+      "username": "farzin01",
       "fullName": "farzin khosravi",
       "email": "f.kh.s.1372f1@gmail.com",
-      "phoneNumber": "0901-4334908",
-      "age": 30,
-      "gender": "male",
-      "password": "farzin_KH_@_01",
-      "confirmPassword": "farzin_KH_@_01",
-      "address": "",
-      "avatar": "🧑🏼‍💻",
-      "terms": true,
-      "id": 1
-    },
-    {
-      "username": "AbolfazlKH",
-      "fullName": "abolfazl khosravi",
-      "email": "abolfazl.abc@gmail.com",
-      "phoneNumber": "0901-4334911",
-      "age": 24,
+      "phoneNumber": "0901-4334900",
+      "age": 18,
       "gender": "male",
       "password": "qweas$1Xaaa",
       "confirmPassword": "qweas$1Xaaa",
       "address": "",
-      "avatar": "😎",
+      "avatar": "🧑🏼‍💻",
       "terms": true,
-      "id": 2
+      "hotelsReserved": [
+        {
+          "id": "9192415",
+          "listing_url": "https://www.airbnb.com/rooms/9192415",
+          "scrape_id": "20170402075052",
+          "last_scraped": "2017-04-02",
+          "name": "Cozy apartment",
+          "summary": "Cozy 2 person apartment in Amsterdam on walking distance from Vondelpark, Museum Square and Leidseplein.",
+          "space": "The appartment has a living room, a kitchen, a bathroom (shower and toilet), a sleeping room and two balconys.  The kitchen is fully equipped (refrigerator, oven, microwave, coffee maker, toaster, blender, dishwasher, ..). The bed is very comfortable for 2 persons (180 x 200). Bedlinen, towels, soap, shampoo and a hairdryer is provided. You can use a closet with hangers. You have acces to wireless internet. Also provided: 2 umbrellas, city guide and map in English.",
+          "description": "Cozy 2 person apartment in Amsterdam on walking distance from Vondelpark, Museum Square and Leidseplein. The appartment has a living room, a kitchen, a bathroom (shower and toilet), a sleeping room and two balconys.  The kitchen is fully equipped (refrigerator, oven, microwave, coffee maker, toaster, blender, dishwasher, ..). The bed is very comfortable for 2 persons (180 x 200). Bedlinen, towels, soap, shampoo and a hairdryer is provided. You can use a closet with hangers. You have acces to wireless internet. Also provided: 2 umbrellas, city guide and map in English. This is an apartment situated at the West side of the Vondelpark in Amsterdam. The apartmant is suitable for 1 or 2 people. The apartment is on the 1th floor. The Albert Heijn market is nearby (200 metres). There are a lot of restaurants on the street. The apartment is located nearby Vondelpark (1min walk), Museumplein (3min walk), Leidseplein and the centre of Amsterdam. Vondelpark, Museum Square, Leidsplein is on walkin",
+          "experiences_offered": "none",
+          "neighborhood_overview": "This is an apartment situated at the West side of the Vondelpark in Amsterdam. The apartmant is suitable for 1 or 2 people. The apartment is on the 1th floor. The Albert Heijn market is nearby (200 metres). There are a lot of restaurants on the street. The apartment is located nearby Vondelpark (1min walk), Museumplein (3min walk), Leidseplein and the centre of Amsterdam.",
+          "notes": null,
+          "duration_of_stay": {
+            "startDate": "2024-01-01T08:43:28.890Z",
+            "endDate": "2024-02-01T08:43:28.890Z"
+          },
+          "transit": "Vondelpark, Museum Square, Leidsplein is on walking distance, but the apartment is situated perfect for public transport (tram 1 stop across the street).  Tram tickets are available on the tram. Bikes can be rent at different shops nearby.",
+          "access": null,
+          "number_of_adult": 2,
+          "number_of_children": 4,
+          "interaction": null,
+          "hotelReserved": false,
+          "house_rules": "-smoking in the house is strictly forbidden, but is allowed on the balcony. -we have neighbours below and above us, we ask that you be respectful of any noise.   -please shut down the lights and close all the windows and doors when you leave the house. and ... enjoy!",
+          "thumbnail_url": "https://a0.muscache.com/im/pictures/eb9e20e1-9c88-43fb-9e0a-e634dfc6e35a.jpg?aki_policy=small",
+          "medium_url": "https://a0.muscache.com/im/pictures/eb9e20e1-9c88-43fb-9e0a-e634dfc6e35a.jpg?aki_policy=medium",
+          "picture_url": {
+            "thumbnail": true,
+            "filename": "eb9e20e1-9c88-43fb-9e0a-e634dfc6e35a.jpg",
+            "format": "JPEG",
+            "width": 639,
+            "mimetype": "image/jpeg",
+            "id": "1293262ae799ac118c65bc0ef90bc3b8",
+            "last_synchronized": "2019-06-01T01:24:19.652697",
+            "color_summary": [
+              "rgba(199, 194, 183, 1.00)",
+              "rgba(184, 179, 173, 1.00)",
+              "rgba(165, 155, 145, 1.00)"
+            ],
+            "height": 426,
+            "url": "https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/airbnb-listings/files/1293262ae799ac118c65bc0ef90bc3b8"
+          },
+          "xl_picture_url": "https://a0.muscache.com/im/pictures/eb9e20e1-9c88-43fb-9e0a-e634dfc6e35a.jpg?aki_policy=x_large",
+          "host_id": "47820987",
+          "host_url": "https://www.airbnb.com/users/show/47820987",
+          "host_name": "Annabel",
+          "host_since": "2015-10-31",
+          "host_location": "Espania, Madrid",
+          "host_about": "I'm from belgian, but currently living in Amsterdam for a while. I'm working as a speech language pathologist in Amsterdam East. I enjoy this city each and every day. I am grateful for the opportunity airbnb gives to share the apartment and my experiences with the airnbnb guests.",
+          "host_response_time": "within a few hours",
+          "host_response_rate": 100,
+          "host_acceptance_rate": null,
+          "host_thumbnail_url": "https://a0.muscache.com/im/pictures/0fc41f38-7ed2-4116-ab28-c8dd3b12d92d.jpg?aki_policy=profile_small",
+          "host_picture_url": "https://a0.muscache.com/im/pictures/0fc41f38-7ed2-4116-ab28-c8dd3b12d92d.jpg?aki_policy=profile_x_medium",
+          "host_neighbourhood": "Oud-West",
+          "host_listings_count": 1,
+          "host_total_listings_count": 1,
+          "host_verifications": [
+            "email",
+            "phone",
+            "reviews",
+            "jumio",
+            "government_id"
+          ],
+          "street": "Oud-West, Amsterdam, Noord-Holland 1054 HP, Netherlands",
+          "neighbourhood": "Oud-West",
+          "neighbourhood_cleansed": "De Baarsjes - Oud-West",
+          "neighbourhood_group_cleansed": null,
+          "city": "Amsterdam",
+          "state": "Noord-Holland",
+          "zipcode": "1054 HP",
+          "market": "Amsterdam",
+          "smart_location": "Madrid, Espania",
+          "country_code": "ES",
+          "country": "Madrid",
+          "latitude": "40.4178743741405",
+          "longitude": "-3.6900329589843754",
+          "property_type": "Apartment",
+          "room_type": "Entire home/apt",
+          "accommodates": 2,
+          "bathrooms": 1,
+          "bedrooms": 1,
+          "beds": 1,
+          "bed_type": "Real Bed",
+          "amenities": [
+            "tv",
+            "wireless_internet",
+            "first_aid_kit",
+            "safety_card",
+            "fire_extinguisher"
+          ],
+          "square_feet": null,
+          "price": 95,
+          "weekly_price": null,
+          "monthly_price": null,
+          "security_deposit": null,
+          "cleaning_fee": 15,
+          "guests_included": 2,
+          "extra_people": 40,
+          "minimum_nights": 2,
+          "maximum_nights": 7,
+          "calendar_updated": "2 months ago",
+          "has_availability": null,
+          "availability_30": 0,
+          "availability_60": 0,
+          "availability_90": 0,
+          "availability_365": 0,
+          "calendar_last_scraped": "2017-04-02",
+          "number_of_reviews": 16,
+          "first_review": "2015-12-07",
+          "last_review": "2017-01-30",
+          "review_scores_rating": 99,
+          "review_scores_accuracy": 10,
+          "review_scores_cleanliness": 10,
+          "review_scores_checkin": 10,
+          "review_scores_communication": 10,
+          "review_scores_location": 10,
+          "review_scores_value": 10,
+          "license": null,
+          "jurisdiction_names": "Amsterdam",
+          "cancellation_policy": "moderate",
+          "calculated_host_listings_count": 1,
+          "reviews_per_month": 0.99,
+          "geolocation": {
+            "lon": 4.8738603256015365,
+            "lat": 52.36137101269532
+          },
+          "features": [
+            "Host Is Superhost",
+            "Host Has Profile Pic",
+            "Host Identity Verified",
+            "Is Location Exact"
+          ]
+        },
+        {
+          "id": "7890890",
+          "listing_url": "https://www.airbnb.com/rooms/7890890",
+          "scrape_id": "20170402075052",
+          "last_scraped": "2017-04-02",
+          "name": "Family home",
+          "summary": "Comfortable family home in one of Amsterdam's nicest neighborhoods. Two story townhouse, with very sunny and flowery garden. Super cosy fireplace. Perfect house for families!",
+          "space": "We live in a beautiful old home in the center of Amsterdam. The house is very centrally located, only steps away from the canal area and Museum square. Our neighbourhood is residential, yet lively with lots of restaurants and a good mix of people.  The appartment is on the ground and first floor of an old townhouse, built in 1890, with lots of original ornaments from that time. At the back side of the apartment there is a small but sunny garden and a balcony on the first floor facing the south.  On the ground floor there is a living room with a big sofa, a fireplace and a TV with dvd. The living area is connected to the dining area and the open kitchen. From the dining area doors swing open to the garden, which has a BBQ and nice teak wooden table with chairs. The kitchen has all the necessary appliances (refrigerator, freezer, microwave, oven, espressomachine) In the hallway leading to the first floor there is a separate toilet.  Upstairs there is a large master bedroom with a walk-in",
+          "description": "Comfortable family home in one of Amsterdam's nicest neighborhoods. Two story townhouse, with very sunny and flowery garden. Super cosy fireplace. Perfect house for families! We live in a beautiful old home in the center of Amsterdam. The house is very centrally located, only steps away from the canal area and Museum square. Our neighbourhood is residential, yet lively with lots of restaurants and a good mix of people.  The appartment is on the ground and first floor of an old townhouse, built in 1890, with lots of original ornaments from that time. At the back side of the apartment there is a small but sunny garden and a balcony on the first floor facing the south.  On the ground floor there is a living room with a big sofa, a fireplace and a TV with dvd. The living area is connected to the dining area and the open kitchen. From the dining area doors swing open to the garden, which has a BBQ and nice teak wooden table with chairs. The kitchen has all the necessary appliances (refriger",
+          "experiences_offered": "none",
+          "neighborhood_overview": "Oud West is a vibrant neighborhood, just next to the famous canal area and next to Amsterdam's best park, the Vondelpark. You will find in this neighborhood lots of students and young people as well as families with children. Oud West is full of nice restaurants, bars, cafes and shops. In our street there are some great places to eat or drink.  We are also close to the museum area, where you can visit the Rijksmuseum and the Van Goghmuseum.",
+          "notes": null,
+          "hotelReserved": false,
+          "duration_of_stay": {
+            "startDate": "2024-02-01T08:43:28.890Z",
+            "endDate": "2024-02-10T08:43:28.890Z"
+          },
+          "number_of_adult": 6,
+          "number_of_children": 2,
+          "transit": "Best way to explore Amsterdam is by bike, but there are also several trams close to our home.",
+          "access": "You can make use of the whole house",
+          "interaction": "You can always text or call me to help you make your stay as comfortable as possible",
+          "house_rules": "We take great care of our home and expect you to do the same.",
+          "thumbnail_url": "https://a0.muscache.com/im/pictures/101261468/5be05a66_original.jpg?aki_policy=small",
+          "medium_url": "https://a0.muscache.com/im/pictures/101261468/5be05a66_original.jpg?aki_policy=medium",
+          "picture_url": {
+            "thumbnail": true,
+            "filename": "5be05a66_original.jpg",
+            "format": "JPEG",
+            "width": 639,
+            "mimetype": "image/jpeg",
+            "id": "c919a478a118cdd7466dd153867817c7",
+            "last_synchronized": "2019-06-01T01:28:31.254096",
+            "color_summary": [
+              "rgba(185, 170, 146, 1.00)",
+              "rgba(138, 127, 112, 1.00)",
+              "rgba(100, 85, 71, 1.00)"
+            ],
+            "height": 426,
+            "url": "https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/airbnb-listings/files/c919a478a118cdd7466dd153867817c7"
+          },
+          "xl_picture_url": "https://a0.muscache.com/im/pictures/101261468/5be05a66_original.jpg?aki_policy=x_large",
+          "host_id": "25049789",
+          "host_url": "https://www.airbnb.com/users/show/25049789",
+          "host_name": "Sanne",
+          "host_since": "2014-12-21",
+          "host_location": "Amsterdam, North Holland, Netherlands",
+          "host_about": "Hi, I am Sanne, 39 years old. I work as a family doctor in Amsterdam and my husband as a city councillor for Amsterdam and freelance strategy consultant. We have two children, a 7 year old girl and a 6 year old boy. We have been living in Amsterdam for 20 years and love the city! We enjoy the relaxed vibe and the fact that the city is so compact: One can walk or bike anywhere. \n  We are first time airbnb renters, but have done several home exchanges over the last years, all very successful. \n  We are looking forward to host you in our lovely house!",
+          "host_response_time": null,
+          "host_response_rate": null,
+          "host_acceptance_rate": null,
+          "host_thumbnail_url": "https://a0.muscache.com/im/users/25049789/profile_pic/1439724233/original.jpg?aki_policy=profile_small",
+          "host_picture_url": "https://a0.muscache.com/im/users/25049789/profile_pic/1439724233/original.jpg?aki_policy=profile_x_medium",
+          "host_neighbourhood": "Oud-West",
+          "host_listings_count": 1,
+          "host_total_listings_count": 1,
+          "host_verifications": ["email", "phone", "reviews", "jumio"],
+          "street": "Oud-West, Amsterdam, Noord-Holland 1054, Netherlands",
+          "neighbourhood": "Oud-West",
+          "neighbourhood_cleansed": "De Baarsjes - Oud-West",
+          "neighbourhood_group_cleansed": null,
+          "city": "Amsterdam",
+          "state": "Noord-Holland",
+          "zipcode": "1054",
+          "market": "Amsterdam",
+          "smart_location": "Amsterdam, Netherlands",
+          "country_code": "NL",
+          "country": "Netherlands",
+          "latitude": "52.3651869694861",
+          "longitude": "4.876026104903436",
+          "property_type": "House",
+          "room_type": "Entire home/apt",
+          "accommodates": 5,
+          "bathrooms": 1,
+          "bedrooms": 2,
+          "beds": 4,
+          "bed_type": "Real Bed",
+          "amenities": [
+            "tv",
+            "wireless_internet",
+            "fire_extinguisher",
+            "laptop_friendly_workspace",
+            "breakfast"
+          ],
+          "square_feet": null,
+          "price": 225,
+          "weekly_price": null,
+          "monthly_price": 4500,
+          "security_deposit": null,
+          "cleaning_fee": 75,
+          "guests_included": 4,
+          "extra_people": 50,
+          "minimum_nights": 5,
+          "maximum_nights": 21,
+          "calendar_updated": "6 months ago",
+          "has_availability": null,
+          "availability_30": 0,
+          "availability_60": 0,
+          "availability_90": 0,
+          "availability_365": 0,
+          "calendar_last_scraped": "2017-04-02",
+          "number_of_reviews": 2,
+          "first_review": "2016-04-30",
+          "last_review": "2016-07-28",
+          "review_scores_rating": 100,
+          "review_scores_accuracy": 10,
+          "review_scores_cleanliness": 10,
+          "review_scores_checkin": 10,
+          "review_scores_communication": 10,
+          "review_scores_location": 10,
+          "review_scores_value": 10,
+          "license": null,
+          "jurisdiction_names": "Amsterdam",
+          "cancellation_policy": "strict",
+          "calculated_host_listings_count": 1,
+          "reviews_per_month": 0.18,
+          "geolocation": {
+            "lon": 4.876026104903436,
+            "lat": 52.3651869694861
+          },
+          "features": [
+            "Host Has Profile Pic",
+            "Host Identity Verified",
+            "Is Location Exact"
+          ]
+        }
+      ],
+      "id": 1
     },
     {
-      "username": "amir_am",
+      "username": "amir",
       "fullName": "amir bigdeli",
       "email": "qwe@gmail.com",
-      "phoneNumber": "0901-4334933",
-      "age": 32,
+      "phoneNumber": "0901-4334922",
+      "age": 18,
       "gender": "male",
-      "password": "qwe$s1zXzzz",
-      "confirmPassword": "qwe$s1zXzzz",
+      "password": "qweas$1Ccc",
+      "confirmPassword": "qweas$1Ccc",
       "address": "",
-      "avatar": "🤓",
+      "avatar": "😎",
       "terms": true,
-      "id": 3
+      "hotelsReserved": [
+        {
+          "id": "9192415",
+          "listing_url": "https://www.airbnb.com/rooms/9192415",
+          "scrape_id": "20170402075052",
+          "last_scraped": "2017-04-02",
+          "name": "Cozy apartment",
+          "summary": "Cozy 2 person apartment in Amsterdam on walking distance from Vondelpark, Museum Square and Leidseplein.",
+          "space": "The appartment has a living room, a kitchen, a bathroom (shower and toilet), a sleeping room and two balconys.  The kitchen is fully equipped (refrigerator, oven, microwave, coffee maker, toaster, blender, dishwasher, ..). The bed is very comfortable for 2 persons (180 x 200). Bedlinen, towels, soap, shampoo and a hairdryer is provided. You can use a closet with hangers. You have acces to wireless internet. Also provided: 2 umbrellas, city guide and map in English.",
+          "description": "Cozy 2 person apartment in Amsterdam on walking distance from Vondelpark, Museum Square and Leidseplein. The appartment has a living room, a kitchen, a bathroom (shower and toilet), a sleeping room and two balconys.  The kitchen is fully equipped (refrigerator, oven, microwave, coffee maker, toaster, blender, dishwasher, ..). The bed is very comfortable for 2 persons (180 x 200). Bedlinen, towels, soap, shampoo and a hairdryer is provided. You can use a closet with hangers. You have acces to wireless internet. Also provided: 2 umbrellas, city guide and map in English. This is an apartment situated at the West side of the Vondelpark in Amsterdam. The apartmant is suitable for 1 or 2 people. The apartment is on the 1th floor. The Albert Heijn market is nearby (200 metres). There are a lot of restaurants on the street. The apartment is located nearby Vondelpark (1min walk), Museumplein (3min walk), Leidseplein and the centre of Amsterdam. Vondelpark, Museum Square, Leidsplein is on walkin",
+          "experiences_offered": "none",
+          "neighborhood_overview": "This is an apartment situated at the West side of the Vondelpark in Amsterdam. The apartmant is suitable for 1 or 2 people. The apartment is on the 1th floor. The Albert Heijn market is nearby (200 metres). There are a lot of restaurants on the street. The apartment is located nearby Vondelpark (1min walk), Museumplein (3min walk), Leidseplein and the centre of Amsterdam.",
+          "notes": null,
+          "duration_of_stay": {
+            "startDate": "2024-01-01T08:43:28.890Z",
+            "endDate": "2024-02-01T08:43:28.890Z"
+          },
+          "transit": "Vondelpark, Museum Square, Leidsplein is on walking distance, but the apartment is situated perfect for public transport (tram 1 stop across the street).  Tram tickets are available on the tram. Bikes can be rent at different shops nearby.",
+          "access": null,
+          "number_of_adult": 2,
+          "number_of_children": 4,
+          "interaction": null,
+          "hotelReserved": false,
+          "house_rules": "-smoking in the house is strictly forbidden, but is allowed on the balcony. -we have neighbours below and above us, we ask that you be respectful of any noise.   -please shut down the lights and close all the windows and doors when you leave the house. and ... enjoy!",
+          "thumbnail_url": "https://a0.muscache.com/im/pictures/eb9e20e1-9c88-43fb-9e0a-e634dfc6e35a.jpg?aki_policy=small",
+          "medium_url": "https://a0.muscache.com/im/pictures/eb9e20e1-9c88-43fb-9e0a-e634dfc6e35a.jpg?aki_policy=medium",
+          "picture_url": {
+            "thumbnail": true,
+            "filename": "eb9e20e1-9c88-43fb-9e0a-e634dfc6e35a.jpg",
+            "format": "JPEG",
+            "width": 639,
+            "mimetype": "image/jpeg",
+            "id": "1293262ae799ac118c65bc0ef90bc3b8",
+            "last_synchronized": "2019-06-01T01:24:19.652697",
+            "color_summary": [
+              "rgba(199, 194, 183, 1.00)",
+              "rgba(184, 179, 173, 1.00)",
+              "rgba(165, 155, 145, 1.00)"
+            ],
+            "height": 426,
+            "url": "https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/airbnb-listings/files/1293262ae799ac118c65bc0ef90bc3b8"
+          },
+          "xl_picture_url": "https://a0.muscache.com/im/pictures/eb9e20e1-9c88-43fb-9e0a-e634dfc6e35a.jpg?aki_policy=x_large",
+          "host_id": "47820987",
+          "host_url": "https://www.airbnb.com/users/show/47820987",
+          "host_name": "Annabel",
+          "host_since": "2015-10-31",
+          "host_location": "Espania, Madrid",
+          "host_about": "I'm from belgian, but currently living in Amsterdam for a while. I'm working as a speech language pathologist in Amsterdam East. I enjoy this city each and every day. I am grateful for the opportunity airbnb gives to share the apartment and my experiences with the airnbnb guests.",
+          "host_response_time": "within a few hours",
+          "host_response_rate": 100,
+          "host_acceptance_rate": null,
+          "host_thumbnail_url": "https://a0.muscache.com/im/pictures/0fc41f38-7ed2-4116-ab28-c8dd3b12d92d.jpg?aki_policy=profile_small",
+          "host_picture_url": "https://a0.muscache.com/im/pictures/0fc41f38-7ed2-4116-ab28-c8dd3b12d92d.jpg?aki_policy=profile_x_medium",
+          "host_neighbourhood": "Oud-West",
+          "host_listings_count": 1,
+          "host_total_listings_count": 1,
+          "host_verifications": [
+            "email",
+            "phone",
+            "reviews",
+            "jumio",
+            "government_id"
+          ],
+          "street": "Oud-West, Amsterdam, Noord-Holland 1054 HP, Netherlands",
+          "neighbourhood": "Oud-West",
+          "neighbourhood_cleansed": "De Baarsjes - Oud-West",
+          "neighbourhood_group_cleansed": null,
+          "city": "Amsterdam",
+          "state": "Noord-Holland",
+          "zipcode": "1054 HP",
+          "market": "Amsterdam",
+          "smart_location": "Madrid, Espania",
+          "country_code": "ES",
+          "country": "Madrid",
+          "latitude": "40.4178743741405",
+          "longitude": "-3.6900329589843754",
+          "property_type": "Apartment",
+          "room_type": "Entire home/apt",
+          "accommodates": 2,
+          "bathrooms": 1,
+          "bedrooms": 1,
+          "beds": 1,
+          "bed_type": "Real Bed",
+          "amenities": [
+            "tv",
+            "wireless_internet",
+            "first_aid_kit",
+            "safety_card",
+            "fire_extinguisher"
+          ],
+          "square_feet": null,
+          "price": 95,
+          "weekly_price": null,
+          "monthly_price": null,
+          "security_deposit": null,
+          "cleaning_fee": 15,
+          "guests_included": 2,
+          "extra_people": 40,
+          "minimum_nights": 2,
+          "maximum_nights": 7,
+          "calendar_updated": "2 months ago",
+          "has_availability": null,
+          "availability_30": 0,
+          "availability_60": 0,
+          "availability_90": 0,
+          "availability_365": 0,
+          "calendar_last_scraped": "2017-04-02",
+          "number_of_reviews": 16,
+          "first_review": "2015-12-07",
+          "last_review": "2017-01-30",
+          "review_scores_rating": 99,
+          "review_scores_accuracy": 10,
+          "review_scores_cleanliness": 10,
+          "review_scores_checkin": 10,
+          "review_scores_communication": 10,
+          "review_scores_location": 10,
+          "review_scores_value": 10,
+          "license": null,
+          "jurisdiction_names": "Amsterdam",
+          "cancellation_policy": "moderate",
+          "calculated_host_listings_count": 1,
+          "reviews_per_month": 0.99,
+          "geolocation": {
+            "lon": 4.8738603256015365,
+            "lat": 52.36137101269532
+          },
+          "features": [
+            "Host Is Superhost",
+            "Host Has Profile Pic",
+            "Host Identity Verified",
+            "Is Location Exact"
+          ]
+        },
+        {
+          "id": "277011",
+          "listing_url": "https://www.airbnb.com/rooms/277011",
+          "scrape_id": "20170402075052",
+          "last_scraped": "2017-04-02",
+          "name": "nice apartment",
+          "summary": null,
+          "space": "This beautiful apartment has a spacious living and cosy dining room, kitchen with all the facilities you need, separate bedroom and bathroom with shower and bathtub. There are two balcony's, one on the south side so there's always sun.  The house is located next to the famous Vondelpark, in a quiet street in a cosy neighbourhood with a variety of shops and restaurants. The area is on walking distance from the city centre and there are many public transport facilities. There is no longer a cat to be taken care of (if you read my reviews).",
+          "description": "This beautiful apartment has a spacious living and cosy dining room, kitchen with all the facilities you need, separate bedroom and bathroom with shower and bathtub. There are two balcony's, one on the south side so there's always sun.  The house is located next to the famous Vondelpark, in a quiet street in a cosy neighbourhood with a variety of shops and restaurants. The area is on walking distance from the city centre and there are many public transport facilities. There is no longer a cat to be taken care of (if you read my reviews).",
+          "experiences_offered": "none",
+          "neighborhood_overview": null,
+          "notes": null,
+          "hotelReserved": false,
+          "duration_of_stay": {
+            "startDate": "2024-01-05T08:43:28.890Z",
+            "endDate": "2024-01-20T08:43:28.890Z"
+          },
+          "number_of_adult": 2,
+          "number_of_children": 5,
+          "transit": null,
+          "access": null,
+          "interaction": null,
+          "house_rules": null,
+          "thumbnail_url": "https://a0.muscache.com/im/pictures/10553335/64dc1cd3_original.jpg?aki_policy=small",
+          "medium_url": "https://a0.muscache.com/im/pictures/10553335/64dc1cd3_original.jpg?aki_policy=medium",
+          "picture_url": {
+            "thumbnail": true,
+            "filename": "64dc1cd3_original.jpg",
+            "format": "JPEG",
+            "width": 720,
+            "mimetype": "image/jpeg",
+            "id": "3bfbda897a5a3ef02a761d3edb784dfd",
+            "last_synchronized": "2020-08-01T01:21:16.243526",
+            "color_summary": [
+              "rgba(230, 213, 189, 1.00)",
+              "rgba(211, 196, 175, 1.00)",
+              "rgba(174, 137, 107, 1.00)"
+            ],
+            "height": 480,
+            "url": "https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/airbnb-listings/files/3bfbda897a5a3ef02a761d3edb784dfd"
+          },
+          "xl_picture_url": "https://a0.muscache.com/im/pictures/10553335/64dc1cd3_original.jpg?aki_policy=x_large",
+          "host_id": "1446698",
+          "host_url": "https://www.airbnb.com/users/show/1446698",
+          "host_name": "Eva",
+          "host_since": "2011-11-27",
+          "host_location": "UK, London",
+          "host_about": "i'm from Amsterdam, the netherlands. I work as a psychologist and in my spare time i love to travel, do nice things with friends and play sports (yoga, bicycle).",
+          "host_response_time": "within an hour",
+          "host_response_rate": 100,
+          "host_acceptance_rate": null,
+          "host_thumbnail_url": "https://a0.muscache.com/im/users/1446698/profile_pic/1322417172/original.jpg?aki_policy=profile_small",
+          "host_picture_url": "https://a0.muscache.com/im/users/1446698/profile_pic/1322417172/original.jpg?aki_policy=profile_x_medium",
+          "host_neighbourhood": "Oud-West",
+          "host_listings_count": 1,
+          "host_total_listings_count": 1,
+          "host_verifications": [
+            "email",
+            "phone",
+            "facebook",
+            "reviews",
+            "work_email"
+          ],
+          "street": "Oud-West, Amsterdam, North Holland 1054, Netherlands",
+          "neighbourhood": "Oud-West",
+          "neighbourhood_cleansed": "De Baarsjes - Oud-West",
+          "neighbourhood_group_cleansed": null,
+          "city": "Amsterdam",
+          "state": "North Holland",
+          "zipcode": "1054",
+          "market": "Amsterdam",
+          "smart_location": "UK, London",
+          "country_code": "GB",
+          "country": "Netherlands",
+          "latitude": "51.5054035483508",
+          "longitude": "-0.12016296386718751",
+          "property_type": "Apartment",
+          "room_type": "Entire home/apt",
+          "accommodates": 2,
+          "bathrooms": 1,
+          "bedrooms": 1,
+          "beds": 1,
+          "bed_type": "Real Bed",
+          "amenities": [
+            "wireless_internet",
+            "laptop_friendly_workspace",
+            "first_aid_kit",
+            "breakfast",
+            "tv"
+          ],
+          "square_feet": null,
+          "price": 100,
+          "weekly_price": 553,
+          "monthly_price": 1953,
+          "security_deposit": null,
+          "cleaning_fee": null,
+          "guests_included": 2,
+          "extra_people": 15,
+          "minimum_nights": 4,
+          "maximum_nights": 760,
+          "calendar_updated": "2 months ago",
+          "has_availability": null,
+          "availability_30": 0,
+          "availability_60": 0,
+          "availability_90": 0,
+          "availability_365": 0,
+          "calendar_last_scraped": "2017-04-02",
+          "number_of_reviews": 12,
+          "first_review": "2012-06-22",
+          "last_review": "2017-03-11",
+          "review_scores_rating": 96,
+          "review_scores_accuracy": 10,
+          "review_scores_cleanliness": 9,
+          "review_scores_checkin": 10,
+          "review_scores_communication": 9,
+          "review_scores_location": 10,
+          "review_scores_value": 10,
+          "license": null,
+          "jurisdiction_names": "Amsterdam",
+          "cancellation_policy": "strict",
+          "calculated_host_listings_count": 1,
+          "reviews_per_month": 0.21,
+          "geolocation": {
+            "lon": 4.859091947726598,
+            "lat": 52.358295084395394
+          },
+          "features": [
+            "Host Has Profile Pic",
+            "Is Location Exact",
+            "Instant Bookable"
+          ]
+        },
+        {
+          "id": "13760586",
+          "listing_url": "https://www.airbnb.com/rooms/13760586",
+          "scrape_id": "20170402075052",
+          "last_scraped": "2017-04-02",
+          "name": "Fresh and bright",
+          "summary": "Bright and comfortable apartment in a quiet street in Amsterdam-west (Baarsjes area) near city centre! You will have a spacious livingroom with big couch and great dining area. There is a nice kitchen and a clean bathroom.  The bedroom is very comfortable with big wardrobe, luxury bed and tv.",
+          "space": null,
+          "description": "2 bikes Wifi Cards for public transfer A lot of stores and restaurants around the corner",
+          "experiences_offered": "none",
+          "neighborhood_overview": "A lot of stores and restaurants around the corner",
+          "notes": null,
+          "hotelReserved": false,
+          "duration_of_stay": {
+            "startDate": "2024-05-01T08:43:28.890Z",
+            "endDate": "2024-06-01T08:43:28.890Z"
+          },
+          "number_of_adult": 2,
+          "number_of_children": 0,
+          "transit": "1 minute walk to public transfer and direct line of 15 minutes to Amsterdam central, dam square and leidseplein.",
+          "access": "2 bikes Wifi Cards for public transfer",
+          "interaction": "You can contact me any time of the day for information about the house or the city!",
+          "house_rules": "-Treat the apartment and neighbours with respect. -No Smoking inside. -No parties/events/invite other people. -Low noise after 23.00 till 9.00. -Please no shoes in the house. (For neighbours and to keep it clean)",
+          "thumbnail_url": "https://a0.muscache.com/im/pictures/440cb88b-6a93-48bc-b87f-78675ea40c60.jpg?aki_policy=small",
+          "medium_url": "https://a0.muscache.com/im/pictures/440cb88b-6a93-48bc-b87f-78675ea40c60.jpg?aki_policy=medium",
+          "picture_url": {
+            "thumbnail": true,
+            "filename": "440cb88b-6a93-48bc-b87f-78675ea40c60.jpg",
+            "format": "JPEG",
+            "width": 639,
+            "mimetype": "image/jpeg",
+            "id": "089848e03bb2b3b495ad7dc8f7640af4",
+            "last_synchronized": "2019-06-01T01:28:29.036214",
+            "color_summary": [
+              "rgba(79, 80, 70, 1.00)",
+              "rgba(70, 69, 63, 1.00)",
+              "rgba(86, 79, 77, 1.00)"
+            ],
+            "height": 426,
+            "url": "https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/airbnb-listings/files/089848e03bb2b3b495ad7dc8f7640af4"
+          },
+          "xl_picture_url": "https://a0.muscache.com/im/pictures/440cb88b-6a93-48bc-b87f-78675ea40c60.jpg?aki_policy=x_large",
+          "host_id": "14694975",
+          "host_url": "https://www.airbnb.com/users/show/14694975",
+          "host_name": "Robin&Thaís",
+          "host_since": "2014-04-24",
+          "host_location": "Berlin, Germany",
+          "host_about": null,
+          "host_response_time": "within an hour",
+          "host_response_rate": 100,
+          "host_acceptance_rate": null,
+          "host_thumbnail_url": "https://a0.muscache.com/im/pictures/236faca6-834f-4dde-be40-d9d229a76250.jpg?aki_policy=profile_small",
+          "host_picture_url": "https://a0.muscache.com/im/pictures/236faca6-834f-4dde-be40-d9d229a76250.jpg?aki_policy=profile_x_medium",
+          "host_neighbourhood": null,
+          "host_listings_count": 0,
+          "host_total_listings_count": 0,
+          "host_verifications": ["email", "phone", "reviews"],
+          "street": "Amsterdam, NH 1056, Netherlands",
+          "neighbourhood": null,
+          "neighbourhood_cleansed": "De Baarsjes - Oud-West",
+          "neighbourhood_group_cleansed": null,
+          "city": "Amsterdam",
+          "state": "NH",
+          "zipcode": "1056",
+          "market": "Amsterdam",
+          "smart_location": "Berlin, Germany",
+          "country_code": "DE",
+          "country": "Netherlands",
+          "latitude": "52.515006473317875",
+          "longitude": "13.381347656250002",
+          "property_type": "Apartment",
+          "room_type": "Entire home/apt",
+          "accommodates": 2,
+          "bathrooms": 1,
+          "bedrooms": 1,
+          "beds": 1,
+          "bed_type": "Real Bed",
+          "amenities": [
+            "tv",
+            "wireless_internet",
+            "laptop_friendly_workspace",
+            "first_aid_kit",
+            "breakfast"
+          ],
+          "square_feet": null,
+          "price": 115,
+          "weekly_price": null,
+          "monthly_price": null,
+          "security_deposit": null,
+          "cleaning_fee": 35,
+          "guests_included": 1,
+          "extra_people": 0,
+          "minimum_nights": 3,
+          "maximum_nights": 14,
+          "calendar_updated": "today",
+          "has_availability": null,
+          "availability_30": 0,
+          "availability_60": 0,
+          "availability_90": 0,
+          "availability_365": 22,
+          "calendar_last_scraped": "2017-04-02",
+          "number_of_reviews": 1,
+          "first_review": "2016-08-02",
+          "last_review": "2016-08-02",
+          "review_scores_rating": 100,
+          "review_scores_accuracy": 10,
+          "review_scores_cleanliness": 10,
+          "review_scores_checkin": 10,
+          "review_scores_communication": 10,
+          "review_scores_location": 8,
+          "review_scores_value": 8,
+          "license": null,
+          "jurisdiction_names": "Amsterdam",
+          "cancellation_policy": "strict",
+          "calculated_host_listings_count": 1,
+          "reviews_per_month": 0.12,
+          "geolocation": {
+            "lon": 4.853345068114508,
+            "lat": 52.37080138742488
+          },
+          "features": ["Host Has Profile Pic"]
+        },
+        {
+          "id": "9690677",
+          "listing_url": "https://www.airbnb.com/rooms/9690677",
+          "scrape_id": "20170402075052",
+          "last_scraped": "2017-04-02",
+          "name": "Modern Apartment",
+          "summary": "Spacious and bright apartment with welcoming living room, well equipped kitchen with pretty garden view, a superspacious bathroom and two comfortable double bedrooms. 10 min bike ride to city centre (f.e. Dam Square/Anne Frank House).",
+          "space": "I have no reviews yet as this is the first time I will rent out my apartment. So I'm excited about starting this :)!",
+          "description": "Spacious and bright apartment with welcoming living room, well equipped kitchen with pretty garden view, a superspacious bathroom and two comfortable double bedrooms. 10 min bike ride to city centre (f.e. Dam Square/Anne Frank House). If you need any help during your stay, whether organising your public transport to the airport or finding a great local place to have dinner, I'm happy to help. De Baarsjes is a young and creative neighborhood which has become more and more popular over the past few years. I love it for the great mix of people -every age group and background is represented-, and the local public amenities reflect that variety. You will find cheap local grocery stores and a brand new mosque alongside beautiful design stores and great coffee places. To reach my house from Central Station, you catch tram 13 (direction Geuzenveld) to tramstop Admiraal de Ruyterweg, which takes approximately 12 minutes. From there, it's a 5 minute walk to my house.  To reach my house from Schi",
+          "experiences_offered": "none",
+          "neighborhood_overview": "De Baarsjes is a young and creative neighborhood which has become more and more popular over the past few years. I love it for the great mix of people -every age group and background is represented-, and the local public amenities reflect that variety. You will find cheap local grocery stores and a brand new mosque alongside beautiful design stores and great coffee places.",
+          "notes": null,
+          "hotelReserved": false,
+          "duration_of_stay": {
+            "startDate": "2024-02-01T08:43:28.890Z",
+            "endDate": "2024-02-15T08:43:28.890Z"
+          },
+          "number_of_adult": 5,
+          "number_of_children": 0,
+          "transit": "To reach my house from Central Station, you catch tram 13 (direction Geuzenveld) to tramstop Admiraal de Ruyterweg, which takes approximately 12 minutes. From there, it's a 5 minute walk to my house.  To reach my house from Schiphol, you catch a train to Amsterdam Lelylaan (7 mins) and take tram 17 (direction Centraal Station) to tramstop 'Witte de Withstraat' (6 mins). From the tramstop, it's a 5 min walk to my house. If you're travelling by car, there's usually plenty of space to park in front of or nearby the house. There's paid parking (2,40/hour) from Monday til Saturday 09h-24h. You can reach the city center (f.e. Dam Square) by foot in about 30 minutes. If you'd rather explore the city the way the locals do -by bike!- there's several bike rental shops closeby.",
+          "access": "As a guest, you have access to the living room, kitchen, bathroom, toilet, laundry room and balcony. Mi casa es su casa.",
+          "interaction": "If you need any help during your stay, whether organising your public transport to the airport or finding a great local place to have dinner, I'm happy to help.",
+          "house_rules": "No pets allowed, no smoking in the house, but feel free to smoke on the balcony. As I live in a quiet street, this is not a place for partying in the house.",
+          "thumbnail_url": null,
+          "medium_url": null,
+          "picture_url": {
+            "thumbnail": true,
+            "filename": "f3f1d071-cff4-42af-bfe9-c9c3504a45d6.jpg",
+            "format": "JPEG",
+            "width": 639,
+            "mimetype": "image/jpeg",
+            "id": "2e202e79e908a132d144cc32168fcfc3",
+            "last_synchronized": "2019-07-03T11:10:24.139947",
+            "color_summary": [
+              "rgba(221, 221, 210, 1.00)",
+              "rgba(192, 197, 185, 1.00)",
+              "rgba(155, 151, 136, 1.00)"
+            ],
+            "height": 426,
+            "url": "https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/airbnb-listings/files/2e202e79e908a132d144cc32168fcfc3"
+          },
+          "xl_picture_url": null,
+          "host_id": "40565986",
+          "host_url": "https://www.airbnb.com/users/show/40565986",
+          "host_name": "Claudia",
+          "host_since": "2015-08-05",
+          "host_location": "Amsterdam, North Holland, Netherlands",
+          "host_about": "Live in lovely Amsterdam. Work in art education. Love to travel!",
+          "host_response_time": null,
+          "host_response_rate": null,
+          "host_acceptance_rate": null,
+          "host_thumbnail_url": "https://a0.muscache.com/im/pictures/498546fb-5b6f-4523-9d0c-8cd1500fd8e8.jpg?aki_policy=profile_small",
+          "host_picture_url": "https://a0.muscache.com/im/pictures/498546fb-5b6f-4523-9d0c-8cd1500fd8e8.jpg?aki_policy=profile_x_medium",
+          "host_neighbourhood": "Oud-West",
+          "host_listings_count": 2,
+          "host_total_listings_count": 2,
+          "host_verifications": ["email", "phone", "reviews", "jumio"],
+          "street": "Oud-West, Amsterdam, Noord-Holland 1057, Netherlands",
+          "neighbourhood": "Oud-West",
+          "neighbourhood_cleansed": "De Baarsjes - Oud-West",
+          "neighbourhood_group_cleansed": null,
+          "city": "Amsterdam",
+          "state": "Noord-Holland",
+          "zipcode": "1057",
+          "market": "Amsterdam",
+          "smart_location": "Amsterdam, Netherlands",
+          "country_code": "NL",
+          "country": "Netherlands",
+          "latitude": "52.368466776562",
+          "longitude": "4.861157573506015",
+          "property_type": "Apartment",
+          "room_type": "Entire home/apt",
+          "accommodates": 4,
+          "bathrooms": 1,
+          "bedrooms": 2,
+          "beds": 2,
+          "bed_type": "Real Bed",
+          "amenities": [
+            "tv",
+            "wireless_internet",
+            "first_aid_kit",
+            "laptop_friendly_workspace",
+            "fire_extinguisher"
+          ],
+          "square_feet": null,
+          "price": 180,
+          "weekly_price": null,
+          "monthly_price": null,
+          "security_deposit": null,
+          "cleaning_fee": 50,
+          "guests_included": 1,
+          "extra_people": 0,
+          "minimum_nights": 1,
+          "maximum_nights": 1125,
+          "calendar_updated": "3 months ago",
+          "has_availability": null,
+          "availability_30": 0,
+          "availability_60": 0,
+          "availability_90": 0,
+          "availability_365": 0,
+          "calendar_last_scraped": "2017-04-02",
+          "number_of_reviews": 2,
+          "first_review": "2015-12-27",
+          "last_review": "2016-01-17",
+          "review_scores_rating": 100,
+          "review_scores_accuracy": 10,
+          "review_scores_cleanliness": 10,
+          "review_scores_checkin": 10,
+          "review_scores_communication": 10,
+          "review_scores_location": 9,
+          "review_scores_value": 10,
+          "license": null,
+          "jurisdiction_names": "Amsterdam",
+          "cancellation_policy": "moderate",
+          "calculated_host_listings_count": 2,
+          "reviews_per_month": 0.13,
+          "geolocation": {
+            "lon": 4.861157573506015,
+            "lat": 52.368466776562
+          },
+          "features": [
+            "Host Is Superhost",
+            "Host Has Profile Pic",
+            "Host Identity Verified",
+            "Is Location Exact"
+          ]
+        }
+      ],
+      "id": 2
     }
   ]
 }

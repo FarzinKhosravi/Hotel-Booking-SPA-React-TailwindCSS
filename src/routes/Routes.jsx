@@ -12,6 +12,7 @@ import BookmarkDetail from "../components/BookmarkDetail/BookmarkDetail";
 import UpdateBookmark from "../components/UpdateBookmark/UpdateBookmark";
 import SignupFormPage from "../pages/SignupFormPage";
 import LoginFormPage from "../pages/LoginFormPage";
+import HotelBookingForm from "../components/HotelBookingForm/HotelBookingForm";
 
 function Routes() {
   let routes = useRoutes([
@@ -62,6 +63,10 @@ function Routes() {
               element: <UpdateBookmark />,
             },
           ],
+        },
+        {
+          path: "hotel-booking/:hotelId",
+          element: <HotelBookingForm />,
         },
         {
           path: "signup",

@@ -1,12 +1,20 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import toast from "react-hot-toast";
 import getHotels from "../../services/getHotelsService";
+import getLocalStorage from "../../localStorage/getLocalStorage";
+import saveLocalStorage from "../../localStorage/saveLocalStorage";
+
+const HOTELS_RESERVED_LIST = "HOTELS_RESERVED_LIST";
+
+const HOTELS = "HOTELS";
 
 export const getAsyncHotels = createAsyncThunk(
   "hotels/getAsyncHotels",
   async (_, { rejectWithValue }) => {
     try {
       const { data } = await getHotels();
+
+      saveLocalStorage(HOTELS, data);
 
       return data;
     } catch (error) {
@@ -22,7 +30,7 @@ export const getAsyncHotels = createAsyncThunk(
 
 const initialState = {
   loading: false,
-  hotels: null,
+  hotels: getLocalStorage(HOTELS_RESERVED_LIST) || getLocalStorage(HOTELS),
   error: null,
 };
 
@@ -46,6 +54,10 @@ const hotelsSlice = createSlice({
 
       state.hotels = filteredHotels;
     },
+
+    createHotelsListReserved: (state, action) => {
+      state.hotels = action.payload;
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -67,6 +79,6 @@ const hotelsSlice = createSlice({
   },
 });
 
-export const { filterHotels } = hotelsSlice.actions;
+export const { filterHotels, createHotelsListReserved } = hotelsSlice.actions;
 
 export default hotelsSlice.reducer;

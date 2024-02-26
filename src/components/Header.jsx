@@ -19,8 +19,15 @@ import loginSignupIcon from "../assets/images/loginSignupIcon.png";
 import { useDispatch, useSelector } from "react-redux";
 import { signOutUser } from "../features/loggedInUser/loggedInUserSlice";
 import removeLocalStorage from "./../localStorage/removeLocalStorage";
+import { getAsyncHotels } from "../features/hotels/hotelsSlice";
 
 const USER_DATA = "USER_DATA";
+
+const BOOKING_FORM = "BOOKING_FORM";
+
+const HOTELS_RESERVED_LIST = "HOTELS_RESERVED_LIST";
+
+const HOTELS = "HOTELS";
 
 function Header() {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
@@ -401,6 +408,14 @@ function UserPanel({ loggedInUser }) {
     dispatch(signOutUser());
 
     removeLocalStorage(USER_DATA);
+
+    removeLocalStorage(BOOKING_FORM);
+
+    removeLocalStorage(HOTELS_RESERVED_LIST);
+
+    removeLocalStorage(HOTELS);
+
+    dispatch(getAsyncHotels());
 
     navigate("/");
   };
