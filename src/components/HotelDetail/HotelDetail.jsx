@@ -1,21 +1,30 @@
 import { useEffect, useState } from "react";
 import ReactCountryFlag from "react-country-flag";
 import AmenitiesIcons from "../../common/AmenitiesIcons";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { createCurrentHotel } from "../../features/currentHotel/currentHotelSlice";
 import BackButton from "./../../common/BackButton";
 import saveLocalStorage from "./../../localStorage/saveLocalStorage";
 import useHotelDetail from "./../../hooks/useHotelDetail";
 import Loader from "../Loader";
+import { useNavigate, useSearchParams } from "react-router-dom";
 
 const CURRENT_HOTEL = "CURRENT_HOTEL";
 
 function HotelDetail() {
   const [accordion, setAccordion] = useState(null);
 
+  const { loggedInUser } = useSelector((state) => state.loggedInUser);
+
   const { loading, hotelDetail } = useHotelDetail();
 
+  const [searchParams] = useSearchParams();
+
+  const isReservedHotel = searchParams.get("isReservedHotel") === "true";
+
   const dispatch = useDispatch();
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     dispatch(createCurrentHotel(hotelDetail));
@@ -23,8 +32,16 @@ function HotelDetail() {
     saveLocalStorage(CURRENT_HOTEL, hotelDetail);
   }, [hotelDetail]);
 
-  const hotelReserveHandler = (e) => {
+  const hotelReserveHandler = (e, id) => {
     e.preventDefault();
+
+    navigate(
+      `${
+        loggedInUser
+          ? `/hotel-booking/${id}`
+          : `/login?redirect=listOrForm&hotelId=${id}`
+      } `
+    );
 
     console.log("invoked hotel reservation !!");
   };
@@ -38,6 +55,8 @@ function HotelDetail() {
   };
 
   console.log(hotelDetail);
+
+  console.log("isReservedHotel:::", isReservedHotel);
 
   return (
     <div>
@@ -485,10 +504,18 @@ function HotelDetail() {
               {/* Hotel Booking Button */}
               <div>
                 <button
-                  onClick={hotelReserveHandler}
-                  className="block w-full rounded-xl bg-emerald-700 px-4 py-2 shadow-lg"
+                  onClick={(e) => hotelReserveHandler(e, hotelDetail?.id)}
+                  className={`block w-full rounded-xl bg-emerald-700 px-4 py-2 shadow-lg disabled:bg-gray-400 ${
+                    isReservedHotel ? "cursor-not-allowed" : ""
+                  }`}
+                  disabled={isReservedHotel ? true : false}
                 >
-                  <div className="flex items-center justify-between">
+                  {/* Unreserved Hotel Content */}
+                  <div
+                    className={`items-center justify-between ${
+                      isReservedHotel ? "hidden" : "flex"
+                    }`}
+                  >
                     <div>
                       <span className="font-semibold text-slate-200">BOOK</span>
                     </div>
@@ -515,6 +542,17 @@ function HotelDetail() {
                         Night
                       </span>
                     </div>
+                  </div>
+
+                  {/* Reserved Hotel Content */}
+                  <div
+                    className={`items-center justify-center ${
+                      isReservedHotel ? "flex" : "hidden"
+                    }`}
+                  >
+                    <span className="block w-full font-semibold italic text-slate-200">
+                      Have a Nice Trip
+                    </span>
                   </div>
                 </button>
               </div>

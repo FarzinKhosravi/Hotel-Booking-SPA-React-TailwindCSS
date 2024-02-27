@@ -590,7 +590,10 @@ function HotelsPage() {
                           hotel.latitude
                         }&lng=${hotel.longitude}&hostLocation=${
                           hotel.host_location
-                        }&mapTitle=${`${hotel.name.slice(0, 5)} Hotel`}`}
+                        }&mapTitle=${`${hotel.name.slice(
+                          0,
+                          5
+                        )} Hotel`}&isReservedHotel=${hotel.hotelReserved}`}
                       >
                         <div className="overflow-hidden rounded-xl bg-slate-200 shadow-lg">
                           {/* Reserved Hotel Section */}
