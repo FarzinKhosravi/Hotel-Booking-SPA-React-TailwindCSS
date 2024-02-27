@@ -111,9 +111,7 @@ function LoginFormPage() {
               hotelsReserved,
             });
 
-            console.log("userRedirect:::", userRedirect);
-
-            if (userRedirect) redirectSwitcher(userRedirect);
+            if (userRedirect) redirectSwitcher(hotelsReserved);
             else navigate("/");
           }
         }
@@ -152,7 +150,7 @@ function LoginFormPage() {
 
   const redirect = searchParams.get("redirect");
 
-  console.log("REDIRECT", redirect);
+  const hotelId = searchParams.get("hotelId");
 
   const navigate = useNavigate();
 
@@ -192,10 +190,13 @@ function LoginFormPage() {
 
   console.log("USER_REDIRECT", userRedirect);
 
-  function redirectSwitcher(userRedirect) {
+  function redirectSwitcher(hotelsReserved) {
+    console.log("*** INVOKE redirectSwitcher ***");
+
     switch (userRedirect) {
       case "bookmarksList":
         navigate("/bookmarks?mapTitle=Bookmarks List");
+
         break;
 
       case "addNewBookmark": {
@@ -204,6 +205,27 @@ function LoginFormPage() {
         navigate(
           `/bookmarks/add?lat=${latitude}&lng=${longitude}&locationName=${locationName}&price=${price}&mapTitle=Bookmark Form`
         );
+
+        break;
+      }
+
+      case "listOrForm": {
+        const foundAlreadyReservedHotel = hotelsReserved.find(
+          (hotel) => Number(hotel.id) === Number(hotelId)
+        );
+
+        if (foundAlreadyReservedHotel) {
+          // User Redirect to List of Hotels
+
+          toast.error(
+            "You Have Already Booked This Hotel; Please Book Another Hotel 🧐"
+          );
+
+          navigate("/hotels-list");
+        }
+        // User Redirect to Hotel Booking Form
+        else navigate(`/hotel-booking/${hotelId}`);
+
         break;
       }
 
@@ -211,6 +233,9 @@ function LoginFormPage() {
         return;
     }
   }
+
+  console.log("REDIRECT:", redirect);
+  console.log("hotelID:", hotelId);
 
   return (
     <section className="min-h-screen px-4">

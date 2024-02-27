@@ -133,7 +133,13 @@ function HotelsPage() {
   const hotelReserveHandler = (e, id) => {
     e.preventDefault();
 
-    navigate(`/hotel-booking/${id}`);
+    navigate(
+      `${
+        loggedInUser
+          ? `/hotel-booking/${id}`
+          : `/login?redirect=listOrForm&hotelId=${id}`
+      } `
+    );
 
     console.log("invoked hotel reservation !!");
   };
@@ -743,7 +749,7 @@ function HotelsPage() {
                                 }`}
                                 disabled={hotel.hotelReserved ? true : false}
                               >
-                                {/* Reserved Hotel Content */}
+                                {/* Unreserved Hotel Content */}
                                 <div
                                   className={`items-center justify-between ${
                                     hotel.hotelReserved ? "hidden" : "flex"
@@ -779,7 +785,7 @@ function HotelsPage() {
                                   </div>
                                 </div>
 
-                                {/* Unreserved Hotel Content */}
+                                {/* Reserved Hotel Content */}
                                 <div
                                   className={`items-center justify-center ${
                                     hotel.hotelReserved ? "flex" : "hidden"
