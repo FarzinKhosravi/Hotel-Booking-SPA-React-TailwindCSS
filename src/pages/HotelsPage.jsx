@@ -22,6 +22,7 @@ import {
 import AmenitiesIcons from "../common/AmenitiesIcons";
 import Message from "../common/Message";
 import saveLocalStorage from "../localStorage/saveLocalStorage";
+import getHotels from "../services/getHotelsService";
 
 const USER_DATA = "USER_DATA";
 
@@ -144,50 +145,52 @@ function HotelsPage() {
     console.log("invoked hotel reservation !!");
   };
 
-  const displayHotelsReserved = () => {
-    console.log("HOTELS:", hotels);
+  const displayHotelsReserved = async () => {
+    const { data: hotelsData } = await getHotels();
 
-    let userHotels = [...hotels];
+    if (hotelsData) {
+      let userHotels = hotelsData;
 
-    loggedInUser.hotelsReserved.forEach((hotelReserved) => {
-      console.log(
-        "userHotels_FIRST_LOOP:",
-        userHotels,
-        "userHotels_ID:",
-        hotelReserved.id
-      );
-
-      const foundHotelReserved = userHotels.find(
-        (hotel) => Number(hotel.id) === Number(hotelReserved.id)
-      );
-
-      if (foundHotelReserved) {
-        const hotelReserved = { ...foundHotelReserved, hotelReserved: true };
-
-        console.log("hotelReserved_CHECK:", hotelReserved);
-
-        userHotels = userHotels.filter(
-          (hotel) => Number(hotel.id) !== Number(hotelReserved.id)
+      loggedInUser.hotelsReserved.forEach((hotelReserved) => {
+        console.log(
+          "userHotels_FIRST_LOOP:",
+          userHotels,
+          "userHotels_ID:",
+          hotelReserved.id
         );
 
-        userHotels.push(hotelReserved);
+        const foundHotelReserved = userHotels.find(
+          (hotel) => Number(hotel.id) === Number(hotelReserved.id)
+        );
 
-        console.log("userHotels", userHotels);
-      }
+        if (foundHotelReserved) {
+          const hotelReserved = { ...foundHotelReserved, hotelReserved: true };
 
-      console.log(
-        "userHotels_END_LOOP:",
-        userHotels,
-        "userHotels_ID:",
-        hotelReserved.id
-      );
-    });
+          console.log("hotelReserved_CHECK:", hotelReserved);
 
-    console.log("userHotels_OUT_LOOP", userHotels);
+          userHotels = userHotels.filter(
+            (hotel) => Number(hotel.id) !== Number(hotelReserved.id)
+          );
 
-    saveLocalStorage(HOTELS_RESERVED_LIST, userHotels);
+          userHotels.push(hotelReserved);
 
-    dispatch(createHotelsListReserved(userHotels));
+          console.log("userHotels", userHotels);
+        }
+
+        console.log(
+          "userHotels_END_LOOP:",
+          userHotels,
+          "userHotels_ID:",
+          hotelReserved.id
+        );
+      });
+
+      console.log("userHotels_OUT_LOOP", userHotels);
+
+      saveLocalStorage(HOTELS_RESERVED_LIST, userHotels);
+
+      dispatch(createHotelsListReserved(userHotels));
+    }
   };
 
   console.log("HOTELS:", hotels);
