@@ -158,6 +158,13 @@ function SignupFormPage() {
     password: "",
   });
 
+  const [showPassword, setShowPassword] = useState({
+    isShowPassword: false,
+    isShowConfirmPassword: false,
+  });
+
+  const { isShowPassword, isShowConfirmPassword } = showPassword;
+
   const navigate = useNavigate();
 
   const formik = useFormik({
@@ -182,6 +189,34 @@ function SignupFormPage() {
   useEffect(() => {
     setDuplicateFields({ ...duplicateFields, password: "" });
   }, [password]);
+
+  const showPasswordHandler = (e) => {
+    e.stopPropagation();
+
+    console.log("clicked on show password button !!", e.target);
+
+    const field = e.target.dataset.field;
+
+    console.log(field);
+
+    switch (field) {
+      case "password":
+        setShowPassword({ ...showPassword, isShowPassword: !isShowPassword });
+
+        break;
+
+      case "confirmPassword":
+        setShowPassword({
+          ...showPassword,
+          isShowConfirmPassword: !isShowConfirmPassword,
+        });
+
+        break;
+
+      default:
+        return;
+    }
+  };
 
   console.log("values:", formik.values);
   console.log("errors:", formik.errors);
@@ -681,7 +716,7 @@ function SignupFormPage() {
                     </svg>
                   </span>
                   <input
-                    type="text"
+                    type={isShowPassword ? "text" : "password"}
                     id="password"
                     name="password"
                     onChange={formik.handleChange}
@@ -690,6 +725,51 @@ function SignupFormPage() {
                     placeholder="Enter Password Please..."
                     className="block w-full cursor-pointer rounded-xl border-0 bg-slate-300 from-emerald-700 to-emerald-900 pl-9 text-base text-emerald-900 shadow-lg placeholder:text-sm placeholder:opacity-50 focus:bg-gradient-to-r focus:bg-clip-text"
                   />
+                  <div
+                    onClick={showPasswordHandler}
+                    data-field="password"
+                    className="absolute right-2 top-3 cursor-pointer"
+                  >
+                    <span
+                      className={`pointer-events-none ${
+                        !isShowPassword ? "block" : "hidden"
+                      }`}
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        className="h-4 w-4 text-emerald-900"
+                      >
+                        <path d="M10 12.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" />
+                        <path
+                          fillRule="evenodd"
+                          d="M.664 10.59a1.651 1.651 0 0 1 0-1.186A10.004 10.004 0 0 1 10 3c4.257 0 7.893 2.66 9.336 6.41.147.381.146.804 0 1.186A10.004 10.004 0 0 1 10 17c-4.257 0-7.893-2.66-9.336-6.41ZM14 10a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </span>
+
+                    <span
+                      className={`pointer-events-none  ${
+                        isShowPassword ? "block" : "hidden"
+                      }`}
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        className="h-4 w-4 text-emerald-900"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M3.28 2.22a.75.75 0 0 0-1.06 1.06l14.5 14.5a.75.75 0 1 0 1.06-1.06l-1.745-1.745a10.029 10.029 0 0 0 3.3-4.38 1.651 1.651 0 0 0 0-1.185A10.004 10.004 0 0 0 9.999 3a9.956 9.956 0 0 0-4.744 1.194L3.28 2.22ZM7.752 6.69l1.092 1.092a2.5 2.5 0 0 1 3.374 3.373l1.091 1.092a4 4 0 0 0-5.557-5.557Z"
+                          clipRule="evenodd"
+                        />
+                        <path d="m10.748 13.93 2.523 2.523a9.987 9.987 0 0 1-3.27.547c-4.258 0-7.894-2.66-9.337-6.41a1.651 1.651 0 0 1 0-1.186A10.007 10.007 0 0 1 2.839 6.02L6.07 9.252a4 4 0 0 0 4.678 4.678Z" />
+                      </svg>
+                    </span>
+                  </div>
                 </div>
 
                 {/* Show Error For Password Field */}
@@ -743,7 +823,7 @@ function SignupFormPage() {
                   </span>
                   <input
                     id="confirmPassword"
-                    type="text"
+                    type={isShowConfirmPassword ? "text" : "password"}
                     name="confirmPassword"
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
@@ -751,6 +831,51 @@ function SignupFormPage() {
                     placeholder="Enter Confirm Password Please..."
                     className="block w-full cursor-pointer rounded-xl border-0 bg-slate-300 from-emerald-700 to-emerald-900 pl-9 text-base text-emerald-900 shadow-lg placeholder:text-sm placeholder:opacity-50 focus:bg-gradient-to-r focus:bg-clip-text"
                   />
+                  <div
+                    onClick={showPasswordHandler}
+                    data-field="confirmPassword"
+                    className="absolute right-2 top-3 cursor-pointer"
+                  >
+                    <span
+                      className={`pointer-events-none ${
+                        !isShowConfirmPassword ? "block" : "hidden"
+                      }`}
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        className="h-4 w-4 text-emerald-900"
+                      >
+                        <path d="M10 12.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" />
+                        <path
+                          fillRule="evenodd"
+                          d="M.664 10.59a1.651 1.651 0 0 1 0-1.186A10.004 10.004 0 0 1 10 3c4.257 0 7.893 2.66 9.336 6.41.147.381.146.804 0 1.186A10.004 10.004 0 0 1 10 17c-4.257 0-7.893-2.66-9.336-6.41ZM14 10a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </span>
+
+                    <span
+                      className={`pointer-events-none  ${
+                        isShowConfirmPassword ? "block" : "hidden"
+                      }`}
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        className="h-4 w-4 text-emerald-900"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M3.28 2.22a.75.75 0 0 0-1.06 1.06l14.5 14.5a.75.75 0 1 0 1.06-1.06l-1.745-1.745a10.029 10.029 0 0 0 3.3-4.38 1.651 1.651 0 0 0 0-1.185A10.004 10.004 0 0 0 9.999 3a9.956 9.956 0 0 0-4.744 1.194L3.28 2.22ZM7.752 6.69l1.092 1.092a2.5 2.5 0 0 1 3.374 3.373l1.091 1.092a4 4 0 0 0-5.557-5.557Z"
+                          clipRule="evenodd"
+                        />
+                        <path d="m10.748 13.93 2.523 2.523a9.987 9.987 0 0 1-3.27.547c-4.258 0-7.894-2.66-9.337-6.41a1.651 1.651 0 0 1 0-1.186A10.007 10.007 0 0 1 2.839 6.02L6.07 9.252a4 4 0 0 0 4.678 4.678Z" />
+                      </svg>
+                    </span>
+                  </div>
                 </div>
 
                 {/* Show Error For Confirm Password Field */}
