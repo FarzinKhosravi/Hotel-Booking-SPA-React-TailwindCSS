@@ -9,8 +9,11 @@ import {
   LifebuoyIcon,
   GlobeAsiaAustraliaIcon,
   StarIcon,
+  SunIcon,
+  MoonIcon,
+  ComputerDesktopIcon,
 } from "@heroicons/react/24/outline";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import useOutsideClick from "./../hooks/useOutsideClick";
 import { NavLink, useNavigate } from "react-router-dom";
 
@@ -20,6 +23,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { signOutUser } from "../features/loggedInUser/loggedInUserSlice";
 import removeLocalStorage from "./../localStorage/removeLocalStorage";
 import { getAsyncHotels } from "../features/hotels/hotelsSlice";
+import getLocalStorage from "../localStorage/getLocalStorage";
+import saveLocalStorage from "../localStorage/saveLocalStorage";
 
 const USER_DATA = "USER_DATA";
 
@@ -38,6 +43,69 @@ function Header() {
     setIsOpenMenu(!isOpenMenu);
   };
 
+  const [theme, setTheme] = useState(
+    getLocalStorage("THEME") || {
+      selectedTheme: "light",
+      isOpenThemeMenu: false,
+    }
+  );
+
+  const { selectedTheme, isOpenThemeMenu } = theme;
+
+  const systemTheme = window.matchMedia("(prefers-color-scheme:dark)").matches;
+
+  useEffect(() => {
+    switch (selectedTheme) {
+      case "dark":
+        document.documentElement.classList.add("dark");
+        break;
+
+      case "light":
+        document.documentElement.classList.remove("dark");
+        break;
+
+      default:
+        if (systemTheme) document.documentElement.classList.add("dark");
+        else document.documentElement.classList.remove("dark");
+        break;
+    }
+  }, [selectedTheme]);
+
+  const showThemeMenuHandler = () => {
+    setTheme({ ...theme, isOpenThemeMenu: !isOpenThemeMenu });
+    // setIsOpenMenu(false);
+  };
+
+  const setThemeHandler = (e) => {
+    function setAppTheme(theme) {
+      saveLocalStorage("THEME", {
+        selectedTheme: theme,
+        isOpenThemeMenu: false,
+      });
+
+      setTheme({ ...theme, isOpenThemeMenu: false, selectedTheme: theme });
+    }
+
+    const theme = e.target.value;
+
+    switch (theme) {
+      case "light":
+        setAppTheme("light");
+        break;
+
+      case "dark":
+        setAppTheme("dark");
+        break;
+
+      case "system":
+        setAppTheme("system");
+        break;
+
+      default:
+        return;
+    }
+  };
+
   console.log("loggedInUser in HEADER:", loggedInUser);
 
   return (
@@ -49,6 +117,10 @@ function Header() {
       >
         <div className="flex flex-auto items-center">
           <AppLogo />
+          <ThemeMenuButton
+            selectedTheme={selectedTheme}
+            onShowThemeMenu={showThemeMenuHandler}
+          />
         </div>
         <div className="flex flex-auto items-center justify-end">
           <NavigationMenu loggedInUser={loggedInUser} />
@@ -66,11 +138,102 @@ function Header() {
           loggedInUser={loggedInUser}
         />
       </nav>
+      <ThemeMenu
+        isOpenThemeMenu={isOpenThemeMenu}
+        onSetTheme={setThemeHandler}
+        setTheme={setTheme}
+        theme={theme}
+      />
     </header>
   );
 }
 
 export default Header;
+
+function ThemeMenuButton({ selectedTheme, onShowThemeMenu }) {
+  return (
+    <div className="ml-4">
+      <div>
+        <button id="themeButton" onClick={onShowThemeMenu} className="block">
+          <SunIcon
+            className={`pointer-events-none h-6 w-6 text-emerald-900 ${
+              selectedTheme === "light" ? "block" : "hidden"
+            }`}
+          />
+          <MoonIcon
+            className={`pointer-events-none h-6 w-6 text-emerald-900 ${
+              selectedTheme === "dark" ? "block" : "hidden"
+            }`}
+          />
+          <ComputerDesktopIcon
+            className={`pointer-events-none h-6 w-6 text-emerald-900 ${
+              selectedTheme === "system" ? "block" : "hidden"
+            }`}
+          />
+        </button>
+      </div>
+    </div>
+  );
+}
+
+function ThemeMenu({ isOpenThemeMenu, onSetTheme, setTheme, theme }) {
+  const themeMenuRef = useRef();
+
+  useOutsideClick(themeMenuRef, "themeButton", () =>
+    setTheme({ ...theme, isOpenThemeMenu: false })
+  );
+
+  return (
+    <div
+      ref={themeMenuRef}
+      className={`top-26 absolute left-16 flex w-28 flex-col items-start overflow-hidden rounded-xl bg-slate-200 md:top-28 ${
+        isOpenThemeMenu ? "flex" : "hidden"
+      }`}
+    >
+      {/* Light Mode Button */}
+      <div className="mb-1 flex w-full">
+        <button
+          onClick={onSetTheme}
+          value="light"
+          className="flex w-full cursor-pointer px-2 pt-2 text-emerald-900"
+        >
+          <div className="pointer-events-none">
+            <SunIcon className="h-5 w-5" />
+          </div>
+          <span className="pointer-events-none ml-1">Light</span>
+        </button>
+      </div>
+
+      {/* Dark Mode Button */}
+      <div className="mb-1 flex w-full">
+        <button
+          onClick={onSetTheme}
+          value="dark"
+          className="flex w-full cursor-pointer px-2 pt-2 text-emerald-900"
+        >
+          <div className="pointer-events-none">
+            <MoonIcon className="h-5 w-5" />
+          </div>
+          <span className="pointer-events-none ml-1">Dark</span>
+        </button>
+      </div>
+
+      {/* System Mode Button */}
+      <div className="flex w-full">
+        <button
+          onClick={onSetTheme}
+          value="system"
+          className="flex w-full cursor-pointer p-2 text-emerald-900"
+        >
+          <div className="pointer-events-none">
+            <ComputerDesktopIcon className="h-5 w-5" />
+          </div>
+          <span className="pointer-events-none ml-1">System</span>
+        </button>
+      </div>
+    </div>
+  );
+}
 
 function HamburgerMenuButton({ onShowMenu, isOpenMenu }) {
   return (
