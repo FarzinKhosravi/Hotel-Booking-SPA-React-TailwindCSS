@@ -99,7 +99,17 @@ function LoginFormPage() {
 
             console.log("foundUserData:", foundUserData);
 
-            dispatch(createLoggedInUserData(foundUserData));
+            dispatch(
+              createLoggedInUserData({
+                username,
+                avatar,
+                fullName,
+                phoneNumber,
+                gender,
+                id,
+                hotelsReserved,
+              })
+            );
 
             saveLocalStorage(USER_DATA, {
               username,
