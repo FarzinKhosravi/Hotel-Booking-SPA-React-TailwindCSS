@@ -153,11 +153,14 @@ function HotelBookingForm() {
             {/* Progress Bar (Stepper) Section */}
             <div className="relative mb-4 flex justify-between">
               {/* Step One Section */}
-              <div className="relative z-50">
+              <button
+                onClick={() => setActiveStep(1)}
+                className="relative z-50 block"
+              >
                 <div className="mb-2 flex h-8 w-8 items-center justify-center rounded-full bg-emerald-800 p-2">
                   <UserIcon className="h-5 w-5 text-white" />
                 </div>
-              </div>
+              </button>
 
               {/* Path between Steps */}
               <div
@@ -167,9 +170,12 @@ function HotelBookingForm() {
               ></div>
 
               {/* Step Two Section */}
-              <div className="relative z-50 ml-3">
+              <button
+                onClick={() => setActiveStep(2)}
+                className="relative z-50 ml-3 block"
+              >
                 <div
-                  className={`mb-2 flex h-8 w-8 items-center justify-center rounded-full p-2 ${
+                  className={`pointer-events-none mb-2 flex h-8 w-8 items-center justify-center rounded-full p-2 ${
                     activeStep > 1 ? "bg-emerald-800" : "bg-slate-300"
                   }`}
                 >
@@ -177,7 +183,7 @@ function HotelBookingForm() {
                     className={`h-5 w-5 ${activeStep > 1 ? "text-white" : ""}`}
                   />
                 </div>
-              </div>
+              </button>
 
               {/* Path between Steps */}
               <div
@@ -187,9 +193,12 @@ function HotelBookingForm() {
               ></div>
 
               {/* Step Three Section */}
-              <div className="relative z-50">
+              <button
+                onClick={() => setActiveStep(3)}
+                className="relative z-50 block"
+              >
                 <div
-                  className={`mb-2 flex h-8 w-8 items-center justify-center rounded-full p-2 ${
+                  className={`pointer-events-none mb-2 flex h-8 w-8 items-center justify-center rounded-full p-2 ${
                     activeStep > 2 ? "bg-emerald-800" : "bg-slate-300"
                   }`}
                 >
@@ -197,7 +206,7 @@ function HotelBookingForm() {
                     className={`h-5 w-5 ${activeStep > 2 ? "text-white" : ""}`}
                   />
                 </div>
-              </div>
+              </button>
 
               {/* Path between Steps */}
               <div
@@ -207,9 +216,13 @@ function HotelBookingForm() {
               ></div>
 
               {/* Step Four Section */}
-              <div className="relative z-50 ml-3">
+              <button
+                onClick={() => setActiveStep(4)}
+                className="relative z-50 ml-3 block disabled:cursor-not-allowed"
+                disabled={activeStep === 3 && !isConfirm ? true : false}
+              >
                 <div
-                  className={`mb-2 flex h-8 w-8 items-center justify-center rounded-full p-2 ${
+                  className={`pointer-events-none mb-2 flex h-8 w-8 items-center justify-center rounded-full p-2 ${
                     activeStep > 3 ? "bg-emerald-800" : "bg-slate-300"
                   }`}
                 >
@@ -217,7 +230,7 @@ function HotelBookingForm() {
                     className={`h-5 w-5 ${activeStep > 3 ? "text-white" : ""}`}
                   />
                 </div>
-              </div>
+              </button>
             </div>
 
             {/* Steps Content Container */}
@@ -535,7 +548,7 @@ function HotelBookingForm() {
                   onClick={() =>
                     setActiveStep((prevActiveStep) => prevActiveStep + 1)
                   }
-                  className="block rounded-xl bg-emerald-800 px-3 py-2 text-white shadow-lg disabled:bg-gray-400"
+                  className="block rounded-xl bg-emerald-800 px-3 py-2 text-white shadow-lg disabled:cursor-not-allowed disabled:bg-gray-400"
                 >
                   Next
                 </button>

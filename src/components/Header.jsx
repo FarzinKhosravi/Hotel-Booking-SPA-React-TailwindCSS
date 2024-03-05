@@ -186,7 +186,7 @@ function ThemeMenu({ isOpenThemeMenu, onSetTheme, setTheme, theme }) {
   return (
     <div
       ref={themeMenuRef}
-      className={`top-26 absolute left-16 flex w-28 flex-col items-start overflow-hidden rounded-xl bg-slate-200 md:top-28 ${
+      className={`absolute left-16 top-26 flex w-28 flex-col items-start overflow-hidden rounded-xl bg-slate-200 md:top-28 ${
         isOpenThemeMenu ? "flex" : "hidden"
       }`}
     >
