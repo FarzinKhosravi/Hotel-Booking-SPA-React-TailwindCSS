@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import introIcon from "../assets/images/introIcon.png";
 import separator from "../assets/images/separator.png";
 import BackButton from "../common/BackButton";
@@ -167,6 +167,8 @@ function SignupFormPage() {
 
   const navigate = useNavigate();
 
+  const ageFieldRef = useRef();
+
   const formik = useFormik({
     initialValues,
     validationSchema,
@@ -189,6 +191,21 @@ function SignupFormPage() {
   useEffect(() => {
     setDuplicateFields({ ...duplicateFields, password: "" });
   }, [password]);
+
+  // *** *** ***
+
+  useEffect(() => {
+    console.log("INPUT_REF:", ageFieldRef.current);
+
+    ageFieldRef.current.addEventListener("keypress", (event) => {
+      if (!`${event.target.value}${event.key}`.match(/^[0-9]{0,2}$/)) {
+        // block the input if result does not match
+        event.preventDefault();
+        event.stopPropagation();
+        return false;
+      }
+    });
+  }, []);
 
   const showPasswordHandler = (e) => {
     e.stopPropagation();
@@ -611,6 +628,7 @@ function SignupFormPage() {
                     </svg>
                   </span>
                   <input
+                    ref={ageFieldRef}
                     id="age"
                     type="number"
                     min="18"
