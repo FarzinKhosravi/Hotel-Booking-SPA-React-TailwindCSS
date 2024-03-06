@@ -23,6 +23,7 @@ import AmenitiesIcons from "../common/AmenitiesIcons";
 import Message from "../common/Message";
 import saveLocalStorage from "../localStorage/saveLocalStorage";
 import getHotels from "../services/getHotelsService";
+import listSorter from "../utils/listSorter";
 
 const USER_DATA = "USER_DATA";
 
@@ -186,6 +187,10 @@ function HotelsPage() {
       });
 
       console.log("userHotels_OUT_LOOP", userHotels);
+
+      listSorter(userHotels);
+
+      console.log("userHotels_SORTED:", userHotels);
 
       saveLocalStorage(HOTELS_RESERVED_LIST, userHotels);
 

@@ -3,6 +3,7 @@ import toast from "react-hot-toast";
 import getHotels from "../../services/getHotelsService";
 import getLocalStorage from "../../localStorage/getLocalStorage";
 import saveLocalStorage from "../../localStorage/saveLocalStorage";
+import listSorter from "../../utils/listSorter";
 
 const HOTELS_RESERVED_LIST = "HOTELS_RESERVED_LIST";
 
@@ -13,6 +14,10 @@ export const getAsyncHotels = createAsyncThunk(
   async (_, { rejectWithValue }) => {
     try {
       const { data } = await getHotels();
+
+      listSorter(data);
+
+      console.log("SORTED_HOTELS_LIST", data);
 
       saveLocalStorage(HOTELS, data);
 
