@@ -18,6 +18,11 @@ export default {
         Rasa: ["Rasa", "sans-serif"],
       },
 
+      fontSize: {
+        5.5: "22px",
+        8: "32px",
+      },
+
       inset: {
         22: "5.5rem",
         26: "6.5rem",
@@ -53,6 +58,7 @@ export default {
       },
 
       margin: {
+        0.25: "1px",
         0.5: "2px",
         1.6: "0.4rem",
       },

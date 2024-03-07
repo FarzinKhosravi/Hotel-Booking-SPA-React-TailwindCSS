@@ -13,6 +13,7 @@ import UpdateBookmark from "../components/UpdateBookmark/UpdateBookmark";
 import SignupFormPage from "../pages/SignupFormPage";
 import LoginFormPage from "../pages/LoginFormPage";
 import HotelBookingForm from "../components/HotelBookingForm/HotelBookingForm";
+import NotFoundPage from "../pages/NotFoundPage";
 
 function Routes() {
   let routes = useRoutes([
@@ -75,6 +76,10 @@ function Routes() {
         {
           path: "login",
           element: <LoginFormPage />,
+        },
+        {
+          path: "*",
+          element: <NotFoundPage />,
         },
       ],
     },
