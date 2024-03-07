@@ -5,7 +5,7 @@ import separator from "../assets/images/separator.png";
 
 function HomePage() {
   return (
-    <section className="min-h-screen px-4">
+    <section className="mb-20 min-h-screen px-4">
       <div className="flex flex-col">
         <div className="relative mx-auto mb-5 flex h-20 max-w-[300px] items-center justify-center">
           <h2 className="mr-4 font-Parisienne text-4xl text-indigo-950">

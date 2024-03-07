@@ -250,7 +250,7 @@ function LoginFormPage() {
   console.log("hotelID:", hotelId);
 
   return (
-    <section className="min-h-screen px-4">
+    <section className="mb-20 min-h-screen px-4">
       <div>
         {/* Intro Section */}
         <div className="mb-16 flex flex-col">
@@ -298,7 +298,7 @@ function LoginFormPage() {
           <div>
             <form
               onSubmit={formik.handleSubmit}
-              className="rounded-xl bg-slate-200 p-4"
+              className="rounded-xl bg-slate-200 p-4 shadow-lg"
             >
               {/* Login Form Description */}
               <div className="mb-6 flex justify-start">

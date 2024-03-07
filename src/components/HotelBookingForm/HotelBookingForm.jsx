@@ -100,7 +100,7 @@ function HotelBookingForm() {
   console.log("loggedInUser:", loggedInUser);
 
   return (
-    <div className="min-h-screen px-4">
+    <div className="mb-20 min-h-screen px-4">
       <div>
         {/* Intro Section */}
         <div className="mb-16 flex flex-col">

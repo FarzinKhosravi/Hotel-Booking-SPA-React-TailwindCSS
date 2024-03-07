@@ -19,7 +19,7 @@ function Bookmarks() {
           </span>
         </Message>
       ) : (
-        <div className="flex min-h-screen flex-col lg:h-[calc(100vh-160px)] lg:min-h-0 lg:flex-row-reverse lg:items-stretch lg:justify-between">
+        <div className="mb-4 flex min-h-screen flex-col lg:h-[calc(100vh-160px)] lg:min-h-0 lg:flex-row-reverse lg:items-stretch lg:justify-between">
           <div className="mb-8 lg:mb-0 lg:w-1/2">
             <Map />
           </div>
@@ -28,7 +28,7 @@ function Bookmarks() {
             <img className="block w-48" src={separator} alt="separator" />
           </div>
 
-          <div className="scrollbarStyle overflow-y-auto lg:w-1/2 lg:pr-4">
+          <div className="scrollbarStyle overflow-y-auto rounded-xl lg:w-1/2 lg:pr-4">
             <Outlet />
           </div>
         </div>

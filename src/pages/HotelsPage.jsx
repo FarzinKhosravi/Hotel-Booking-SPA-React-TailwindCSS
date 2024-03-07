@@ -203,7 +203,7 @@ function HotelsPage() {
   console.log("loggedInUser:", loggedInUser);
 
   return (
-    <section className="min-h-screen px-4">
+    <section className="mb-20 min-h-screen px-4">
       <div>
         {error && !hotels ? (
           <Message message={error}>
