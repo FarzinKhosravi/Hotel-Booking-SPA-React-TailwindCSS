@@ -127,16 +127,16 @@ function ContactUsPage() {
           </div>
 
           {/* Contact Us Specs */}
-          <div className="flex flex-col rounded-lg bg-slate-200 p-4 shadow-lg md:flex-row-reverse md:gap-x-8">
+          <div className="flex flex-col rounded-lg bg-slate-200 p-4 shadow-lg">
             {/* Contact Info Section */}
-            <div className="mb-6 md:w-2/6">
+            <div className="mb-6">
               <div className="mb-1 pl-1 font-semibold text-emerald-900">
                 <span>Contact Info</span>
               </div>
 
-              <div className="flex items-center justify-between rounded-lg bg-slate-300 p-3 text-emerald-900 shadow-lg md:flex-col md:items-start md:gap-y-2">
+              <div className="flex items-center justify-between rounded-lg bg-slate-300 p-3 text-emerald-900 shadow-lg">
                 {/* Company Email Address */}
-                <div className="flex flex-col items-center justify-center md:flex-row md:gap-x-2">
+                <div className="flex flex-col items-center justify-center">
                   <div className="mb-1 flex h-8 w-8 items-center justify-center rounded-full bg-emerald-900 text-white">
                     <EnvelopeIcon className="h-4 w-4" />
                   </div>
@@ -146,7 +146,7 @@ function ContactUsPage() {
                 </div>
 
                 {/* Company Phone */}
-                <div className="flex flex-col items-center justify-center md:flex-row md:gap-x-2">
+                <div className="flex flex-col items-center justify-center">
                   <div className="mb-1 flex h-8 w-8 items-center justify-center rounded-full bg-emerald-900 text-white">
                     <PhoneIcon className="h-4 w-4" />
                   </div>
@@ -158,7 +158,7 @@ function ContactUsPage() {
             </div>
 
             {/* Contact Us Form Section */}
-            <div className="md:w-9/12">
+            <div>
               <div className="mb-1 pl-1 font-semibold text-emerald-900">
                 <span>Contact Us Form</span>
               </div>
