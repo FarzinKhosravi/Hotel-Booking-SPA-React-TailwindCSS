@@ -15,6 +15,7 @@ import LoginFormPage from "../pages/LoginFormPage";
 import HotelBookingForm from "../components/HotelBookingForm/HotelBookingForm";
 import NotFoundPage from "../pages/NotFoundPage";
 import ContactUsPage from "../pages/ContactUsPage";
+import AboutUsPage from "../pages/AboutUsPage";
 
 function Routes() {
   let routes = useRoutes([
@@ -81,6 +82,10 @@ function Routes() {
         {
           path: "contact-us",
           element: <ContactUsPage />,
+        },
+        {
+          path: "about-us",
+          element: <AboutUsPage />,
         },
         {
           path: "*",

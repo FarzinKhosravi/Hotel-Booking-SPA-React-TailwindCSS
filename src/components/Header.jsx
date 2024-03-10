@@ -448,7 +448,7 @@ function HamburgerMenu({ isOpenMenu, setIsOpenMenu, loggedInUser }) {
           onClick={() => setIsOpenMenu(false)}
           className="mb-1 cursor-pointer pl-2 transition-all ease-in-out hover:rounded-md hover:bg-slate-300"
         >
-          <NavLink to="/c">
+          <NavLink to="/about-us">
             {({ isActive }) => (
               <div className="flex py-1">
                 <div className="flex items-center justify-center">
@@ -516,7 +516,7 @@ function NavigationMenu({ loggedInUser }) {
         <li className="transition-all hover:rounded-md hover:bg-slate-300">
           <NavLink
             className={({ isActive }) => (isActive ? "text-emerald-700" : "")}
-            to="/c"
+            to="/about-us"
           >
             <span className="block px-2 py-4 font-semibold">About Us</span>
           </NavLink>
