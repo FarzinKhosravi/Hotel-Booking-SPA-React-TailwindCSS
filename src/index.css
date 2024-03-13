@@ -10,6 +10,10 @@
     @apply pointer-events-none mx-0 my-1 h-1 w-6 rounded-lg bg-gradient-to-r from-emerald-600 to-emerald-900 transition-all duration-200 ease-out;
   }
 
+  .themeIcon {
+    @apply pointer-events-none h-6 w-6 text-emerald-900;
+  }
+
   .scrollbarStyle {
     @apply scrollbar-thin scrollbar-track-slate-200 scrollbar-thumb-emerald-800 scrollbar-track-rounded scrollbar-thumb-rounded;
   }

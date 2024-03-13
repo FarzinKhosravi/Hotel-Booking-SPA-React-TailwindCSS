@@ -18,7 +18,7 @@ import ContactUsPage from "../pages/ContactUsPage";
 import AboutUsPage from "../pages/AboutUsPage";
 
 function Routes() {
-  let routes = useRoutes([
+  return useRoutes([
     {
       path: "/",
       element: <Layout />,
@@ -94,8 +94,6 @@ function Routes() {
       ],
     },
   ]);
-
-  return routes;
 }
 
 export default Routes;
