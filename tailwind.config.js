@@ -23,6 +23,12 @@ export default {
         8: "32px",
       },
 
+      borderRadius: {
+        0.5: "2px",
+        5: "20px",
+        6.25: "25px",
+      },
+
       inset: {
         22: "5.5rem",
         26: "6.5rem",

@@ -10,51 +10,81 @@ function Footer() {
   const dispatch = useDispatch();
 
   useEffect(() => {
+    // Get a list of user bookmarks
     if (loggedInUser) dispatch(getAsyncBookmarksList({ loggedInUser }));
   }, [loggedInUser]);
 
-  console.log("bookmarksList_FOOTER:", bookmarksList);
-  console.log("loggedInUser_FOOTER:", loggedInUser);
+  // Displaying list of bookmarks and reserved hotels at time of user authentication
+  function renderFooterLogic() {
+    return loggedInUser ? (
+      <div className="mb-5 flex items-center justify-between text-sm sm:text-base md:text-lg md:font-semibold">
+        <span>
+          RESERVED HOTELS:&nbsp;
+          <span className="text-base sm:text-lg md:text-xl">
+            {loggedInUser.hotelsReserved.length}
+          </span>
+        </span>
+
+        <span>
+          BOOKMARKS:&nbsp;
+          <span className="text-base sm:text-lg md:text-xl">
+            {bookmarksList?.length}
+          </span>
+        </span>
+      </div>
+    ) : (
+      <div className="mb-5 flex items-center justify-center">
+        <q className="rounded-br-0.5 rounded-tl-0.5 rounded-bl-6.25 rounded-tr-5 block bg-yellow-400 py-1 pl-1 pr-2 italic text-stone-800 sm:text-lg md:font-semibold">
+          You are Our Most Prized Possession
+        </q>
+      </div>
+    );
+  }
+
+  function renderSocialMediaIcons() {
+    const socialMediaIcons = [
+      {
+        href: "https://github.com/FarzinKhosravi?tab=repositories",
+        icon: (
+          <BiLogoGithub className="h-5 w-5 text-emerald-950 transition-all duration-200  hover:text-yellow-500" />
+        ),
+      },
+      {
+        href: "https://t.me/Farzin_KHI",
+        icon: (
+          <BiLogoTelegram className="h-5 w-5 text-emerald-950 transition-all duration-200  hover:text-yellow-500" />
+        ),
+      },
+      {
+        href: "https://github.com/FarzinKhosravi/Hotel-Booking-SPA-React-TailwindCSS",
+        icon: (
+          <BiSolidHeart className="h-5 w-5 cursor-pointer text-emerald-950 transition-all duration-300  hover:text-yellow-500" />
+        ),
+      },
+    ];
+
+    return socialMediaIcons.map((item) => {
+      return (
+        <SocialMediaIcon key={item.href} {...item}>
+          {item.icon}
+        </SocialMediaIcon>
+      );
+    });
+  }
 
   return (
     <footer className="mt-auto rounded-t-xl bg-slate-200">
       <div className="mx-auto flex max-w-xl flex-col px-4 py-8">
+        {/* box to display list of bookmarks and hotels reserved user */}
         <div className="mb-8 rounded-2xl bg-yellow-400 p-4 text-stone-800 shadow-md">
-          {loggedInUser ? (
-            <div className="mb-5 flex items-center justify-between text-sm sm:text-base md:text-lg md:font-semibold">
-              <span>
-                RESERVED HOTELS:&nbsp;
-                <span className="text-base sm:text-lg md:text-xl">
-                  {loggedInUser.hotelsReserved.length}
-                </span>
-              </span>
-              <span>
-                BOOKMARKS:&nbsp;
-                <span className="text-base sm:text-lg md:text-xl">
-                  {bookmarksList?.length}
-                </span>
-              </span>
-            </div>
-          ) : (
-            <div className="mb-5 flex items-center justify-center">
-              <q className="block rounded-bl-[25px] rounded-br-[2px] rounded-tl-[2px] rounded-tr-[20px] bg-yellow-400 py-1 pl-1 pr-2 italic text-stone-800 sm:text-lg md:font-semibold">
-                You are Our Most Prized Possession
-              </q>
-            </div>
-          )}
+          {renderFooterLogic()}
 
-          <div className="flex items-center justify-center">
-            <span className="text-sm font-medium text-slate-900 sm:text-base md:text-lg md:font-semibold">
-              SERVER STATUS
-            </span>
-            <span className="relative -mt-1 ml-2 flex h-3 w-3">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-stone-600 opacity-75"></span>
-              <span className="relative inline-flex h-3 w-3 rounded-full bg-stone-700"></span>
-            </span>
-          </div>
+          <ServerStatus />
         </div>
 
+        {/* Footer icons */}
         <div className="mb-10 flex items-center justify-evenly">
+          {/* Netlify Icon */}
           <div className="cursor-pointer">
             <svg
               className="text-emerald-950"
@@ -77,6 +107,8 @@ function Footer() {
               ></path>
             </svg>
           </div>
+
+          {/* Stellate Icon */}
           <div className="cursor-pointer">
             <svg
               className="text-emerald-950"
@@ -107,32 +139,12 @@ function Footer() {
           </div>
         </div>
 
+        {/* Icons of communication */}
         <div className="mb-6 flex items-center justify-center gap-x-4">
-          <div>
-            <a
-              href="https://github.com/FarzinKhosravi?tab=repositories"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block"
-            >
-              <BiLogoGithub className="h-5 w-5 text-emerald-950 transition-all duration-200  hover:text-yellow-500" />
-            </a>
-          </div>
-          <div>
-            <a
-              href="https://t.me/Farzin_KHI"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block"
-            >
-              <BiLogoTelegram className="h-5 w-5 text-emerald-950 transition-all duration-200  hover:text-yellow-500" />
-            </a>
-          </div>
-          <div>
-            <BiSolidHeart className="h-5 w-5 cursor-pointer text-emerald-950 transition-all duration-300  hover:text-yellow-500" />
-          </div>
+          {renderSocialMediaIcons()}
         </div>
 
+        {/* Box to introducing app developer */}
         <div className="flex items-center justify-center">
           <span className="text-emerald-950 md:text-base md:font-medium">
             ❮❯ by
@@ -153,3 +165,34 @@ function Footer() {
 }
 
 export default Footer;
+
+function ServerStatus() {
+  return (
+    <div className="flex items-center justify-center">
+      <span className="text-sm font-medium text-slate-900 sm:text-base md:text-lg md:font-semibold">
+        SERVER STATUS
+      </span>
+
+      {/* Ping Symbol */}
+      <span className="relative -mt-1 ml-2 flex h-3 w-3">
+        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-stone-600 opacity-75"></span>
+        <span className="relative inline-flex h-3 w-3 rounded-full bg-stone-700"></span>
+      </span>
+    </div>
+  );
+}
+
+function SocialMediaIcon({ href, children }) {
+  return (
+    <div>
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block"
+      >
+        {children}
+      </a>
+    </div>
+  );
+}
