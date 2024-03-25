@@ -11,7 +11,7 @@ function Message({
       {/* Top Section */}
       <div className="mb-6 flex w-full items-center justify-center">
         {/* Error Message */}
-        <div className="flex flex-col">
+        <div className="flex flex-col dark:text-white">
           <div className="w-full">
             <span className="block w-full text-4xl font-medium">WHOOPS!</span>
           </div>
@@ -39,7 +39,7 @@ function Message({
 
       {/* Middle Section */}
       <div className="mb-8 flex w-full flex-col items-center">
-        <span className="mb-2 block w-full text-center text-3xl font-semibold">
+        <span className="mb-2 block w-full text-center text-3xl font-semibold dark:text-white">
           Look Like You&apos;re{" "}
           <span className="inline-flex rotate-12">LOST</span>
         </span>

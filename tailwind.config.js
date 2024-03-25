@@ -32,6 +32,7 @@ export default {
       inset: {
         22: "5.5rem",
         26: "6.5rem",
+        30: "7.5rem",
         7.5: "30px",
         18: "4.5rem",
         1.25: "5px",

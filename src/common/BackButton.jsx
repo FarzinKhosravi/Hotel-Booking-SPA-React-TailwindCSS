@@ -7,7 +7,7 @@ function BackButton() {
     <div>
       <button
         onClick={() => navigate(-1)}
-        className="flex h-7 w-7 items-center justify-center rounded-full bg-emerald-700 shadow-lg"
+        className="flex h-7 w-7 items-center justify-center rounded-full bg-emerald-700 shadow-lg dark:bg-slate-700"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

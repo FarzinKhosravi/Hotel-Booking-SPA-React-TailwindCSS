@@ -80,7 +80,7 @@ function HotelDetail() {
             </div>
 
             {/* Hotel Detail */}
-            <div className="flex flex-col justify-between rounded-xl bg-slate-200 p-4 shadow-lg">
+            <div className="flex flex-col justify-between rounded-xl bg-slate-200 p-4 shadow-lg dark:bg-slate-800">
               {/* Hotel Image */}
               <div className="relative mb-4 overflow-hidden rounded-xl">
                 <div>
@@ -90,8 +90,9 @@ function HotelDetail() {
                     alt={hotelDetail?.name}
                   />
                 </div>
+
                 <div className="absolute top-2 flex w-full items-center justify-between px-2">
-                  <div className="flex items-center rounded-xl bg-white px-2">
+                  <div className="flex items-center rounded-xl bg-white px-2 dark:bg-slate-700">
                     <span className="block text-red-600">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -103,11 +104,11 @@ function HotelDetail() {
                         <path d="m9.653 16.915-.005-.003-.019-.01a20.759 20.759 0 0 1-1.162-.682 22.045 22.045 0 0 1-2.582-1.9C4.045 12.733 2 10.352 2 7.5a4.5 4.5 0 0 1 8-2.828A4.5 4.5 0 0 1 18 7.5c0 2.852-2.044 5.233-3.885 6.82a22.049 22.049 0 0 1-3.744 2.582l-.019.01-.005.003h-.002a.739.739 0 0 1-.69.001l-.002-.001Z" />
                       </svg>
                     </span>
-                    <span className="ml-1 font-semibold text-emerald-700">
+                    <span className="ml-1 font-semibold text-emerald-700 dark:text-white">
                       10
                     </span>
                   </div>
-                  <div className="flex items-center rounded-xl bg-white px-2">
+                  <div className="flex items-center rounded-xl bg-white px-2 dark:bg-slate-700">
                     <span className="block text-yellow-400">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -123,7 +124,7 @@ function HotelDetail() {
                         />
                       </svg>
                     </span>
-                    <span className="ml-1 font-semibold text-emerald-700">
+                    <span className="ml-1 font-semibold text-emerald-700 dark:text-white">
                       20
                     </span>
                   </div>
@@ -132,7 +133,7 @@ function HotelDetail() {
 
               {/* Hotel Name */}
               <div className="mb-8 text-center">
-                <span className="font-Parisienne text-lg font-semibold italic text-emerald-700">
+                <span className="text-lg font-semibold italic text-emerald-700 dark:text-white">
                   {hotelDetail?.name}
                 </span>
               </div>
@@ -140,7 +141,7 @@ function HotelDetail() {
               {/* Hotel Location */}
               <div className="mb-12 flex items-center justify-between">
                 <div className="flex flex-col">
-                  <span className="font-semibold text-emerald-700">
+                  <span className="font-semibold text-emerald-700 dark:text-white">
                     {hotelDetail?.smart_location.split(",")[1].trim()}
                   </span>
                   <span>
@@ -151,7 +152,7 @@ function HotelDetail() {
                     />
                   </span>
                 </div>
-                <span className="block">
+                <span className="block dark:text-white">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 20 20"
@@ -163,10 +164,10 @@ function HotelDetail() {
                   </svg>
                 </span>
                 <div className="flex flex-col">
-                  <span className="font-semibold text-emerald-700">
+                  <span className="font-semibold text-emerald-700 dark:text-white">
                     {hotelDetail?.state}
                   </span>
-                  <span className="font-semibold text-emerald-700">
+                  <span className="font-semibold text-emerald-700 dark:text-white">
                     {hotelDetail?.smart_location.split(",")[0]}
                   </span>
                 </div>
@@ -185,7 +186,7 @@ function HotelDetail() {
                 <div className="mb-4 px-2">
                   <div className="flex items-center justify-start">
                     <div>
-                      <span className="block text-lg font-semibold capitalize text-emerald-700">
+                      <span className="block text-lg font-semibold capitalize text-emerald-700 dark:text-white">
                         More Detail
                       </span>
                     </div>
@@ -205,7 +206,7 @@ function HotelDetail() {
                 </div>
 
                 {/* Down Section */}
-                <div className="rounded-xl bg-slate-300 p-4">
+                <div className="rounded-xl bg-slate-300 p-4 dark:bg-slate-700">
                   {/* Container of Accordions */}
                   <div>
                     {/* Accordion Box */}
@@ -214,12 +215,12 @@ function HotelDetail() {
                       <div
                         onClick={accordionHandler}
                         data-id="1"
-                        className={`flex cursor-pointer items-center justify-between rounded-xl bg-slate-200 p-4 ${
+                        className={`flex cursor-pointer items-center justify-between rounded-xl bg-slate-200 p-4 dark:bg-slate-600 ${
                           accordion === 1 ? "rounded-b-none" : ""
                         }`}
                       >
                         <div className="pointer-events-none">
-                          <span className="font-semibold capitalize text-emerald-700">
+                          <span className="font-semibold capitalize text-emerald-700 dark:text-white">
                             Neighborhood Overview
                           </span>
                           <span
@@ -229,7 +230,7 @@ function HotelDetail() {
                           ></span>
                         </div>
                         <div className="pointer-events-none">
-                          <span className="block text-emerald-700">
+                          <span className="block text-emerald-700 dark:text-white">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               viewBox="0 0 20 20"
@@ -250,7 +251,7 @@ function HotelDetail() {
 
                       {/* Down Section */}
                       <div
-                        className={`rounded-b-xl bg-slate-200 px-6 pt-1 capitalize text-emerald-700 ${
+                        className={`rounded-b-xl bg-slate-200 px-6 pt-1 capitalize text-emerald-700 dark:bg-slate-600 dark:text-white ${
                           accordion === 1
                             ? "pb-4 opacity-100 transition-all"
                             : "max-h-0 overflow-hidden opacity-0 transition-all duration-300"
@@ -272,12 +273,12 @@ function HotelDetail() {
                       <div
                         onClick={accordionHandler}
                         data-id="2"
-                        className={`flex cursor-pointer items-center justify-between rounded-xl bg-slate-200 p-4 ${
+                        className={`flex cursor-pointer items-center justify-between rounded-xl bg-slate-200 p-4 dark:bg-slate-600 ${
                           accordion === 2 ? "rounded-b-none" : ""
                         }`}
                       >
                         <div className="pointer-events-none">
-                          <span className="font-semibold capitalize text-emerald-700">
+                          <span className="font-semibold capitalize text-emerald-700 dark:text-white">
                             Hotel Summary
                           </span>
                           <span
@@ -287,7 +288,7 @@ function HotelDetail() {
                           ></span>
                         </div>
                         <div className="pointer-events-none">
-                          <span className="block text-emerald-700">
+                          <span className="block text-emerald-700 dark:text-white">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               viewBox="0 0 20 20"
@@ -308,7 +309,7 @@ function HotelDetail() {
 
                       {/* Down Section */}
                       <div
-                        className={`rounded-b-xl bg-slate-200 px-6 pt-1 capitalize text-emerald-700 ${
+                        className={`rounded-b-xl bg-slate-200 px-6 pt-1 capitalize text-emerald-700 dark:bg-slate-600 dark:text-white ${
                           accordion === 2
                             ? "pb-4 opacity-100 transition-all"
                             : "max-h-0 overflow-hidden opacity-0 transition-all duration-300"
@@ -330,12 +331,12 @@ function HotelDetail() {
                       <div
                         onClick={accordionHandler}
                         data-id="3"
-                        className={`flex cursor-pointer items-center justify-between rounded-xl bg-slate-200 p-4 ${
+                        className={`flex cursor-pointer items-center justify-between rounded-xl bg-slate-200 p-4 dark:bg-slate-600 ${
                           accordion === 3 ? "rounded-b-none" : ""
                         }`}
                       >
                         <div className="pointer-events-none">
-                          <span className="font-semibold capitalize text-emerald-700">
+                          <span className="font-semibold capitalize text-emerald-700 dark:text-white">
                             Hotel Space
                           </span>
                           <span
@@ -345,7 +346,7 @@ function HotelDetail() {
                           ></span>
                         </div>
                         <div className="pointer-events-none">
-                          <span className="block text-emerald-700">
+                          <span className="block text-emerald-700 dark:text-white">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               viewBox="0 0 20 20"
@@ -366,7 +367,7 @@ function HotelDetail() {
 
                       {/* Down Section */}
                       <div
-                        className={`rounded-b-xl bg-slate-200 px-6 pt-1 capitalize text-emerald-700 ${
+                        className={`rounded-b-xl bg-slate-200 px-6 pt-1 capitalize text-emerald-700 dark:bg-slate-600 dark:text-white ${
                           accordion === 3
                             ? "pb-4 opacity-100 transition-all"
                             : "max-h-0 overflow-hidden opacity-0 transition-all duration-300"
@@ -388,12 +389,12 @@ function HotelDetail() {
                       <div
                         onClick={accordionHandler}
                         data-id="4"
-                        className={`flex cursor-pointer items-center justify-between rounded-xl bg-slate-200 p-4 ${
+                        className={`flex cursor-pointer items-center justify-between rounded-xl bg-slate-200 p-4 dark:bg-slate-600 ${
                           accordion === 4 ? "rounded-b-none" : ""
                         }`}
                       >
                         <div className="pointer-events-none">
-                          <span className="font-semibold capitalize text-emerald-700">
+                          <span className="font-semibold capitalize text-emerald-700 dark:text-white">
                             Hotel Access
                           </span>
                           <span
@@ -403,7 +404,7 @@ function HotelDetail() {
                           ></span>
                         </div>
                         <div className="pointer-events-none">
-                          <span className="block text-emerald-700">
+                          <span className="block text-emerald-700 dark:text-white">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               viewBox="0 0 20 20"
@@ -424,7 +425,7 @@ function HotelDetail() {
 
                       {/* Down Section */}
                       <div
-                        className={`rounded-b-xl bg-slate-200 px-6 pt-1 capitalize text-emerald-700 ${
+                        className={`rounded-b-xl bg-slate-200 px-6 pt-1 capitalize text-emerald-700 dark:bg-slate-600 dark:text-white ${
                           accordion === 4
                             ? "pb-4 opacity-100 transition-all"
                             : "max-h-0 overflow-hidden opacity-0 transition-all duration-300"
@@ -446,12 +447,12 @@ function HotelDetail() {
                       <div
                         onClick={accordionHandler}
                         data-id="5"
-                        className={`flex cursor-pointer items-center justify-between rounded-xl bg-slate-200 p-4 ${
+                        className={`flex cursor-pointer items-center justify-between rounded-xl bg-slate-200 p-4 dark:bg-slate-600 ${
                           accordion === 5 ? "rounded-b-none" : ""
                         }`}
                       >
                         <div className="pointer-events-none">
-                          <span className="font-semibold capitalize text-emerald-700">
+                          <span className="font-semibold capitalize text-emerald-700 dark:text-white">
                             Hotel Transit
                           </span>
                           <span
@@ -461,7 +462,7 @@ function HotelDetail() {
                           ></span>
                         </div>
                         <div className="pointer-events-none">
-                          <span className="block text-emerald-700">
+                          <span className="block text-emerald-700 dark:text-white">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               viewBox="0 0 20 20"
@@ -482,7 +483,7 @@ function HotelDetail() {
 
                       {/* Down Section */}
                       <div
-                        className={`rounded-b-xl bg-slate-200 px-6 pt-1 capitalize text-emerald-700 ${
+                        className={`rounded-b-xl bg-slate-200 px-6 pt-1 capitalize text-emerald-700 dark:bg-slate-600 dark:text-white ${
                           accordion === 5
                             ? "pb-4 opacity-100 transition-all"
                             : "max-h-0 overflow-hidden opacity-0 transition-all duration-300"
@@ -505,7 +506,7 @@ function HotelDetail() {
               <div>
                 <button
                   onClick={(e) => hotelReserveHandler(e, hotelDetail?.id)}
-                  className={`block w-full rounded-xl bg-emerald-700 px-4 py-2 shadow-lg disabled:bg-gray-400 ${
+                  className={`block w-full rounded-xl bg-emerald-700 px-4 py-2 shadow-lg disabled:bg-gray-400 dark:bg-slate-700 dark:disabled:bg-slate-400 ${
                     isReservedHotel ? "cursor-not-allowed" : ""
                   }`}
                   disabled={isReservedHotel ? true : false}

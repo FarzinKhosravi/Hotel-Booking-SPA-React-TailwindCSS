@@ -60,7 +60,7 @@ function BookmarkDetail() {
             </div>
 
             {/* Bookmark Detail Section */}
-            <div className="overflow-hidden rounded-2xl bg-slate-200 shadow-md">
+            <div className="overflow-hidden rounded-2xl bg-slate-200 shadow-md dark:bg-slate-800">
               {/* Bookmark Menu Section */}
               <div
                 className={`relative flex py-4 pr-4 ${
@@ -71,7 +71,7 @@ function BookmarkDetail() {
               >
                 {/* Menu Icon */}
                 <div
-                  className="cursor-pointer rounded-full bg-emerald-800 px-1"
+                  className="cursor-pointer rounded-full bg-emerald-800 px-1 dark:bg-slate-700"
                   onClick={() => setIsOpenMenu(!isOpenMenu)}
                 >
                   <span className="block">
@@ -88,7 +88,7 @@ function BookmarkDetail() {
 
                 {/* Menu Options */}
                 <div
-                  className={`absolute top-11 z-20 flex-col overflow-hidden rounded-xl bg-slate-100 py-1 shadow-lg ${
+                  className={`absolute top-11 z-20 flex-col overflow-hidden rounded-xl bg-slate-100 py-1 shadow-lg dark:bg-slate-700 ${
                     isOpenMenu ? "flex" : "hidden"
                   }`}
                 >
@@ -105,7 +105,7 @@ function BookmarkDetail() {
                         )} Bookmark`}`
                       )
                     }
-                    className="cursor-pointer px-4 py-2 text-sm font-semibold text-emerald-800"
+                    className="cursor-pointer px-4 py-2 text-sm font-semibold text-emerald-800 dark:text-white"
                   >
                     Update Bookmark
                   </span>
@@ -124,10 +124,10 @@ function BookmarkDetail() {
                 {/* Bookmark Name */}
                 <div className="mb-16 flex items-center justify-center">
                   <div className="relative mt-4 flex w-full max-w-64 items-center justify-start sm:mx-auto">
-                    <div className="absolute -top-4 left-12 rounded-xl bg-white px-6.88 py-2 font-semibold">
+                    <div className="absolute -top-4 left-12 rounded-xl bg-white px-6.88 py-2 font-semibold dark:bg-slate-600 dark:text-white">
                       Bookmark Name
                     </div>
-                    <div className="h-auto w-full rounded-xl bg-emerald-800 px-2 pb-2 pt-8 text-center text-white shadow-lg">
+                    <div className="h-auto w-full rounded-xl bg-emerald-800 px-2 pb-2 pt-8 text-center text-white shadow-lg dark:bg-slate-700">
                       {bookmarkDetail?.bookmarkName}
                     </div>
                   </div>
@@ -140,7 +140,7 @@ function BookmarkDetail() {
                     {/* Continent */}
                     <div className="mb-9 flex w-full justify-center sm:mb-0">
                       <div className="relative flex w-full max-w-64 items-center justify-start lg:max-w-55 xl:max-w-64">
-                        <div className="absolute -top-4 left-16 flex justify-start rounded-xl bg-white px-4 py-2 font-semibold lg:left-12 xl:left-16">
+                        <div className="absolute -top-4 left-16 flex justify-start rounded-xl bg-white px-4 py-2 font-semibold dark:bg-slate-600 dark:text-white lg:left-12 xl:left-16">
                           <span className="block">Continent</span>
                           <span className="ml-2 block">
                             <ReactCountryFlag
@@ -151,7 +151,7 @@ function BookmarkDetail() {
                           </span>
                         </div>
 
-                        <div className="h-auto w-full whitespace-nowrap rounded-xl bg-emerald-800 px-2 pb-2 pt-8 text-center text-white shadow-lg">
+                        <div className="h-auto w-full whitespace-nowrap rounded-xl bg-emerald-800 px-2 pb-2 pt-8 text-center text-white shadow-lg dark:bg-slate-700">
                           {bookmarkDetail?.continent}
                         </div>
                       </div>
@@ -160,7 +160,7 @@ function BookmarkDetail() {
                     {/* Country */}
                     <div className="flex w-full justify-center sm:mb-0">
                       <div className="relative flex w-full max-w-64 items-center justify-start lg:max-w-55 xl:max-w-64">
-                        <div className="absolute -top-4 left-18 flex justify-start rounded-xl bg-white px-4 py-2 font-semibold lg:left-14 xl:left-18">
+                        <div className="absolute -top-4 left-18 flex justify-start rounded-xl bg-white px-4 py-2 font-semibold dark:bg-slate-600 dark:text-white lg:left-14 xl:left-18">
                           <span className="block">Country</span>
                           <span className="ml-2 block">
                             <ReactCountryFlag
@@ -171,7 +171,7 @@ function BookmarkDetail() {
                           </span>
                         </div>
 
-                        <div className="h-auto w-full whitespace-nowrap rounded-xl bg-emerald-800 px-2 pb-2 pt-8 text-center text-white shadow-lg">
+                        <div className="h-auto w-full whitespace-nowrap rounded-xl bg-emerald-800 px-2 pb-2 pt-8 text-center text-white shadow-lg dark:bg-slate-700">
                           {bookmarkDetail?.countryName.slice(0, 15).trim() +
                             " ..."}
                         </div>
@@ -184,10 +184,10 @@ function BookmarkDetail() {
                     {/* City */}
                     <div className="mb-9 flex w-full justify-center sm:mb-0">
                       <div className="relative flex w-full max-w-64 items-center justify-start lg:max-w-55 xl:max-w-64">
-                        <div className="absolute -top-4 left-24 rounded-xl bg-white px-4 py-2 font-semibold lg:left-20 xl:left-24">
+                        <div className="absolute -top-4 left-24 rounded-xl bg-white px-4 py-2 font-semibold dark:bg-slate-600 dark:text-white lg:left-20 xl:left-24">
                           City
                         </div>
-                        <div className="flex h-auto w-full items-center justify-center rounded-xl bg-emerald-800 px-2 pb-2 pt-8 text-white shadow-lg">
+                        <div className="flex h-auto w-full items-center justify-center rounded-xl bg-emerald-800 px-2 pb-2 pt-8 text-white shadow-lg dark:bg-slate-700">
                           {bookmarkDetail?.city}
                         </div>
                       </div>
@@ -196,10 +196,10 @@ function BookmarkDetail() {
                     {/* Locality */}
                     <div className="flex w-full justify-center">
                       <div className="relative flex w-full max-w-64 items-center justify-start lg:max-w-55 xl:max-w-64">
-                        <div className="absolute -top-4 left-22 rounded-xl bg-white px-4 py-2 font-semibold lg:left-18 xl:left-22">
+                        <div className="absolute -top-4 left-22 rounded-xl bg-white px-4 py-2 font-semibold dark:bg-slate-600 dark:text-white lg:left-18 xl:left-22">
                           Locality
                         </div>
-                        <div className="flex h-auto w-full items-center justify-center rounded-xl bg-emerald-800 px-2 pb-2 pt-8 text-white shadow-lg">
+                        <div className="flex h-auto w-full items-center justify-center rounded-xl bg-emerald-800 px-2 pb-2 pt-8 text-white shadow-lg dark:bg-slate-700">
                           {bookmarkDetail?.locality}
                         </div>
                       </div>
@@ -213,7 +213,7 @@ function BookmarkDetail() {
                     {/* Location Name */}
                     <div className="mb-9 flex w-full justify-center sm:mb-0">
                       <div className="relative flex w-full max-w-64 items-center justify-start lg:max-w-55 xl:max-w-64">
-                        <div className="absolute -top-4 left-11 flex justify-start rounded-xl bg-white px-4 py-2 font-semibold lg:left-6 xl:left-11">
+                        <div className="absolute -top-4 left-11 flex justify-start rounded-xl bg-white px-4 py-2 font-semibold dark:bg-slate-600 dark:text-white lg:left-6 xl:left-11">
                           <span className="block">Location Name</span>
                           <span className="ml-2 block">
                             <ReactCountryFlag
@@ -224,7 +224,7 @@ function BookmarkDetail() {
                           </span>
                         </div>
 
-                        <div className="h-auto w-full whitespace-nowrap rounded-xl bg-emerald-800 px-2 pb-2 pt-8 text-center text-white shadow-lg">
+                        <div className="h-auto w-full whitespace-nowrap rounded-xl bg-emerald-800 px-2 pb-2 pt-8 text-center text-white shadow-lg dark:bg-slate-700">
                           {bookmarkDetail?.locationName}
                         </div>
                       </div>
@@ -233,10 +233,10 @@ function BookmarkDetail() {
                     {/* Price */}
                     <div className="flex w-full justify-center">
                       <div className="relative flex w-full max-w-64 items-center justify-start lg:max-w-55 xl:max-w-64">
-                        <div className="absolute -top-4 left-24 rounded-xl bg-white px-4 py-2 font-semibold lg:left-20 xl:left-24">
+                        <div className="absolute -top-4 left-24 rounded-xl bg-white px-4 py-2 font-semibold dark:bg-slate-600 dark:text-white lg:left-20 xl:left-24">
                           Price
                         </div>
-                        <div className="flex h-auto w-full items-center justify-center rounded-xl bg-emerald-800 px-2 pb-2 pt-8 text-white shadow-lg">
+                        <div className="flex h-auto w-full items-center justify-center rounded-xl bg-emerald-800 px-2 pb-2 pt-8 text-white shadow-lg dark:bg-slate-700">
                           <span className="mr-1 block text-slate-200">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
@@ -267,18 +267,18 @@ function BookmarkDetail() {
 
               {/* Middle Section */}
               <div className="mb-8 p-4">
-                <div className="rounded-xl bg-slate-300 p-4">
+                <div className="rounded-xl bg-slate-300 p-4 dark:bg-slate-700">
                   {/* Accordion Box */}
                   <div>
                     {/* Top Section */}
                     <div
                       onClick={() => setIsOpenAccordion(!isOpenAccordion)}
-                      className={`flex cursor-pointer items-center justify-between rounded-xl bg-slate-200 p-4 ${
+                      className={`flex cursor-pointer items-center justify-between rounded-xl bg-slate-200 p-4 dark:bg-slate-600 ${
                         isOpenAccordion ? "rounded-b-none" : ""
                       }`}
                     >
                       <div className="pointer-events-none">
-                        <span className="font-semibold capitalize text-emerald-700">
+                        <span className="font-semibold capitalize text-emerald-700 dark:text-white">
                           Bookmark Description
                         </span>
                         <span
@@ -288,7 +288,7 @@ function BookmarkDetail() {
                         ></span>
                       </div>
                       <div className="pointer-events-none">
-                        <span className="block text-emerald-700">
+                        <span className="block text-emerald-700 dark:text-white">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 20 20"
@@ -309,7 +309,7 @@ function BookmarkDetail() {
 
                     {/* Down Section */}
                     <div
-                      className={`rounded-b-xl bg-slate-200 px-6 pt-1 capitalize text-emerald-700 ${
+                      className={`rounded-b-xl bg-slate-200 px-6 pt-1 capitalize text-emerald-700 dark:bg-slate-600 dark:text-white ${
                         isOpenAccordion
                           ? "pb-4 opacity-100 transition-all"
                           : "max-h-0 overflow-hidden opacity-0 transition-all duration-300"
@@ -329,7 +329,7 @@ function BookmarkDetail() {
 
               {/* Down Section */}
               <div className="w-full shadow-lg">
-                <button className="block w-full rounded-t-sm bg-emerald-800 text-white">
+                <button className="block w-full rounded-t-sm bg-emerald-800 text-white dark:bg-slate-700">
                   <div className="flex items-center justify-between py-2 pl-3 pr-2">
                     <div>
                       <span className="font-semibold text-slate-200">BOOK</span>

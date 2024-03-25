@@ -133,7 +133,7 @@ function UpdateBookmark() {
             <div className="pr-2">
               <form
                 onSubmit={formik.handleSubmit}
-                className="rounded-xl bg-slate-200 p-4"
+                className="rounded-xl bg-slate-200 p-4 dark:bg-slate-800"
               >
                 {/* User Bookmark Data */}
                 <div className="mb-12 flex flex-col">
@@ -153,7 +153,7 @@ function UpdateBookmark() {
                         />
                       </svg>
                     </span>
-                    <span className="ml-1 font-semibold text-emerald-800">
+                    <span className="ml-1 font-semibold text-emerald-800 dark:text-white">
                       Please Edit Your Bookmark Information :
                     </span>
                   </div>
@@ -167,12 +167,12 @@ function UpdateBookmark() {
                       {/* User Bookmark Name Input */}
                       <div className="mb-2 flex w-full items-center justify-start sm:relative">
                         <div
-                          className={`absolute -top-3 left-0 rounded-xl bg-white p-2 font-semibold sm:top-0 ${
+                          className={`absolute -top-3 left-0 rounded-xl bg-white p-2 font-semibold dark:bg-slate-600 sm:top-0 ${
                             (formik.errors.bookmarkName &&
                               formik.touched.bookmarkName) ||
                             duplicateBookmarkName
-                              ? "text-red-700"
-                              : ""
+                              ? "text-red-700 dark:text-red-600"
+                              : "dark:text-white"
                           }`}
                         >
                           Your Bookmark Name
@@ -191,11 +191,11 @@ function UpdateBookmark() {
                                 ? "Don't Forget Name of Bookmark 💡"
                                 : "Update Your Bookmark Name..."
                             }
-                            className={`block h-16 w-full rounded-xl border-0 bg-emerald-800 from-emerald-700 to-emerald-900 pb-6 pt-12 text-base text-white shadow-lg placeholder:text-white focus:bg-gradient-to-r focus:bg-clip-text focus:text-emerald-700 focus:placeholder:text-slate-500 focus:placeholder:opacity-50 sm:h-auto sm:pb-2 sm:pl-44 sm:pt-2  ${
+                            className={`block h-16 w-full rounded-xl border-0 bg-emerald-800 from-emerald-700 to-emerald-900 pb-6 pt-12 text-base text-white shadow-lg placeholder:text-white focus:bg-gradient-to-r focus:bg-clip-text focus:text-emerald-700 focus:placeholder:text-slate-500 focus:placeholder:opacity-50 dark:bg-slate-700 dark:from-slate-700 dark:to-slate-800 dark:focus:text-white sm:h-auto sm:pb-2 sm:pl-44 sm:pt-2  ${
                               (formik.errors.bookmarkName &&
                                 formik.touched.bookmarkName) ||
                               duplicateBookmarkName
-                                ? "bg-red-700"
+                                ? "bg-red-700 dark:bg-red-600"
                                 : ""
                             }`}
                           />
@@ -224,7 +224,7 @@ function UpdateBookmark() {
                       {/* User Bookmark Description Input */}
                       <div className="relative mb-2 flex w-full items-center justify-start">
                         <div
-                          className={`absolute -top-3 left-0 rounded-xl bg-white p-2 font-semibold ${
+                          className={`absolute -top-3 left-0 rounded-xl bg-white p-2 font-semibold dark:bg-slate-600 dark:text-white ${
                             formik.errors.bookmarkDescription &&
                             formik.touched.bookmarkDescription
                               ? "text-red-700"
@@ -240,7 +240,7 @@ function UpdateBookmark() {
                             onBlur={formik.handleBlur}
                             value={formik.values.bookmarkDescription}
                             placeholder="Update Your Bookmark Description (Optional) ..."
-                            className={`block w-full resize-none rounded-xl border-0 bg-emerald-800 from-emerald-700 to-emerald-900 px-2 pb-2 pt-8 text-base text-white shadow-lg placeholder:text-white focus:bg-gradient-to-r focus:bg-clip-text focus:text-emerald-700 focus:placeholder:text-slate-500 focus:placeholder:opacity-50 ${
+                            className={`block w-full resize-none rounded-xl border-0 bg-emerald-800 from-emerald-700 to-emerald-900 px-2 pb-2 pt-8 text-base text-white shadow-lg placeholder:text-white focus:bg-gradient-to-r focus:bg-clip-text focus:text-emerald-700 focus:placeholder:text-slate-500 focus:placeholder:opacity-50 dark:bg-slate-700 dark:from-slate-700 dark:to-slate-800 dark:focus:text-white ${
                               formik.errors.bookmarkDescription &&
                               formik.touched.bookmarkDescription
                                 ? "bg-red-700"
@@ -268,7 +268,7 @@ function UpdateBookmark() {
                   <button
                     type="submit"
                     disabled={!formik.isValid}
-                    className="block w-full rounded-xl bg-emerald-800 shadow-lg disabled:bg-gray-500"
+                    className="block w-full rounded-xl bg-emerald-800 shadow-lg disabled:bg-gray-500 dark:bg-slate-700 dark:disabled:bg-slate-400"
                   >
                     <div className="flex items-center justify-center">
                       <div className="w-full p-4">

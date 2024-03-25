@@ -4,8 +4,6 @@ import {
   useNavigate,
   useSearchParams,
 } from "react-router-dom";
-import introIcon from "../assets/images/introIcon.png";
-import separator from "../assets/images/separator.png";
 import BackButton from "../common/BackButton";
 import { useFormik } from "formik";
 import * as Yup from "yup";
@@ -15,6 +13,7 @@ import toast from "react-hot-toast";
 import { useDispatch } from "react-redux";
 import { createLoggedInUserData } from "../features/loggedInUser/loggedInUserSlice";
 import saveLocalStorage from "./../localStorage/saveLocalStorage";
+import Wellcome from "../common/Wellcome";
 
 const USER_DATA = "USER_DATA";
 
@@ -252,32 +251,7 @@ function LoginFormPage() {
   return (
     <section className="mb-20 min-h-screen px-4">
       <div>
-        {/* Intro Section */}
-        <div className="mb-16 flex flex-col">
-          <div className="mb-2 flex flex-col">
-            <span className="flex items-center justify-center font-Parisienne text-2xl text-indigo-950">
-              Welcome To
-            </span>
-            <div className="relative mx-auto flex h-20 max-w-[300px] items-center justify-center">
-              <h2 className="mr-4 font-Parisienne text-2xl text-indigo-950">
-                Hotel Booking Site
-              </h2>
-              <div className="absolute -top-1.25 right-4">
-                <img className="w-10" src={introIcon} alt="intro-Icon" />
-              </div>
-            </div>
-          </div>
-
-          <div className="mb-6 flex items-center justify-center">
-            <img className="block w-36" src={separator} alt="separator" />
-          </div>
-
-          <div className="flex w-full items-center justify-center">
-            <span className="block bg-img-home bg-cover bg-center bg-no-repeat font-Parisienne text-xl text-indigo-950">
-              We Wish You a Pleasant Trip
-            </span>
-          </div>
-        </div>
+        <Wellcome />
 
         {/* Login Form Section */}
         <div>
@@ -298,7 +272,7 @@ function LoginFormPage() {
           <div>
             <form
               onSubmit={formik.handleSubmit}
-              className="rounded-xl bg-slate-200 p-4 shadow-lg"
+              className="rounded-xl bg-slate-200 p-4 shadow-lg dark:bg-slate-800"
             >
               {/* Login Form Description */}
               <div className="mb-6 flex justify-start">
@@ -316,7 +290,7 @@ function LoginFormPage() {
                     />
                   </svg>
                 </span>
-                <span className="ml-1 text-sm font-semibold text-emerald-800">
+                <span className="ml-1 text-sm font-semibold text-emerald-800 dark:text-white">
                   You Can Login Through the Form Below :
                 </span>
               </div>
@@ -327,7 +301,7 @@ function LoginFormPage() {
                 <div className="pl-1">
                   <label
                     htmlFor="email"
-                    className="cursor-pointer text-sm font-semibold text-emerald-900"
+                    className="cursor-pointer text-sm font-semibold text-emerald-900 dark:text-slate-200"
                   >
                     Email
                   </label>
@@ -340,7 +314,7 @@ function LoginFormPage() {
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 20 20"
                       fill="currentColor"
-                      className="h-5 w-5 text-emerald-900"
+                      className="h-5 w-5 text-emerald-900 dark:text-slate-200"
                     >
                       <path d="M3 4a2 2 0 0 0-2 2v1.161l8.441 4.221a1.25 1.25 0 0 0 1.118 0L19 7.162V6a2 2 0 0 0-2-2H3Z" />
                       <path d="m19 8.839-7.77 3.885a2.75 2.75 0 0 1-2.46 0L1 8.839V14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8.839Z" />
@@ -354,7 +328,7 @@ function LoginFormPage() {
                     onBlur={formik.handleBlur}
                     value={formik.values.email}
                     placeholder="Enter Email Please..."
-                    className="block w-full cursor-pointer rounded-xl border-0 bg-slate-300 from-emerald-700 to-emerald-900 pl-9 text-base text-emerald-900 shadow-lg placeholder:text-sm placeholder:opacity-50 focus:bg-gradient-to-r focus:bg-clip-text"
+                    className="block w-full cursor-pointer rounded-xl border-0 bg-slate-300 pl-9 text-base text-emerald-900 shadow-lg placeholder:text-sm placeholder:opacity-50 dark:bg-slate-700 dark:text-slate-200 dark:placeholder:text-slate-200 dark:placeholder:opacity-70"
                   />
                 </div>
 
@@ -380,7 +354,7 @@ function LoginFormPage() {
                 <div className="pl-1">
                   <label
                     htmlFor="password"
-                    className="cursor-pointer text-sm font-semibold text-emerald-900"
+                    className="cursor-pointer text-sm font-semibold text-emerald-900 dark:text-slate-200"
                   >
                     Password
                   </label>
@@ -393,7 +367,7 @@ function LoginFormPage() {
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 20 20"
                       fill="currentColor"
-                      className="h-5 w-5 text-emerald-900"
+                      className="h-5 w-5 text-emerald-900 dark:text-slate-200"
                     >
                       <path
                         fillRule="evenodd"
@@ -410,7 +384,7 @@ function LoginFormPage() {
                     onBlur={formik.handleBlur}
                     value={formik.values.password}
                     placeholder="Enter Password Please..."
-                    className="block w-full cursor-pointer rounded-xl border-0 bg-slate-300 from-emerald-700 to-emerald-900 pl-9 text-base text-emerald-900 shadow-lg placeholder:text-sm placeholder:opacity-50 focus:bg-gradient-to-r focus:bg-clip-text"
+                    className="block w-full cursor-pointer rounded-xl border-0 bg-slate-300 pl-9 text-base text-emerald-900 shadow-lg placeholder:text-sm placeholder:opacity-50 dark:bg-slate-700 dark:text-slate-200 dark:placeholder:text-slate-200 dark:placeholder:opacity-70"
                   />
                   <div
                     onClick={() => setIsShowPassword(!isShowPassword)}
@@ -425,7 +399,7 @@ function LoginFormPage() {
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 20 20"
                         fill="currentColor"
-                        className="h-4 w-4 text-emerald-900"
+                        className="h-4 w-4 text-emerald-900 dark:text-slate-200"
                       >
                         <path d="M10 12.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" />
                         <path
@@ -445,7 +419,7 @@ function LoginFormPage() {
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 20 20"
                         fill="currentColor"
-                        className="h-4 w-4 text-emerald-900"
+                        className="h-4 w-4 text-emerald-900 dark:text-slate-200"
                       >
                         <path
                           fillRule="evenodd"
@@ -479,7 +453,7 @@ function LoginFormPage() {
                 <button
                   type="submit"
                   disabled={!formik.isValid}
-                  className="flex w-full items-center justify-center rounded-xl bg-emerald-800 p-4 shadow-lg disabled:bg-gray-500"
+                  className="flex w-full items-center justify-center rounded-xl bg-emerald-800 p-4 shadow-lg disabled:bg-gray-500 dark:bg-slate-700 dark:disabled:bg-slate-400"
                 >
                   <span className="block text-white">Continue</span>
                 </button>
@@ -500,7 +474,7 @@ function LoginFormPage() {
                 </button>
               </div>
 
-              <div className="flex items-center justify-center text-emerald-800">
+              <div className="flex items-center justify-center text-emerald-800 dark:text-white">
                 <span className="block">Don&apos;t Have an Account?</span>
                 <Link
                   to="/signup"

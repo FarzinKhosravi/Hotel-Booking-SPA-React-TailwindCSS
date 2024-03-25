@@ -10,8 +10,24 @@
     @apply pointer-events-none mx-0 my-1 h-1 w-6 rounded-lg bg-gradient-to-r from-emerald-600 to-emerald-900 transition-all duration-200 ease-out;
   }
 
+  .barDarkMode {
+    @apply dark:from-slate-50 dark:to-slate-100;
+  }
+
+  .socialMediaIcon {
+    @apply h-5 w-5 cursor-pointer text-emerald-950 transition-all duration-200 hover:text-yellow-500  dark:text-white;
+  }
+
+  .socialMediaIconDarkMode {
+    @apply dark:text-white dark:hover:text-yellow-500;
+  }
+
   .themeIcon {
-    @apply pointer-events-none h-6 w-6 text-emerald-900;
+    @apply pointer-events-none h-6 w-6 text-emerald-900 dark:text-white;
+  }
+
+  .amenitiesIcon {
+    @apply h-5 w-5 text-indigo-950 dark:text-white;
   }
 
   .scrollbarStyle {

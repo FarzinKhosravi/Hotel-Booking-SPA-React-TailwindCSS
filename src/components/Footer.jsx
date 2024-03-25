@@ -34,7 +34,7 @@ function Footer() {
       </div>
     ) : (
       <div className="mb-5 flex items-center justify-center">
-        <q className="rounded-br-0.5 rounded-tl-0.5 rounded-bl-6.25 rounded-tr-5 block bg-yellow-400 py-1 pl-1 pr-2 italic text-stone-800 sm:text-lg md:font-semibold">
+        <q className="block rounded-bl-6.25 rounded-br-0.5 rounded-tl-0.5 rounded-tr-5 bg-yellow-400 py-1 pl-1 pr-2 italic text-stone-800 sm:text-lg md:font-semibold">
           You are Our Most Prized Possession
         </q>
       </div>
@@ -46,19 +46,19 @@ function Footer() {
       {
         href: "https://github.com/FarzinKhosravi?tab=repositories",
         icon: (
-          <BiLogoGithub className="h-5 w-5 text-emerald-950 transition-all duration-200  hover:text-yellow-500" />
+          <BiLogoGithub className="socialMediaIcon socialMediaIconDarkMode" />
         ),
       },
       {
         href: "https://t.me/Farzin_KHI",
         icon: (
-          <BiLogoTelegram className="h-5 w-5 text-emerald-950 transition-all duration-200  hover:text-yellow-500" />
+          <BiLogoTelegram className="socialMediaIcon socialMediaIconDarkMode" />
         ),
       },
       {
         href: "https://github.com/FarzinKhosravi/Hotel-Booking-SPA-React-TailwindCSS",
         icon: (
-          <BiSolidHeart className="h-5 w-5 cursor-pointer text-emerald-950 transition-all duration-300  hover:text-yellow-500" />
+          <BiSolidHeart className="socialMediaIcon socialMediaIconDarkMode" />
         ),
       },
     ];
@@ -73,7 +73,7 @@ function Footer() {
   }
 
   return (
-    <footer className="mt-auto rounded-t-xl bg-slate-200">
+    <footer className="mt-auto rounded-t-xl bg-slate-200 dark:bg-slate-800">
       <div className="mx-auto flex max-w-xl flex-col px-4 py-8">
         {/* box to display list of bookmarks and hotels reserved user */}
         <div className="mb-8 rounded-2xl bg-yellow-400 p-4 text-stone-800 shadow-md">
@@ -87,7 +87,7 @@ function Footer() {
           {/* Netlify Icon */}
           <div className="cursor-pointer">
             <svg
-              className="text-emerald-950"
+              className="text-emerald-950 dark:text-white"
               width="93"
               height="34"
               viewBox="0 0 93 34"
@@ -111,7 +111,7 @@ function Footer() {
           {/* Stellate Icon */}
           <div className="cursor-pointer">
             <svg
-              className="text-emerald-950"
+              className="text-emerald-950 dark:text-white"
               width="109"
               height="36"
               viewBox="0 0 109 36"
@@ -146,13 +146,13 @@ function Footer() {
 
         {/* Box to introducing app developer */}
         <div className="flex items-center justify-center">
-          <span className="text-emerald-950 md:text-base md:font-medium">
+          <span className="text-emerald-950 dark:text-white md:text-base md:font-medium">
             ❮❯ by
             <a
               href="https://github.com/FarzinKhosravi"
               target="_blank"
               rel="noopener noreferrer"
-              className="mx-1 border-b border-b-orange-400 text-sm font-normal text-emerald-950 transition-all duration-75 hover:border-b-0 hover:text-orange-400 sm:font-medium md:text-base md:font-semibold"
+              className="mx-1 border-b border-b-orange-400 text-sm font-normal text-emerald-950 transition-all duration-75 hover:border-b-0 hover:text-orange-400 dark:text-white dark:hover:text-yellow-400 sm:font-medium md:text-base md:font-semibold"
             >
               Farzin Khosravi
             </a>

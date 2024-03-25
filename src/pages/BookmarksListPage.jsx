@@ -60,7 +60,7 @@ function BookmarksListPage() {
                   <span className="block bg-img-home bg-cover bg-center bg-no-repeat text-lg font-semibold italic">
                     Bookmarks List
                   </span>
-                  <span className="ml-2 flex h-6 w-6 items-center justify-center rounded-full bg-slate-200 text-lg font-semibold shadow-md">
+                  <span className="ml-2 flex h-6 w-6 items-center justify-center rounded-full bg-slate-200 text-lg font-semibold shadow-md dark:bg-slate-700 dark:text-white">
                     {bookmarksList?.length}
                   </span>
                 </div>
@@ -78,7 +78,7 @@ function BookmarksListPage() {
                   return (
                     <div
                       key={bookmark.id}
-                      className="overflow-hidden rounded-xl bg-slate-200 shadow-md last:mb-0"
+                      className="overflow-hidden rounded-xl bg-slate-200 shadow-md last:mb-0 dark:bg-slate-800"
                     >
                       {/* Last Visited Bookmark Section */}
                       <div
@@ -133,7 +133,7 @@ function BookmarksListPage() {
                       >
                         {/* Menu Icon */}
                         <div
-                          className="cursor-pointer rounded-full bg-emerald-800 px-1"
+                          className="cursor-pointer rounded-full bg-emerald-800 px-1 dark:bg-slate-700"
                           onClick={() =>
                             setBookmarkMenu(
                               bookmarkMenu === bookmark.id ? null : bookmark.id
@@ -154,7 +154,7 @@ function BookmarksListPage() {
 
                         {/* Menu Options */}
                         <div
-                          className={`absolute top-11 z-20 flex-col overflow-hidden rounded-xl bg-slate-100 py-1 shadow-lg ${
+                          className={`absolute top-11 z-20 flex-col overflow-hidden rounded-xl bg-slate-100 py-1 shadow-lg dark:bg-slate-700 ${
                             bookmarkMenu === bookmark.id ? "flex" : "hidden"
                           }`}
                         >
@@ -171,7 +171,7 @@ function BookmarksListPage() {
                                 )} Bookmark`}`
                               )
                             }
-                            className="cursor-pointer px-4 py-2 text-sm font-semibold text-emerald-800"
+                            className="cursor-pointer px-4 py-2 text-sm font-semibold text-emerald-800 dark:text-white"
                           >
                             Update Bookmark
                           </span>
@@ -197,10 +197,10 @@ function BookmarksListPage() {
                         {/* Bookmark Name */}
                         <div className="mb-16 flex items-center justify-center">
                           <div className="relative mt-4 flex w-full max-w-64 items-center justify-start sm:mx-auto">
-                            <div className="absolute -top-4 left-12 rounded-xl bg-white px-6.88 py-2 font-semibold">
+                            <div className="absolute -top-4 left-12 rounded-xl bg-white px-6.88 py-2 font-semibold dark:bg-slate-600 dark:text-white">
                               Bookmark Name
                             </div>
-                            <div className="h-auto w-full rounded-xl bg-emerald-800 px-2 pb-2 pt-8 text-center text-white shadow-lg">
+                            <div className="h-auto w-full rounded-xl bg-emerald-800 px-2 pb-2 pt-8 text-center text-white shadow-lg  dark:bg-slate-700">
                               {bookmark.bookmarkName}
                             </div>
                           </div>
@@ -211,7 +211,7 @@ function BookmarksListPage() {
                           {/* Location Name */}
                           <div className="mb-9 flex w-full justify-center sm:mb-0">
                             <div className="relative flex w-full max-w-64 items-center justify-start lg:max-w-55 xl:max-w-64">
-                              <div className="absolute -top-4 left-11 flex justify-start rounded-xl bg-white px-4 py-2 font-semibold lg:left-6 xl:left-11">
+                              <div className="absolute -top-4 left-11 flex justify-start rounded-xl bg-white px-4 py-2 font-semibold dark:bg-slate-600 dark:text-white lg:left-6 xl:left-11">
                                 <span className="block">Location Name</span>
                                 <span className="ml-2 block">
                                   <ReactCountryFlag
@@ -222,7 +222,7 @@ function BookmarksListPage() {
                                 </span>
                               </div>
 
-                              <div className="h-auto w-full whitespace-nowrap rounded-xl bg-emerald-800 px-2 pb-2 pt-8 text-center text-white shadow-lg">
+                              <div className="h-auto w-full whitespace-nowrap rounded-xl bg-emerald-800 px-2 pb-2 pt-8 text-center text-white shadow-lg dark:bg-slate-700">
                                 {bookmark.locationName}
                               </div>
                             </div>
@@ -231,10 +231,10 @@ function BookmarksListPage() {
                           {/* Price */}
                           <div className="flex w-full justify-center">
                             <div className="relative flex w-full max-w-64 items-center justify-start lg:max-w-55 xl:max-w-64">
-                              <div className="absolute -top-4 left-24 rounded-xl bg-white px-4 py-2 font-semibold lg:left-20 xl:left-24">
+                              <div className="absolute -top-4 left-24 rounded-xl bg-white px-4 py-2 font-semibold dark:bg-slate-600 dark:text-white lg:left-20 xl:left-24">
                                 Price
                               </div>
-                              <div className="flex h-auto w-full items-center justify-center rounded-xl bg-emerald-800 px-2 pb-2 pt-8 text-white shadow-lg">
+                              <div className="flex h-auto w-full items-center justify-center rounded-xl bg-emerald-800 px-2 pb-2 pt-8 text-white shadow-lg dark:bg-slate-700">
                                 <span className="mr-1 block text-slate-200">
                                   <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -278,7 +278,7 @@ function BookmarksListPage() {
                             className={`block w-full rounded-t-sm ${
                               bookmark?.plusCode === currentBookmark?.plusCode
                                 ? "bg-yellow-400 text-stone-800"
-                                : "bg-emerald-800 text-white"
+                                : "bg-emerald-800 text-white dark:bg-slate-700"
                             }`}
                           >
                             <div className="flex items-center justify-between py-2 pl-3 pr-2">

@@ -1,6 +1,4 @@
 import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/outline";
-import introIcon from "../assets/images/introIcon.png";
-import separator from "../assets/images/separator.png";
 import BackButton from "../common/BackButton";
 import * as Yup from "yup";
 import { useFormik } from "formik";
@@ -8,6 +6,7 @@ import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import Wellcome from "../common/Wellcome";
 
 const initialValues = {
   fullName: "",
@@ -83,32 +82,7 @@ function ContactUsPage() {
   return (
     <section className="mb-20 min-h-screen px-4">
       <div>
-        {/* Intro Section */}
-        <div className="mb-16 flex flex-col">
-          <div className="mb-2 flex flex-col">
-            <span className="flex items-center justify-center font-Parisienne text-2xl text-indigo-950">
-              Welcome To
-            </span>
-            <div className="relative mx-auto flex h-20 max-w-[300px] items-center justify-center">
-              <h2 className="mr-4 font-Parisienne text-2xl text-indigo-950">
-                Hotel Booking Site
-              </h2>
-              <div className="absolute -top-1.25 right-4">
-                <img className="w-10" src={introIcon} alt="intro-Icon" />
-              </div>
-            </div>
-          </div>
-
-          <div className="mb-6 flex items-center justify-center">
-            <img className="block w-36" src={separator} alt="separator" />
-          </div>
-
-          <div className="flex w-full items-center justify-center">
-            <span className="block bg-img-home bg-cover bg-center bg-no-repeat font-Parisienne text-xl text-indigo-950">
-              We Wish You a Pleasant Trip
-            </span>
-          </div>
-        </div>
+        <Wellcome />
 
         {/* Contact Us Form Section */}
         <div>
@@ -127,17 +101,17 @@ function ContactUsPage() {
           </div>
 
           {/* Contact Us Specs */}
-          <div className="flex flex-col rounded-lg bg-slate-200 p-4 shadow-lg">
+          <div className="flex flex-col rounded-lg bg-slate-200 p-4 shadow-lg dark:bg-slate-800">
             {/* Contact Info Section */}
             <div className="mb-6">
-              <div className="mb-1 pl-1 font-semibold text-emerald-900">
+              <div className="mb-1 pl-1 font-semibold text-emerald-900 dark:text-white">
                 <span>Contact Info</span>
               </div>
 
-              <div className="flex items-center justify-between rounded-lg bg-slate-300 p-3 text-emerald-900 shadow-lg">
+              <div className="flex items-center justify-between rounded-lg bg-slate-300 p-3 text-emerald-900 shadow-lg dark:bg-slate-700 dark:text-slate-200">
                 {/* Company Email Address */}
                 <div className="flex flex-col items-center justify-center">
-                  <div className="mb-1 flex h-8 w-8 items-center justify-center rounded-full bg-emerald-900 text-white">
+                  <div className="mb-1 flex h-8 w-8 items-center justify-center rounded-full bg-emerald-900 text-white dark:bg-slate-600">
                     <EnvelopeIcon className="h-4 w-4" />
                   </div>
                   <div className="italic">
@@ -147,7 +121,7 @@ function ContactUsPage() {
 
                 {/* Company Phone */}
                 <div className="flex flex-col items-center justify-center">
-                  <div className="mb-1 flex h-8 w-8 items-center justify-center rounded-full bg-emerald-900 text-white">
+                  <div className="mb-1 flex h-8 w-8 items-center justify-center rounded-full bg-emerald-900 text-white dark:bg-slate-600">
                     <PhoneIcon className="h-4 w-4" />
                   </div>
                   <div className="italic">
@@ -159,14 +133,14 @@ function ContactUsPage() {
 
             {/* Contact Us Form Section */}
             <div>
-              <div className="mb-1 pl-1 font-semibold text-emerald-900">
+              <div className="mb-1 pl-1 font-semibold text-emerald-900 dark:text-white">
                 <span>Contact Us Form</span>
               </div>
 
               <div>
                 <form
                   onSubmit={formik.handleSubmit}
-                  className="rounded-xl bg-slate-300 p-4 shadow-lg"
+                  className="rounded-xl bg-slate-300 p-4 shadow-lg dark:bg-slate-700"
                 >
                   {/* Contact Us Form Description */}
                   <div className="mb-6 flex justify-start">
@@ -184,7 +158,7 @@ function ContactUsPage() {
                         />
                       </svg>
                     </span>
-                    <span className="ml-1 mt-0.5 text-sm font-semibold text-emerald-800">
+                    <span className="ml-1 mt-0.5 text-sm font-semibold text-emerald-800 dark:text-white">
                       We are Open for any Suggestion Or Just to Have a Chat :
                     </span>
                   </div>
@@ -195,7 +169,7 @@ function ContactUsPage() {
                     <div className="pl-1">
                       <label
                         htmlFor="fullName"
-                        className="cursor-pointer text-sm font-semibold text-emerald-900"
+                        className="cursor-pointer text-sm font-semibold text-emerald-900 dark:text-slate-200"
                       >
                         Full Name
                       </label>
@@ -208,7 +182,7 @@ function ContactUsPage() {
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 20 20"
                           fill="currentColor"
-                          className="h-5 w-5 text-emerald-900"
+                          className="h-5 w-5 text-emerald-900 dark:text-slate-200"
                         >
                           <path d="M10 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM3.465 14.493a1.23 1.23 0 0 0 .41 1.412A9.957 9.957 0 0 0 10 18c2.31 0 4.438-.784 6.131-2.1.43-.333.604-.903.408-1.41a7.002 7.002 0 0 0-13.074.003Z" />
                         </svg>
@@ -221,7 +195,7 @@ function ContactUsPage() {
                         onBlur={formik.handleBlur}
                         value={formik.values.fullName}
                         placeholder="Enter Full Name Please..."
-                        className="block w-full cursor-pointer rounded-xl border-0 bg-slate-300 from-emerald-700 to-emerald-900 pl-8 text-base text-emerald-900 shadow-lg placeholder:text-sm placeholder:opacity-50 focus:bg-gradient-to-r focus:bg-clip-text"
+                        className="block w-full cursor-pointer rounded-xl border-0 bg-slate-300 pl-8 text-base text-emerald-900 shadow-lg placeholder:text-sm placeholder:opacity-50 dark:bg-slate-600 dark:text-slate-200 dark:placeholder:text-slate-200 dark:placeholder:opacity-70"
                       />
                     </div>
 
@@ -241,7 +215,7 @@ function ContactUsPage() {
                     <div className="pl-1">
                       <label
                         htmlFor="email"
-                        className="cursor-pointer text-sm font-semibold text-emerald-900"
+                        className="cursor-pointer text-sm font-semibold text-emerald-900 dark:text-slate-200"
                       >
                         Email
                       </label>
@@ -254,7 +228,7 @@ function ContactUsPage() {
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 20 20"
                           fill="currentColor"
-                          className="h-5 w-5 text-emerald-900"
+                          className="h-5 w-5 text-emerald-900 dark:text-slate-200"
                         >
                           <path d="M3 4a2 2 0 0 0-2 2v1.161l8.441 4.221a1.25 1.25 0 0 0 1.118 0L19 7.162V6a2 2 0 0 0-2-2H3Z" />
                           <path d="m19 8.839-7.77 3.885a2.75 2.75 0 0 1-2.46 0L1 8.839V14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8.839Z" />
@@ -268,7 +242,7 @@ function ContactUsPage() {
                         onBlur={formik.handleBlur}
                         value={formik.values.email}
                         placeholder="Enter Email Please..."
-                        className="block w-full cursor-pointer rounded-xl border-0 bg-slate-300 from-emerald-700 to-emerald-900 pl-9 text-base text-emerald-900 shadow-lg placeholder:text-sm placeholder:opacity-50 focus:bg-gradient-to-r focus:bg-clip-text"
+                        className="block w-full cursor-pointer rounded-xl border-0 bg-slate-300 pl-9 text-base text-emerald-900 shadow-lg placeholder:text-sm placeholder:opacity-50 dark:bg-slate-600 dark:text-slate-200 dark:placeholder:text-slate-200 dark:placeholder:opacity-70"
                       />
                     </div>
 
@@ -288,7 +262,7 @@ function ContactUsPage() {
                     <div className="flex items-center justify-between px-1">
                       <label
                         htmlFor="phoneNumber"
-                        className="cursor-pointer text-sm font-semibold text-emerald-900"
+                        className="cursor-pointer text-sm font-semibold text-emerald-900 dark:text-slate-200"
                       >
                         Phone Number
                       </label>
@@ -315,7 +289,7 @@ function ContactUsPage() {
                         </span>
 
                         <span
-                          className={`absolute right-0 top-5 z-50 rounded-xl bg-emerald-800 px-3 py-2 text-xs text-white
+                          className={`absolute right-0 top-5 z-50 rounded-xl bg-emerald-800 px-3 py-2 text-xs text-white dark:bg-slate-500
                             ${showGuide ? "block" : "hidden"}
                           `}
                         >
@@ -335,7 +309,7 @@ function ContactUsPage() {
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 20 20"
                           fill="currentColor"
-                          className="h-5 w-5 text-emerald-900"
+                          className="h-5 w-5 text-emerald-900 dark:text-slate-200"
                         >
                           <path
                             fillRule="evenodd"
@@ -352,7 +326,7 @@ function ContactUsPage() {
                         onBlur={formik.handleBlur}
                         value={formik.values.phoneNumber}
                         placeholder="Enter Phone Number Please..."
-                        className="block w-full cursor-pointer rounded-xl border-0 bg-slate-300 from-emerald-700 to-emerald-900 pl-9 text-base text-emerald-900 shadow-lg placeholder:text-sm placeholder:opacity-50 focus:bg-gradient-to-r focus:bg-clip-text"
+                        className="block w-full cursor-pointer rounded-xl border-0 bg-slate-300 pl-9 text-base text-emerald-900 shadow-lg placeholder:text-sm placeholder:opacity-50 dark:bg-slate-600 dark:text-slate-200 dark:placeholder:text-slate-200 dark:placeholder:opacity-70"
                       />
                     </div>
 
@@ -373,7 +347,7 @@ function ContactUsPage() {
                     <div className="pl-1">
                       <label
                         htmlFor="subject"
-                        className="cursor-pointer text-sm font-semibold text-emerald-900"
+                        className="cursor-pointer text-sm font-semibold text-emerald-900 dark:text-slate-200"
                       >
                         Subject
                       </label>
@@ -386,7 +360,7 @@ function ContactUsPage() {
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 20 20"
                           fill="currentColor"
-                          className="h-5 w-5 text-emerald-900"
+                          className="h-5 w-5 text-emerald-900 dark:text-slate-200"
                         >
                           <path
                             fillRule="evenodd"
@@ -408,7 +382,7 @@ function ContactUsPage() {
                         onBlur={formik.handleBlur}
                         value={formik.values.subject}
                         placeholder="Enter Subject Please..."
-                        className="block w-full cursor-pointer rounded-xl border-0 bg-slate-300 from-emerald-700 to-emerald-900 pl-8 text-base text-emerald-900 shadow-lg placeholder:text-sm placeholder:opacity-50 focus:bg-gradient-to-r focus:bg-clip-text"
+                        className="block w-full cursor-pointer rounded-xl border-0 bg-slate-300 pl-8 text-base text-emerald-900 shadow-lg placeholder:text-sm placeholder:opacity-50 dark:bg-slate-600 dark:text-slate-200 dark:placeholder:text-slate-200 dark:placeholder:opacity-70"
                       />
                     </div>
 
@@ -428,7 +402,7 @@ function ContactUsPage() {
                     <div className="pl-1">
                       <label
                         htmlFor="message"
-                        className="cursor-pointer text-sm font-semibold text-emerald-900"
+                        className="cursor-pointer text-sm font-semibold text-emerald-900 dark:text-slate-200"
                       >
                         Message
                       </label>
@@ -442,7 +416,7 @@ function ContactUsPage() {
                         onChange={formik.handleChange}
                         onBlur={formik.handleBlur}
                         value={formik.values.message}
-                        className="block w-full cursor-pointer resize-none rounded-xl border-0 bg-slate-300 from-emerald-700 to-emerald-900 text-base text-emerald-900 shadow-lg placeholder:text-sm placeholder:opacity-50 focus:bg-gradient-to-r focus:bg-clip-text"
+                        className="block w-full cursor-pointer resize-none rounded-xl border-0 bg-slate-300 text-base text-emerald-900 shadow-lg placeholder:text-sm placeholder:opacity-50 dark:bg-slate-600 dark:text-slate-200 dark:placeholder:text-slate-200 dark:placeholder:opacity-70"
                         placeholder="Write Your Message..."
                       ></textarea>
                     </div>
@@ -462,7 +436,7 @@ function ContactUsPage() {
                     <button
                       type="submit"
                       disabled={!formik.isValid}
-                      className="flex w-full items-center justify-center rounded-xl bg-emerald-800 p-4 shadow-lg disabled:bg-gray-500"
+                      className="flex w-full items-center justify-center rounded-xl bg-emerald-800 p-4 shadow-lg disabled:bg-gray-500 dark:bg-slate-600 dark:disabled:bg-slate-400"
                     >
                       <span className="block text-white">Send Message</span>
                     </button>

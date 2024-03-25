@@ -24,6 +24,7 @@ import { useEffect, useRef, useState } from "react";
 import useOutsideClick from "./../hooks/useOutsideClick";
 import { NavLink, useNavigate } from "react-router-dom";
 import appLogo from "../assets/images/appLogo.png";
+import appLogoDarkMode from "../assets/images/appLogo-darkMode.png";
 import { useDispatch, useSelector } from "react-redux";
 import { signOutUser } from "../features/loggedInUser/loggedInUserSlice";
 import removeLocalStorage from "./../localStorage/removeLocalStorage";
@@ -109,12 +110,12 @@ function Header() {
   return (
     <header className="sticky top-0 z-2000 mb-8 p-4 backdrop-blur-md">
       <nav
-        className={`relative flex flex-wrap gap-x-6 rounded-xl bg-slate-200 px-3 py-4 shadow-lg ${
+        className={`relative flex flex-wrap gap-x-6 rounded-xl bg-slate-200 px-3 py-4 shadow-lg dark:bg-slate-800 ${
           isOpenMenu ? "rounded-b-none md:rounded-xl" : ""
         }`}
       >
         <div className="flex flex-auto items-center">
-          <AppLogo />
+          <AppLogo selectedTheme={selectedTheme} systemTheme={systemTheme} />
           <ThemeMenuButton
             selectedTheme={selectedTheme}
             onShowThemeMenu={showThemeMenuHandler}
@@ -159,17 +160,17 @@ function HamburgerMenuButton({ setIsOpenMenu, isOpenMenu }) {
         className={`bar ${
           isOpenMenu
             ? "mx-0 my-2 translate-x-0 translate-y-2.25 rotate-129 bg-gradient-to-r from-red-500 to-orange-500"
-            : ""
+            : "barDarkMode"
         }`}
       ></div>
 
-      <div className={`bar ${isOpenMenu ? "opacity-0" : ""}`}></div>
+      <div className={`bar ${isOpenMenu ? "opacity-0" : "barDarkMode"}`}></div>
 
       <div
         className={`bar ${
           isOpenMenu
             ? "mx-0 my-2 -translate-y-3.75 translate-x-0.25 rotate-50 bg-gradient-to-r from-red-500 to-orange-500"
-            : ""
+            : "barDarkMode"
         }`}
       ></div>
     </div>
@@ -280,7 +281,7 @@ function HamburgerMenu({ isOpenMenu, setIsOpenMenu, loggedInUser }) {
   return (
     <ul
       ref={hamburgerMenuRef}
-      className={`absolute right-0 top-16 z-10 flex w-full flex-col overflow-hidden rounded-xl bg-slate-200 px-2 pb-2 pt-6 shadow-md transition-all duration-75 ease-out md:hidden ${
+      className={`absolute right-0 top-16 z-10 flex w-full flex-col overflow-hidden rounded-xl bg-slate-200 px-2 pb-2 pt-6 shadow-md transition-all duration-75 ease-out dark:top-20 dark:bg-slate-800 dark:text-white md:hidden ${
         isOpenMenu
           ? "max-h-screen rounded-t-none opacity-100"
           : "max-h-0 opacity-0"
@@ -341,13 +342,17 @@ function HamburgerItem({
           <div className="flex py-1">
             <div
               className={`flex items-center justify-center ${
-                isActive ? "text-emerald-900" : ""
+                isActive ? "text-emerald-900 dark:text-yellow-500" : ""
               }`}
             >
               {children}
             </div>
-            <div className="ml-1 mt-1 text-sm text-slate-900 sm:text-base">
-              <span className={isActive ? "text-emerald-700" : ""}>
+            <div className="ml-1 mt-1 text-sm text-slate-900 dark:text-white sm:text-base">
+              <span
+                className={
+                  isActive ? "text-emerald-700 dark:text-yellow-400" : ""
+                }
+              >
                 {title}
               </span>
             </div>
@@ -414,9 +419,11 @@ function NavigationMenu({ loggedInUser }) {
 
 function NavigationItem({ to, title, loggedInUser, isCondition = false }) {
   return (
-    <li className="transition-all hover:rounded-md hover:bg-slate-300">
+    <li className="transition-all hover:rounded-md hover:bg-slate-300 dark:hover:bg-slate-700">
       <NavLink
-        className={({ isActive }) => (isActive ? "text-emerald-700" : "")}
+        className={({ isActive }) =>
+          isActive ? "text-emerald-700 dark:text-yellow-400" : "dark:text-white"
+        }
         to={`${isCondition ? (loggedInUser ? to.bookmarks : to.login) : to}`}
       >
         <span className="block px-2 py-4 font-semibold">{title}</span>
@@ -425,10 +432,19 @@ function NavigationItem({ to, title, loggedInUser, isCondition = false }) {
   );
 }
 
-function AppLogo() {
+function AppLogo({ selectedTheme, systemTheme }) {
   return (
     <div className="w-16">
-      <img className="block" src={appLogo} alt="App-Logo" />
+      <img
+        className="block"
+        src={
+          selectedTheme === "dark" ||
+          (selectedTheme === "system" && systemTheme)
+            ? appLogoDarkMode
+            : appLogo
+        }
+        alt="App-Logo"
+      />
     </div>
   );
 }
@@ -464,14 +480,14 @@ function UserPanel({ loggedInUser }) {
       {/* User Panel Button */}
       <div
         onClick={() => setIsShowUserPanel(!isShowUserPanel)}
-        className="flex cursor-pointer rounded-xl bg-slate-300 p-1"
+        className="flex cursor-pointer rounded-xl bg-slate-300 p-1 dark:bg-slate-700"
       >
         <MiniIcon>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
             fill="currentColor"
-            className="h-5 w-5 text-emerald-800"
+            className="h-5 w-5 text-emerald-800 dark:text-white"
           >
             <path
               fillRule="evenodd"
@@ -488,7 +504,7 @@ function UserPanel({ loggedInUser }) {
             viewBox="0 0 24 24"
             strokeWidth="1.5"
             stroke="currentColor"
-            className="h-5 w-5 text-emerald-800"
+            className="h-5 w-5 text-emerald-800 dark:text-white"
           >
             <path
               strokeLinecap="round"
@@ -501,12 +517,12 @@ function UserPanel({ loggedInUser }) {
 
       {/* User Panel */}
       <div
-        className={`absolute right-0 top-8 w-40 flex-col rounded-lg bg-slate-100 px-2 py-3 shadow-lg ${
+        className={`absolute right-0 top-8 w-40 flex-col rounded-lg bg-slate-100 px-2 py-3 shadow-lg dark:bg-slate-700 ${
           isShowUserPanel ? "flex" : "hidden"
         }`}
       >
         {/* User Specs */}
-        <div className="mb-1 flex flex-col px-1 text-emerald-800">
+        <div className="mb-1 flex flex-col px-1 text-emerald-800 dark:text-white">
           {/* Username Spec */}
           <div className="mb-1 flex justify-between">
             <UserSpec spec={username}>
@@ -573,7 +589,7 @@ function UserPanel({ loggedInUser }) {
         </div>
 
         {/* Separator Line */}
-        <div className="mb-2 border-b border-slate-400 opacity-30"></div>
+        <div className="mb-2 border-b border-slate-400 opacity-30 dark:border-slate-50"></div>
 
         {/* Sign out Section */}
         <div
@@ -587,7 +603,7 @@ function UserPanel({ loggedInUser }) {
               viewBox="0 0 24 24"
               strokeWidth="1.5"
               stroke="currentColor"
-              className="h-4 w-4 text-red-700"
+              className="h-4 w-4 text-red-700 dark:text-red-600"
             >
               <path
                 strokeLinecap="round"
@@ -596,7 +612,7 @@ function UserPanel({ loggedInUser }) {
               />
             </svg>
           </MiniIcon>
-          <span className="pointer-events-none ml-1 block text-sm capitalize text-red-700">
+          <span className="pointer-events-none ml-1 mt-0.25 block text-sm capitalize text-red-700 dark:text-red-600">
             sign out
           </span>
         </div>
@@ -609,7 +625,7 @@ function AuthenticationMessage({ loggedInUser }) {
   const { username, avatar, fullName, phoneNumber, gender } = loggedInUser;
 
   return (
-    <div className="mb-4 flex flex-col rounded-lg bg-emerald-800 px-3 py-2 shadow-lg">
+    <div className="mb-4 flex flex-col rounded-lg bg-emerald-800 px-3 py-2 shadow-lg dark:bg-slate-700">
       <div className="mb-2 text-center text-white">
         <span className="block w-full">{`Welcome ${
           gender === "male" ? "Mr." : "Mrs."
@@ -720,7 +736,7 @@ function ThemeMenu({ isOpenThemeMenu, onSetTheme, setTheme, theme }) {
   return (
     <div
       ref={themeMenuRef}
-      className={`absolute left-16 top-26 flex w-28 flex-col items-start overflow-hidden rounded-xl bg-slate-200 md:top-28 ${
+      className={`absolute left-16 top-26 flex w-28 flex-col items-start overflow-hidden rounded-xl bg-slate-200 dark:top-30 dark:bg-slate-700 md:top-28 ${
         isOpenThemeMenu ? "flex" : "hidden"
       }`}
     >
@@ -735,7 +751,7 @@ function ThemeOption({ title, value, children, onSetTheme }) {
       <button
         onClick={onSetTheme}
         value={value}
-        className="flex w-full cursor-pointer px-2 pt-2 text-emerald-900"
+        className="flex w-full cursor-pointer px-2 pt-2 text-emerald-900 dark:text-white"
       >
         <div className="pointer-events-none">{children}</div>
         <span className="pointer-events-none ml-1">{title}</span>

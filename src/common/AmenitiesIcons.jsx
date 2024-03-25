@@ -14,43 +14,43 @@ function AmenitiesIcons({ item }) {
       case "tv":
         return (
           <IconContainer>
-            <TvIcon className="h-5 w-5 text-indigo-950" />
+            <TvIcon className="amenitiesIcon" />
           </IconContainer>
         );
       case "wireless_internet":
         return (
           <IconContainer>
-            <WifiIcon className="h-5 w-5 text-indigo-950" />
+            <WifiIcon className="amenitiesIcon" />
           </IconContainer>
         );
       case "safety_card":
         return (
           <IconContainer>
-            <CreditCardIcon className="h-5 w-5 text-indigo-950" />
+            <CreditCardIcon className="amenitiesIcon" />
           </IconContainer>
         );
       case "fire_extinguisher":
         return (
           <IconContainer>
-            <FireIcon className="h-5 w-5 text-indigo-950" />
+            <FireIcon className="amenitiesIcon" />
           </IconContainer>
         );
       case "first_aid_kit":
         return (
           <IconContainer>
-            <LifebuoyIcon className="h-5 w-5 text-indigo-950" />
+            <LifebuoyIcon className="amenitiesIcon" />
           </IconContainer>
         );
       case "breakfast":
         return (
           <IconContainer>
-            <BellAlertIcon className="h-5 w-5 text-indigo-950" />
+            <BellAlertIcon className="amenitiesIcon" />
           </IconContainer>
         );
       case "laptop_friendly_workspace":
         return (
           <IconContainer>
-            <ComputerDesktopIcon className="h-5 w-5 text-indigo-950" />
+            <ComputerDesktopIcon className="amenitiesIcon" />
           </IconContainer>
         );
       default:

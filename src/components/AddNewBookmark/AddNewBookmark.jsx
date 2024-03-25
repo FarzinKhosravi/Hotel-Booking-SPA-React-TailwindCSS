@@ -161,7 +161,7 @@ function AddNewBookmark() {
         <div className="pr-2">
           <form
             onSubmit={formik.handleSubmit}
-            className="rounded-xl bg-slate-200 p-4"
+            className="rounded-xl bg-slate-200 p-4 dark:bg-slate-800"
           >
             {/* Location Data */}
             <div className="mb-12 flex flex-col">
@@ -181,7 +181,7 @@ function AddNewBookmark() {
                     />
                   </svg>
                 </span>
-                <span className="ml-1 font-semibold text-emerald-800">
+                <span className="ml-1 font-semibold text-emerald-800 dark:text-white">
                   Your Location Data :
                 </span>
               </div>
@@ -193,7 +193,7 @@ function AddNewBookmark() {
 
                   {/* Continent */}
                   <div className="relative mb-10 flex w-full items-center justify-start">
-                    <div className="absolute -top-3 left-0 flex justify-start rounded-xl bg-white px-4 py-2 font-semibold sm:top-0">
+                    <div className="absolute -top-3 left-0 flex justify-start rounded-xl bg-white px-4 py-2 font-semibold dark:bg-slate-600 dark:text-white sm:top-0">
                       <span className="block">Continent</span>
                       <span className="ml-2 block">
                         <ReactCountryFlag
@@ -203,14 +203,14 @@ function AddNewBookmark() {
                         />
                       </span>
                     </div>
-                    <div className="h-auto w-full rounded-xl bg-emerald-800 px-2 pb-2 pt-8 text-white shadow-lg sm:pl-34 sm:pt-2">
+                    <div className="h-auto w-full rounded-xl bg-emerald-800 px-2 pb-2 pt-8 text-white shadow-lg dark:bg-slate-700 sm:pl-34 sm:pt-2">
                       {selectedLocation.continent}
                     </div>
                   </div>
 
                   {/* Country */}
                   <div className="relative flex w-full items-center justify-start">
-                    <div className="absolute -top-4 left-0 flex justify-start rounded-xl bg-white px-4 py-2 font-semibold sm:top-0">
+                    <div className="absolute -top-4 left-0 flex justify-start rounded-xl bg-white px-4 py-2 font-semibold dark:bg-slate-600 dark:text-white sm:top-0">
                       <span className="block">Country</span>
                       <span className="ml-2 block">
                         <ReactCountryFlag
@@ -221,7 +221,7 @@ function AddNewBookmark() {
                       </span>
                     </div>
 
-                    <div className="h-auto w-full whitespace-nowrap rounded-xl bg-emerald-800 px-2 pb-2 pt-8 text-white shadow-lg sm:pl-32 sm:pt-2">
+                    <div className="h-auto w-full whitespace-nowrap rounded-xl bg-emerald-800 px-2 pb-2 pt-8 text-white shadow-lg dark:bg-slate-700 sm:pl-32 sm:pt-2">
                       {selectedLocation.countryName.slice(0, 15).trim()}
                     </div>
                   </div>
@@ -232,20 +232,20 @@ function AddNewBookmark() {
 
                   {/* City */}
                   <div className="relative mb-10 flex w-full items-center justify-start">
-                    <div className="absolute -top-4 left-0 rounded-xl bg-white px-6.88 py-2 font-semibold sm:top-0 lg:px-5">
+                    <div className="absolute -top-4 left-0 rounded-xl bg-white px-6.88 py-2 font-semibold dark:bg-slate-600 dark:text-white sm:top-0 lg:px-5">
                       City
                     </div>
-                    <div className="h-auto w-full rounded-xl bg-emerald-800 px-2 pb-2 pt-8 text-white shadow-lg sm:pl-24 sm:pt-2 lg:pl-20">
+                    <div className="h-auto w-full rounded-xl bg-emerald-800 px-2 pb-2 pt-8 text-white shadow-lg dark:bg-slate-700 sm:pl-24 sm:pt-2 lg:pl-20">
                       {selectedLocation.city}
                     </div>
                   </div>
 
                   {/* Locality */}
                   <div className="relative flex w-full items-center justify-start">
-                    <div className="absolute -top-4 left-0 rounded-xl bg-white px-4 py-2 font-semibold sm:top-0 lg:px-3.5">
+                    <div className="absolute -top-4 left-0 rounded-xl bg-white px-4 py-2 font-semibold dark:bg-slate-600 dark:text-white sm:top-0 lg:px-3.5">
                       Locality
                     </div>
-                    <div className="h-auto w-full whitespace-nowrap rounded-xl bg-emerald-800 px-2 pb-2 pt-8 text-white shadow-lg sm:pl-24 sm:pt-2 lg:pl-24">
+                    <div className="h-auto w-full whitespace-nowrap rounded-xl bg-emerald-800 px-2 pb-2 pt-8 text-white shadow-lg dark:bg-slate-700 sm:pl-24 sm:pt-2 lg:pl-24">
                       {selectedLocation.locality.slice(0, 10).trim()}
                     </div>
                   </div>
@@ -259,7 +259,7 @@ function AddNewBookmark() {
                     viewBox="0 0 20 20"
                     fill="currentColor"
                     data-slot="icon"
-                    className="h-5 w-5"
+                    className="h-5 w-5 dark:text-white"
                   >
                     <path d="M3 10a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0ZM8.5 10a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0ZM15.5 8.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Z" />
                   </svg>
@@ -271,20 +271,20 @@ function AddNewBookmark() {
 
                 {/* Location Name */}
                 <div className="relative mb-10 flex w-full items-center justify-start sm:mb-0">
-                  <div className="absolute -top-4 left-0 rounded-xl bg-white px-4 py-2 font-semibold sm:top-0">
+                  <div className="absolute -top-4 left-0 rounded-xl bg-white px-4 py-2 font-semibold dark:bg-slate-600 dark:text-white sm:top-0">
                     Location Name
                   </div>
-                  <div className="h-auto w-full rounded-xl bg-emerald-800 px-2 pb-2 pt-8 text-white shadow-lg sm:pl-34 sm:pt-2">
+                  <div className="h-auto w-full rounded-xl bg-emerald-800 px-2 pb-2 pt-8 text-white shadow-lg dark:bg-slate-700 sm:pl-34 sm:pt-2">
                     {selectedLocation.locationName}
                   </div>
                 </div>
 
                 {/* Price */}
                 <div className="relative flex w-full items-center justify-start">
-                  <div className="absolute -top-4 left-0 rounded-xl bg-white px-4 py-2.5 font-semibold sm:top-0">
+                  <div className="absolute -top-4 left-0 rounded-xl bg-white px-4 py-2.5 font-semibold dark:bg-slate-600 dark:text-white sm:top-0">
                     Price
                   </div>
-                  <div className="inline-flex h-auto w-full items-center justify-start whitespace-nowrap rounded-xl bg-emerald-800 pb-2 pl-2 pt-9 text-white shadow-lg sm:pl-20 sm:pt-2">
+                  <div className="inline-flex h-auto w-full items-center justify-start whitespace-nowrap rounded-xl bg-emerald-800 pb-2 pl-2 pt-9 text-white shadow-lg dark:bg-slate-700 sm:pl-20 sm:pt-2">
                     <span className="mr-1 block text-slate-200">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -329,7 +329,7 @@ function AddNewBookmark() {
                     />
                   </svg>
                 </span>
-                <span className="ml-1 font-semibold text-emerald-800">
+                <span className="ml-1 font-semibold text-emerald-800 dark:text-white">
                   Please Enter Your Bookmark Information :
                 </span>
               </div>
@@ -343,12 +343,12 @@ function AddNewBookmark() {
                   {/* User Bookmark Name Input */}
                   <div className="mb-2 flex w-full items-center justify-start sm:relative">
                     <div
-                      className={`absolute -top-3 left-0 rounded-xl bg-white p-2 font-semibold sm:top-0 ${
+                      className={`absolute -top-3 left-0 rounded-xl bg-white p-2 font-semibold dark:bg-slate-600 sm:top-0 ${
                         (formik.errors.bookmarkName &&
                           formik.touched.bookmarkName) ||
                         duplicateBookmarkName
-                          ? "text-red-700"
-                          : ""
+                          ? "text-red-700 dark:text-red-600"
+                          : "dark:text-white"
                       }`}
                     >
                       Your Bookmark Name
@@ -367,11 +367,11 @@ function AddNewBookmark() {
                             ? "Don't Forget Name of Bookmark 💡"
                             : "Enter Your Bookmark Name..."
                         }
-                        className={`block h-16 w-full rounded-xl border-0 bg-emerald-800 from-emerald-700 to-emerald-900 pb-6 pt-12 text-base text-white shadow-lg placeholder:text-white focus:bg-gradient-to-r focus:bg-clip-text focus:text-emerald-700 focus:placeholder:text-slate-500 focus:placeholder:opacity-50 sm:h-auto sm:pb-2 sm:pl-44 sm:pt-2 ${
+                        className={`block h-16 w-full rounded-xl border-0 bg-emerald-800 from-emerald-700 to-emerald-900 pb-6 pt-12 text-base text-white shadow-lg placeholder:text-white focus:bg-gradient-to-r focus:bg-clip-text focus:text-emerald-700 focus:placeholder:text-slate-500 focus:placeholder:opacity-50 dark:bg-slate-700 dark:from-slate-700 dark:to-slate-800 dark:focus:text-white sm:h-auto sm:pb-2 sm:pl-44 sm:pt-2 ${
                           (formik.errors.bookmarkName &&
                             formik.touched.bookmarkName) ||
                           duplicateBookmarkName
-                            ? "bg-red-700"
+                            ? "bg-red-700 dark:bg-red-600"
                             : ""
                         }`}
                       />
@@ -400,7 +400,7 @@ function AddNewBookmark() {
                   {/* User Bookmark Description Input */}
                   <div className="relative mb-2 flex w-full items-center justify-start">
                     <div
-                      className={`absolute -top-3 left-0 rounded-xl bg-white p-2 font-semibold ${
+                      className={`absolute -top-3 left-0 rounded-xl bg-white p-2 font-semibold dark:bg-slate-600 dark:text-white ${
                         formik.errors.bookmarkDescription &&
                         formik.touched.bookmarkDescription
                           ? "text-red-700"
@@ -416,7 +416,7 @@ function AddNewBookmark() {
                         onBlur={formik.handleBlur}
                         value={formik.values.bookmarkDescription}
                         placeholder="Enter Your Bookmark Description (Optional) ..."
-                        className={`block w-full resize-none rounded-xl border-0 bg-emerald-800 from-emerald-700 to-emerald-900 px-2 pb-2 pt-8 text-base text-white shadow-lg placeholder:text-white focus:bg-gradient-to-r focus:bg-clip-text focus:text-emerald-700 focus:placeholder:text-slate-500 focus:placeholder:opacity-50 ${
+                        className={`block w-full resize-none rounded-xl border-0 bg-emerald-800 from-emerald-700 to-emerald-900 px-2 pb-2 pt-8 text-base text-white shadow-lg placeholder:text-white focus:bg-gradient-to-r focus:bg-clip-text focus:text-emerald-700 focus:placeholder:text-slate-500 focus:placeholder:opacity-50 dark:bg-slate-700 dark:from-slate-700 dark:to-slate-800 dark:focus:text-white ${
                           formik.errors.bookmarkDescription &&
                           formik.touched.bookmarkDescription
                             ? "bg-red-700"
@@ -444,7 +444,7 @@ function AddNewBookmark() {
               <button
                 type="submit"
                 disabled={!formik.isValid}
-                className="block w-full rounded-xl bg-emerald-800 shadow-lg disabled:bg-gray-500"
+                className="block w-full rounded-xl bg-emerald-800 shadow-lg disabled:bg-gray-500 dark:bg-slate-700 dark:disabled:bg-slate-400"
               >
                 <div className="flex items-center justify-center">
                   <div className="w-full p-4">

@@ -217,20 +217,20 @@ function HotelsPage() {
             <div className="mb-6">
               {/* Filter Title */}
               <div className="mb-2 pl-1">
-                <h2 className="bg-gradient-to-r from-emerald-700 to-emerald-900 bg-clip-text text-lg font-semibold text-transparent">
+                <h2 className="bg-gradient-to-r from-emerald-700 to-emerald-900 bg-clip-text text-lg font-semibold text-transparent dark:from-slate-50 dark:to-slate-100">
                   Go Find Your Hotel :
                 </h2>
               </div>
 
               {/* Filter Main Section */}
-              <div className="rounded-xl bg-slate-200 p-4 shadow-lg">
+              <div className="rounded-xl bg-slate-200 p-4 shadow-lg dark:bg-slate-800">
                 {/* Search Box */}
                 <div className="mb-6">
                   <div className="mb-3 flex justify-start">
                     <div>
-                      <MapPinIcon className="h-5 w-5 text-emerald-700" />
+                      <MapPinIcon className="h-5 w-5 text-emerald-700 dark:text-white" />
                     </div>
-                    <h3 className="ml-1 bg-gradient-to-r from-emerald-700 to-emerald-900 bg-clip-text font-semibold text-transparent">
+                    <h3 className="ml-1 bg-gradient-to-r from-emerald-700 to-emerald-900 bg-clip-text font-semibold text-transparent dark:from-slate-50 dark:to-slate-100">
                       Which City Do You Want a Hotel ?
                     </h3>
                   </div>
@@ -244,7 +244,7 @@ function HotelsPage() {
                         })
                       }
                       value={hotelSpecs.destination}
-                      className={`block w-full rounded-xl border-0 bg-slate-300 from-emerald-700 to-emerald-900 text-base text-emerald-900 shadow-lg placeholder:text-sm placeholder:opacity-50 focus:bg-gradient-to-r focus:bg-clip-text ${
+                      className={`block w-full rounded-xl border-0 bg-slate-300 from-emerald-700 to-emerald-900 text-base text-emerald-900 shadow-lg placeholder:text-sm placeholder:opacity-50 focus:bg-gradient-to-r focus:bg-clip-text dark:bg-slate-700 dark:text-white dark:placeholder:text-white dark:placeholder:opacity-100 ${
                         isValidDestination || hotelSpecs.destination
                           ? ""
                           : "border-2 border-red-600 placeholder:text-red-800"
@@ -254,13 +254,14 @@ function HotelsPage() {
                     />
                   </div>
                 </div>
+
                 {/* Date Box */}
                 <div className="mb-6">
                   <div className="mb-3 flex justify-start">
                     <div>
-                      <CalendarIcon className="h-5 w-5 text-emerald-700" />
+                      <CalendarIcon className="h-5 w-5 text-emerald-700 dark:text-white" />
                     </div>
-                    <h3 className="ml-1 bg-gradient-to-r from-emerald-700 to-emerald-900 bg-clip-text font-semibold text-transparent">
+                    <h3 className="ml-1 bg-gradient-to-r from-emerald-700 to-emerald-900 bg-clip-text font-semibold text-transparent dark:from-slate-50 dark:to-slate-100">
                       How Long is Your Stay ?
                     </h3>
                   </div>
@@ -268,17 +269,19 @@ function HotelsPage() {
                   <div className="relative flex w-full flex-col items-center justify-center">
                     <div
                       onClick={() => setIsOpenCalendar(!isOpenCalendar)}
-                      className="w-full rounded-2xl bg-slate-100 shadow-lg"
+                      className="w-full rounded-2xl bg-slate-100 shadow-lg dark:bg-slate-700"
                     >
                       <div className="mx-auto flex w-full max-w-[256px] items-center justify-around px-4 py-2 font-semibold">
-                        <span className="text-emerald-700">{`${format(
+                        <span className="text-emerald-700 dark:text-white">{`${format(
                           calendar[0].startDate,
                           "MM/dd/yyyy"
                         )}`}</span>
 
-                        <span className="text-emerald-700">To</span>
+                        <span className="text-emerald-700 dark:text-white">
+                          To
+                        </span>
 
-                        <span className="text-emerald-700">{`${format(
+                        <span className="text-emerald-700 dark:text-white">{`${format(
                           calendar[0].endDate,
                           "MM/dd/yyyy"
                         )}`}</span>
@@ -298,13 +301,14 @@ function HotelsPage() {
                     </div>
                   </div>
                 </div>
+
                 {/* Number Box */}
                 <div className="mb-12">
                   <div className="mb-6 flex justify-start">
                     <div>
-                      <UserGroupIcon className="h-5 w-5 text-emerald-700" />
+                      <UserGroupIcon className="h-5 w-5 text-emerald-700 dark:text-white" />
                     </div>
-                    <h3 className="ml-1 bg-gradient-to-r from-emerald-700 to-emerald-900 bg-clip-text font-semibold text-transparent">
+                    <h3 className="ml-1 bg-gradient-to-r from-emerald-700 to-emerald-900 bg-clip-text font-semibold text-transparent dark:from-slate-50 dark:to-slate-100">
                       Determine the Number of People and Your Rooms :
                     </h3>
                   </div>
@@ -325,6 +329,7 @@ function HotelsPage() {
                           Adult
                         </span>
                       </div>
+
                       <div className="flex items-center justify-center">
                         <div className="flex">
                           <button
@@ -358,7 +363,7 @@ function HotelsPage() {
                               />
                             </svg>
                           </button>
-                          <span className="ml-4 text-lg font-semibold">
+                          <span className="ml-4 text-lg font-semibold dark:text-white">
                             {hotelSpecs.number.adult}
                           </span>
                           <button
@@ -403,6 +408,7 @@ function HotelsPage() {
                           Children
                         </span>
                       </div>
+
                       <div className="flex items-center justify-center">
                         <div className="flex">
                           <button
@@ -436,7 +442,7 @@ function HotelsPage() {
                               />
                             </svg>
                           </button>
-                          <span className="ml-4 text-lg font-semibold">
+                          <span className="ml-4 text-lg font-semibold dark:text-white">
                             {hotelSpecs.number.children}
                           </span>
                           <button
@@ -481,6 +487,7 @@ function HotelsPage() {
                           Rooms
                         </span>
                       </div>
+
                       <div className="flex items-center justify-center">
                         <div className="flex">
                           <button
@@ -514,7 +521,7 @@ function HotelsPage() {
                               />
                             </svg>
                           </button>
-                          <span className="ml-4 text-lg font-semibold">
+                          <span className="ml-4 text-lg font-semibold dark:text-white">
                             {hotelSpecs.number.rooms}
                           </span>
                           <button
@@ -550,7 +557,7 @@ function HotelsPage() {
                 <div>
                   <button
                     onClick={filterHotelsHandler}
-                    className="block w-full rounded-xl bg-emerald-700 px-4 py-2 shadow-lg"
+                    className="block w-full rounded-xl bg-emerald-700 px-4 py-2 shadow-lg dark:bg-slate-700"
                   >
                     <div className="flex items-center justify-between">
                       <div>
@@ -580,7 +587,7 @@ function HotelsPage() {
             <div>
               {/* Hotel Section Title */}
               <div className="mb-2 pl-1">
-                <h2 className="bg-gradient-to-r from-emerald-700 to-emerald-900 bg-clip-text text-lg font-semibold text-transparent">
+                <h2 className="bg-gradient-to-r from-emerald-700 to-emerald-900 bg-clip-text text-lg font-semibold text-transparent dark:from-slate-50 dark:to-slate-100">
                   Book Your Favorite Hotel :
                 </h2>
               </div>
@@ -603,7 +610,7 @@ function HotelsPage() {
                           5
                         )} Hotel`}&isReservedHotel=${hotel.hotelReserved}`}
                       >
-                        <div className="overflow-hidden rounded-xl bg-slate-200 shadow-lg">
+                        <div className="overflow-hidden rounded-xl bg-slate-200 shadow-lg dark:bg-slate-800">
                           {/* Reserved Hotel Section */}
                           <div
                             className={`mb-1 w-full items-center justify-center bg-rose-600 py-2 font-semibold text-white shadow-md ${
@@ -656,8 +663,9 @@ function HotelsPage() {
                                   alt={hotel.name}
                                 />
                               </div>
+
                               <div className="absolute top-2 flex w-full items-center justify-between px-2">
-                                <div className="flex items-center rounded-xl bg-white px-2">
+                                <div className="flex items-center rounded-xl bg-white px-2 dark:bg-slate-700">
                                   <span className="block text-red-600">
                                     <svg
                                       xmlns="http://www.w3.org/2000/svg"
@@ -669,11 +677,12 @@ function HotelsPage() {
                                       <path d="m9.653 16.915-.005-.003-.019-.01a20.759 20.759 0 0 1-1.162-.682 22.045 22.045 0 0 1-2.582-1.9C4.045 12.733 2 10.352 2 7.5a4.5 4.5 0 0 1 8-2.828A4.5 4.5 0 0 1 18 7.5c0 2.852-2.044 5.233-3.885 6.82a22.049 22.049 0 0 1-3.744 2.582l-.019.01-.005.003h-.002a.739.739 0 0 1-.69.001l-.002-.001Z" />
                                     </svg>
                                   </span>
-                                  <span className="ml-1 font-semibold text-emerald-700">
+                                  <span className="ml-1 font-semibold text-emerald-700 dark:text-white">
                                     10
                                   </span>
                                 </div>
-                                <div className="flex items-center rounded-xl bg-white px-2">
+
+                                <div className="flex items-center rounded-xl bg-white px-2 dark:bg-slate-700">
                                   <span className="block text-yellow-400">
                                     <svg
                                       xmlns="http://www.w3.org/2000/svg"
@@ -689,7 +698,7 @@ function HotelsPage() {
                                       />
                                     </svg>
                                   </span>
-                                  <span className="ml-1 font-semibold text-emerald-700">
+                                  <span className="ml-1 font-semibold text-emerald-700 dark:text-white">
                                     20
                                   </span>
                                 </div>
@@ -698,7 +707,7 @@ function HotelsPage() {
 
                             {/* Hotel Name */}
                             <div className="mb-4 text-center">
-                              <span className="font-Parisienne text-lg font-semibold capitalize italic text-emerald-700">
+                              <span className="text-lg font-semibold capitalize italic text-emerald-700 dark:text-white">
                                 {hotel.name}
                               </span>
                             </div>
@@ -706,7 +715,7 @@ function HotelsPage() {
                             {/* Hotel Location */}
                             <div className="mb-8 flex items-center justify-between">
                               <div className="flex flex-col">
-                                <span className="font-semibold text-emerald-700">
+                                <span className="font-semibold text-emerald-700 dark:text-white">
                                   {hotel.smart_location.split(",")[1].trim()}
                                 </span>
                                 <span>
@@ -723,16 +732,16 @@ function HotelsPage() {
                                   viewBox="0 0 20 20"
                                   fill="currentColor"
                                   data-slot="icon"
-                                  className="h-5 w-5"
+                                  className="h-5 w-5 dark:text-white"
                                 >
                                   <path d="M3 10a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0ZM8.5 10a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0ZM15.5 8.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Z" />
                                 </svg>
                               </span>
                               <div className="flex flex-col">
-                                <span className="font-semibold text-emerald-700">
+                                <span className="font-semibold text-emerald-700 dark:text-white">
                                   {hotel.state}
                                 </span>
-                                <span className="font-semibold text-emerald-700">
+                                <span className="font-semibold text-emerald-700 dark:text-white">
                                   {hotel.smart_location.split(",")[0]}
                                 </span>
                               </div>
@@ -753,7 +762,7 @@ function HotelsPage() {
                                 onClick={(e) =>
                                   hotelReserveHandler(e, hotel.id)
                                 }
-                                className={`block w-full rounded-xl bg-emerald-700 px-4 py-2 shadow-lg disabled:bg-gray-400 ${
+                                className={`block w-full rounded-xl bg-emerald-700 px-4 py-2 shadow-lg disabled:bg-gray-400 dark:bg-slate-700 dark:disabled:bg-slate-400 ${
                                   hotel.hotelReserved
                                     ? "cursor-not-allowed"
                                     : ""

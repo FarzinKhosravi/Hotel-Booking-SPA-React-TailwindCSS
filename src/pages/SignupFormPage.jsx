@@ -1,6 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import introIcon from "../assets/images/introIcon.png";
-import separator from "../assets/images/separator.png";
 import BackButton from "../common/BackButton";
 import { useFormik } from "formik";
 import * as Yup from "yup";
@@ -8,6 +6,7 @@ import toast from "react-hot-toast";
 import getUsers from "../services/getUsersService";
 import createUser from "../services/createUserService";
 import { Link, useNavigate } from "react-router-dom";
+import Wellcome from "../common/Wellcome";
 
 const fields = [
   { name: "username", message: "Your Username is Already Selected 🧐" },
@@ -244,32 +243,7 @@ function SignupFormPage() {
   return (
     <section className="mb-20 min-h-screen px-4">
       <div>
-        {/* Intro Section */}
-        <div className="mb-16 flex flex-col">
-          <div className="mb-2 flex flex-col">
-            <span className="flex items-center justify-center font-Parisienne text-2xl text-indigo-950">
-              Welcome To
-            </span>
-            <div className="relative mx-auto flex h-20 max-w-[300px] items-center justify-center">
-              <h2 className="mr-4 font-Parisienne text-2xl text-indigo-950">
-                Hotel Booking Site
-              </h2>
-              <div className="absolute -top-1.25 right-4">
-                <img className="w-10" src={introIcon} alt="intro-Icon" />
-              </div>
-            </div>
-          </div>
-
-          <div className="mb-6 flex items-center justify-center">
-            <img className="block w-36" src={separator} alt="separator" />
-          </div>
-
-          <div className="flex w-full items-center justify-center">
-            <span className="block bg-img-home bg-cover bg-center bg-no-repeat font-Parisienne text-xl text-indigo-950">
-              We Wish You a Pleasant Trip
-            </span>
-          </div>
-        </div>
+        <Wellcome />
 
         {/* Signup Form Section */}
         <div>
@@ -290,7 +264,7 @@ function SignupFormPage() {
           <div>
             <form
               onSubmit={formik.handleSubmit}
-              className="rounded-xl bg-slate-200 p-4 shadow-lg"
+              className="rounded-xl bg-slate-200 p-4 shadow-lg dark:bg-slate-800"
             >
               {/* Signup Form Description */}
               <div className="mb-6 flex justify-start">
@@ -308,7 +282,7 @@ function SignupFormPage() {
                     />
                   </svg>
                 </span>
-                <span className="ml-1 text-sm font-semibold text-emerald-800">
+                <span className="ml-1 text-sm font-semibold text-emerald-800 dark:text-white">
                   You Can Register Through the Form Below :
                 </span>
               </div>
@@ -319,7 +293,7 @@ function SignupFormPage() {
                 <div className="pl-1">
                   <label
                     htmlFor="userName"
-                    className="cursor-pointer text-sm font-semibold text-emerald-900"
+                    className="cursor-pointer text-sm font-semibold text-emerald-900 dark:text-slate-200"
                   >
                     Username
                   </label>
@@ -332,7 +306,7 @@ function SignupFormPage() {
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 20 20"
                       fill="currentColor"
-                      className="h-5 w-5 text-emerald-900"
+                      className="h-5 w-5 text-emerald-900 dark:text-slate-200"
                     >
                       <path
                         fillRule="evenodd"
@@ -349,7 +323,7 @@ function SignupFormPage() {
                     onBlur={formik.handleBlur}
                     value={formik.values.username}
                     placeholder="Enter Username Please..."
-                    className="block w-full cursor-pointer rounded-xl border-0 bg-slate-300 from-emerald-700 to-emerald-900 pl-8 text-base text-emerald-900 shadow-lg placeholder:text-sm placeholder:opacity-50 focus:bg-gradient-to-r focus:bg-clip-text"
+                    className="block w-full cursor-pointer rounded-xl border-0 bg-slate-300 pl-8 text-base text-emerald-900 shadow-lg placeholder:text-sm placeholder:opacity-50 dark:bg-slate-700 dark:text-slate-200 dark:placeholder:text-slate-200 dark:placeholder:opacity-70"
                   />
                 </div>
 
@@ -375,7 +349,7 @@ function SignupFormPage() {
                 <div className="pl-1">
                   <label
                     htmlFor="fullName"
-                    className="cursor-pointer text-sm font-semibold text-emerald-900"
+                    className="cursor-pointer text-sm font-semibold text-emerald-900 dark:text-slate-200"
                   >
                     Full Name
                   </label>
@@ -388,7 +362,7 @@ function SignupFormPage() {
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 20 20"
                       fill="currentColor"
-                      className="h-5 w-5 text-emerald-900"
+                      className="h-5 w-5 text-emerald-900 dark:text-slate-200"
                     >
                       <path d="M10 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM3.465 14.493a1.23 1.23 0 0 0 .41 1.412A9.957 9.957 0 0 0 10 18c2.31 0 4.438-.784 6.131-2.1.43-.333.604-.903.408-1.41a7.002 7.002 0 0 0-13.074.003Z" />
                     </svg>
@@ -401,7 +375,7 @@ function SignupFormPage() {
                     onBlur={formik.handleBlur}
                     value={formik.values.fullName}
                     placeholder="Enter Full Name Please..."
-                    className="block w-full cursor-pointer rounded-xl border-0 bg-slate-300 from-emerald-700 to-emerald-900 pl-8 text-base text-emerald-900 shadow-lg placeholder:text-sm placeholder:opacity-50 focus:bg-gradient-to-r focus:bg-clip-text"
+                    className="block w-full cursor-pointer rounded-xl border-0 bg-slate-300 pl-8 text-base text-emerald-900 shadow-lg placeholder:text-sm placeholder:opacity-50 dark:bg-slate-700 dark:text-slate-200 dark:placeholder:text-slate-200 dark:placeholder:opacity-70"
                   />
                 </div>
 
@@ -421,7 +395,7 @@ function SignupFormPage() {
                 <div className="pl-1">
                   <label
                     htmlFor="email"
-                    className="cursor-pointer text-sm font-semibold text-emerald-900"
+                    className="cursor-pointer text-sm font-semibold text-emerald-900 dark:text-slate-200"
                   >
                     Email
                   </label>
@@ -434,7 +408,7 @@ function SignupFormPage() {
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 20 20"
                       fill="currentColor"
-                      className="h-5 w-5 text-emerald-900"
+                      className="h-5 w-5 text-emerald-900 dark:text-slate-200"
                     >
                       <path d="M3 4a2 2 0 0 0-2 2v1.161l8.441 4.221a1.25 1.25 0 0 0 1.118 0L19 7.162V6a2 2 0 0 0-2-2H3Z" />
                       <path d="m19 8.839-7.77 3.885a2.75 2.75 0 0 1-2.46 0L1 8.839V14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8.839Z" />
@@ -448,7 +422,7 @@ function SignupFormPage() {
                     onBlur={formik.handleBlur}
                     value={formik.values.email}
                     placeholder="Enter Email Please..."
-                    className="block w-full cursor-pointer rounded-xl border-0 bg-slate-300 from-emerald-700 to-emerald-900 pl-9 text-base text-emerald-900 shadow-lg placeholder:text-sm placeholder:opacity-50 focus:bg-gradient-to-r focus:bg-clip-text"
+                    className="block w-full cursor-pointer rounded-xl border-0 bg-slate-300 pl-9 text-base text-emerald-900 shadow-lg placeholder:text-sm placeholder:opacity-50 dark:bg-slate-700 dark:text-slate-200 dark:placeholder:text-slate-200 dark:placeholder:opacity-70"
                   />
                 </div>
 
@@ -474,7 +448,7 @@ function SignupFormPage() {
                 <div className="flex items-center justify-between px-1">
                   <label
                     htmlFor="phoneNumber"
-                    className="cursor-pointer text-sm font-semibold text-emerald-900"
+                    className="cursor-pointer text-sm font-semibold text-emerald-900 dark:text-slate-200"
                   >
                     Phone Number
                   </label>
@@ -504,7 +478,7 @@ function SignupFormPage() {
                       </svg>
                     </span>
                     <span
-                      className={`absolute right-0 top-5 z-50 rounded-xl bg-emerald-800 px-3 py-2 text-xs text-white
+                      className={`absolute right-0 top-5 z-50 rounded-xl bg-emerald-800 px-3 py-2 text-xs text-white dark:bg-slate-600
                       ${showGuide === "phoneNumber" ? "block" : "hidden"}
                       `}
                     >
@@ -524,7 +498,7 @@ function SignupFormPage() {
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 20 20"
                       fill="currentColor"
-                      className="h-5 w-5 text-emerald-900"
+                      className="h-5 w-5 text-emerald-900 dark:text-slate-200"
                     >
                       <path
                         fillRule="evenodd"
@@ -541,7 +515,7 @@ function SignupFormPage() {
                     onBlur={formik.handleBlur}
                     value={formik.values.phoneNumber}
                     placeholder="Enter Phone Number Please..."
-                    className="block w-full cursor-pointer rounded-xl border-0 bg-slate-300 from-emerald-700 to-emerald-900 pl-9 text-base text-emerald-900 shadow-lg placeholder:text-sm placeholder:opacity-50 focus:bg-gradient-to-r focus:bg-clip-text"
+                    className="block w-full cursor-pointer rounded-xl border-0 bg-slate-300 pl-9 text-base text-emerald-900 shadow-lg placeholder:text-sm placeholder:opacity-50 dark:bg-slate-700 dark:text-slate-200 dark:placeholder:text-slate-200 dark:placeholder:opacity-70"
                   />
                 </div>
 
@@ -561,7 +535,7 @@ function SignupFormPage() {
                 <div className="flex items-center justify-between px-1">
                   <label
                     htmlFor="age"
-                    className="cursor-pointer text-sm font-semibold text-emerald-900"
+                    className="cursor-pointer text-sm font-semibold text-emerald-900 dark:text-slate-200"
                   >
                     Age
                   </label>
@@ -591,8 +565,10 @@ function SignupFormPage() {
                       </svg>
                     </span>
                     <span
-                      className={`// absolute right-0 top-5 z-50 rounded-xl bg-emerald-800 px-3 py-2 text-xs
-                      text-white ${showGuide === "age" ? "block" : "hidden"}
+                      className={`// absolute right-0 top-5 z-50 rounded-xl bg-emerald-800 px-3 py-2 text-xs text-white
+                      dark:bg-slate-600 ${
+                        showGuide === "age" ? "block" : "hidden"
+                      }
                       `}
                     >
                       <span className="inline-block h-1 w-1 rounded-full bg-white"></span>
@@ -618,7 +594,7 @@ function SignupFormPage() {
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 20 20"
                       fill="currentColor"
-                      className="h-5 w-5 text-emerald-900"
+                      className="h-5 w-5 text-emerald-900 dark:text-slate-200"
                     >
                       <path
                         fillRule="evenodd"
@@ -638,7 +614,7 @@ function SignupFormPage() {
                     onBlur={formik.handleBlur}
                     value={formik.values.age}
                     placeholder="Enter Age Please..."
-                    className="remove-arrow m-0 block w-full cursor-pointer appearance-none rounded-xl border-0 bg-slate-300 from-emerald-700 to-emerald-900 pl-9 text-base text-emerald-900 shadow-lg placeholder:text-sm placeholder:opacity-50 focus:bg-gradient-to-r focus:bg-clip-text"
+                    className="remove-arrow m-0 block w-full cursor-pointer appearance-none rounded-xl border-0 bg-slate-300 pl-9 text-base text-emerald-900 shadow-lg placeholder:text-sm placeholder:opacity-50 dark:bg-slate-700 dark:text-slate-200 dark:placeholder:text-slate-200 dark:placeholder:opacity-70"
                   />
                 </div>
 
@@ -656,13 +632,13 @@ function SignupFormPage() {
               <div className="mb-4">
                 {/* Gender Field Title */}
                 <div className="pl-1">
-                  <span className="text-sm font-semibold text-emerald-900">
+                  <span className="text-sm font-semibold text-emerald-900 dark:text-slate-200">
                     Gender
                   </span>
                 </div>
 
                 {/* Radio Buttons Container */}
-                <div className="mb-1 flex items-center justify-start rounded-xl bg-slate-300 p-4 shadow-lg">
+                <div className="mb-1 flex items-center justify-start rounded-xl bg-slate-300 p-4 shadow-lg dark:bg-slate-700">
                   <div className="flex">
                     <input
                       type="radio"
@@ -672,9 +648,12 @@ function SignupFormPage() {
                       onBlur={formik.handleBlur}
                       value="male"
                       checked={formik.values.gender === "male"}
-                      className="h-4 w-4 text-emerald-900 focus:ring-emerald-800"
+                      className="h-4 w-4 text-emerald-900 focus:ring-emerald-800 dark:text-yellow-500 dark:focus:ring-yellow-400"
                     />
-                    <label htmlFor="male" className="ml-1 text-sm">
+                    <label
+                      htmlFor="male"
+                      className="ml-1 text-sm dark:text-slate-200"
+                    >
                       Male
                     </label>
                   </div>
@@ -687,9 +666,12 @@ function SignupFormPage() {
                       onBlur={formik.handleBlur}
                       value="female"
                       checked={formik.values.gender === "female"}
-                      className="h-4 w-4 text-emerald-900 focus:ring-emerald-800"
+                      className="h-4 w-4 text-emerald-900 focus:ring-emerald-800 dark:text-yellow-500 dark:focus:ring-yellow-400"
                     />
-                    <label htmlFor="female" className="ml-1 text-sm">
+                    <label
+                      htmlFor="female"
+                      className="ml-1 text-sm dark:text-slate-200"
+                    >
                       Female
                     </label>
                   </div>
@@ -711,7 +693,7 @@ function SignupFormPage() {
                 <div className="pl-1">
                   <label
                     htmlFor="password"
-                    className="cursor-pointer text-sm font-semibold text-emerald-900"
+                    className="cursor-pointer text-sm font-semibold text-emerald-900 dark:text-slate-200"
                   >
                     Password
                   </label>
@@ -724,7 +706,7 @@ function SignupFormPage() {
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 20 20"
                       fill="currentColor"
-                      className="h-5 w-5 text-emerald-900"
+                      className="h-5 w-5 text-emerald-900 dark:text-slate-200"
                     >
                       <path
                         fillRule="evenodd"
@@ -741,7 +723,7 @@ function SignupFormPage() {
                     onBlur={formik.handleBlur}
                     value={formik.values.password}
                     placeholder="Enter Password Please..."
-                    className="block w-full cursor-pointer rounded-xl border-0 bg-slate-300 from-emerald-700 to-emerald-900 pl-9 text-base text-emerald-900 shadow-lg placeholder:text-sm placeholder:opacity-50 focus:bg-gradient-to-r focus:bg-clip-text"
+                    className="block w-full cursor-pointer rounded-xl border-0 bg-slate-300 pl-9 text-base text-emerald-900 shadow-lg placeholder:text-sm placeholder:opacity-50 dark:bg-slate-700 dark:text-slate-200 dark:placeholder:text-slate-200 dark:placeholder:opacity-70"
                   />
                   <div
                     onClick={showPasswordHandler}
@@ -757,7 +739,7 @@ function SignupFormPage() {
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 20 20"
                         fill="currentColor"
-                        className="h-4 w-4 text-emerald-900"
+                        className="h-4 w-4 text-emerald-900 dark:text-slate-200"
                       >
                         <path d="M10 12.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" />
                         <path
@@ -777,7 +759,7 @@ function SignupFormPage() {
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 20 20"
                         fill="currentColor"
-                        className="h-4 w-4 text-emerald-900"
+                        className="h-4 w-4 text-emerald-900 dark:text-slate-200"
                       >
                         <path
                           fillRule="evenodd"
@@ -812,7 +794,7 @@ function SignupFormPage() {
                 <div className="pl-1">
                   <label
                     htmlFor="confirmPassword"
-                    className="cursor-pointer text-sm font-semibold text-emerald-900"
+                    className="cursor-pointer text-sm font-semibold text-emerald-900 dark:text-slate-200"
                   >
                     Confirm Password
                   </label>
@@ -825,7 +807,7 @@ function SignupFormPage() {
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 20 20"
                       fill="currentColor"
-                      className="h-5 w-5 text-emerald-900"
+                      className="h-5 w-5 text-emerald-900 dark:text-slate-200"
                     >
                       <path
                         fillRule="evenodd"
@@ -847,7 +829,7 @@ function SignupFormPage() {
                     onBlur={formik.handleBlur}
                     value={formik.values.confirmPassword}
                     placeholder="Enter Confirm Password Please..."
-                    className="block w-full cursor-pointer rounded-xl border-0 bg-slate-300 from-emerald-700 to-emerald-900 pl-9 text-base text-emerald-900 shadow-lg placeholder:text-sm placeholder:opacity-50 focus:bg-gradient-to-r focus:bg-clip-text"
+                    className="block w-full cursor-pointer rounded-xl border-0 bg-slate-300 pl-9 text-base text-emerald-900 shadow-lg placeholder:text-sm placeholder:opacity-50 dark:bg-slate-700 dark:text-slate-200 dark:placeholder:text-slate-200 dark:placeholder:opacity-70"
                   />
                   <div
                     onClick={showPasswordHandler}
@@ -863,7 +845,7 @@ function SignupFormPage() {
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 20 20"
                         fill="currentColor"
-                        className="h-4 w-4 text-emerald-900"
+                        className="h-4 w-4 text-emerald-900 dark:text-slate-200"
                       >
                         <path d="M10 12.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" />
                         <path
@@ -883,7 +865,7 @@ function SignupFormPage() {
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 20 20"
                         fill="currentColor"
-                        className="h-4 w-4 text-emerald-900"
+                        className="h-4 w-4 text-emerald-900 dark:text-slate-200"
                       >
                         <path
                           fillRule="evenodd"
@@ -913,7 +895,7 @@ function SignupFormPage() {
                 <div className="pl-1">
                   <label
                     htmlFor="address"
-                    className="cursor-pointer text-sm font-semibold text-emerald-900"
+                    className="cursor-pointer text-sm font-semibold text-emerald-900 dark:text-slate-200"
                   >
                     Address
                   </label>
@@ -926,7 +908,7 @@ function SignupFormPage() {
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 20 20"
                       fill="currentColor"
-                      className="h-5 w-5 text-emerald-900"
+                      className="h-5 w-5 text-emerald-900 dark:text-slate-200"
                     >
                       <path
                         fillRule="evenodd"
@@ -943,7 +925,7 @@ function SignupFormPage() {
                     onBlur={formik.handleBlur}
                     value={formik.values.address}
                     placeholder="Enter Address Please..."
-                    className="block w-full cursor-pointer rounded-xl border-0 bg-slate-300 from-emerald-700 to-emerald-900 pl-9 text-base text-emerald-900 shadow-lg placeholder:text-sm placeholder:opacity-50 focus:bg-gradient-to-r focus:bg-clip-text"
+                    className="block w-full cursor-pointer rounded-xl border-0 bg-slate-300 pl-9 text-base text-emerald-900 shadow-lg placeholder:text-sm placeholder:opacity-50 dark:bg-slate-700 dark:text-slate-200 dark:placeholder:text-slate-200 dark:placeholder:opacity-70"
                   />
                 </div>
               </div>
@@ -952,7 +934,7 @@ function SignupFormPage() {
               <div className="mb-6">
                 {/* Avatar Field Title */}
                 <div className="pl-1">
-                  <span className="text-sm font-semibold text-emerald-900">
+                  <span className="text-sm font-semibold text-emerald-900 dark:text-slate-200">
                     Avatar
                   </span>
                 </div>
@@ -964,7 +946,7 @@ function SignupFormPage() {
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
                     value={formik.values.avatar}
-                    className="w-full cursor-pointer rounded-xl border-0 bg-slate-300 text-base text-emerald-900 shadow-lg"
+                    className="w-full cursor-pointer rounded-xl border-0 bg-slate-300 text-base text-emerald-900 shadow-lg dark:bg-slate-700 dark:text-slate-200"
                   >
                     <option value="">Select Your Avatar:</option>
                     <option value="🧑🏼‍💻">Programmer 🧑🏼‍💻</option>
@@ -986,7 +968,7 @@ function SignupFormPage() {
               {/* Terms & Conditions Section */}
               <div className="mb-8">
                 {/* Terms & Conditions Field */}
-                <div className="flex items-center justify-start rounded-xl bg-slate-300 p-4 shadow-lg">
+                <div className="flex items-center justify-start rounded-xl bg-slate-300 p-4 shadow-lg dark:bg-slate-700">
                   <input
                     type="checkbox"
                     id="terms"
@@ -995,9 +977,12 @@ function SignupFormPage() {
                     onBlur={formik.handleBlur}
                     value={true}
                     checked={formik.values.terms}
-                    className="rounded-md text-emerald-900 focus:ring-emerald-800"
+                    className="rounded-md text-emerald-900 focus:ring-emerald-800 dark:text-yellow-500 dark:focus:ring-yellow-600"
                   />
-                  <label htmlFor="terms" className="ml-2 text-emerald-900">
+                  <label
+                    htmlFor="terms"
+                    className="ml-2 text-emerald-900 dark:text-slate-200"
+                  >
                     I Accept All Terms & Conditions
                   </label>
                 </div>
@@ -1017,7 +1002,7 @@ function SignupFormPage() {
                 <button
                   type="submit"
                   disabled={!formik.isValid}
-                  className="flex w-full items-center justify-center rounded-xl bg-emerald-800 p-4 shadow-lg disabled:bg-gray-500"
+                  className="flex w-full items-center justify-center rounded-xl bg-emerald-800 p-4 shadow-lg disabled:bg-gray-500 dark:bg-slate-700 dark:disabled:bg-slate-400"
                 >
                   <span className="block text-white">Register Now</span>
                 </button>
@@ -1038,7 +1023,7 @@ function SignupFormPage() {
                 </button>
               </div>
 
-              <div className="flex items-center justify-center text-emerald-800">
+              <div className="flex items-center justify-center text-emerald-800 dark:text-white">
                 <span className="block">Already Have an Account?</span>
                 <Link to="/login" className="ml-1 border-b-2 border-yellow-500">
                   Login Now

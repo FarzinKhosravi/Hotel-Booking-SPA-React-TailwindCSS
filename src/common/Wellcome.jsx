@@ -6,11 +6,11 @@ function Wellcome() {
     <div className="mb-8 flex flex-col">
       {/* Wellcome Section */}
       <div className="mb-2 flex flex-col">
-        <span className="flex items-center justify-center font-Parisienne text-2xl text-indigo-950">
+        <span className="flex items-center justify-center font-Parisienne text-2xl text-indigo-950 dark:text-white">
           Welcome To
         </span>
         <div className="relative mx-auto flex h-20 max-w-[300px] items-center justify-center">
-          <h2 className="mr-4 font-Parisienne text-2xl text-indigo-950">
+          <h2 className="mr-4 font-Parisienne text-2xl text-indigo-950 dark:text-white">
             Hotel Booking Site
           </h2>
           <div className="absolute -top-1.25 right-4">

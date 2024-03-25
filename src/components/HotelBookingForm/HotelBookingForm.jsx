@@ -4,8 +4,6 @@ import {
   ClipboardDocumentCheckIcon,
   ClipboardDocumentListIcon,
 } from "@heroicons/react/24/outline";
-import introIcon from "../../assets/images/introIcon.png";
-import separator from "../../assets/images/separator.png";
 import BackButton from "../../common/BackButton";
 import ReactCountryFlag from "react-country-flag";
 import useHotelDetail from "./../../hooks/useHotelDetail";
@@ -21,6 +19,7 @@ import http from "../../services/httpService";
 import getLocalStorage from "../../localStorage/getLocalStorage";
 import removeLocalStorage from "../../localStorage/removeLocalStorage";
 import toast from "react-hot-toast";
+import Wellcome from "../../common/Wellcome";
 
 const USER_DATA = "USER_DATA";
 
@@ -102,32 +101,7 @@ function HotelBookingForm() {
   return (
     <div className="mb-20 min-h-screen px-4">
       <div>
-        {/* Intro Section */}
-        <div className="mb-16 flex flex-col">
-          <div className="mb-2 flex flex-col">
-            <span className="flex items-center justify-center font-Parisienne text-2xl text-indigo-950">
-              Welcome To
-            </span>
-            <div className="relative mx-auto flex h-20 max-w-[300px] items-center justify-center">
-              <h2 className="mr-4 font-Parisienne text-2xl text-indigo-950">
-                Hotel Booking Site
-              </h2>
-              <div className="absolute -top-1.25 right-4">
-                <img className="w-10" src={introIcon} alt="intro-Icon" />
-              </div>
-            </div>
-          </div>
-
-          <div className="mb-6 flex items-center justify-center">
-            <img className="block w-36" src={separator} alt="separator" />
-          </div>
-
-          <div className="flex w-full items-center justify-center">
-            <span className="block bg-img-home bg-cover bg-center bg-no-repeat font-Parisienne text-xl text-indigo-950">
-              We Wish You a Pleasant Trip
-            </span>
-          </div>
-        </div>
+        <Wellcome />
 
         {/* Hotel Booking Form Section */}
         <div>
@@ -149,7 +123,7 @@ function HotelBookingForm() {
           </div>
 
           {/* Multi-Step Form with Progress Bar Section*/}
-          <div className="flex flex-col rounded-xl bg-slate-200 p-4 shadow-xl">
+          <div className="flex flex-col rounded-xl bg-slate-200 p-4 shadow-xl dark:bg-slate-800">
             {/* Progress Bar (Stepper) Section */}
             <div className="relative mb-4 flex justify-between">
               {/* Step One Section */}
@@ -157,15 +131,17 @@ function HotelBookingForm() {
                 onClick={() => setActiveStep(1)}
                 className="relative z-50 block"
               >
-                <div className="mb-2 flex h-8 w-8 items-center justify-center rounded-full bg-emerald-800 p-2">
-                  <UserIcon className="h-5 w-5 text-white" />
+                <div className="mb-2 flex h-8 w-8 items-center justify-center rounded-full bg-emerald-800 p-2 dark:bg-yellow-500">
+                  <UserIcon className="h-5 w-5 text-white dark:text-black" />
                 </div>
               </button>
 
               {/* Path between Steps */}
               <div
                 className={`absolute left-0 top-3.5 h-1 w-1/3 rounded-full ${
-                  activeStep > 1 ? "bg-emerald-800" : "bg-gray-300"
+                  activeStep > 1
+                    ? "bg-emerald-800 dark:bg-yellow-500"
+                    : "bg-gray-300 dark:bg-slate-700"
                 }`}
               ></div>
 
@@ -176,11 +152,17 @@ function HotelBookingForm() {
               >
                 <div
                   className={`pointer-events-none mb-2 flex h-8 w-8 items-center justify-center rounded-full p-2 ${
-                    activeStep > 1 ? "bg-emerald-800" : "bg-slate-300"
+                    activeStep > 1
+                      ? "bg-emerald-800 dark:bg-yellow-500"
+                      : "bg-slate-300 dark:bg-slate-700"
                   }`}
                 >
                   <BuildingOfficeIcon
-                    className={`h-5 w-5 ${activeStep > 1 ? "text-white" : ""}`}
+                    className={`h-5 w-5 ${
+                      activeStep > 1
+                        ? "text-white dark:text-black"
+                        : "dark:text-white"
+                    }`}
                   />
                 </div>
               </button>
@@ -188,7 +170,9 @@ function HotelBookingForm() {
               {/* Path between Steps */}
               <div
                 className={`absolute left-35% right-1/2 top-3.5 h-1 w-1/3 rounded-full ${
-                  activeStep > 2 ? "bg-emerald-800" : "bg-gray-300"
+                  activeStep > 2
+                    ? "bg-emerald-800 dark:bg-yellow-500"
+                    : "bg-gray-300 dark:bg-slate-700"
                 }`}
               ></div>
 
@@ -199,11 +183,17 @@ function HotelBookingForm() {
               >
                 <div
                   className={`pointer-events-none mb-2 flex h-8 w-8 items-center justify-center rounded-full p-2 ${
-                    activeStep > 2 ? "bg-emerald-800" : "bg-slate-300"
+                    activeStep > 2
+                      ? "bg-emerald-800 dark:bg-yellow-500"
+                      : "bg-slate-300 dark:bg-slate-700"
                   }`}
                 >
                   <ClipboardDocumentCheckIcon
-                    className={`h-5 w-5 ${activeStep > 2 ? "text-white" : ""}`}
+                    className={`h-5 w-5 ${
+                      activeStep > 2
+                        ? "text-white dark:text-black"
+                        : "dark:text-white"
+                    }`}
                   />
                 </div>
               </button>
@@ -211,7 +201,9 @@ function HotelBookingForm() {
               {/* Path between Steps */}
               <div
                 className={`absolute right-0 top-3.5 h-1 w-1/3 rounded-full ${
-                  activeStep > 3 ? "bg-emerald-800" : "bg-gray-300"
+                  activeStep > 3
+                    ? "bg-emerald-800 dark:bg-yellow-500"
+                    : "bg-gray-300 dark:bg-slate-700"
                 }`}
               ></div>
 
@@ -223,18 +215,24 @@ function HotelBookingForm() {
               >
                 <div
                   className={`pointer-events-none mb-2 flex h-8 w-8 items-center justify-center rounded-full p-2 ${
-                    activeStep > 3 ? "bg-emerald-800" : "bg-slate-300"
+                    activeStep > 3
+                      ? "bg-emerald-800 dark:bg-yellow-500"
+                      : "bg-slate-300 dark:bg-slate-700"
                   }`}
                 >
                   <ClipboardDocumentListIcon
-                    className={`h-5 w-5 ${activeStep > 3 ? "text-white" : ""}`}
+                    className={`h-5 w-5 ${
+                      activeStep > 3
+                        ? "text-white dark:text-black"
+                        : "dark:text-white"
+                    }`}
                   />
                 </div>
               </button>
             </div>
 
             {/* Steps Content Container */}
-            <div className="mb-8 rounded-xl bg-slate-300 px-3 pb-4 pt-3 shadow-xl">
+            <div className="mb-8 rounded-xl bg-slate-300 px-3 pb-4 pt-3 shadow-xl dark:bg-slate-700">
               {/* User Info Content */}
               <div
                 className={`w-full flex-col ${
@@ -243,7 +241,7 @@ function HotelBookingForm() {
               >
                 {/* Step Specs */}
                 <div className="mb-8 flex w-full items-center justify-center">
-                  <div className="flex flex-col items-center border-b-2 border-yellow-500 font-bold text-emerald-800">
+                  <div className="flex flex-col items-center border-b-2 border-yellow-500 font-bold text-emerald-800 dark:text-white">
                     <span className="block">Step 1</span>
                     <span className="block">User Info Review</span>
                   </div>
@@ -256,22 +254,22 @@ function HotelBookingForm() {
 
                     {/* Username */}
                     <div className="relative mb-10 flex w-full items-center justify-start">
-                      <div className="absolute -top-3 left-0 flex justify-start rounded-xl bg-white px-4 py-2 font-semibold sm:top-0">
+                      <div className="absolute -top-3 left-0 flex justify-start rounded-xl bg-white px-4 py-2 font-semibold dark:bg-slate-500 dark:text-slate-100 sm:top-0">
                         <span className="block">Username</span>
                       </div>
 
-                      <div className="h-auto w-full rounded-xl bg-emerald-800 px-2 pb-2 pt-8 capitalize text-white shadow-lg sm:pl-28 sm:pt-2">
+                      <div className="h-auto w-full rounded-xl bg-emerald-800 px-2 pb-2 pt-8 capitalize text-white shadow-lg dark:bg-slate-600 sm:pl-28 sm:pt-2">
                         {loggedInUser.username}
                       </div>
                     </div>
 
                     {/* Full Name */}
                     <div className="relative flex w-full items-center justify-start">
-                      <div className="absolute -top-4 left-0 flex justify-start rounded-xl bg-white px-4 py-2 font-semibold sm:top-0">
+                      <div className="absolute -top-4 left-0 flex justify-start rounded-xl bg-white px-4 py-2 font-semibold dark:bg-slate-500 dark:text-slate-100 sm:top-0">
                         <span className="block">Full Name</span>
                       </div>
 
-                      <div className="h-auto w-full whitespace-nowrap rounded-xl bg-emerald-800 px-2 pb-2 pt-8 capitalize text-white shadow-lg sm:pl-28 sm:pt-2">
+                      <div className="h-auto w-full whitespace-nowrap rounded-xl bg-emerald-800 px-2 pb-2 pt-8 capitalize text-white shadow-lg dark:bg-slate-600 sm:pl-28 sm:pt-2">
                         {loggedInUser.fullName}
                       </div>
                     </div>
@@ -282,22 +280,22 @@ function HotelBookingForm() {
 
                     {/* Phone Number */}
                     <div className="relative mb-10 flex w-full items-center justify-start">
-                      <div className="absolute -top-4 left-0 rounded-xl bg-white px-3 py-2 font-semibold sm:top-0">
+                      <div className="absolute -top-4 left-0 rounded-xl bg-white px-3 py-2 font-semibold dark:bg-slate-500 dark:text-slate-100 sm:top-0">
                         Phone Number
                       </div>
 
-                      <div className="h-auto w-full rounded-xl bg-emerald-800 px-2 pb-2 pt-8 text-white shadow-lg sm:pl-32 sm:pt-2">
+                      <div className="h-auto w-full rounded-xl bg-emerald-800 px-2 pb-2 pt-8 text-white shadow-lg dark:bg-slate-600 sm:pl-32 sm:pt-2">
                         {loggedInUser.phoneNumber}
                       </div>
                     </div>
 
                     {/* Gender */}
                     <div className="relative flex w-full items-center justify-start">
-                      <div className="absolute -top-4 left-0 rounded-xl bg-white px-4 py-2 font-semibold sm:top-0">
+                      <div className="absolute -top-4 left-0 rounded-xl bg-white px-4 py-2 font-semibold dark:bg-slate-500 dark:text-slate-100 sm:top-0">
                         Gender
                       </div>
 
-                      <div className="h-auto w-full whitespace-nowrap rounded-xl bg-emerald-800 px-2 pb-2 pt-8 capitalize text-white shadow-lg sm:pl-24 sm:pt-2">
+                      <div className="h-auto w-full whitespace-nowrap rounded-xl bg-emerald-800 px-2 pb-2 pt-8 capitalize text-white shadow-lg dark:bg-slate-600 sm:pl-24 sm:pt-2">
                         {`${loggedInUser.gender} ${
                           loggedInUser.gender === "male" ? "🧑🏻" : "👩🏻"
                         }`}
@@ -315,7 +313,7 @@ function HotelBookingForm() {
               >
                 {/* Step Specs */}
                 <div className="mb-8 flex w-full items-center justify-center">
-                  <div className="flex flex-col items-center border-b-2 border-yellow-500 font-bold text-emerald-800">
+                  <div className="flex flex-col items-center border-b-2 border-yellow-500 font-bold text-emerald-800 dark:text-white">
                     <span className="block">Step 2</span>
                     <span className="block">Hotel Info Review</span>
                   </div>
@@ -328,22 +326,22 @@ function HotelBookingForm() {
 
                     {/* Name */}
                     <div className="relative mb-10 flex w-full items-center justify-start">
-                      <div className="absolute -top-3 left-0 flex justify-start rounded-xl bg-white px-4 py-2 font-semibold sm:top-0">
+                      <div className="absolute -top-3 left-0 flex justify-start rounded-xl bg-white px-4 py-2 font-semibold dark:bg-slate-500 dark:text-slate-100 sm:top-0">
                         <span className="block">Name</span>
                       </div>
 
-                      <div className="h-auto w-full rounded-xl bg-emerald-800 px-2 pb-2 pt-8 text-white shadow-lg sm:pl-20 sm:pt-2">
+                      <div className="h-auto w-full rounded-xl bg-emerald-800 px-2 pb-2 pt-8 text-white shadow-lg dark:bg-slate-600 sm:pl-20 sm:pt-2">
                         {hotelDetail?.name}
                       </div>
                     </div>
 
                     {/* State */}
                     <div className="relative flex w-full items-center justify-start">
-                      <div className="absolute -top-4 left-0 flex justify-start rounded-xl bg-white px-4 py-2 font-semibold sm:top-0">
+                      <div className="absolute -top-4 left-0 flex justify-start rounded-xl bg-white px-4 py-2 font-semibold dark:bg-slate-500 dark:text-slate-100 sm:top-0">
                         <span className="block">State</span>
                       </div>
 
-                      <div className="h-auto w-full whitespace-nowrap rounded-xl bg-emerald-800 px-2 pb-2 pt-8 text-white shadow-lg sm:pl-20 sm:pt-2">
+                      <div className="h-auto w-full whitespace-nowrap rounded-xl bg-emerald-800 px-2 pb-2 pt-8 text-white shadow-lg dark:bg-slate-600 sm:pl-20 sm:pt-2">
                         {hotelDetail?.state}
                       </div>
                     </div>
@@ -354,7 +352,7 @@ function HotelBookingForm() {
 
                     {/* Country */}
                     <div className="relative mb-10 flex w-full items-center justify-start">
-                      <div className="absolute -top-4 left-0 flex justify-start rounded-xl bg-white px-3 py-2 font-semibold sm:top-0">
+                      <div className="absolute -top-4 left-0 flex justify-start rounded-xl bg-white px-3 py-2 font-semibold dark:bg-slate-500 dark:text-slate-100 sm:top-0">
                         <span className="block">Country</span>
                         <span className="ml-2 block">
                           <ReactCountryFlag
@@ -365,18 +363,18 @@ function HotelBookingForm() {
                         </span>
                       </div>
 
-                      <div className="h-auto w-full rounded-xl bg-emerald-800 px-2 pb-2 pt-8 text-white shadow-lg sm:pl-28 sm:pt-2">
+                      <div className="h-auto w-full rounded-xl bg-emerald-800 px-2 pb-2 pt-8 text-white shadow-lg dark:bg-slate-600 sm:pl-28 sm:pt-2">
                         {hotelDetail?.smart_location.split(",")[1].trim()}
                       </div>
                     </div>
 
                     {/* Capital */}
                     <div className="relative flex w-full items-center justify-start">
-                      <div className="absolute -top-4 left-0 rounded-xl bg-white px-4 py-2 font-semibold sm:top-0">
+                      <div className="absolute -top-4 left-0 rounded-xl bg-white px-4 py-2 font-semibold dark:bg-slate-500 dark:text-slate-100 sm:top-0">
                         Capital
                       </div>
 
-                      <div className="h-auto w-full whitespace-nowrap rounded-xl bg-emerald-800 px-2 pb-2 pt-8 text-white shadow-lg sm:pl-24 sm:pt-2">
+                      <div className="h-auto w-full whitespace-nowrap rounded-xl bg-emerald-800 px-2 pb-2 pt-8 text-white shadow-lg dark:bg-slate-600 sm:pl-24 sm:pt-2">
                         {hotelDetail?.smart_location.split(",")[0]}
                       </div>
                     </div>
@@ -392,7 +390,7 @@ function HotelBookingForm() {
               >
                 {/* Step Specs */}
                 <div className="mb-8 flex w-full items-center justify-center">
-                  <div className="flex flex-col items-center border-b-2 border-yellow-500 font-bold text-emerald-800">
+                  <div className="flex flex-col items-center border-b-2 border-yellow-500 font-bold text-emerald-800 dark:text-white">
                     <span className="block">Step 3</span>
                     <span className="block">Info Confirm</span>
                   </div>
@@ -416,7 +414,7 @@ function HotelBookingForm() {
                         />
                       </svg>
                     </span>
-                    <span className="ml-1 font-semibold text-emerald-800">
+                    <span className="ml-1 font-semibold text-emerald-800 dark:text-white">
                       You Can Confirm Information of Previous Steps by Pressing
                       Button Below :
                     </span>
@@ -427,7 +425,7 @@ function HotelBookingForm() {
                     <button
                       disabled={isConfirm ? true : false}
                       onClick={() => infoConfirmHandler(hotelDetail)}
-                      className="flex w-full items-center justify-center rounded-xl bg-emerald-800 p-4 shadow-lg disabled:bg-gray-400"
+                      className="flex w-full items-center justify-center rounded-xl bg-emerald-800 p-4 shadow-lg disabled:bg-gray-400 dark:bg-slate-600 dark:disabled:bg-slate-400"
                     >
                       <span className="pointer-events-none block text-white">
                         Confirmation
@@ -461,7 +459,7 @@ function HotelBookingForm() {
               >
                 {/* Step Specs */}
                 <div className="mb-8 flex w-full items-center justify-center">
-                  <div className="flex flex-col items-center border-b-2 border-yellow-500 font-bold text-emerald-800">
+                  <div className="flex flex-col items-center border-b-2 border-yellow-500 font-bold text-emerald-800 dark:text-white">
                     <span className="block">Step 4</span>
                     <span className="block">Finishing Up</span>
                   </div>
@@ -485,7 +483,7 @@ function HotelBookingForm() {
                         />
                       </svg>
                     </span>
-                    <span className="ml-1 font-semibold text-emerald-800">
+                    <span className="ml-1 font-semibold text-emerald-800 dark:text-white">
                       You Can Finalize Your Desired Hotel Reservation by
                       Pressing Button Below :
                     </span>
@@ -495,7 +493,7 @@ function HotelBookingForm() {
                   <div className="mb-3 w-full">
                     <button
                       onClick={() => hotelReservedHandler(loggedInUser.id)}
-                      className="flex w-full items-center justify-center rounded-xl bg-emerald-800 p-4 shadow-lg disabled:bg-gray-500"
+                      className="flex w-full items-center justify-center rounded-xl bg-emerald-800 p-4 shadow-lg disabled:bg-gray-500 dark:bg-slate-600 dark:disabled:bg-slate-400"
                     >
                       <span className="pointer-events-none block text-white">
                         Final Reservation
@@ -530,7 +528,7 @@ function HotelBookingForm() {
                   onClick={() =>
                     setActiveStep((prevActiveStep) => prevActiveStep - 1)
                   }
-                  className="block rounded-xl bg-emerald-800 px-3 py-2 text-white shadow-lg disabled:bg-gray-400"
+                  className="block rounded-xl bg-emerald-800 px-3 py-2 text-white shadow-lg disabled:bg-gray-400 dark:bg-slate-700 dark:disabled:bg-slate-400"
                 >
                   Prev.
                 </button>
@@ -548,7 +546,7 @@ function HotelBookingForm() {
                   onClick={() =>
                     setActiveStep((prevActiveStep) => prevActiveStep + 1)
                   }
-                  className="block rounded-xl bg-emerald-800 px-3 py-2 text-white shadow-lg disabled:cursor-not-allowed disabled:bg-gray-400"
+                  className="block rounded-xl bg-emerald-800 px-3 py-2 text-white shadow-lg disabled:cursor-not-allowed disabled:bg-gray-400 dark:bg-slate-700 dark:disabled:bg-slate-400"
                 >
                   Next
                 </button>

@@ -39,7 +39,7 @@ function HotelsResults() {
               <span className="block bg-img-home bg-cover bg-center bg-no-repeat text-lg font-semibold italic">
                 Search Results
               </span>
-              <span className="ml-2 flex h-6 w-6 items-center justify-center rounded-full bg-slate-200 text-lg font-semibold shadow-md">
+              <span className="ml-2 flex h-6 w-6 items-center justify-center rounded-full bg-slate-200 text-lg font-semibold shadow-md dark:bg-slate-700 dark:text-white">
                 {hotels?.length}
               </span>
             </div>
@@ -66,9 +66,9 @@ function HotelsResults() {
               >
                 {/*  // Filtered Hotel : */}
                 <div
-                  className={`overflow-hidden rounded-xl bg-slate-200 shadow-lg ${
+                  className={`overflow-hidden rounded-xl bg-slate-200 shadow-lg dark:bg-slate-800 ${
                     hotel.id === currentHotel?.id
-                      ? "border-4 border-emerald-700"
+                      ? "border-4 border-emerald-700 dark:border-slate-200"
                       : ""
                   }`}
                 >
@@ -127,7 +127,7 @@ function HotelsResults() {
                           />
                         </div>
                         <div className="absolute top-2 flex w-full items-center justify-between px-2">
-                          <div className="flex items-center rounded-xl bg-white px-2">
+                          <div className="flex items-center rounded-xl bg-white px-2 dark:bg-slate-700">
                             <span className="block text-red-600">
                               <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -139,11 +139,12 @@ function HotelsResults() {
                                 <path d="m9.653 16.915-.005-.003-.019-.01a20.759 20.759 0 0 1-1.162-.682 22.045 22.045 0 0 1-2.582-1.9C4.045 12.733 2 10.352 2 7.5a4.5 4.5 0 0 1 8-2.828A4.5 4.5 0 0 1 18 7.5c0 2.852-2.044 5.233-3.885 6.82a22.049 22.049 0 0 1-3.744 2.582l-.019.01-.005.003h-.002a.739.739 0 0 1-.69.001l-.002-.001Z" />
                               </svg>
                             </span>
-                            <span className="ml-1 font-semibold text-emerald-700">
+                            <span className="ml-1 font-semibold text-emerald-700 dark:text-white">
                               10
                             </span>
                           </div>
-                          <div className="flex items-center rounded-xl bg-white px-2">
+
+                          <div className="flex items-center rounded-xl bg-white px-2 dark:bg-slate-700">
                             <span className="block text-yellow-400">
                               <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -159,7 +160,7 @@ function HotelsResults() {
                                 />
                               </svg>
                             </span>
-                            <span className="ml-1 font-semibold text-emerald-700">
+                            <span className="ml-1 font-semibold text-emerald-700 dark:text-white">
                               20
                             </span>
                           </div>
@@ -170,7 +171,7 @@ function HotelsResults() {
                       <div className="flex flex-col sm:ml-4 sm:justify-around">
                         {/* Hotel Name */}
                         <div className="mb-4 text-center">
-                          <span className="font-Parisienne text-lg font-semibold capitalize italic text-emerald-700">
+                          <span className="text-lg font-semibold capitalize italic text-emerald-700 dark:text-white">
                             {hotel.name}
                           </span>
                         </div>
@@ -178,7 +179,7 @@ function HotelsResults() {
                         {/* Hotel Location */}
                         <div className="mb-8 flex items-center justify-between">
                           <div className="flex flex-col">
-                            <span className="font-semibold text-emerald-700">
+                            <span className="font-semibold text-emerald-700 dark:text-white">
                               {hotel.smart_location.split(",")[1].trim()}
                             </span>
                             <span>
@@ -189,7 +190,7 @@ function HotelsResults() {
                               />
                             </span>
                           </div>
-                          <span className="block sm:ml-3">
+                          <span className="block dark:text-white sm:ml-3">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               viewBox="0 0 20 20"
@@ -201,10 +202,10 @@ function HotelsResults() {
                             </svg>
                           </span>
                           <div className="flex flex-col sm:ml-3">
-                            <span className="font-semibold text-emerald-700">
+                            <span className="font-semibold text-emerald-700 dark:text-white">
                               {hotel.state}
                             </span>
-                            <span className="font-semibold text-emerald-700">
+                            <span className="font-semibold text-emerald-700 dark:text-white">
                               {hotel.smart_location.split(",")[0]}
                             </span>
                           </div>
@@ -225,7 +226,7 @@ function HotelsResults() {
                       <div>
                         <button
                           onClick={(e) => hotelReserveHandler(e, hotel.id)}
-                          className={`block w-full rounded-xl bg-emerald-700 px-4 py-2 shadow-lg disabled:bg-gray-400 ${
+                          className={`block w-full rounded-xl bg-emerald-700 px-4 py-2 shadow-lg disabled:bg-gray-400 dark:bg-slate-700 dark:disabled:bg-slate-400 ${
                             hotel.hotelReserved ? "cursor-not-allowed" : ""
                           }`}
                           disabled={hotel.hotelReserved ? true : false}
