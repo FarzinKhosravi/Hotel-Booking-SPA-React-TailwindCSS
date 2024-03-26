@@ -114,7 +114,7 @@ function UpdateBookmark() {
         {loading ? (
           <Loader />
         ) : (
-          <div>
+          <div className="mx-auto md:max-w-screen-md">
             {/* Update Bookmark Form Title */}
             <div className="mb-4">
               <div className="flex items-center justify-between">

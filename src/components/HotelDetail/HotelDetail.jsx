@@ -64,7 +64,7 @@ function HotelDetail() {
         {loading ? (
           <Loader />
         ) : (
-          <div>
+          <div className="mx-auto md:max-w-screen-md">
             {/* Hotel Name Section */}
             <div className="mb-4 px-1">
               <div className="flex items-center justify-between">

@@ -56,12 +56,7 @@
       "host_neighbourhood": null,
       "host_listings_count": 1,
       "host_total_listings_count": 1,
-      "host_verifications": [
-        "email",
-        "phone",
-        "facebook",
-        "reviews"
-      ],
+      "host_verifications": ["email", "phone", "facebook", "reviews"],
       "street": "Amsterdam, Noord-Holland 1054, Netherlands",
       "neighbourhood": null,
       "neighbourhood_cleansed": "De Baarsjes - Oud-West",
@@ -125,9 +120,7 @@
         "lon": 2.35,
         "lat": 48.86
       },
-      "features": [
-        "Host Has Profile Pic"
-      ]
+      "features": ["Host Has Profile Pic"]
     },
     {
       "id": "9192415",
@@ -317,11 +310,7 @@
       "host_neighbourhood": "Oud-West",
       "host_listings_count": 3,
       "host_total_listings_count": 3,
-      "host_verifications": [
-        "email",
-        "phone",
-        "reviews"
-      ],
+      "host_verifications": ["email", "phone", "reviews"],
       "street": "Oud-West, Amsterdam, North Holland 1054, Netherlands",
       "neighbourhood": "Oud-West",
       "neighbourhood_cleansed": "De Baarsjes - Oud-West",
@@ -385,10 +374,7 @@
         "lon": 4.875639539930118,
         "lat": 52.36456756846072
       },
-      "features": [
-        "Host Has Profile Pic",
-        "Is Location Exact"
-      ]
+      "features": ["Host Has Profile Pic", "Is Location Exact"]
     },
     {
       "id": "13153299",
@@ -711,10 +697,7 @@
       "host_neighbourhood": null,
       "host_listings_count": 1,
       "host_total_listings_count": 1,
-      "host_verifications": [
-        "email",
-        "reviews"
-      ],
+      "host_verifications": ["email", "reviews"],
       "street": "Amsterdam, North Holland, Netherlands",
       "neighbourhood": null,
       "neighbourhood_cleansed": "De Baarsjes - Oud-West",
@@ -778,9 +761,7 @@
         "lon": 4.865594943841575,
         "lat": 52.36667871194905
       },
-      "features": [
-        "Host Has Profile Pic"
-      ]
+      "features": ["Host Has Profile Pic"]
     },
     {
       "id": "13465532",
@@ -970,11 +951,7 @@
       "host_neighbourhood": null,
       "host_listings_count": 0,
       "host_total_listings_count": 0,
-      "host_verifications": [
-        "email",
-        "phone",
-        "reviews"
-      ],
+      "host_verifications": ["email", "phone", "reviews"],
       "street": "Amsterdam, NH 1056, Netherlands",
       "neighbourhood": null,
       "neighbourhood_cleansed": "De Baarsjes - Oud-West",
@@ -1038,9 +1015,7 @@
         "lon": 4.853345068114508,
         "lat": 52.37080138742488
       },
-      "features": [
-        "Host Has Profile Pic"
-      ]
+      "features": ["Host Has Profile Pic"]
     },
     {
       "id": "7890890",
@@ -1098,12 +1073,7 @@
       "host_neighbourhood": "Oud-West",
       "host_listings_count": 1,
       "host_total_listings_count": 1,
-      "host_verifications": [
-        "email",
-        "phone",
-        "reviews",
-        "jumio"
-      ],
+      "host_verifications": ["email", "phone", "reviews", "jumio"],
       "street": "Oud-West, Amsterdam, Noord-Holland 1054, Netherlands",
       "neighbourhood": "Oud-West",
       "neighbourhood_cleansed": "De Baarsjes - Oud-West",
@@ -1229,12 +1199,7 @@
       "host_neighbourhood": "Oud-West",
       "host_listings_count": 2,
       "host_total_listings_count": 2,
-      "host_verifications": [
-        "email",
-        "phone",
-        "reviews",
-        "jumio"
-      ],
+      "host_verifications": ["email", "phone", "reviews", "jumio"],
       "street": "Oud-West, Amsterdam, Noord-Holland 1057, Netherlands",
       "neighbourhood": "Oud-West",
       "neighbourhood_cleansed": "De Baarsjes - Oud-West",
@@ -1887,141 +1852,7 @@
       "address": "",
       "avatar": "🧑🏼‍💻",
       "terms": true,
-      "hotelsReserved": [
-        {
-          "id": "13153299",
-          "listing_url": "https://www.airbnb.com/rooms/13153299",
-          "scrape_id": "20170402075052",
-          "last_scraped": "2017-04-02",
-          "name": "Trendy and spacious",
-          "summary": "A beautiful 2 bedroom apt (115 m2) with a an amazing 50 m2 roof terrace with 360 view over Amsterdam. Located very centrally in Amsterdam-West/Center. Walking distance to many highlights (Vondelpark, 9 Streets, Jordaan, Leidseplein and many musea). Very luxurious and light apt with huge living, open kitchen and direct access to the rooftop. The master bedroom and 2nd bedroom for a baby or single bed if requested. Perfectly suited for a young family or couple.",
-          "space": "This spacious top floor apartment is completely renovated and professionally designed. The living room with open kitchen has a dining table with 6 seats. Needless to say there is a complementary wireless Internet connection. Due to the large windows, the apartment gives a spacious and warm feeling. The bedroom on the third floor has a very comfortable king size bed (180x200). The bathroom is attached to the bedroom and contains a bath, rain shower, sinks and washing machine & dryer. The apartment has its own entrance and is in one of the best neighbourhoods in Amsterdam. The apartment is located close to the Vondelpark and 5 min away from the famous Leidseplein. Multiple public transport connections are available around the corner. Easy access to all the major public transport lines. Tram 1 and 13 with direct links to Central Station and the entire centre, as well as a fast link (via Lelylaan) to Schiphol.  The Rijksmuseum, Van Gogh Museum and Modern art Museum (Stedelijk) are at a 5 t",
-          "description": "A beautiful 2 bedroom apt (115 m2) with a an amazing 50 m2 roof terrace with 360 view over Amsterdam. Located very centrally in Amsterdam-West/Center. Walking distance to many highlights (Vondelpark, 9 Streets, Jordaan, Leidseplein and many musea). Very luxurious and light apt with huge living, open kitchen and direct access to the rooftop. The master bedroom and 2nd bedroom for a baby or single bed if requested. Perfectly suited for a young family or couple. This spacious top floor apartment is completely renovated and professionally designed. The living room with open kitchen has a dining table with 6 seats. Needless to say there is a complementary wireless Internet connection. Due to the large windows, the apartment gives a spacious and warm feeling. The bedroom on the third floor has a very comfortable king size bed (180x200). The bathroom is attached to the bedroom and contains a bath, rain shower, sinks and washing machine & dryer. The apartment has its own entrance and is in one",
-          "experiences_offered": "none",
-          "neighborhood_overview": "Seriously one of the best neighbourhoods in town. A~nd we are not saying this because we live here ;-) The Bosboom Toussaintstraat is considered to be one of the most beautiful streets in Amsterdam. The area is very popular with many restaurants, bars, musea, shopping streets and of course the Vondelpark around the corner.",
-          "notes": null,
-          "hotelReserved": false,
-          "duration_of_stay": {
-            "startDate": "2024-03-01T08:43:28.890Z",
-            "endDate": "2024-04-01T08:43:28.890Z"
-          },
-          "number_of_adult": 5,
-          "number_of_children": 2,
-          "transit": "1 min walk to public transportation which will bring you to literally every corner of Amsterdam. Furthermore it is possible to have rental bikes or rental scooters at a store close to the apartment, so you can move quickly through the city.",
-          "access": "If the weather permits, make sure to enjoy the roof terrace and BBQ!",
-          "interaction": "We are at your disposal and if not around we will make sure our family or friends are.  You can e-mail or call us anytime. We can help you find a babysitter or a nice reservation in a restaurant. Bedlinen and towels are provided.",
-          "house_rules": "Feel at home. Please respect the neighbours and treat the house as if it were yours. The apartment is non smoking and parties are not allowed.",
-          "thumbnail_url": "https://a0.muscache.com/im/pictures/4aad80ac-8a8f-465d-873c-04c951304180.jpg?aki_policy=small",
-          "medium_url": "https://a0.muscache.com/im/pictures/4aad80ac-8a8f-465d-873c-04c951304180.jpg?aki_policy=medium",
-          "picture_url": {
-            "thumbnail": true,
-            "filename": "4aad80ac-8a8f-465d-873c-04c951304180.jpg",
-            "format": "JPEG",
-            "width": 639,
-            "mimetype": "image/jpeg",
-            "id": "7139bb0ddfd791f6b68f9e6462afe974",
-            "last_synchronized": "2019-07-03T11:07:39.436235",
-            "color_summary": [
-              "rgba(140, 173, 213, 1.00)",
-              "rgba(140, 150, 159, 1.00)",
-              "rgba(120, 119, 120, 1.00)"
-            ],
-            "height": 426,
-            "url": "https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/airbnb-listings/files/7139bb0ddfd791f6b68f9e6462afe974"
-          },
-          "xl_picture_url": "https://a0.muscache.com/im/pictures/4aad80ac-8a8f-465d-873c-04c951304180.jpg?aki_policy=x_large",
-          "host_id": "17633423",
-          "host_url": "https://www.airbnb.com/users/show/17633423",
-          "host_name": "Jan Willem",
-          "host_since": "2014-07-04",
-          "host_location": "Amsterdam, North Holland, The Netherlands",
-          "host_about": null,
-          "host_response_time": "within a few hours",
-          "host_response_rate": 100,
-          "host_acceptance_rate": null,
-          "host_thumbnail_url": "https://a0.muscache.com/im/users/17633423/profile_pic/1404476602/original.jpg?aki_policy=profile_small",
-          "host_picture_url": "https://a0.muscache.com/im/users/17633423/profile_pic/1404476602/original.jpg?aki_policy=profile_x_medium",
-          "host_neighbourhood": "Oud-West",
-          "host_listings_count": 1,
-          "host_total_listings_count": 1,
-          "host_verifications": [
-            "email",
-            "phone",
-            "reviews",
-            "jumio",
-            "offline_government_id",
-            "government_id"
-          ],
-          "street": "Oud-West, Amsterdam, Noord-Holland 1054 AH, Netherlands",
-          "neighbourhood": "Oud-West",
-          "neighbourhood_cleansed": "De Baarsjes - Oud-West",
-          "neighbourhood_group_cleansed": null,
-          "city": "Amsterdam",
-          "state": "Noord-Holland",
-          "zipcode": "1054 AH",
-          "market": "Amsterdam",
-          "smart_location": "Amsterdam, Netherlands",
-          "country_code": "NL",
-          "country": "Netherlands",
-          "latitude": "52.36464636933365",
-          "longitude": "4.8740486118580595",
-          "property_type": "Apartment",
-          "room_type": "Entire home/apt",
-          "accommodates": 4,
-          "bathrooms": 1,
-          "bedrooms": 2,
-          "beds": 3,
-          "bed_type": "Real Bed",
-          "amenities": [
-            "tv",
-            "wireless_internet",
-            "breakfast",
-            "laptop_friendly_workspace",
-            "first_aid_kit"
-          ],
-          "square_feet": null,
-          "price": 175,
-          "weekly_price": null,
-          "monthly_price": null,
-          "security_deposit": 250,
-          "cleaning_fee": 50,
-          "guests_included": 2,
-          "extra_people": 40,
-          "minimum_nights": 12,
-          "maximum_nights": 21,
-          "calendar_updated": "5 weeks ago",
-          "has_availability": null,
-          "availability_30": 1,
-          "availability_60": 1,
-          "availability_90": 1,
-          "availability_365": 148,
-          "calendar_last_scraped": "2017-04-02",
-          "number_of_reviews": 1,
-          "first_review": "2016-07-11",
-          "last_review": "2017-02-18",
-          "review_scores_rating": 100,
-          "review_scores_accuracy": 10,
-          "review_scores_cleanliness": 10,
-          "review_scores_checkin": 10,
-          "review_scores_communication": 10,
-          "review_scores_location": 10,
-          "review_scores_value": 10,
-          "license": null,
-          "jurisdiction_names": "Amsterdam",
-          "cancellation_policy": "strict",
-          "calculated_host_listings_count": 1,
-          "reviews_per_month": 0.11,
-          "geolocation": {
-            "lon": 4.8740486118580595,
-            "lat": 52.36464636933365
-          },
-          "features": [
-            "Host Has Profile Pic",
-            "Host Identity Verified",
-            "Is Location Exact"
-          ]
-        }
-      ],
+      "hotelsReserved": [],
       "id": 1
     }
   ]

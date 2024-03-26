@@ -241,7 +241,7 @@ function SignupFormPage() {
   console.log("duplicateFields:", duplicateFields);
 
   return (
-    <section className="mb-20 min-h-screen px-4">
+    <section className="mx-auto mb-20 min-h-screen px-4 md:max-w-screen-md">
       <div>
         <Wellcome />
 

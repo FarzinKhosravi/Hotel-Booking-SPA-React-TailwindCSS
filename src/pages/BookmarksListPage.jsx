@@ -52,7 +52,7 @@ function BookmarksListPage() {
             </span>
           </Message>
         ) : (
-          <div>
+          <div className="mx-auto md:max-w-screen-md">
             {/* Bookmark Title */}
             <div className="mb-10 px-1">
               <div className="flex items-center justify-between">

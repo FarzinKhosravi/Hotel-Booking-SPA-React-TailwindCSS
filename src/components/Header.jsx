@@ -110,7 +110,7 @@ function Header() {
   return (
     <header className="sticky top-0 z-2000 mb-8 p-4 backdrop-blur-md">
       <nav
-        className={`relative flex flex-wrap gap-x-6 rounded-xl bg-slate-200 px-3 py-4 shadow-lg dark:bg-slate-800 ${
+        className={`relative mx-auto flex flex-wrap gap-x-6 rounded-xl bg-slate-200 px-3 py-4 shadow-lg dark:bg-slate-800 2xl:max-w-screen-2xl ${
           isOpenMenu ? "rounded-b-none md:rounded-xl" : ""
         }`}
       >

@@ -19,7 +19,7 @@ function Bookmarks() {
           </span>
         </Message>
       ) : (
-        <div className="mb-4 flex min-h-screen flex-col lg:h-[calc(100vh-160px)] lg:min-h-0 lg:flex-row-reverse lg:items-stretch lg:justify-between">
+        <div className="mx-auto mb-4 flex min-h-screen flex-col lg:h-[calc(100vh-160px)] lg:min-h-0 lg:flex-row-reverse lg:items-stretch lg:justify-between 2xl:max-w-screen-2xl">
           <div className="mb-8 lg:mb-0 lg:w-1/2">
             <Map />
           </div>

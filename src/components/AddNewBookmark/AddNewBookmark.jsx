@@ -142,7 +142,7 @@ function AddNewBookmark() {
 
   return (
     <div className="h-screen">
-      <div>
+      <div className="mx-auto md:max-w-screen-md">
         {/* Add New Bookmark Form Title */}
         <div className="mb-4">
           <div className="flex items-center justify-between">

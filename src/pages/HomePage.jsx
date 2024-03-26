@@ -3,7 +3,7 @@ import Wellcome from "../common/Wellcome";
 
 function HomePage() {
   return (
-    <section className="mb-20 min-h-screen px-4">
+    <section className="mx-auto mb-20 min-h-screen px-4 2xl:max-w-screen-2xl">
       <div>
         <Wellcome />
 

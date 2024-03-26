@@ -44,7 +44,7 @@ function BookmarkDetail() {
         {loading ? (
           <Loader />
         ) : (
-          <div>
+          <div className="mx-auto md:max-w-screen-md">
             {/* Bookmark Detail Title */}
             <div className="mb-8 px-1">
               <div className="flex items-center justify-between">
