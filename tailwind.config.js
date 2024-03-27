@@ -10,7 +10,7 @@ export default {
       },
 
       backgroundImage: {
-        "img-home": "url('./src/assets/images/img-home.svg')",
+        "img-home": "url('./src/assets/images/img-home.png')",
       },
 
       fontFamily: {
