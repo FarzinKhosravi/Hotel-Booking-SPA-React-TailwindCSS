@@ -21,13 +21,6 @@ const loggedInUserSlice = createSlice({
     createHotelReserved: (state, action) => {
       state.loggedInUser.hotelsReserved.push(action.payload);
     },
-
-    removeHotelReserved: (state, action) => {
-      state.loggedInUser.hotelsReserved =
-        state.loggedInUser.hotelsReserved.filter(
-          (hotel) => hotel.id !== action.payload
-        );
-    },
   },
 });
 

@@ -14,7 +14,7 @@ import {
   ComputerDesktopIcon,
 } from "@heroicons/react/24/outline";
 import {
-  BOOKING_FORM,
+  BOOKING_FORM_STEP,
   HOTELS,
   HOTELS_RESERVED_LIST,
   THEME,
@@ -463,7 +463,7 @@ function UserPanel({ loggedInUser }) {
 
     removeLocalStorage(USER_DATA);
 
-    removeLocalStorage(BOOKING_FORM);
+    removeLocalStorage(BOOKING_FORM_STEP);
 
     removeLocalStorage(HOTELS_RESERVED_LIST);
 

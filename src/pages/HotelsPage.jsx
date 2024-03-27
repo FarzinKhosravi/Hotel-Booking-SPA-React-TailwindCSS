@@ -24,10 +24,14 @@ import Message from "../common/Message";
 import saveLocalStorage from "../localStorage/saveLocalStorage";
 import getHotels from "../services/getHotelsService";
 import listSorter from "../utils/listSorter";
+import removeLocalStorage from "../localStorage/removeLocalStorage";
+import http from "../services/httpService";
 
 const USER_DATA = "USER_DATA";
 
 const HOTELS_RESERVED_LIST = "HOTELS_RESERVED_LIST";
+
+const BOOKING_FORM_STEP = "BOOKING_FORM_STEP";
 
 const initialState = {
   destination: "",
@@ -99,7 +103,16 @@ function HotelsPage() {
   useEffect(() => {
     console.log("FIRST RENDERING...");
 
-    saveLocalStorage(USER_DATA, loggedInUser);
+    if (loggedInUser) {
+      const updateUserHotelsReservedList = async () =>
+        await http.patch(`/users/${loggedInUser.id}`, loggedInUser);
+
+      saveLocalStorage(USER_DATA, loggedInUser);
+
+      updateUserHotelsReservedList();
+    }
+
+    removeLocalStorage(BOOKING_FORM_STEP);
   }, [loggedInUser]);
 
   useEffect(() => {
