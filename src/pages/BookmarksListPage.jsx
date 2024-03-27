@@ -57,7 +57,7 @@ function BookmarksListPage() {
             <div className="mb-10 px-1">
               <div className="flex items-center justify-between">
                 <div className="flex">
-                  <span className="block bg-img-home bg-cover bg-center bg-no-repeat text-lg font-semibold italic">
+                  <span className="block bg-img-home bg-cover bg-center bg-no-repeat text-lg font-semibold italic dark:text-white">
                     Bookmarks List
                   </span>
                   <span className="ml-2 flex h-6 w-6 items-center justify-center rounded-full bg-slate-200 text-lg font-semibold shadow-md dark:bg-slate-700 dark:text-white">

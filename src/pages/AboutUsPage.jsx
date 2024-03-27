@@ -18,7 +18,7 @@ function AboutUsPage() {
           <div className="mb-4">
             <div className="flex items-center justify-between">
               <div className="pl-1">
-                <span className="block bg-img-home bg-cover bg-center bg-no-repeat text-lg font-semibold italic">
+                <span className="block bg-img-home bg-cover bg-center bg-no-repeat text-lg font-semibold italic dark:text-white">
                   About Us
                 </span>
               </div>

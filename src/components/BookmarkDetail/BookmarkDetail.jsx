@@ -49,7 +49,7 @@ function BookmarkDetail() {
             <div className="mb-8 px-1">
               <div className="flex items-center justify-between">
                 <div>
-                  <span className="block bg-img-home bg-cover bg-center bg-no-repeat text-lg font-semibold italic">
+                  <span className="block bg-img-home bg-cover bg-center bg-no-repeat text-lg font-semibold italic dark:text-white">
                     {bookmarkDetail?.bookmarkName}
                   </span>
                 </div>

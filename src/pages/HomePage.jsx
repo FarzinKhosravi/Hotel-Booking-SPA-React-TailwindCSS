@@ -22,7 +22,7 @@ function HomePage() {
           {/* Link to list of hotels */}
           <div className="flex">
             <Link to="/hotels-list">
-              <span className="block bg-img-home bg-cover bg-center bg-no-repeat text-indigo-950">
+              <span className="block bg-img-home bg-cover bg-center bg-no-repeat text-indigo-950 dark:text-white">
                 <span className="dark:text-white">L</span>et&apos;s Go See List
                 of Hotels.
               </span>

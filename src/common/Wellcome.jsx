@@ -22,7 +22,7 @@ function Wellcome() {
       <Separator />
 
       <div className="flex w-full items-center justify-center">
-        <span className="block bg-img-home bg-cover bg-center bg-no-repeat font-Parisienne text-xl text-indigo-950">
+        <span className="block bg-img-home bg-cover bg-center bg-no-repeat font-Parisienne text-xl text-indigo-950 dark:text-white">
           We Wish You a Pleasant Trip
         </span>
       </div>
