@@ -1,6 +1,6 @@
 # Hotel Booking SPA Project 😎 ( React/TailwindCSS )
 
-## [App Live](https://hotel-booking-spa.netlify.app/)
+## [App Live](https://hotel-booking-spa-react-tailwindcss.netlify.app/)
 
 ## Description 📝
 
