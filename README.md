@@ -2,8 +2,6 @@
 
 ## [App Live](https://hotel-booking-spa.netlify.app/)
 
----
-
 ## Description 📝
 
 The Hotel Booking Single Page Application (SPA) is A hotel Reservation Site that Allows you to Find the Desired Hotel Based on your needs and Conditions from the Main List of Hotels or the Filtered List or add the Desired Hotel from the Map to the Bookmark List;
