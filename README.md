@@ -20,6 +20,8 @@ Which is Responsive in the Screen Sizes of Different Devices.
 
 Also Speed of Work by the Tailwind Framework is very high and it results in an Optimal Output.
 
+I am currently working on optimizing the app codes 🤓
+
 ## Getting Started 🚀
 
 To get started with this project, follow these steps:
